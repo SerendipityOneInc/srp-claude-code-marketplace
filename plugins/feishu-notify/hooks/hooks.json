@@ -1,12 +1,12 @@
 {
   "hooks": {
-    "permission_prompt": [
+    "Notification": [
       {
         "type": "command",
         "command": "$PLUGIN_DIR/hooks/feishu-notify.sh"
       }
     ],
-    "idle_prompt": [
+    "PermissionRequest": [
       {
         "type": "command",
         "command": "$PLUGIN_DIR/hooks/feishu-notify.sh"

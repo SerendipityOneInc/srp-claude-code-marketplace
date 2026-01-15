@@ -2,7 +2,7 @@
     "name": "srp-claude-code-marketplace",
     "owner": {
           "name": "SRP Team",
-          "email": "team@srp.one"
+          "email": "tim@srp.one"
     },
     "metadata": {
           "description": "Internal SRP Claude Code plugins and MCP servers",

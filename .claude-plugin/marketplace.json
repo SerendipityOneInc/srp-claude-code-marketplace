@@ -18,6 +18,13 @@
       "description": "Example plugin demonstrating basic Claude Code skill structure",
       "version": "1.0.0",
       "strict": true
+    },
+    {
+      "name": "feishu-notify",
+      "source": "./plugins/feishu-notify",
+      "description": "Claude Code 飞书群通知插件 - 权限请求和任务完成时发送飞书通知",
+      "version": "1.0.0",
+      "strict": true
     }
   ]
 }

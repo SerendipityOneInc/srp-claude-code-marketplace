@@ -1,0 +1,23 @@
+{
+  "name": "srp-claude-code-marketplace",
+  "owner": {
+    "name": "SRP Team",
+    "email": "team@srp.one"
+  },
+  "metadata": {
+    "description": "Internal SRP Claude Code plugins and MCP servers",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "example-hello-world",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/SerendipityOneInc/example-hello-world.git"
+      },
+      "description": "Example plugin demonstrating basic Claude Code skill structure",
+      "version": "1.0.0",
+      "strict": true
+    }
+  ]
+}

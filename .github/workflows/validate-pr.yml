@@ -1,0 +1,180 @@
+name: Validate Plugin Entry
+
+on:
+  pull_request:
+    paths:
+      - '.claude-plugin/marketplace.json'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate marketplace.json
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate JSON syntax
+        id: validate-json
+        run: |
+          echo "Validating JSON syntax..."
+          if ! jq empty .claude-plugin/marketplace.json 2>/dev/null; then
+            echo "❌ Invalid JSON syntax in marketplace.json"
+            echo "valid=false" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          echo "✅ Valid JSON syntax"
+          echo "valid=true" >> $GITHUB_OUTPUT
+
+      - name: Validate required fields
+        if: steps.validate-json.outputs.valid == 'true'
+        run: |
+          echo "Validating required fields..."
+          
+          # Check marketplace metadata
+          if ! jq -e '.name' .claude-plugin/marketplace.json > /dev/null; then
+            echo "❌ Missing 'name' field in marketplace metadata"
+            exit 1
+          fi
+          
+          # Validate each plugin entry
+          PLUGIN_COUNT=$(jq '.plugins | length' .claude-plugin/marketplace.json)
+          echo "Found $PLUGIN_COUNT plugins to validate"
+          
+          for i in $(seq 0 $(($PLUGIN_COUNT - 1))); do
+            PLUGIN=$(jq -r ".plugins[$i].name // \"(unnamed)\"" .claude-plugin/marketplace.json)
+            echo "\nValidating plugin: $PLUGIN"
+            
+            # Check required fields
+            if ! jq -e ".plugins[$i].name" .claude-plugin/marketplace.json > /dev/null; then
+              echo "❌ Plugin $i: Missing 'name' field"
+              exit 1
+            fi
+            
+            if ! jq -e ".plugins[$i].source.url" .claude-plugin/marketplace.json > /dev/null; then
+              echo "❌ Plugin $PLUGIN: Missing 'source.url' field"
+              exit 1
+            fi
+            
+            if ! jq -e ".plugins[$i].description" .claude-plugin/marketplace.json > /dev/null; then
+              echo "❌ Plugin $PLUGIN: Missing 'description' field"
+              exit 1
+            fi
+            
+            if ! jq -e ".plugins[$i].version" .claude-plugin/marketplace.json > /dev/null; then
+              echo "❌ Plugin $PLUGIN: Missing 'version' field"
+              exit 1
+            fi
+            
+            if ! jq -e ".plugins[$i].strict" .claude-plugin/marketplace.json > /dev/null; then
+              echo "❌ Plugin $PLUGIN: Missing 'strict' field"
+              exit 1
+            fi
+            
+            # Validate semantic version format
+            VERSION=$(jq -r ".plugins[$i].version" .claude-plugin/marketplace.json)
+            if ! echo "$VERSION" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+'; then
+              echo "❌ Plugin $PLUGIN: Invalid version format '$VERSION' (must be semver like 1.0.0)"
+              exit 1
+            fi
+            
+            echo "✅ Plugin $PLUGIN: All required fields present"
+          done
+
+      - name: Check for duplicate plugin names
+        if: steps.validate-json.outputs.valid == 'true'
+        run: |
+          echo "Checking for duplicate plugin names..."
+          DUPLICATES=$(jq -r '.plugins[].name' .claude-plugin/marketplace.json | sort | uniq -d)
+          
+          if [ -n "$DUPLICATES" ]; then
+            echo "❌ Found duplicate plugin names:"
+            echo "$DUPLICATES"
+            exit 1
+          fi
+          
+          echo "✅ No duplicate plugin names found"
+
+      - name: Validate repository URLs
+        if: steps.validate-json.outputs.valid == 'true'
+        run: |
+          echo "Validating repository URLs..."
+          
+          PLUGIN_COUNT=$(jq '.plugins | length' .claude-plugin/marketplace.json)
+          
+          for i in $(seq 0 $(($PLUGIN_COUNT - 1))); do
+            PLUGIN=$(jq -r ".plugins[$i].name" .claude-plugin/marketplace.json)
+            URL=$(jq -r ".plugins[$i].source.url" .claude-plugin/marketplace.json)
+            
+            echo "\nChecking $PLUGIN: $URL"
+            
+            # Extract owner/repo from GitHub URL
+            if echo "$URL" | grep -qE 'github.com/[^/]+/[^/]+'; then
+              REPO_PATH=$(echo "$URL" | sed -E 's#.*github.com/([^/]+/[^/]+)(\.git)?.*#\1#')
+              
+              # Check if repo exists (using GitHub API)
+              HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+                -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/repos/$REPO_PATH")
+              
+              if [ "$HTTP_CODE" = "200" ]; then
+                echo "✅ Repository exists and is accessible"
+              elif [ "$HTTP_CODE" = "404" ]; then
+                echo "❌ Repository not found: $URL"
+                exit 1
+              else
+                echo "⚠️ Warning: Could not verify repository (HTTP $HTTP_CODE)"
+              fi
+            else
+              echo "⚠️ Warning: Non-GitHub URL, skipping validation"
+            fi
+          done
+
+      - name: Check plugin structure (non-blocking)
+        if: steps.validate-json.outputs.valid == 'true'
+        continue-on-error: true
+        run: |
+          echo "Checking plugin structure (warnings only)..."
+          
+          PLUGIN_COUNT=$(jq '.plugins | length' .claude-plugin/marketplace.json)
+          
+          for i in $(seq 0 $(($PLUGIN_COUNT - 1))); do
+            PLUGIN=$(jq -r ".plugins[$i].name" .claude-plugin/marketplace.json)
+            URL=$(jq -r ".plugins[$i].source.url" .claude-plugin/marketplace.json)
+            
+            if echo "$URL" | grep -qE 'github.com/[^/]+/[^/]+'; then
+              REPO_PATH=$(echo "$URL" | sed -E 's#.*github.com/([^/]+/[^/]+)(\.git)?.*#\1#')
+              
+              # Check for .claude-plugin directory
+              HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+                -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/repos/$REPO_PATH/contents/.claude-plugin")
+              
+              if [ "$HTTP_CODE" = "200" ]; then
+                echo "✅ $PLUGIN: Has .claude-plugin/ directory"
+              else
+                echo "⚠️ $PLUGIN: No .claude-plugin/ directory found (this may cause installation issues)"
+              fi
+            fi
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "\n=========================================="
+          echo "Validation Summary"
+          echo "=========================================="
+          if [ "${{ steps.validate-json.outputs.valid }}" = "true" ]; then
+            echo "✅ All validation checks passed!"
+            echo "\nYour plugin entry is ready for review."
+          else
+            echo "❌ Validation failed"
+            echo "\nPlease fix the errors above and push changes."
+            exit 1
+          fi

@@ -1,0 +1,22 @@
+{
+    "hooks": [
+          {
+                  "matcher": "permission_prompt",
+                  "hooks": [
+                            {
+                                        "type": "command",
+                                        "command": "$PLUGIN_DIR/hooks/feishu-notify.sh"
+                            }
+                  ]
+          },
+          {
+                  "matcher": "idle_prompt",
+                  "hooks": [
+                            {
+                                        "type": "command",
+                                        "command": "$PLUGIN_DIR/hooks/feishu-notify.sh"
+                            }
+                  ]
+          }
+    ]
+}

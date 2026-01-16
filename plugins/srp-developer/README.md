@@ -151,30 +151,42 @@ Show schema of table dataset.table
 
 ### MCP Servers
 
-The plugin configures the following MCP servers:
+The plugin configures the following MCP servers in `.mcp.json`:
 
-**GitHub:**
-```json
-{
-  "github": {
-    "type": "stdio",
-    "command": "npx",
-    "args": ["@modelcontextprotocol/server-github"]
-  }
-}
+**Configuration file location:**
+```
+plugins/srp-developer/.mcp.json
 ```
 
-**BigQuery:**
+**GitHub MCP Server:**
+- Requires `GITHUB_TOKEN` environment variable
+- Provides access to GitHub repositories, PRs, issues
+
+**BigQuery MCP Server:**
+- Requires `GCP_PROJECT_ID` and `GCP_LOCATION` environment variables
+- Requires GCP authentication: `gcloud auth application-default login`
+- Provides read-only access to BigQuery datasets
+
+**Full configuration:**
 ```json
 {
-  "bigquery": {
-    "type": "stdio",
-    "command": "uvx",
-    "args": [
-      "mcp-server-bigquery",
-      "--project", "${GCP_PROJECT_ID}",
-      "--location", "${GCP_LOCATION}"
-    ]
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "bigquery": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-bigquery",
+        "--project", "${GCP_PROJECT_ID}",
+        "--location", "${GCP_LOCATION}"
+      ],
+      "env": {}
+    }
   }
 }
 ```

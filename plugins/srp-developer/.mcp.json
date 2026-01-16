@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "bigquery": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-bigquery",
+        "--project",
+        "${GCP_PROJECT_ID}",
+        "--location",
+        "${GCP_LOCATION}"
+      ],
+      "env": {}
+    }
+  }
+}

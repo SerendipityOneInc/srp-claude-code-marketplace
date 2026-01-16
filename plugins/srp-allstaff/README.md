@@ -68,21 +68,47 @@ echo $LARK_APP_ID
 echo $LARK_APP_SECRET
 ```
 
-### 3. MCP Server (MCP服务器)
+### 3. MCP Server Configuration (MCP服务器配置)
 
-The plugin uses the Lark MCP server which will be automatically configured when you install the plugin.
+The plugin uses the Lark MCP server with the following configuration in `.mcp.json`:
 
-**MCP Server Package:** `@larksuiteoapi/lark-mcp`
+```json
+{
+  "mcpServers": {
+    "lark": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@larksuiteoapi/lark-mcp",
+        "mcp",
+        "-a",
+        "${LARK_APP_ID}",
+        "-s",
+        "${LARK_APP_SECRET}",
+        "--oauth",
+        "--token-mode",
+        "auto"
+      ],
+      "env": {}
+    }
+  }
+}
+```
+
+This configuration is automatically included when you install the plugin.
 
 ## Installation (安装)
 
 ### Step 1: Verify Environment Variables
 
+Ensure your Lark credentials are set:
+
 ```bash
-# Make sure your Lark credentials are set
 echo $LARK_APP_ID
 echo $LARK_APP_SECRET
 ```
+
+If not set, refer to the Prerequisites section above.
 
 ### Step 2: Install the Plugin
 
@@ -173,16 +199,16 @@ Send message to "Engineering Team": "Meeting rescheduled to tomorrow"
 
 ### MCP Server Configuration
 
-The plugin automatically configures the Lark MCP server using your environment variables. The configuration is located at:
+The plugin automatically configures the Lark MCP server. The configuration is located at:
 
 ```
-plugins/srp-allstaff/mcp/lark.json
+plugins/srp-allstaff/.mcp.json
 ```
 
 **Configuration details:**
-- Uses OAuth authentication
-- Token mode: auto (automatic refresh)
-- Credentials from environment variables
+- Uses authenticated token (from `npx @larksuiteoapi/lark-mcp login`)
+- Token is automatically managed by the Lark MCP server
+- No environment variables needed in the MCP configuration
 
 ### Plugin Metadata
 
@@ -198,14 +224,25 @@ plugins/srp-allstaff/.claude-plugin/plugin.json
 **Problem:** MCP server cannot authenticate with Lark API.
 
 **Solutions:**
+
 1. Verify environment variables are set correctly:
    ```bash
    echo $LARK_APP_ID
    echo $LARK_APP_SECRET
    ```
-2. Check that your Lark app credentials are valid
-3. Ensure the app has the required permissions
-4. Restart Claude Code after setting environment variables
+2. Verify your Lark app credentials are valid in [Lark Open Platform](https://open.feishu.cn/app)
+3. Ensure the app has the required scopes/permissions enabled
+4. Check that the app is published and approved (if required)
+5. Restart Claude Code after setting environment variables
+
+**Alternative: Use login command (optional)**
+
+If you prefer not to use environment variables, you can also authenticate using:
+```bash
+npx -y @larksuiteoapi/lark-mcp login -a cli_your_app_id -s your_app_secret
+```
+
+However, the plugin is configured to use environment variables by default.
 
 ### Issue 2: "Permission denied" when accessing documents
 

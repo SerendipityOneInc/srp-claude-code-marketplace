@@ -1,0 +1,13 @@
+{
+  "name": "example-hello-world",
+  "version": "1.0.0",
+  "description": "Example Claude Code skill plugin demonstrating basic structure",
+  "author": {
+    "name": "SRP Team",
+    "email": "team@srp.one"
+  },
+  "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/example-hello-world",
+  "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
+  "license": "MIT",
+  "keywords": ["example", "tutorial", "skills", "learning"]
+}

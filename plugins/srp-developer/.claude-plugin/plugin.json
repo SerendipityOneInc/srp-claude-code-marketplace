@@ -6,28 +6,8 @@
     "name": "SRP Team",
     "email": "team@srp.one"
   },
-  "dependencies": {
-    "srp-allstaff": "^1.0.0"
-  },
-  "mcpServers": ["github", "bigquery"],
-  "skills": ["github-integration", "gcp-developer"],
-  "commands": {
-    "srp:github": {
-      "skill": "github-integration",
-      "description": "GitHub integration for code review and PR management (GitHub集成)"
-    },
-    "srp:gh": {
-      "skill": "github-integration",
-      "description": "Quick alias for GitHub integration (GitHub快捷命令)"
-    },
-    "srp:gcp": {
-      "skill": "gcp-developer",
-      "description": "GCP access for developers - BigQuery and data analysis (GCP开发者访问)"
-    },
-    "srp:bq": {
-      "skill": "gcp-developer",
-      "description": "Quick alias for BigQuery access (BigQuery快捷命令)"
-    }
-  },
-  "tags": ["github", "gcp", "bigquery", "cicd", "developer", "code-review"]
+  "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-developer",
+  "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
+  "license": "MIT",
+  "keywords": ["github", "gcp", "bigquery", "cicd", "developer", "code-review"]
 }

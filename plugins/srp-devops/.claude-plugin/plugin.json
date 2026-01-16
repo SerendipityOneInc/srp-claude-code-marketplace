@@ -6,28 +6,8 @@
     "name": "SRP Team",
     "email": "team@srp.one"
   },
-  "dependencies": {
-    "srp-allstaff": "^1.0.0"
-  },
-  "mcpServers": [],
-  "skills": ["k8s-management", "cloud-resources"],
-  "commands": {
-    "srp:k8s": {
-      "skill": "k8s-management",
-      "description": "Kubernetes cluster management and monitoring (K8s集群管理)"
-    },
-    "srp:k8s-mgmt": {
-      "skill": "k8s-management",
-      "description": "Alias for Kubernetes management (K8s管理快捷命令)"
-    },
-    "srp:cloud": {
-      "skill": "cloud-resources",
-      "description": "Cloud resources management for GCP (GCP云资源管理)"
-    },
-    "srp:gcp-ops": {
-      "skill": "cloud-resources",
-      "description": "Quick alias for GCP operations (GCP运维快捷命令)"
-    }
-  },
-  "tags": ["kubernetes", "k8s", "monitoring", "devops", "gcp", "cloud"]
+  "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-devops",
+  "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
+  "license": "MIT",
+  "keywords": ["kubernetes", "k8s", "monitoring", "devops", "gcp", "cloud"]
 }

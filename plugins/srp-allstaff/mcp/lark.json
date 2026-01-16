@@ -1,0 +1,19 @@
+{
+  "lark": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@larksuiteoapi/lark-mcp",
+      "mcp",
+      "-a",
+      "${LARK_APP_ID}",
+      "-s",
+      "${LARK_APP_SECRET}",
+      "--oauth",
+      "--token-mode",
+      "auto"
+    ],
+    "env": {}
+  }
+}

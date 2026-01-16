@@ -1,0 +1,12 @@
+{
+  "name": "srp-allstaff",
+  "version": "1.0.0",
+  "description": "SRP全员插件 - 飞书集成工具（云文档、消息与群组）",
+  "author": {
+    "name": "SRP Team",
+    "email": "team@srp.one"
+  },
+  "mcpServers": ["lark"],
+  "skills": ["lark-docs", "lark-messages"],
+  "tags": ["lark", "feishu", "documents", "messaging", "allstaff"]
+}

@@ -1,25 +1,32 @@
 {
-    "name": "srp-claude-code-marketplace",
-    "version": "1.0.0",
-    "description": "Internal SRP Claude Code plugins and MCP servers - monorepo structure",
-    "owner": {
-          "name": "SRP Team",
-          "email": "team@srp.one"
+  "name": "srp-claude-code-marketplace",
+  "version": "2.0.0",
+  "description": "Internal SRP Claude Code plugins and MCP servers - monorepo structure",
+  "owner": {
+    "name": "SRP Team",
+    "email": "team@srp.one"
+  },
+  "plugins": [
+    {
+      "name": "srp-allstaff",
+      "source": "./plugins/srp-allstaff",
+      "description": "SRP全员插件 - 飞书集成工具（云文档、消息与群组）",
+      "version": "1.0.0",
+      "strict": true
     },
-    "plugins": [
-          {
-                  "name": "example-hello-world",
-                  "source": "./plugins/example-hello-world",
-                  "description": "Example plugin demonstrating basic Claude Code skill structure",
-                  "version": "1.0.0",
-                  "strict": true
-          },
-          {
-                  "name": "feishu-notify",
-                  "source": "./plugins/feishu-notify",
-                  "description": "Feishu notification plugin for Claude Code - sends notifications on permission requests and task completion",
-                  "version": "1.0.0",
-                  "strict": true
-          }
-    ]
+    {
+      "name": "example-hello-world",
+      "source": "./plugins/example-hello-world",
+      "description": "Example plugin demonstrating basic Claude Code skill structure",
+      "version": "1.0.0",
+      "strict": true
+    },
+    {
+      "name": "feishu-notify",
+      "source": "./plugins/feishu-notify",
+      "description": "Feishu notification plugin for Claude Code - sends notifications on permission requests and task completion",
+      "version": "1.0.0",
+      "strict": true
+    }
+  ]
 }

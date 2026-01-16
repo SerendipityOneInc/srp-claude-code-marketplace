@@ -15,6 +15,20 @@
       "strict": true
     },
     {
+      "name": "srp-developer",
+      "source": "./plugins/srp-developer",
+      "description": "SRP开发者插件 - 扩展allstaff功能，增加GitHub集成、GCP只读访问等开发工具",
+      "version": "1.0.0",
+      "strict": true
+    },
+    {
+      "name": "srp-devops",
+      "source": "./plugins/srp-devops",
+      "description": "SRP运维插件 - 扩展allstaff功能，增加Kubernetes管理、云资源管理等运维工具",
+      "version": "1.0.0",
+      "strict": true
+    },
+    {
       "name": "example-hello-world",
       "source": "./plugins/example-hello-world",
       "description": "Example plugin demonstrating basic Claude Code skill structure",

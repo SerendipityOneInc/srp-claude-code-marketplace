@@ -1,0 +1,10 @@
+{
+  "github": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "@modelcontextprotocol/server-github"
+    ],
+    "env": {}
+  }
+}

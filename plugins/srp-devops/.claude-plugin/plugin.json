@@ -1,0 +1,15 @@
+{
+  "name": "srp-devops",
+  "version": "1.0.0",
+  "description": "SRP运维插件 - 扩展allstaff功能，增加Kubernetes管理、监控告警、云资源管理等运维工具",
+  "author": {
+    "name": "SRP Team",
+    "email": "team@srp.one"
+  },
+  "dependencies": {
+    "srp-allstaff": "^1.0.0"
+  },
+  "mcpServers": [],
+  "skills": ["k8s-management", "cloud-resources"],
+  "tags": ["kubernetes", "k8s", "monitoring", "devops", "gcp", "cloud"]
+}

@@ -1,0 +1,14 @@
+{
+  "bigquery": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": [
+      "mcp-server-bigquery",
+      "--project",
+      "${GCP_PROJECT_ID}",
+      "--location",
+      "${GCP_LOCATION}"
+    ],
+    "env": {}
+  }
+}

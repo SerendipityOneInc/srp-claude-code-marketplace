@@ -1,0 +1,15 @@
+{
+  "name": "srp-developer",
+  "version": "1.0.0",
+  "description": "SRP开发者插件 - 扩展allstaff功能，增加GitHub集成、GCP只读访问等开发工具",
+  "author": {
+    "name": "SRP Team",
+    "email": "team@srp.one"
+  },
+  "dependencies": {
+    "srp-allstaff": "^1.0.0"
+  },
+  "mcpServers": ["github", "bigquery"],
+  "skills": ["github-integration", "gcp-readonly"],
+  "tags": ["github", "gcp", "bigquery", "cicd", "developer", "code-review"]
+}

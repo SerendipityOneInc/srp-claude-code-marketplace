@@ -24,9 +24,9 @@
       "skill": "cloud-resources",
       "description": "Cloud resources management for GCP (GCP云资源管理)"
     },
-    "srp:gcp": {
+    "srp:gcp-ops": {
       "skill": "cloud-resources",
-      "description": "Quick alias for GCP cloud resources (GCP快捷命令)"
+      "description": "Quick alias for GCP operations (GCP运维快捷命令)"
     }
   },
   "tags": ["kubernetes", "k8s", "monitoring", "devops", "gcp", "cloud"]

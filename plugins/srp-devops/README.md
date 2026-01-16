@@ -110,7 +110,7 @@ The plugin provides the following commands with the `srp:` namespace:
 | Command | Alias | Skill | Description |
 |---------|-------|-------|-------------|
 | `srp:k8s` | `srp:k8s-mgmt` | k8s-management | Kubernetes cluster management and monitoring<br/>K8s集群管理 |
-| `srp:cloud` | `srp:gcp` | cloud-resources | Cloud resources management for GCP<br/>GCP云资源管理 |
+| `srp:cloud` | `srp:gcp-ops` | cloud-resources | Cloud resources management for GCP<br/>GCP云资源管理 |
 
 **Usage examples:**
 ```bash
@@ -120,7 +120,7 @@ srp:cloud
 
 # Short aliases
 srp:k8s-mgmt
-srp:gcp
+srp:gcp-ops
 
 # Original skill names (also work)
 /k8s-management
@@ -163,7 +163,7 @@ Which pods are having issues?
 
 **Activate the skill:**
 ```bash
-srp:cloud  # or srp:gcp or /cloud-resources
+srp:cloud  # or srp:gcp-ops or /cloud-resources
 ```
 
 **Example prompts:**

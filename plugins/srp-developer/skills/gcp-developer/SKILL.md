@@ -1,13 +1,13 @@
 ---
-name: gcp-readonly
-description: Read-only access to GCP resources - BigQuery, GCS, GKE (GCP只读访问：BigQuery、GCS、GKE)
+name: gcp-developer
+description: GCP access for developers - BigQuery data analysis, GCS viewing, GKE info (GCP开发者访问：BigQuery、GCS、GKE)
 ---
 
-# GCP Read-Only Access (GCP 只读访问)
+# GCP Developer Access (GCP 开发者访问)
 
-为开发者提供 GCP 资源的只读访问权限，包括 BigQuery 数据查询、GCS 对象查看、GKE 集群信息等。
+为开发者提供 GCP 资源的访问权限，包括 BigQuery 数据查询和分析、GCS 对象查看、GKE 集群信息等。
 
-Provides read-only access to GCP resources for developers, including BigQuery queries, GCS object viewing, and GKE cluster information.
+Provides GCP resource access for developers, including BigQuery data queries and analysis, GCS object viewing, and GKE cluster information.
 
 ⚠️ **Important**: This skill provides **READ-ONLY** access. No management operations (create, update, delete) are allowed.
 

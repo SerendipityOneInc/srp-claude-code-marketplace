@@ -307,7 +307,7 @@ Common errors and solutions:
 
 ## Related Skills
 
-- `gcp-readonly`: Access GCP resources (BigQuery, GCS, GKE)
+- `gcp-developer`: Access GCP resources (BigQuery, GCS, GKE)
 - Future: `cicd-integration`, `code-quality-tools`
 
 ## Prerequisites

@@ -90,13 +90,13 @@ The plugin provides the following commands with the `srp:` namespace:
 | Command | Alias | Skill | Description |
 |---------|-------|-------|-------------|
 | `srp:github` | `srp:gh` | github-integration | GitHub integration for code review and PR management<br/>GitHub集成 |
-| `srp:gcp-readonly` | `srp:bq` | gcp-readonly | GCP read-only access for BigQuery<br/>GCP只读访问 |
+| `srp:gcp` | `srp:bq` | gcp-developer | GCP access for developers - BigQuery and data analysis<br/>GCP开发者访问 |
 
 **Usage examples:**
 ```bash
 # Full command names
 srp:github
-srp:gcp-readonly
+srp:gcp
 
 # Short aliases
 srp:gh
@@ -104,7 +104,7 @@ srp:bq
 
 # Original skill names (also work)
 /github-integration
-/gcp-readonly
+/gcp-developer
 ```
 
 ### Skill 1: GitHub Integration (GitHub 集成)
@@ -139,11 +139,11 @@ Check CI/CD status of PR #15
 - ✅ Check CI/CD status
 - 💬 Add review comments
 
-### Skill 2: GCP Read-Only Access (GCP 只读访问)
+### Skill 2: GCP Developer Access (GCP 开发者访问)
 
 **Activate the skill:**
 ```bash
-srp:gcp-readonly  # or srp:bq or /gcp-readonly
+srp:gcp  # or srp:bq or /gcp-developer
 ```
 
 **Example prompts:**
@@ -295,7 +295,7 @@ Claude will:
 ### Example 2: Data Analysis (数据分析)
 
 ```bash
-/gcp-readonly
+/gcp-developer
 
 Prompt: "分析 analytics.user_events 表中昨天最活跃的 10 个事件类型"
 
@@ -319,7 +319,7 @@ Prompt: "显示工程团队群的最新消息"
 Prompt: "审查消息中提到的 PR #15"
 
 # Finally, check data impact
-/gcp-readonly
+/gcp-developer
 Prompt: "查询相关功能的使用数据"
 ```
 
@@ -345,7 +345,7 @@ Prompt: "查询相关功能的使用数据"
 - Plugin: `plugins/srp-developer/README.md` (this file)
 - Skills:
   - `plugins/srp-developer/skills/github-integration/SKILL.md`
-  - `plugins/srp-developer/skills/gcp-readonly/SKILL.md`
+  - `plugins/srp-developer/skills/gcp-developer/SKILL.md`
 
 ### Getting Help
 - Internal support: Contact SRP Team (team@srp.one)

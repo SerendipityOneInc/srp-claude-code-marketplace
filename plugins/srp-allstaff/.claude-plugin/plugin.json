@@ -8,5 +8,23 @@
   },
   "mcpServers": ["lark"],
   "skills": ["lark-docs", "lark-messages"],
+  "commands": {
+    "srp:lark-docs": {
+      "skill": "lark-docs",
+      "description": "Access Lark documents and wiki (飞书云文档与知识库)"
+    },
+    "srp:lark-messages": {
+      "skill": "lark-messages",
+      "description": "Access Lark messages and groups (飞书消息与群组)"
+    },
+    "srp:docs": {
+      "skill": "lark-docs",
+      "description": "Quick alias for Lark documents (飞书云文档快捷命令)"
+    },
+    "srp:msg": {
+      "skill": "lark-messages",
+      "description": "Quick alias for Lark messages (飞书消息快捷命令)"
+    }
+  },
   "tags": ["lark", "feishu", "documents", "messaging", "allstaff"]
 }

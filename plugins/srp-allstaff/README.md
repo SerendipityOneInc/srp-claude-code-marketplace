@@ -131,11 +131,35 @@ You should see `srp-allstaff` in the list of installed plugins.
 
 ## Usage (使用方法)
 
+### Available Commands (可用命令)
+
+The plugin provides the following commands with the `srp:` namespace:
+
+| Command | Alias | Skill | Description |
+|---------|-------|-------|-------------|
+| `srp:lark-docs` | `srp:docs` | lark-docs | Access Lark documents and wiki<br/>飞书云文档与知识库 |
+| `srp:lark-messages` | `srp:msg` | lark-messages | Access Lark messages and groups<br/>飞书消息与群组 |
+
+**Usage examples:**
+```bash
+# Full command names
+srp:lark-docs
+srp:lark-messages
+
+# Short aliases
+srp:docs
+srp:msg
+
+# Original skill names (also work)
+/lark-docs
+/lark-messages
+```
+
 ### Skill 1: Lark Docs Access (飞书云文档)
 
 **Activate the skill:**
 ```bash
-/lark-docs
+srp:lark-docs  # or srp:docs or /lark-docs
 ```
 
 **Example prompts (示例提示):**
@@ -167,7 +191,7 @@ Show all documents owned by John
 
 **Activate the skill:**
 ```bash
-/lark-messages
+srp:lark-messages  # or srp:msg or /lark-messages
 ```
 
 **Example prompts (示例提示):**

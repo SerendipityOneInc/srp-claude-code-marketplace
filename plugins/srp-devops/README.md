@@ -103,11 +103,35 @@ cd ~/Downloads/srp-claude-code-marketplace
 
 ## Usage (使用方法)
 
+### Available Commands (可用命令)
+
+The plugin provides the following commands with the `srp:` namespace:
+
+| Command | Alias | Skill | Description |
+|---------|-------|-------|-------------|
+| `srp:k8s` | `srp:k8s-mgmt` | k8s-management | Kubernetes cluster management and monitoring<br/>K8s集群管理 |
+| `srp:cloud` | `srp:gcp` | cloud-resources | Cloud resources management for GCP<br/>GCP云资源管理 |
+
+**Usage examples:**
+```bash
+# Full command names
+srp:k8s
+srp:cloud
+
+# Short aliases
+srp:k8s-mgmt
+srp:gcp
+
+# Original skill names (also work)
+/k8s-management
+/cloud-resources
+```
+
 ### Skill 1: Kubernetes Management (Kubernetes 管理)
 
 **Activate the skill:**
 ```bash
-/k8s-management
+srp:k8s  # or srp:k8s-mgmt or /k8s-management
 ```
 
 **Example prompts:**
@@ -139,7 +163,7 @@ Which pods are having issues?
 
 **Activate the skill:**
 ```bash
-/cloud-resources
+srp:cloud  # or srp:gcp or /cloud-resources
 ```
 
 **Example prompts:**

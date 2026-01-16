@@ -11,5 +11,23 @@
   },
   "mcpServers": [],
   "skills": ["k8s-management", "cloud-resources"],
+  "commands": {
+    "srp:k8s": {
+      "skill": "k8s-management",
+      "description": "Kubernetes cluster management and monitoring (K8s集群管理)"
+    },
+    "srp:k8s-mgmt": {
+      "skill": "k8s-management",
+      "description": "Alias for Kubernetes management (K8s管理快捷命令)"
+    },
+    "srp:cloud": {
+      "skill": "cloud-resources",
+      "description": "Cloud resources management for GCP (GCP云资源管理)"
+    },
+    "srp:gcp": {
+      "skill": "cloud-resources",
+      "description": "Quick alias for GCP cloud resources (GCP快捷命令)"
+    }
+  },
   "tags": ["kubernetes", "k8s", "monitoring", "devops", "gcp", "cloud"]
 }

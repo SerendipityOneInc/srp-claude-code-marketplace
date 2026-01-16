@@ -83,11 +83,35 @@ cd ~/Downloads/srp-claude-code-marketplace
 
 ## Usage (使用方法)
 
+### Available Commands (可用命令)
+
+The plugin provides the following commands with the `srp:` namespace:
+
+| Command | Alias | Skill | Description |
+|---------|-------|-------|-------------|
+| `srp:github` | `srp:gh` | github-integration | GitHub integration for code review and PR management<br/>GitHub集成 |
+| `srp:gcp-readonly` | `srp:bq` | gcp-readonly | GCP read-only access for BigQuery<br/>GCP只读访问 |
+
+**Usage examples:**
+```bash
+# Full command names
+srp:github
+srp:gcp-readonly
+
+# Short aliases
+srp:gh
+srp:bq
+
+# Original skill names (also work)
+/github-integration
+/gcp-readonly
+```
+
 ### Skill 1: GitHub Integration (GitHub 集成)
 
 **Activate the skill:**
 ```bash
-/github-integration
+srp:github  # or srp:gh or /github-integration
 ```
 
 **Example prompts:**
@@ -119,7 +143,7 @@ Check CI/CD status of PR #15
 
 **Activate the skill:**
 ```bash
-/gcp-readonly
+srp:gcp-readonly  # or srp:bq or /gcp-readonly
 ```
 
 **Example prompts:**

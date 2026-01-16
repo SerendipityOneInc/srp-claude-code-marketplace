@@ -11,5 +11,23 @@
   },
   "mcpServers": ["github", "bigquery"],
   "skills": ["github-integration", "gcp-readonly"],
+  "commands": {
+    "srp:github": {
+      "skill": "github-integration",
+      "description": "GitHub integration for code review and PR management (GitHub集成)"
+    },
+    "srp:gh": {
+      "skill": "github-integration",
+      "description": "Quick alias for GitHub integration (GitHub快捷命令)"
+    },
+    "srp:gcp-readonly": {
+      "skill": "gcp-readonly",
+      "description": "GCP read-only access for BigQuery and data analysis (GCP只读访问)"
+    },
+    "srp:bq": {
+      "skill": "gcp-readonly",
+      "description": "Quick alias for BigQuery access (BigQuery快捷命令)"
+    }
+  },
   "tags": ["github", "gcp", "bigquery", "cicd", "developer", "code-review"]
 }

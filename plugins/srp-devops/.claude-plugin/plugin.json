@@ -1,10 +1,10 @@
 {
   "name": "srp-devops",
-  "version": "1.0.0",
-  "description": "SRP运维插件 - 扩展allstaff功能，增加Kubernetes管理、监控告警、云资源管理等运维工具",
+  "version": "1.0.1",
+  "description": "SRP DevOps plugin - Kubernetes management, cloud resource monitoring, and operations tools",
   "author": {
     "name": "SRP Team",
-    "email": "team@srp.one"
+    "email": "infra@srp.one"
   },
   "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-devops",
   "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",

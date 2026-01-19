@@ -14,6 +14,69 @@ Add this marketplace to Claude Code:
 
 ## Available Plugins
 
+### SRP AllStaff
+
+**Description:** Lark/Feishu integration and office automation platform with Rube - access documents, messages, and automate workflows across Gmail, Slack, Calendar, Drive, GitHub, Linear, and more
+
+**Categories:** Productivity, Integration, Communication, Automation
+
+**Install:**
+```bash
+/plugin install srp-allstaff@srp-claude-code-marketplace
+```
+
+**Skills:** `/lark-docs`, `/lark-messages`
+
+**Commands:** `srp:docs`, `srp:msg`
+
+**Key Features:**
+- Lark/Feishu: Documents, wiki, messages, notifications
+- Rube Automation: Gmail, Slack, Google Calendar, Drive
+- Project Management: GitHub, Linear, Notion
+- Communication: WhatsApp, Twitter, PagerDuty
+
+**Location:** [plugins/srp-allstaff](plugins/srp-allstaff)
+
+---
+
+### SRP Developer
+
+**Description:** Developer plugin providing GitHub integration, GCP BigQuery access, and development tools
+
+**Categories:** Development, GitHub, GCP, Data Analysis
+
+**Install:**
+```bash
+/plugin install srp-developer@srp-claude-code-marketplace
+```
+
+**Skills:** `/github-integration`, `/gcp-developer`
+
+**Commands:** `srp:github`, `srp:gcp`, `srp:gh`, `srp:bq`
+
+**Location:** [plugins/srp-developer](plugins/srp-developer)
+
+---
+
+### SRP DevOps
+
+**Description:** DevOps plugin providing Kubernetes management, cloud resource monitoring, and operations tools
+
+**Categories:** DevOps, Kubernetes, Cloud, Operations
+
+**Install:**
+```bash
+/plugin install srp-devops@srp-claude-code-marketplace
+```
+
+**Skills:** `/k8s-management`, `/cloud-resources`
+
+**Commands:** `srp:k8s`, `srp:cloud`
+
+**Location:** [plugins/srp-devops](plugins/srp-devops)
+
+---
+
 ### Example Hello World
 
 **Description:** Example plugin demonstrating basic Claude Code skill structure
@@ -28,21 +91,6 @@ Add this marketplace to Claude Code:
 **Skills:** `/hello-world`
 
 **Location:** [plugins/example-hello-world](plugins/example-hello-world)
-
----
-
-### Feishu Notify
-
-**Description:** Feishu notification plugin for Claude Code - sends notifications on permission requests and task completion
-
-**Categories:** Productivity, Integration
-
-**Install:**
-```bash
-/plugin install feishu-notify@srp-claude-code-marketplace
-```
-
-**Location:** [plugins/feishu-notify](plugins/feishu-notify)
 
 ---
 
@@ -178,7 +226,11 @@ srp-claude-code-marketplace/
 │   │   │   └── hello-world/
 │   │   │       └── SKILL.md
 │   │   └── README.md
-│   └── feishu-notify/             # Another plugin
+│   ├── srp-allstaff/              # SRP AllStaff plugin
+│   │   └── ...
+│   ├── srp-developer/             # SRP Developer plugin
+│   │   └── ...
+│   └── srp-devops/                # SRP DevOps plugin
 │       └── ...
 ├── README.md                      # This file
 └── LICENSE                        # MIT License
@@ -198,7 +250,7 @@ srp-claude-code-marketplace/
 For questions or help:
 - Open an issue in this repository
 - Check the [example-hello-world plugin](plugins/example-hello-world) for reference
-- Contact the Infrastructure team
+- Contact the Infrastructure team (infra@srp.one)
 - Check #infrastructure channel in Slack
 
 ## License

@@ -1,10 +1,10 @@
 {
   "name": "srp-developer",
-  "version": "1.0.0",
-  "description": "SRP开发者插件 - 扩展allstaff功能，增加GitHub集成、GCP开发者访问等开发工具",
+  "version": "1.0.1",
+  "description": "SRP developer plugin - GitHub integration, GCP BigQuery access, and development tools",
   "author": {
     "name": "SRP Team",
-    "email": "team@srp.one"
+    "email": "infra@srp.one"
   },
   "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-developer",
   "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",

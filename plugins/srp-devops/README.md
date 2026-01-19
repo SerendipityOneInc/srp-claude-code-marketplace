@@ -1,53 +1,30 @@
-# SRP DevOps Plugin (SRP运维插件)
+# SRP DevOps Plugin
 
-运维专用插件，扩展 srp-allstaff 功能，增加 Kubernetes 管理、云资源监控、告警处理等运维工具。
+DevOps plugin providing Kubernetes management, cloud resource monitoring, and operations tools.
 
-DevOps-specific plugin that extends srp-allstaff with Kubernetes management, cloud resource monitoring, alert handling, and other operations tools.
+## Overview
 
-## Overview (概述)
+The SRP DevOps plugin provides essential DevOps tools including Kubernetes cluster management, GCP cloud resource monitoring, and infrastructure operations.
 
-The SRP DevOps plugin builds on the srp-allstaff foundation, adding essential DevOps tools including Kubernetes cluster management, GCP cloud resource monitoring, and infrastructure operations.
+## Features
 
-SRP运维插件基于 srp-allstaff 基础，增加了 Kubernetes 集群管理、GCP 云资源监控、基础设施运维等核心工具。
-
-## Features (功能特性)
-
-### 📦 Inherited from srp-allstaff (继承自 srp-allstaff)
-- 📄 Lark Docs Access (飞书云文档访问)
-- 💬 Lark Messages (飞书消息管理)
-
-### 🆕 DevOps-Specific Features (运维专属功能)
-
-#### ☸️ Kubernetes Management (Kubernetes 管理)
+#### ☸️ Kubernetes Management
 - View pod status and logs
 - Monitor deployments and services
 - Check resource usage
 - Troubleshoot cluster issues
 - **Read-only**: Safe investigation operations
 
-#### ☁️ Cloud Resources Management (云资源管理)
+#### ☁️ Cloud Resources Management
 - Manage GCP Compute Engine instances
 - Monitor Cloud Storage buckets
 - Review network and firewall rules
 - Audit resource access and security
 - Track costs and quotas
 
-## Prerequisites (前置要求)
+## Prerequisites
 
-### 1. Install srp-allstaff First (先安装 srp-allstaff)
-
-This plugin depends on srp-allstaff:
-```bash
-/plugin install srp-allstaff@srp-claude-code-marketplace
-```
-
-### 2. Set Up Environment Variables (设置环境变量)
-
-**Lark (from srp-allstaff):**
-```bash
-export LARK_APP_ID="cli_your_app_id"
-export LARK_APP_SECRET="your_app_secret"
-```
+### 1. Set Up Environment Variables
 
 **GCP:**
 ```bash
@@ -61,7 +38,7 @@ export GCP_ZONE="us-east1-b"
 source ~/.zshrc  # or source ~/.bashrc
 ```
 
-### 3. Install and Configure Tools (安装和配置工具)
+### 2. Install and Configure Tools
 
 **kubectl (for Kubernetes):**
 ```bash
@@ -91,7 +68,7 @@ gcloud config set project srpproduct-dc37e
 gcloud projects describe srpproduct-dc37e
 ```
 
-## Installation (安装)
+## Installation
 
 ```bash
 # Navigate to marketplace directory
@@ -101,16 +78,16 @@ cd ~/Downloads/srp-claude-code-marketplace
 /plugin install srp-devops@srp-claude-code-marketplace
 ```
 
-## Usage (使用方法)
+## Usage
 
-### Available Commands (可用命令)
+### Available Commands
 
 The plugin provides the following commands with the `srp:` namespace:
 
 | Command | Alias | Skill | Description |
 |---------|-------|-------|-------------|
-| `srp:k8s` | `srp:k8s-mgmt` | k8s-management | Kubernetes cluster management and monitoring<br/>K8s集群管理 |
-| `srp:cloud` | `srp:gcp-ops` | cloud-resources | Cloud resources management for GCP<br/>GCP云资源管理 |
+| `srp:k8s` | `srp:k8s-mgmt` | k8s-management | Kubernetes cluster management and monitoring |
+| `srp:cloud` | `srp:gcp-ops` | cloud-resources | Cloud resources management for GCP |
 
 **Usage examples:**
 ```bash
@@ -127,7 +104,7 @@ srp:gcp-ops
 /cloud-resources
 ```
 
-### Skill 1: Kubernetes Management (Kubernetes 管理)
+### Skill 1: Kubernetes Management
 
 **Activate the skill:**
 ```bash
@@ -136,15 +113,6 @@ srp:k8s  # or srp:k8s-mgmt or /k8s-management
 
 **Example prompts:**
 
-Chinese (中文):
-```
-显示 production namespace 中的所有 pods
-查看 pod api-server-abc123 的日志
-检查集群资源使用情况
-哪些 pods 出现了问题？
-```
-
-English:
 ```
 List all pods in the production namespace
 Get logs from pod api-server-abc123
@@ -159,7 +127,7 @@ Which pods are having issues?
 - 🔍 Troubleshoot issues
 - ⚠️ **Read-only**: No modifications
 
-### Skill 2: Cloud Resources (云资源管理)
+### Skill 2: Cloud Resources
 
 **Activate the skill:**
 ```bash
@@ -168,15 +136,6 @@ srp:cloud  # or srp:gcp-ops or /cloud-resources
 
 **Example prompts:**
 
-Chinese (中文):
-```
-显示所有 GCE 实例
-列出所有 GCS buckets
-检查防火墙规则是否安全
-审计项目资源使用情况
-```
-
-English:
 ```
 List all Compute Engine instances
 Show all Cloud Storage buckets
@@ -191,7 +150,7 @@ Audit project resource usage
 - 📊 Track resource costs
 - ⚠️ Management operations require caution
 
-## Configuration (配置)
+## Configuration
 
 ### Tool Requirements
 
@@ -201,7 +160,7 @@ This plugin uses command-line tools:
 
 No additional MCP servers are required for this plugin.
 
-## Troubleshooting (故障排除)
+## Troubleshooting
 
 ### Issue 1: "kubectl: command not found"
 
@@ -247,9 +206,9 @@ No additional MCP servers are required for this plugin.
    - `roles/storage.objectViewer`
    - `roles/container.viewer`
 
-## Permissions & Security (权限与安全)
+## Permissions & Security
 
-### Kubernetes Access (Kubernetes 访问)
+### Kubernetes Access
 - Defined by RBAC roles
 - Read-only operations recommended
 - Required permissions:
@@ -257,27 +216,27 @@ No additional MCP servers are required for this plugin.
   - `services/list`, `deployments/list`
   - `nodes/list`
 
-### GCP Access (GCP 访问)
+### GCP Access
 - Defined by IAM roles
 - Read operations: Viewer roles
 - Management operations: Admin roles (use with caution)
 - All operations are logged in Cloud Audit Logs
 
-### Best Practices (最佳实践)
+### Best Practices
 - Use least privilege access
 - Prefer read-only operations for investigation
 - Follow change management for modifications
 - Document all infrastructure changes
 - Regular access reviews
 
-## Examples (示例场景)
+## Examples
 
-### Example 1: Troubleshoot Production Issue (生产问题排查)
+### Example 1: Troubleshoot Production Issue
 
 ```bash
 /k8s-management
 
-Prompt: "production namespace 中有 pod 在 crash，帮我排查原因"
+Prompt: "There are pods crashing in the production namespace, help me troubleshoot"
 
 Claude will:
 1. List pods in production namespace
@@ -288,12 +247,12 @@ Claude will:
 6. Suggest remediation steps
 ```
 
-### Example 2: Security Audit (安全审计)
+### Example 2: Security Audit
 
 ```bash
 /cloud-resources
 
-Prompt: "审计 GCP 防火墙规则，检查是否有安全风险"
+Prompt: "Audit GCP firewall rules and check for security risks"
 
 Claude will:
 1. List all firewall rules
@@ -304,21 +263,21 @@ Claude will:
 6. Recommend remediation actions
 ```
 
-### Example 3: Resource Optimization (资源优化)
+### Example 3: Resource Optimization
 
 ```bash
 # Check Kubernetes resources
 /k8s-management
-Prompt: "哪些 pods 占用资源最多？"
+Prompt: "Which pods are using the most resources?"
 
 # Then check GCP resources
 /cloud-resources
-Prompt: "显示 GCE 实例的资源使用和成本"
+Prompt: "Show GCE instance resource usage and costs"
 
 Claude will provide comprehensive resource analysis across K8s and GCP.
 ```
 
-## Limitations (限制)
+## Limitations
 
 ### Current Limitations
 - Uses CLI tools (kubectl, gcloud) not direct APIs
@@ -336,7 +295,7 @@ Claude will provide comprehensive resource analysis across K8s and GCP.
 - Cost optimization recommendations
 - Terraform/IaC integration
 
-## Support (支持)
+## Support
 
 ### Documentation
 - Plugin: `plugins/srp-devops/README.md` (this file)
@@ -345,20 +304,20 @@ Claude will provide comprehensive resource analysis across K8s and GCP.
   - `plugins/srp-devops/skills/cloud-resources/SKILL.md`
 
 ### Getting Help
-- Internal support: Contact SRP Team (team@srp.one)
+- Internal support: Contact SRP Team (infra@srp.one)
 - Kubernetes docs: https://kubernetes.io/docs/
 - GCP docs: https://cloud.google.com/docs
 
-## Safety Guidelines (安全指南)
+## Safety Guidelines
 
-### Read-Only Operations (只读操作) ✅
+### Read-Only Operations ✅
 - List resources
 - View status and logs
 - Check configurations
 - Monitor metrics
 - Safe for investigation
 
-### Management Operations (管理操作) ⚠️
+### Management Operations ⚠️
 - Restart pods/instances
 - Modify configurations
 - Create/delete resources
@@ -367,23 +326,23 @@ Claude will provide comprehensive resource analysis across K8s and GCP.
 
 **Always follow change management processes for any infrastructure modifications.**
 
-## Version History (版本历史)
+## Version History
+
+### v1.0.1 (2026-01-19)
+- Changed owner email to infra@srp.one
 
 ### v1.0.0 (2026-01-16)
 - Initial release
-- Depends on srp-allstaff v1.0.0
 - Kubernetes Management skill
 - Cloud Resources skill
-- Bilingual documentation
 
-## License (许可证)
+## License
 
 Internal use only by SRP (Serendipity One Inc.) employees.
 
 ---
 
 **Plugin Name:** srp-devops
-**Version:** 1.0.0
-**Dependencies:** srp-allstaff ^1.0.0
-**Author:** SRP Team (team@srp.one)
+**Version:** 1.0.1
+**Author:** SRP Team (infra@srp.one)
 **Tags:** kubernetes, k8s, monitoring, devops, gcp, cloud

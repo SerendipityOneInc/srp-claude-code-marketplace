@@ -1,62 +1,111 @@
-# SRP AllStaff Plugin (SRP全员插件)
+# SRP AllStaff Plugin
 
-飞书集成工具，为SRP全体员工提供云文档访问和消息管理功能。
+Lark/Feishu integration and office automation platform for all SRP staff, providing cloud document access, message management, and seamless integration with productivity tools.
 
-Lark/Feishu integration tools for all SRP staff, providing cloud document access and message management capabilities.
+## Overview
 
-## Overview (概述)
+The SRP AllStaff plugin provides seamless integration with Lark (Feishu) and comprehensive office automation through Rube. Access documents, wiki pages, group chats, messages, and automate workflows across Gmail, Slack, Google Calendar, Google Drive, GitHub, Linear, and more. All operations use the authenticated user's identity and permissions.
 
-The SRP AllStaff plugin provides seamless integration with Lark (Feishu) to access documents, wiki pages, group chats, and messages directly from Claude Code. All operations use the authenticated user's identity and permissions.
+## Features
 
-SRP全员插件提供与飞书的无缝集成，可以直接在Claude Code中访问文档、知识库、群聊和消息。所有操作都使用用户的身份和权限。
-
-## Features (功能特性)
-
-### 📄 Lark Docs Access (飞书云文档访问)
-- Search across all document types (文档、表格、多维表格、知识库)
+### 📄 Lark Docs Access
+- Search across all document types
 - Read document content with user permissions
 - Navigate wiki spaces and pages
 - Access documents, sheets, bitables, and wiki content
 - Bilingual support (Chinese and English)
 
-### 💬 Lark Messages (飞书消息管理)
+### 💬 Lark Messages
 - List all groups the user is a member of
 - View group members and their roles
 - Read message history from authorized groups
 - Send messages to groups and individuals
 - Search messages by time range and keywords
 
-## Prerequisites (前置要求)
+### 🔔 Feishu Notifications
+- Send notifications when Claude needs user confirmation
+- Alert on task completion
+- Customizable notification messages via webhook
+- Supports Notification and Stop hooks
 
-### 1. Lark Application Credentials (飞书应用凭证)
+### 🤖 Office Automation with Rube
+Rube provides AI-powered automation across your productivity tools:
 
-You need a Lark application with the following permissions:
+**Email & Communication:**
+- Gmail: Send emails, summarize today's emails, draft quick responses
+- Slack: Catch up on messages, send updates, search conversations
+- WhatsApp: Send messages and notifications
 
-**Required Scopes (必需权限):**
-- `im:chat:readonly` - Read group chats
-- `im:message:readonly` - Read messages
-- `im:message:send_as_user` - Send messages as user
-- `docx:document:readonly` - Read documents
-- `wiki:wiki:readonly` - Read wiki content
-- `contact:user:id:readonly` - Read user IDs
+**Calendar & Scheduling:**
+- Google Calendar: Block deep work time, schedule meetings, check availability
+- Automated time management and calendar coordination
 
-**How to obtain credentials (如何获取凭证):**
+**Document Management:**
+- Google Drive: Access, search, and manage documents
+- Create and organize files across Drive
 
-1. Go to [Lark Open Platform](https://open.feishu.cn/app)
-2. Create or select your application
-3. Navigate to **Credentials & Basic Info**
-4. Copy the **App ID** and **App Secret**
-5. Configure permissions under **Permissions & Scopes**
-6. Publish the app and get admin approval if required
+**Project Management:**
+- GitHub: Create issues, review PRs, manage repositories
+- Linear: Create and update issues, track project progress
+- Notion: Create tasks from emails, manage workspaces
 
-### 2. Environment Variables (环境变量)
+**Other Integrations:**
+- PagerDuty: Incident management and alerting
+- Twitter: Draft and post tweets
+- VSCode: Development workflow automation
 
-Set up the following environment variables with your Lark application credentials:
+**Example Use Cases:**
+- Automatically create Linear issues from important emails
+- Block calendar time for focused work based on project deadlines
+- Summarize daily Slack messages and send digest via email
+- Draft PR descriptions based on commit messages
+- Create meeting notes in Notion from calendar events
+
+## Prerequisites
+
+### 1. Lark Application Credentials
+
+The plugin uses the SRP shared Lark application with pre-configured permissions:
+
+**Application Details:**
+- **App ID:** `cli_a694efeda97c1013`
+- **App Name:** SRP Claude Code Integration
+- **Pre-configured Scopes:**
+  - `im:chat:readonly` - Read group chats
+  - `im:message:readonly` - Read messages
+  - `im:message:send_as_user` - Send messages as user
+  - `docx:document:readonly` - Read documents
+  - `wiki:wiki:readonly` - Read wiki content
+  - `contact:user:id:readonly` - Read user IDs
+
+**Note:** The application credentials are shared across all SRP staff. You don't need to create a new Lark application - simply use the provided credentials in the environment variables below.
+
+### 2. Rube API Key
+
+Get your Rube API key:
+
+1. Visit [Rube.app](https://rube.app/)
+2. Sign up or log in
+3. Go to Settings → API Keys
+4. Create a new API key
+5. Connect the services you want to use (Gmail, Slack, Calendar, etc.)
+
+### 3. Environment Variables
+
+Set up the following environment variables:
 
 ```bash
 # Add to ~/.zshrc or ~/.bashrc
-export LARK_APP_ID="cli_your_app_id_here"
-export LARK_APP_SECRET="your_app_secret_here"
+
+# Lark credentials
+export LARK_APP_ID="cli_a694efeda97c1013"
+export LARK_APP_SECRET="<obtain from SRP password manager or contact infra@srp.one>"
+
+# Rube API key for office automation
+export RUBE_API_KEY="your_rube_api_key_here"
+
+# Optional: For Feishu notifications
+export FEISHU_WEBHOOK_URL="https://open.feishu.cn/open-apis/bot/v2/hook/your_webhook_token"
 
 # Reload shell configuration
 source ~/.zshrc  # or source ~/.bashrc
@@ -66,11 +115,13 @@ source ~/.zshrc  # or source ~/.bashrc
 ```bash
 echo $LARK_APP_ID
 echo $LARK_APP_SECRET
+echo $RUBE_API_KEY
+echo $FEISHU_WEBHOOK_URL  # Optional
 ```
 
-### 3. MCP Server Configuration (MCP服务器配置)
+### 4. MCP Server Configuration
 
-The plugin uses the Lark MCP server with the following configuration in `.mcp.json`:
+The plugin uses two MCP servers with the following configuration in `.mcp.json`:
 
 ```json
 {
@@ -90,25 +141,46 @@ The plugin uses the Lark MCP server with the following configuration in `.mcp.js
         "auto"
       ],
       "env": {}
+    },
+    "rube": {
+      "type": "http",
+      "url": "https://rube.app/mcp",
+      "headers": {
+        "Authorization": "Bearer ${RUBE_API_KEY}"
+      }
     }
   }
 }
 ```
 
+**MCP Servers:**
+- **Lark MCP**: Provides Lark/Feishu integration
+- **Rube MCP**: Provides office automation across multiple services
+
 This configuration is automatically included when you install the plugin.
 
-## Installation (安装)
+## Installation
 
-### Step 1: Verify Environment Variables
+### Step 1: Set Environment Variables
 
-Ensure your Lark credentials are set:
+Set the required environment variables:
 
+```bash
+# Add to ~/.zshrc or ~/.bashrc
+export LARK_APP_ID="cli_a694efeda97c1013"
+export LARK_APP_SECRET="<obtain from SRP password manager or contact infra@srp.one>"
+export RUBE_API_KEY="your_rube_api_key_here"  # Get from https://rube.app/
+
+# Reload shell
+source ~/.zshrc  # or source ~/.bashrc
+```
+
+**Verify environment variables:**
 ```bash
 echo $LARK_APP_ID
 echo $LARK_APP_SECRET
+echo $RUBE_API_KEY
 ```
-
-If not set, refer to the Prerequisites section above.
 
 ### Step 2: Install the Plugin
 
@@ -129,16 +201,16 @@ Check that the plugin is installed:
 
 You should see `srp-allstaff` in the list of installed plugins.
 
-## Usage (使用方法)
+## Usage
 
-### Available Commands (可用命令)
+### Available Commands
 
 The plugin provides the following commands with the `srp:` namespace:
 
 | Command | Alias | Skill | Description |
 |---------|-------|-------|-------------|
-| `srp:lark-docs` | `srp:docs` | lark-docs | Access Lark documents and wiki<br/>飞书云文档与知识库 |
-| `srp:lark-messages` | `srp:msg` | lark-messages | Access Lark messages and groups<br/>飞书消息与群组 |
+| `srp:lark-docs` | `srp:docs` | lark-docs | Access Lark documents and wiki |
+| `srp:lark-messages` | `srp:msg` | lark-messages | Access Lark messages and groups |
 
 **Usage examples:**
 ```bash
@@ -155,24 +227,15 @@ srp:msg
 /lark-messages
 ```
 
-### Skill 1: Lark Docs Access (飞书云文档)
+### Skill 1: Lark Docs Access
 
 **Activate the skill:**
 ```bash
 srp:lark-docs  # or srp:docs or /lark-docs
 ```
 
-**Example prompts (示例提示):**
+**Example prompts:**
 
-Chinese (中文):
-```
-搜索包含'OKR'的文档
-获取这个文档的内容：https://example.feishu.cn/docx/abc123
-在知识库中搜索关于'架构设计'的内容
-显示张三创建的所有文档
-```
-
-English:
 ```
 Search for documents containing 'product roadmap'
 Get the content of this document: https://example.feishu.cn/wiki/xyz789
@@ -187,24 +250,15 @@ Show all documents owned by John
 - 👤 Find documents by owner
 - 🔗 Access documents via URL
 
-### Skill 2: Lark Messages (飞书消息)
+### Skill 2: Lark Messages
 
 **Activate the skill:**
 ```bash
 srp:lark-messages  # or srp:msg or /lark-messages
 ```
 
-**Example prompts (示例提示):**
+**Example prompts:**
 
-Chinese (中文):
-```
-显示我加入的所有群聊
-产品团队群有哪些成员?
-获取工程团队群最近的消息
-给产品团队发消息："会议推迟到明天"
-```
-
-English:
 ```
 List all my group chats
 Show members of the "Engineering Team" group
@@ -219,7 +273,81 @@ Send message to "Engineering Team": "Meeting rescheduled to tomorrow"
 - ✉️ Send messages
 - 🔍 Search messages by time
 
-## Configuration (配置)
+### Hooks: Feishu Notifications
+
+The plugin includes notification hooks that send Feishu messages when Claude needs your attention or completes tasks.
+
+**Setup:**
+
+1. Create a custom bot in your Feishu group:
+   - Open the group chat in Feishu
+   - Click Settings → Bots → Add Bot
+   - Create a custom bot and copy the webhook URL
+
+2. Set the webhook URL as an environment variable:
+```bash
+export FEISHU_WEBHOOK_URL="https://open.feishu.cn/open-apis/bot/v2/hook/your_webhook_token"
+```
+
+**Supported hooks:**
+- 🔐 **Notification**: Triggers when Claude needs user confirmation
+- ✅ **Stop**: Triggers when Claude completes a task
+
+**How it works:**
+The notification hook automatically sends a message to your Feishu group when:
+- Claude needs permission to run a command
+- Claude completes a long-running task
+- Claude enters an idle state waiting for user input
+
+### Using Rube for Office Automation
+
+Once configured, you can use natural language to automate tasks across your connected services:
+
+**Example prompts:**
+
+```
+# Email management
+"Summarize my unread emails from today and send me a digest"
+"Send an email to john@example.com about the project update"
+"Draft a follow-up email based on the last conversation"
+
+# Calendar management
+"Block 2 hours on my calendar for deep work tomorrow afternoon"
+"Schedule a meeting with the team next Tuesday at 2pm"
+"What's on my calendar for today?"
+
+# Slack integration
+"Catch up on messages in the #engineering channel from yesterday"
+"Send a message to #general: Meeting moved to 3pm"
+"Search for discussions about the new API in Slack"
+
+# Document management
+"Find the Q4 planning document in Google Drive"
+"Create a new folder in Drive for the marketing project"
+"Share the design doc with the team"
+
+# Project management
+"Create a Linear issue: Fix login bug on mobile"
+"Update issue INF-341 status to In Progress"
+"Create a GitHub issue for the API documentation"
+
+# Cross-tool automation
+"Create a Linear issue from my latest email about the bug report"
+"Schedule time to work on my top 3 Linear issues this week"
+"Draft a tweet about our new feature launch"
+```
+
+**Available Tools:**
+Rube provides tools for all connected services. The specific tools depend on which integrations you've configured in your Rube account. Common tools include:
+- Email sending and reading (Gmail)
+- Calendar event management (Google Calendar)
+- Message sending (Slack, WhatsApp)
+- File operations (Google Drive)
+- Issue creation and updates (GitHub, Linear, Notion)
+- Tweet drafting (Twitter)
+- Incident management (PagerDuty)
+
+## Configuration
 
 ### MCP Server Configuration
 
@@ -241,7 +369,7 @@ Plugin information is defined in:
 plugins/srp-allstaff/.claude-plugin/plugin.json
 ```
 
-## Troubleshooting (故障排除)
+## Troubleshooting
 
 ### Issue 1: "Invalid token" or "Authentication failed"
 
@@ -251,22 +379,20 @@ plugins/srp-allstaff/.claude-plugin/plugin.json
 
 1. Verify environment variables are set correctly:
    ```bash
-   echo $LARK_APP_ID
-   echo $LARK_APP_SECRET
+   echo $LARK_APP_ID  # Should output: cli_a694efeda97c1013
+   echo $LARK_APP_SECRET  # Should output the secret value
    ```
-2. Verify your Lark app credentials are valid in [Lark Open Platform](https://open.feishu.cn/app)
-3. Ensure the app has the required scopes/permissions enabled
-4. Check that the app is published and approved (if required)
-5. Restart Claude Code after setting environment variables
 
-**Alternative: Use login command (optional)**
+2. If not set, add them to your shell configuration:
+   ```bash
+   export LARK_APP_ID="cli_a694efeda97c1013"
+   export LARK_APP_SECRET="<obtain from SRP password manager or contact infra@srp.one>"
+   source ~/.zshrc  # or source ~/.bashrc
+   ```
 
-If you prefer not to use environment variables, you can also authenticate using:
-```bash
-npx -y @larksuiteoapi/lark-mcp login -a cli_your_app_id -s your_app_secret
-```
+3. Restart Claude Code after setting environment variables
 
-However, the plugin is configured to use environment variables by default.
+**Note:** The SRP shared Lark application is pre-configured with all required permissions. If you still have authentication issues after setting the environment variables, contact SRP Team (infra@srp.one).
 
 ### Issue 2: "Permission denied" when accessing documents
 
@@ -308,37 +434,73 @@ However, the plugin is configured to use environment variables by default.
 3. Verify network access to npm registry
 4. Try manually running: `npx -y @larksuiteoapi/lark-mcp --help`
 
-## Permissions & Security (权限与安全)
+### Issue 6: "Rube authentication failed"
 
-### User Identity (用户身份)
+**Problem:** Cannot use Rube automation features.
+
+**Solutions:**
+1. Verify RUBE_API_KEY is set:
+   ```bash
+   echo $RUBE_API_KEY
+   ```
+2. Check your API key is valid at https://rube.app/
+3. Ensure you've connected the services you want to use in Rube dashboard
+4. Restart Claude Code after setting the API key
+
+### Issue 7: "Service not connected in Rube"
+
+**Problem:** Cannot use a specific service (Gmail, Slack, etc.).
+
+**Solutions:**
+1. Log in to https://rube.app/
+2. Go to Connected Services or Integrations
+3. Connect the service you want to use
+4. Grant necessary permissions
+5. Try the operation again
+
+## Permissions & Security
+
+### User Identity
 - All operations use the authenticated user's Lark identity
 - OAuth flow ensures secure authentication
 - Token refresh is handled automatically
 
-### Permission Model (权限模型)
+### Permission Model
 - Document access: User's actual Lark permissions apply
 - Message access: Can only access groups the user is a member of
 - No privilege elevation: Cannot access restricted resources
 
-### Data Privacy (数据隐私)
-- No data is stored or logged by the plugin
-- All API calls go directly to Lark servers
-- Follows Lark's data privacy and security policies
+### Rube Security
+- OAuth-based authentication for connected services
+- API key stored as environment variable
+- All operations use your authenticated identity
+- Rube follows industry-standard security practices
+- Granular permissions per connected service
 
-### Best Practices (最佳实践)
+### Data Privacy
+- No data is stored or logged by the plugin
+- Lark API calls go directly to Lark servers
+- Rube acts as a proxy to connected services
+- All data handling follows respective service policies (Gmail, Slack, etc.)
+- Follows Lark's and Rube's data privacy policies
+
+### Best Practices
 - Only access documents and messages you need
+- Review and limit Rube service connections to what you actively use
+- Regularly audit connected services in Rube dashboard
 - Respect company data handling policies
 - Do not share sensitive information outside authorized channels
 - Use environment variables for credentials (never hardcode)
+- Rotate API keys periodically
 
-## Examples (示例场景)
+## Examples
 
-### Example 1: Daily Standup Summary (每日站会总结)
+### Example 1: Daily Standup Summary
 
 ```
 /lark-messages
 
-Prompt: "获取工程团队群昨天的所有消息,并总结关键讨论点"
+Prompt: "Get all messages from Engineering Team group from yesterday and summarize key discussion points"
 
 Result: Claude will:
 1. Find the "Engineering Team" group
@@ -347,25 +509,25 @@ Result: Claude will:
 4. Highlight action items and decisions
 ```
 
-### Example 2: Find Architecture Documentation (查找架构文档)
+### Example 2: Find Architecture Documentation
 
 ```
 /lark-docs
 
-Prompt: "在知识库中搜索'微服务架构',然后总结最重要的3个设计原则"
+Prompt: "Search wiki for 'microservices architecture' and summarize the top 3 design principles"
 
 Result: Claude will:
-1. Search wiki for "微服务架构"
+1. Search wiki for "microservices architecture"
 2. Retrieve relevant documentation
 3. Extract and summarize the top 3 design principles
 ```
 
-### Example 3: Team Communication (团队沟通)
+### Example 3: Team Communication
 
 ```
 /lark-messages
 
-Prompt: "给产品团队群的所有成员发送提醒：明天下午2点产品评审会"
+Prompt: "Send reminder to Product Team group: Product review meeting tomorrow at 2pm"
 
 Result: Claude will:
 1. Find the "Product Team" group
@@ -374,33 +536,80 @@ Result: Claude will:
 4. Confirm delivery
 ```
 
-## Limitations (限制)
+### Example 4: Cross-Platform Workflow Automation
 
-### Current Limitations
+```
+Prompt: "Check my urgent emails, create Linear issues for any bug reports, and block time on my calendar to work on them"
+
+Result: Claude will:
+1. Access Gmail and filter urgent emails
+2. Identify bug reports from email content
+3. Create Linear issues with details from emails
+4. Estimate time needed
+5. Block calendar time for bug fixes
+6. Provide summary of actions taken
+```
+
+### Example 5: Daily Productivity Routine
+
+```
+Prompt: "Give me my daily briefing: summarize today's calendar, recent Slack mentions, and top 3 Linear issues I should focus on"
+
+Result: Claude will:
+1. Check Google Calendar for today's schedule
+2. Search Slack for messages mentioning you
+3. Query Linear for your assigned high-priority issues
+4. Generate a concise daily briefing
+5. Suggest time blocks for focused work
+```
+
+### Example 6: Communication Automation
+
+```
+Prompt: "Draft a project update email based on completed Linear issues this week, and send it to the team Slack channel"
+
+Result: Claude will:
+1. Query Linear for completed issues this week
+2. Draft a comprehensive update email
+3. Review with you for approval
+4. Send to specified email recipients
+5. Post summary in Slack channel
+6. Confirm all actions completed
+```
+
+## Limitations
+
+### Lark Limitations
 - Cannot edit or create documents (read-only)
 - Cannot modify group settings or membership
 - Wiki editing not supported
 - File upload requires separate workflow
 - Cannot access archived groups or messages
 
+### Rube Limitations
+- Depends on which services you've connected in Rube
+- Each service has its own rate limits and permissions
+- Some services require OAuth authorization flow
+- Complex automations may require multiple steps
+
 ### Known Issues
 - Large message histories may take time to load
 - Document search limited to 50 results per query
 - Group names must match exactly for searching
 - OAuth token refresh may occasionally fail (retry works)
+- Rube service connections need to be refreshed periodically
 
-## Future Enhancements (未来增强)
+## Future Enhancements
 
 Planned features for future versions:
-- 📅 Calendar integration
-- ✅ Approval workflow management
 - 📎 File upload and management
 - 🔧 Document creation and editing
 - 📊 Bitable (multi-dimensional table) operations
-- 🔔 Notification management
 - 📱 Mobile app integration
+- 🤖 Pre-built automation templates for common workflows
+- 📋 Workflow scheduling and recurring tasks
 
-## Support (支持)
+## Support
 
 ### Documentation
 - Plugin: `plugins/srp-allstaff/README.md` (this file)
@@ -408,28 +617,37 @@ Planned features for future versions:
   - `plugins/srp-allstaff/skills/lark-docs/SKILL.md`
   - `plugins/srp-allstaff/skills/lark-messages/SKILL.md`
 - Lark Open Platform: https://open.feishu.cn/document
+- Rube Documentation: https://rube.app/
+- Rube MCP Market: https://mcpmarket.com/server/rube
 
 ### Getting Help
-- Internal support: Contact SRP Team (team@srp.one)
+- Internal support: Contact SRP Team (infra@srp.one)
 - Lark API docs: https://open.feishu.cn/document
+- Rube support: https://rube.app/
 - Claude Code docs: https://code.claude.com/docs
 
-## Version History (版本历史)
+## Version History
+
+### v1.0.1 (2026-01-19)
+- Added Rube MCP for office automation (Gmail, Slack, Calendar, Drive, GitHub, Linear, PagerDuty, etc.)
+- Integrated Feishu notification hooks (merged from feishu-notify plugin)
+- Added webhook-based notifications for permission requests and task completion
+- Updated documentation with Rube automation examples and setup instructions
+- Changed owner email to infra@srp.one
 
 ### v1.0.0 (2026-01-16)
 - Initial release
 - Lark Docs Access skill
 - Lark Messages skill
-- OAuth authentication support
-- Bilingual documentation (Chinese and English)
+- OAuth authentication support (Chinese and English)
 
-## License (许可证)
+## License
 
 Internal use only by SRP (Serendipity One Inc.) employees.
 
 ---
 
 **Plugin Name:** srp-allstaff
-**Version:** 1.0.0
-**Author:** SRP Team (team@srp.one)
-**Tags:** lark, feishu, documents, messaging, allstaff
+**Version:** 1.0.1
+**Author:** SRP Team (infra@srp.one)
+**Tags:** lark, feishu, documents, messaging, allstaff, automation, rube, gmail, slack, calendar, productivity

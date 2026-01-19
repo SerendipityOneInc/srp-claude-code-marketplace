@@ -1,24 +1,14 @@
-# SRP Developer Plugin (SRP开发者插件)
+# SRP Developer Plugin
 
-开发者专用插件，扩展 srp-allstaff 功能，增加 GitHub 集成、GCP 只读访问等开发工具。
+Developer plugin providing GitHub integration, GCP BigQuery access, and development tools.
 
-Developer-specific plugin that extends srp-allstaff with GitHub integration, GCP read-only access, and other development tools.
+## Overview
 
-## Overview (概述)
+The SRP Developer plugin provides essential development tools including GitHub code review, PR management, BigQuery data access, and more.
 
-The SRP Developer plugin builds on the srp-allstaff foundation, adding essential development tools including GitHub code review, PR management, BigQuery data access, and more.
+## Features
 
-SRP开发者插件基于 srp-allstaff 基础，增加了 GitHub 代码审查、PR 管理、BigQuery 数据访问等核心开发工具。
-
-## Features (功能特性)
-
-### 📦 Inherited from srp-allstaff (继承自 srp-allstaff)
-- 📄 Lark Docs Access (飞书云文档访问)
-- 💬 Lark Messages (飞书消息管理)
-
-### 🆕 Developer-Specific Features (开发者专属功能)
-
-#### 🐙 GitHub Integration (GitHub 集成)
+#### 🐙 GitHub Integration
 - View and search pull requests
 - Code review and comments
 - Issue tracking and management
@@ -26,28 +16,15 @@ SRP开发者插件基于 srp-allstaff 基础，增加了 GitHub 代码审查、P
 - Commit history and diffs
 - CI/CD status checking
 
-#### ☁️ GCP Read-Only Access (GCP 只读访问)
+#### ☁️ GCP Developer Access
 - BigQuery data queries
 - Table schema viewing
 - Data analysis and aggregation
 - **Read-only**: No data modification allowed
 
-## Prerequisites (前置要求)
+## Prerequisites
 
-### 1. Install srp-allstaff First (先安装 srp-allstaff)
-
-This plugin depends on srp-allstaff:
-```bash
-/plugin install srp-allstaff@srp-claude-code-marketplace
-```
-
-### 2. Set Up Environment Variables (设置环境变量)
-
-**Lark (from srp-allstaff):**
-```bash
-export LARK_APP_ID="cli_your_app_id"
-export LARK_APP_SECRET="your_app_secret"
-```
+### 1. Set Up Environment Variables
 
 **GitHub:**
 ```bash
@@ -65,13 +42,13 @@ export GCP_LOCATION="us-east1"
 source ~/.zshrc  # or source ~/.bashrc
 ```
 
-### 3. GCP Authentication (GCP 认证)
+### 2. GCP Authentication
 
 ```bash
 gcloud auth application-default login
 ```
 
-## Installation (安装)
+## Installation
 
 ```bash
 # Navigate to marketplace directory
@@ -81,16 +58,16 @@ cd ~/Downloads/srp-claude-code-marketplace
 /plugin install srp-developer@srp-claude-code-marketplace
 ```
 
-## Usage (使用方法)
+## Usage
 
-### Available Commands (可用命令)
+### Available Commands
 
 The plugin provides the following commands with the `srp:` namespace:
 
 | Command | Alias | Skill | Description |
 |---------|-------|-------|-------------|
-| `srp:github` | `srp:gh` | github-integration | GitHub integration for code review and PR management<br/>GitHub集成 |
-| `srp:gcp` | `srp:bq` | gcp-developer | GCP access for developers - BigQuery and data analysis<br/>GCP开发者访问 |
+| `srp:github` | `srp:gh` | github-integration | GitHub integration for code review and PR management |
+| `srp:gcp` | `srp:bq` | gcp-developer | GCP access for developers - BigQuery and data analysis |
 
 **Usage examples:**
 ```bash
@@ -107,7 +84,7 @@ srp:bq
 /gcp-developer
 ```
 
-### Skill 1: GitHub Integration (GitHub 集成)
+### Skill 1: GitHub Integration
 
 **Activate the skill:**
 ```bash
@@ -116,15 +93,6 @@ srp:github  # or srp:gh or /github-integration
 
 **Example prompts:**
 
-Chinese (中文):
-```
-显示 SerendipityOneInc/srp-claude-code-marketplace 的 PR 列表
-审查 PR #10 的代码变更
-创建一个 issue：添加 DevOps 插件功能
-检查 PR #15 的构建状态
-```
-
-English:
 ```
 List open PRs in SerendipityOneInc/srp-claude-code-marketplace
 Review code changes in PR #10
@@ -139,7 +107,7 @@ Check CI/CD status of PR #15
 - ✅ Check CI/CD status
 - 💬 Add review comments
 
-### Skill 2: GCP Developer Access (GCP 开发者访问)
+### Skill 2: GCP Developer Access
 
 **Activate the skill:**
 ```bash
@@ -148,15 +116,6 @@ srp:gcp  # or srp:bq or /gcp-developer
 
 **Example prompts:**
 
-Chinese (中文):
-```
-显示所有 BigQuery 表
-查询表 analytics.user_events 的前 10 行
-分析昨天的用户活跃数据
-显示表 dataset.table 的字段结构
-```
-
-English:
 ```
 List all BigQuery tables
 Query first 10 rows from analytics.user_events
@@ -171,7 +130,7 @@ Show schema of table dataset.table
 - 📈 Analyze data
 - ⚠️ **Read-only**: No data modification
 
-## Configuration (配置)
+## Configuration
 
 ### MCP Servers
 
@@ -215,7 +174,7 @@ plugins/srp-developer/.mcp.json
 }
 ```
 
-## Troubleshooting (故障排除)
+## Troubleshooting
 
 ### Issue 1: "GitHub token invalid"
 
@@ -243,46 +202,35 @@ plugins/srp-developer/.mcp.json
 3. Verify GCP_PROJECT_ID is correct
 4. Contact GCP admin for access
 
-### Issue 3: "Plugin dependency missing"
+## Permissions & Security
 
-**Problem:** srp-allstaff not installed.
-
-**Solutions:**
-1. Install srp-allstaff first:
-   ```bash
-   /plugin install srp-allstaff@srp-claude-code-marketplace
-   ```
-2. Then reinstall srp-developer
-
-## Permissions & Security (权限与安全)
-
-### GitHub Access (GitHub 访问)
+### GitHub Access
 - Read repositories, PRs, issues
 - Create and update issues
 - Submit code reviews
 - Cannot merge PRs or modify repo settings
 
-### GCP Access (GCP 访问)
+### GCP Access
 - **Read-only**: Query data, view schemas
 - Cannot modify data (INSERT, UPDATE, DELETE)
 - Cannot create or drop tables
 - All queries are logged
 
-### Best Practices (最佳实践)
+### Best Practices
 - Only access data you need
 - Use LIMIT for exploratory queries
 - Follow company data policies
 - Do not share sensitive data
 - Use environment variables for credentials
 
-## Examples (示例场景)
+## Examples
 
-### Example 1: PR Review Workflow (PR 审查工作流)
+### Example 1: PR Review Workflow
 
 ```bash
 /github-integration
 
-Prompt: "审查 SerendipityOneInc/srp-claude-code-marketplace 的 PR #12"
+Prompt: "Review PR #12 in SerendipityOneInc/srp-claude-code-marketplace"
 
 Claude will:
 1. Get PR details and changed files
@@ -292,12 +240,12 @@ Claude will:
 5. (Optional) Submit review comments
 ```
 
-### Example 2: Data Analysis (数据分析)
+### Example 2: Data Analysis
 
 ```bash
 /gcp-developer
 
-Prompt: "分析 analytics.user_events 表中昨天最活跃的 10 个事件类型"
+Prompt: "Analyze the top 10 most active event types from analytics.user_events table yesterday"
 
 Claude will:
 1. Query the analytics.user_events table
@@ -307,23 +255,7 @@ Claude will:
 5. Provide insights and recommendations
 ```
 
-### Example 3: Combined Workflow (组合工作流)
-
-```bash
-# First, check Lark messages
-/lark-messages
-Prompt: "显示工程团队群的最新消息"
-
-# Then, review related PR
-/github-integration
-Prompt: "审查消息中提到的 PR #15"
-
-# Finally, check data impact
-/gcp-developer
-Prompt: "查询相关功能的使用数据"
-```
-
-## Limitations (限制)
+## Limitations
 
 ### Current Limitations
 - GCP: BigQuery only (GCS and GKE coming soon)
@@ -339,7 +271,7 @@ Prompt: "查询相关功能的使用数据"
 - Automated code review suggestions
 - Integration with monitoring tools
 
-## Support (支持)
+## Support
 
 ### Documentation
 - Plugin: `plugins/srp-developer/README.md` (this file)
@@ -348,27 +280,27 @@ Prompt: "查询相关功能的使用数据"
   - `plugins/srp-developer/skills/gcp-developer/SKILL.md`
 
 ### Getting Help
-- Internal support: Contact SRP Team (team@srp.one)
+- Internal support: Contact SRP Team (infra@srp.one)
 - GitHub API docs: https://docs.github.com/rest
 - BigQuery SQL reference: https://cloud.google.com/bigquery/docs/reference/standard-sql
 
-## Version History (版本历史)
+## Version History
+
+### v1.0.1 (2026-01-19)
+- Changed owner email to infra@srp.one
 
 ### v1.0.0 (2026-01-16)
 - Initial release
-- Depends on srp-allstaff v1.0.0
 - GitHub Integration skill
-- GCP Read-Only skill (BigQuery)
-- Bilingual documentation
+- GCP Developer skill (BigQuery)
 
-## License (许可证)
+## License
 
 Internal use only by SRP (Serendipity One Inc.) employees.
 
 ---
 
 **Plugin Name:** srp-developer
-**Version:** 1.0.0
-**Dependencies:** srp-allstaff ^1.0.0
-**Author:** SRP Team (team@srp.one)
+**Version:** 1.0.1
+**Author:** SRP Team (infra@srp.one)
 **Tags:** github, gcp, bigquery, cicd, developer, code-review

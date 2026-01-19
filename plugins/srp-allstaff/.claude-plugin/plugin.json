@@ -1,10 +1,10 @@
 {
   "name": "srp-allstaff",
-  "version": "1.0.0",
-  "description": "SRP全员插件 - 飞书集成工具（云文档、消息与群组）",
+  "version": "1.0.1",
+  "description": "SRP AllStaff plugin - Lark/Feishu integration and office automation with Rube (Gmail, Slack, Calendar, Drive, GitHub, Linear, etc.)",
   "author": {
     "name": "SRP Team",
-    "email": "team@srp.one"
+    "email": "infra@srp.one"
   },
   "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-allstaff",
   "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",

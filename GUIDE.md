@@ -515,7 +515,7 @@ Claude 使用 /srp:k8s：
 1. 确认环境变量已正确设置（`echo $LARK_APP_ID`）
 2. 重启 Claude Code 或重新加载配置（`source ~/.zshrc`）
 3. 验证 MCP 服务器是否正常运行（查看 Claude Code 日志）
-4. 在 GitHub Issues 提交问题或联系 IT 部门寻求帮助
+4. 在 [GitHub Issues](https://github.com/SerendipityOneInc/srp-claude-code-marketplace/issues) 提交问题寻求帮助
 
 ### Q2：为什么我看不到某些飞书文档？
 
@@ -570,23 +570,26 @@ Claude 使用 /srp:k8s：
 
 ---
 
-## 📞 获取帮助
+## 📞 获取帮助与反馈
 
-### 支持渠道
+我们非常欢迎你的反馈和建议！请通过 **GitHub Issues** 来帮助我们改进：
 
-- **GitHub Issues**：https://github.com/SerendipityOneInc/srp-claude-code-marketplace/issues
-- **Linear 任务**：INF-341
-- **飞书群组**：联系 IT 部门获取技术支持群
-- **Email**：team@srp.one
+**👉 https://github.com/SerendipityOneInc/srp-claude-code-marketplace/issues**
 
-### 反馈与建议
+你可以在这里：
+- 🐛 **报告 Bug** - 遇到问题？告诉我们，我们会尽快修复
+- 💡 **提出功能建议** - 有好想法？我们很乐意听取
+- 📚 **改进文档** - 发现文档不清楚的地方？帮助我们完善
+- 🔌 **请求新插件** - 需要某个工具的集成？提交你的需求
+- ❓ **寻求帮助** - 使用中遇到困难？在 Issues 中提问
 
-我们欢迎你的反馈！如果你有以下需求，请随时联系我们：
+**如何提交 Issue：**
+1. 访问上述 GitHub Issues 链接
+2. 点击 "New Issue" 按钮
+3. 选择合适的模板（Bug Report / Feature Request / Question）
+4. 填写详细信息并提交
 
-- 🐛 报告 Bug
-- 💡 功能建议
-- 📚 文档改进
-- 🔌 新插件需求
+你的每一个反馈都能帮助我们做得更好！🙏
 
 ---
 
@@ -753,16 +756,15 @@ Claude：代码质量检查中...
 如果你对以上优化方向有想法或建议：
 
 1. **提交 Feature Request**
-   - 在 GitHub Issues 中创建新的 Feature Request
+   - 在 [GitHub Issues](https://github.com/SerendipityOneInc/srp-claude-code-marketplace/issues) 中创建新的 Feature Request
    - 标签：`enhancement`
 
 2. **参与开发**
    - Fork 仓库并创建 PR
    - 参考 [贡献指南](#贡献指南)
 
-3. **反馈意见**
-   - 飞书群组中讨论
-   - 联系 Infrastructure 团队
+3. **提供反馈**
+   - 在 GitHub Issues 中分享你的使用体验和改进建议
 
 ---
 

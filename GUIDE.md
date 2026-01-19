@@ -12,7 +12,8 @@
 
 - **🔌 开箱即用**：预配置的插件，安装即可使用
 - **🔐 安全可靠**：基于你的真实身份和权限，无需担心权限泄露
-- **🚀 提升效率**：用自然语言操作飞书、GitHub、GCP、Kubernetes 等工具
+- **🚀 提升效率**：用自然语言操作飞书、Gmail、GitHub、GCP、Kubernetes 等工具
+- **🤖 智能自动化**：通过 Rube 实现跨应用办公自动化，告别重复性工作
 - **🔧 持续更新**：由 SRP 团队维护，定期增加新功能
 
 ---
@@ -23,7 +24,9 @@
 
 **面向人群**：所有 SRP 员工
 
-**功能**：飞书（Lark/Feishu）深度集成
+**功能**：飞书（Lark/Feishu）深度集成 + Rube 办公自动化
+
+#### 🔷 飞书集成
 
 **核心能力**：
 - ✅ **文档搜索**：快速查找云文档、电子表格、多维表格、知识库
@@ -34,6 +37,8 @@
 ```bash
 /srp:msg          # 飞书消息管理
 /srp:docs         # 飞书文档搜索
+/srp:lark-messages  # 飞书消息与群组访问
+/srp:lark-docs      # 飞书云文档权限访问
 ```
 
 **典型场景**：
@@ -42,6 +47,102 @@
 "显示产品团队群的最新消息"
 "给张三发送一条飞书消息：会议推迟到下午3点"
 ```
+
+#### 🤖 **Rube 办公自动化**（重要功能）
+
+> **强烈推荐**：所有 SRP 员工配置 Rube，实现跨应用的智能办公自动化
+
+**Rube 是什么？**
+
+Rube 是由 Composio 提供的 AI 自动化平台，让 Claude 能够直接操作你日常使用的各种办公工具。通过 Rube，你可以用自然语言指挥 AI 完成跨应用的复杂任务，大幅提升工作效率。
+
+**核心优势**：
+- 🔗 **统一接口**：一次配置，连接所有你的工作应用
+- 🤖 **智能执行**：AI 自动处理多步骤、跨应用的工作流
+- 🔐 **安全认证**：基于 OAuth 授权，遵循你的真实权限
+- 🎯 **场景丰富**：邮件、日历、任务、文档等全方位覆盖
+
+**支持的应用集成**：
+- ✉️ **Gmail / Google Workspace**：邮件管理、智能摘要、自动回复
+- 📅 **Google Calendar**：日程安排、会议管理、时间阻塞
+- 📁 **Google Drive**：文档搜索、文件管理、协作
+- 📋 **Linear**：任务创建、Issue 管理、项目追踪
+- 📝 **Notion**：笔记整理、知识库管理
+- 💬 **Slack**：消息管理、频道监控（可选）
+
+**推荐使用场景**：
+
+1. **📧 智能邮件助手**
+   ```
+   "总结今天所有未读邮件的要点"
+   "给 John 发一封邮件，主题是项目进度汇报"
+   "查找上周来自产品团队的所有邮件"
+   ```
+
+2. **📅 日历与时间管理**
+   ```
+   "明天上午 10 点安排一个 1 小时的团队会议"
+   "帮我在日历上标记下周的专注工作时间"
+   "查看本周我有哪些会议"
+   ```
+
+3. **✅ 任务流转自动化**
+   ```
+   "把这封邮件转成 Linear 任务"
+   "创建一个新的 Linear Issue：修复登录 Bug，优先级高"
+   "查看我在 Linear 上今天要完成的任务"
+   ```
+
+4. **📄 文档协作**
+   ```
+   "在 Google Drive 中搜索 Q1 OKR 相关的文档"
+   "创建一个新的 Google Doc，标题是会议纪要"
+   "把这段文字保存到 Notion 的工作笔记中"
+   ```
+
+5. **🔄 跨应用工作流**
+   ```
+   "从 Gmail 读取客户反馈邮件，创建 Linear Issue，并在 Notion 中记录"
+   "总结今天的 Slack 消息，整理成日报发送给我的邮箱"
+   "查看明天的日程，如果有空闲时间就创建一个专注时间块"
+   ```
+
+**如何配置 Rube？**
+
+1. **注册 Rube 账号**
+   - 访问：https://rube.app/
+   - 使用公司邮箱注册账号
+
+2. **连接你的工作应用**
+   - 登录后进入 Settings → Connections
+   - 依次授权连接：
+     - ✅ Gmail / Google Workspace（必需）
+     - ✅ Google Calendar（必需）
+     - ✅ Google Drive（推荐）
+     - ✅ Linear（推荐）
+     - ✅ Notion（可选）
+     - ✅ Slack（可选）
+
+3. **在 Claude Code 中配置**
+   - Rube 已集成在 `srp-allstaff` 插件中
+   - 安装插件后，Claude 会自动使用你的 Rube 连接
+   - 只需确保你在 https://rube.app/ 上完成了应用授权
+
+4. **验证配置**
+   ```
+   "帮我总结今天的邮件"
+   ```
+   如果能够成功执行，说明 Rube 配置成功！
+
+**注意事项**：
+- 🔐 首次使用时，Rube 会引导你完成 OAuth 授权流程
+- 🔐 你的凭证和数据不会被 SRP 或 Claude 直接访问
+- 🔐 所有操作都基于你的真实权限，不会越权
+- 💡 定期检查 https://rube.app/ 的连接状态，确保授权未过期
+
+**参考资源**：
+- 官方网站：https://rube.app/
+- MCP 市场：https://mcpmarket.com/server/rube
 
 ---
 
@@ -148,6 +249,60 @@ export LARK_APP_SECRET="your_app_secret"
 # 重新加载配置
 source ~/.zshrc
 ```
+
+#### 🤖 配置 Rube（srp-allstaff 强烈推荐）
+
+**重要提示**：配置 Rube 可以大幅提升办公效率，强烈建议所有员工完成配置！
+
+1. **注册并登录 Rube**
+   ```bash
+   # 访问 Rube 官网
+   open https://rube.app/
+   ```
+   - 使用你的公司邮箱注册账号
+   - 完成邮箱验证
+
+2. **连接你的工作应用**
+
+   登录后，在 Rube 网站上依次授权以下应用：
+
+   **必需连接**（基础办公）：
+   - ✅ **Gmail / Google Workspace** - 邮件管理
+   - ✅ **Google Calendar** - 日程管理
+
+   **推荐连接**（提升效率）：
+   - ✅ **Google Drive** - 文档管理
+   - ✅ **Linear** - 任务管理
+
+   **可选连接**（按需配置）：
+   - ✅ **Notion** - 笔记和知识库
+   - ✅ **Slack** - 团队沟通（如果你使用）
+
+3. **验证 Rube 配置**
+
+   安装 `srp-allstaff` 插件后，直接在 Claude Code 中测试：
+
+   ```bash
+   # 在 Claude Code 中尝试
+   "帮我总结今天的 Gmail 未读邮件"
+   ```
+
+   首次使用时，Rube 会自动引导你完成 OAuth 授权流程。
+
+4. **保持连接状态**
+
+   定期检查应用授权状态：
+   ```bash
+   # 访问 Rube Settings
+   open https://rube.app/settings
+   ```
+
+   如果某个应用显示"已过期"，重新授权即可。
+
+**故障排查**：
+- 如果 Rube 工具无法使用，先确认你已在 https://rube.app/ 上完成授权
+- 检查授权是否过期（访问 Rube Settings → Connections）
+- 尝试重新授权对应的应用
 
 #### 💻 配置 GitHub（srp-developer 必需）
 
@@ -306,9 +461,27 @@ Claude 使用 /srp:k8s：
 - **srp-developer**：仅读取权限（BigQuery SELECT 查询）
 - **srp-devops**：根据你的 GCP IAM 角色，可能包含管理权限（需谨慎操作）
 
-### Q6：我可以贡献新的插件吗？
+### Q6：Rube 是否安全？会不会泄露我的数据？
 
-**A6**：当然可以！这是一个内部开源项目：
+**A6**：Rube 的安全性有保障：
+- 🔐 使用标准 OAuth 2.0 授权流程，符合行业安全标准
+- 🔐 你的凭证（密码、Token）不会被 SRP 或 Claude 直接访问
+- 🔐 所有操作都基于你的真实权限，不会越权访问
+- 🔐 Rube 由 Composio 提供（知名 AI 工具集成平台），有完善的安全机制
+- 💡 你可以随时在 https://rube.app/ 上撤销授权
+
+### Q7：Rube 配置后为什么还是无法使用？
+
+**A7**：请按以下步骤排查：
+1. 确认已在 https://rube.app/ 上完成应用授权
+2. 检查授权是否过期（访问 Rube Settings → Connections）
+3. 确认 `srp-allstaff` 插件已正确安装
+4. 尝试重启 Claude Code
+5. 如果仍有问题，尝试重新授权对应的应用
+
+### Q8：我可以贡献新的插件吗？
+
+**A8**：当然可以！这是一个内部开源项目：
 1. Fork 仓库：https://github.com/SerendipityOneInc/srp-claude-code-marketplace
 2. 参考 `plugins/example-hello-world` 创建新插件
 3. 提交 PR，CI 会自动验证格式
@@ -338,13 +511,23 @@ Claude 使用 /srp:k8s：
 
 ## 🚀 快速上手检查清单
 
+**基础配置（所有员工）：**
 - [ ] 添加 marketplace 源
 - [ ] 安装 `srp-allstaff` 插件
 - [ ] 配置飞书环境变量（LARK_APP_ID, LARK_APP_SECRET）
+- [ ] 🌟 **注册并配置 Rube**（强烈推荐）
+  - [ ] 访问 https://rube.app/ 注册账号
+  - [ ] 连接 Gmail / Google Workspace
+  - [ ] 连接 Google Calendar
+  - [ ] 连接 Google Drive
+  - [ ] 连接 Linear
 - [ ] 重启 Claude Code
-- [ ] 尝试执行 `/srp:msg` 命令
-- [ ] （可选）安装 `srp-developer` 并配置 GitHub Token
-- [ ] （可选）安装 `srp-devops` 并配置 GCP/K8s
+- [ ] 尝试执行 `/srp:msg` 命令（测试飞书）
+- [ ] 尝试 "帮我总结今天的邮件"（测试 Rube）
+
+**进阶配置（开发者/运维）：**
+- [ ] （开发者）安装 `srp-developer` 并配置 GitHub Token
+- [ ] （运维）安装 `srp-devops` 并配置 GCP/K8s
 - [ ] 查看文档和 GitHub Issues 获取最新消息
 
 ---

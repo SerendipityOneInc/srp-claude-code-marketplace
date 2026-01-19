@@ -1,7 +1,7 @@
 {
   "name": "srp-developer",
-  "version": "1.0.1",
-  "description": "SRP developer plugin - GitHub integration, GCP BigQuery access, and development tools",
+  "version": "1.0.2",
+  "description": "SRP developer plugin - GitHub integration, GCP BigQuery access, Cloudflare Workers/Pages/R2/KV, and development tools",
   "author": {
     "name": "SRP Team",
     "email": "infra@srp.one"
@@ -9,5 +9,5 @@
   "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-developer",
   "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
   "license": "MIT",
-  "keywords": ["github", "gcp", "bigquery", "cicd", "developer", "code-review"]
+  "keywords": ["github", "gcp", "bigquery", "cloudflare", "workers", "pages", "r2", "kv", "edge-computing", "developer", "code-review"]
 }

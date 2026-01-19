@@ -41,18 +41,26 @@ Add this marketplace to Claude Code:
 
 ### SRP Developer
 
-**Description:** Developer plugin providing GitHub integration, GCP BigQuery access, and development tools
+**Description:** Developer plugin providing GitHub integration, GCP BigQuery access, Cloudflare edge computing & storage services, and development tools
 
-**Categories:** Development, GitHub, GCP, Data Analysis
+**Categories:** Development, GitHub, GCP, Cloudflare, Edge Computing
 
 **Install:**
 ```bash
 /plugin install srp-developer@srp-claude-code-marketplace
 ```
 
-**Skills:** `/github-integration`, `/gcp-developer`
+**Skills:** `/github-integration`, `/gcp-developer`, `/cloudflare-workers`, `/cloudflare-pages`, `/cloudflare-r2`, `/cloudflare-kv`
 
-**Commands:** `srp:github`, `srp:gcp`, `srp:gh`, `srp:bq`
+**Commands:** `srp:github`, `srp:gcp`, `srp:gh`, `srp:bq`, `srp:workers`, `srp:pages`, `srp:r2`, `srp:kv`
+
+**Key Features:**
+- GitHub: Code review, PR management, issue tracking
+- GCP: BigQuery data queries and analysis
+- Cloudflare Workers: Serverless edge computing with Wrangler CLI
+- Cloudflare Pages: JAMstack platform with Git integration
+- Cloudflare R2: S3-compatible object storage with zero egress fees
+- Cloudflare KV: Low-latency key-value storage at the edge
 
 **Location:** [plugins/srp-developer](plugins/srp-developer)
 

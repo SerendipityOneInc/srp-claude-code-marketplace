@@ -1,10 +1,10 @@
 # SRP Developer Plugin
 
-Developer plugin providing GitHub integration, GCP BigQuery access, Cloudflare development tools, and more.
+Developer plugin providing GitHub integration, GCP BigQuery access, Cloudflare development tools, Ray Data processing, Slurm cluster management, and more.
 
 ## Overview
 
-The SRP Developer plugin provides essential development tools including GitHub code review, PR management, BigQuery data access, and Cloudflare edge computing & storage services.
+The SRP Developer plugin provides essential development tools including GitHub code review, PR management, BigQuery data access, Cloudflare edge computing & storage services, distributed data processing with Ray Data, and GPU cluster management with Slurm.
 
 ## Features
 
@@ -45,6 +45,22 @@ The SRP Developer plugin provides essential development tools including GitHub c
 - Low-latency key-value storage at the edge
 - Global replication
 - Workers KV API
+
+#### 🚀 Ray Data Processing
+- Large-scale distributed data processing
+- GPU/CPU coordinated batch inference
+- Local development on A10 machines
+- Production deployment on RayCluster
+- Airflow scheduling integration
+- Performance optimization guidance
+
+#### 🖥️ Slurm Cluster Management
+- GPU job submission (H100/H200)
+- Oracle OKE and DO DOKS clusters
+- Apptainer container integration
+- Multi-node distributed training
+- Automatic Feishu notifications
+- Grafana monitoring dashboards
 
 ## Prerequisites
 
@@ -103,6 +119,8 @@ The plugin provides the following commands with the `srp:` namespace:
 | `srp:cloudflare-pages` | `srp:pages` | cloudflare-pages | Cloudflare Pages JAMstack platform |
 | `srp:cloudflare-r2` | `srp:r2` | cloudflare-r2 | Cloudflare R2 object storage |
 | `srp:cloudflare-kv` | `srp:kv` | cloudflare-kv | Cloudflare KV key-value storage |
+| - | - | raydata | Ray Data distributed data processing and batch inference |
+| - | - | slurm | Slurm GPU cluster management and job submission |
 
 **Usage examples:**
 ```bash
@@ -129,6 +147,8 @@ srp:kv
 /cloudflare-pages
 /cloudflare-r2
 /cloudflare-kv
+/raydata
+/slurm
 ```
 
 ### Skill 1: GitHub Integration
@@ -273,6 +293,93 @@ Bind KV to my Worker
 - 🔧 Workers KV API
 - 💾 Edge caching
 
+### Skill 7: Ray Data Processing
+
+**Activate the skill:**
+```bash
+/raydata
+```
+
+**Example prompts:**
+
+```
+Write a Ray Data job for batch image classification
+Test my Ray Data script on A10 dev machine
+Deploy Ray Data job to RayCluster for production
+Optimize batch size for GPU memory
+Debug Ray Data job performance issues
+Set up Airflow schedule for daily data processing
+```
+
+**Key operations:**
+- 📊 Large-scale distributed data processing
+- 🖼️ Batch inference for ML models
+- 🔧 Local development on A10 machines
+- 🚀 Production deployment on RayCluster
+- 📅 Airflow scheduling integration
+- ⚡ Performance optimization guidance
+- 🐛 Debugging and monitoring
+
+**Development Workflow:**
+1. **Local Development (A10):** Write and test code on development machines
+2. **GPU Testing (Slurm H100/H200):** Test large models on GPU clusters
+3. **Production (RayCluster):** Deploy at scale with auto-scaling
+4. **Scheduling (Airflow):** Set up periodic job execution
+
+**Resources:**
+- Dashboard: https://ray.g.yesy.online/
+- GitHub: https://github.com/SerendipityOneInc/ray-data-etl
+- Wiki: https://starquest.feishu.cn/wiki/Kpb3w8MNZieJGkkMhbqcIkrTnTc
+
+### Skill 8: Slurm Cluster Management
+
+**Activate the skill:**
+```bash
+/slurm
+```
+
+**Example prompts:**
+
+```
+Submit a GPU training job to Oracle OKE cluster
+Check my running jobs on DO cluster
+Write a Slurm script for multi-node training
+Use Apptainer container for PyTorch job
+Monitor GPU utilization in Grafana
+Debug why my job is pending
+Cancel job with ID 12345
+```
+
+**Key operations:**
+- 🖥️ GPU job submission (H100/H200)
+- 📊 Job monitoring and management
+- 🐳 Apptainer container integration
+- 🔧 Multi-node distributed training
+- 📱 Automatic Feishu notifications
+- 📈 Grafana monitoring dashboards
+- 🐛 Troubleshooting and debugging
+
+**Available Clusters:**
+- **Oracle OKE:** H100 GPUs via `ssh -p 2222 <username>@129.80.180.16`
+- **DO DOKS:** H200 GPUs via `ssh -p 2222 <username>@129.212.240.50`
+
+**Key Commands:**
+- `sbatch job.sh` - Submit batch job
+- `squeue -u $USER` - View your jobs
+- `scancel <job_id>` - Cancel job
+- `sinfo -p h100` - Check cluster resources
+- `sacct -j <job_id>` - View job history
+
+**Monitoring Dashboards:**
+- **Oracle OKE:**
+  - Cluster: https://grafana.g.yesy.site/d/edrg5th9t1edcb/slinky-slurm
+  - Workload: https://grafana.g.yesy.site/d/f2c83374-71e2-42c6-92a1-10505b584cf2/workload
+  - Job Stats: https://grafana.g.yesy.site/d/HRLkiLS7k/slurmjobstats
+- **DO DOKS:**
+  - Cluster: https://grafana.g2.yesy.site/d/edrg5th9t1edcb/slinky-slurm
+  - Workload: https://grafana.g2.yesy.site/d/workload/workload
+  - Job Stats: https://grafana.g2.yesy.site/d/slurm/slurm
+
 ## Configuration
 
 ### MCP Servers
@@ -412,7 +519,9 @@ Claude will:
 - CI/CD pipeline integration
 - Code quality and test coverage metrics
 - Automated code review suggestions
-- Integration with monitoring tools
+- Integration with additional monitoring tools
+- Ray Serve integration for model deployment
+- Advanced Slurm job templates library
 
 ## Support
 
@@ -425,6 +534,8 @@ Claude will:
   - `plugins/srp-developer/skills/cloudflare-pages/SKILL.md`
   - `plugins/srp-developer/skills/cloudflare-r2/SKILL.md`
   - `plugins/srp-developer/skills/cloudflare-kv/SKILL.md`
+  - `plugins/srp-developer/skills/raydata/SKILL.md`
+  - `plugins/srp-developer/skills/slurm/SKILL.md`
 
 ### Getting Help
 - Internal support: Contact SRP Team (infra@srp.one)
@@ -434,8 +545,36 @@ Claude will:
 - Cloudflare Pages: https://developers.cloudflare.com/pages/
 - Cloudflare R2: https://developers.cloudflare.com/r2/
 - Cloudflare KV: https://developers.cloudflare.com/kv/
+- Ray Data:
+  - Quickstart: https://docs.ray.io/en/latest/data/quickstart.html
+  - LLM Processing: https://docs.ray.io/en/latest/data/working-with-llms.html
+  - Batch Inference: https://docs.ray.io/en/latest/data/batch_inference.html
+  - SRP Wiki: https://starquest.feishu.cn/wiki/Kpb3w8MNZieJGkkMhbqcIkrTnTc
+- Slurm:
+  - Official Docs: https://slurm.schedmd.com/
+  - Commands: https://slurm.schedmd.com/man_index.html
+  - Apptainer: https://apptainer.org/docs/user/latest/
+  - SRP Wiki: https://starquest.feishu.cn/wiki/TZASwm86nivXLTkMV6kcoJF4n2I
 
 ## Version History
+
+### v1.1.0 (2026-01-20)
+- **Added Ray Data Processing skill** - Large-scale distributed data processing and batch inference
+  - Local development on A10 machines
+  - Slurm H100/H200 GPU testing
+  - Production RayCluster deployment
+  - Airflow scheduling integration
+  - Performance optimization guidance
+  - Complete code examples
+- **Added Slurm Cluster Management skill** - GPU cluster job submission and management
+  - Oracle OKE (H100) and DO DOKS (H200) cluster support
+  - Apptainer container integration
+  - Multi-node distributed training
+  - Automatic Feishu notifications
+  - Grafana monitoring dashboards (6 dashboards)
+  - Comprehensive troubleshooting guide
+- Updated README with new skills documentation
+- Added categories: HPC, ML Infrastructure
 
 ### v1.0.2 (2026-01-19)
 - Added Cloudflare Workers skill (v1.4.0)
@@ -459,6 +598,6 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 ---
 
 **Plugin Name:** srp-developer
-**Version:** 1.0.1
+**Version:** 1.1.0
 **Author:** SRP Team (infra@srp.one)
-**Tags:** github, gcp, bigquery, cicd, developer, code-review
+**Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review

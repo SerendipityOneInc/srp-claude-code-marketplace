@@ -17,8 +17,8 @@
     {
       "name": "srp-developer",
       "source": "./plugins/srp-developer",
-      "description": "SRP developer plugin - GitHub integration, GCP BigQuery access, Cloudflare Workers/Pages/R2/KV, and development tools",
-      "version": "1.0.2",
+      "description": "SRP developer plugin - GitHub integration, GCP BigQuery access, Cloudflare Workers/Pages/R2/KV, Ray Data processing, Slurm cluster management, and development tools",
+      "version": "1.1.0",
       "strict": true
     },
     {

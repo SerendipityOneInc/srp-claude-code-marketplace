@@ -119,8 +119,8 @@ The plugin provides the following commands with the `srp:` namespace:
 | `srp:cloudflare-pages` | `srp:pages` | cloudflare-pages | Cloudflare Pages JAMstack platform |
 | `srp:cloudflare-r2` | `srp:r2` | cloudflare-r2 | Cloudflare R2 object storage |
 | `srp:cloudflare-kv` | `srp:kv` | cloudflare-kv | Cloudflare KV key-value storage |
-| - | - | raydata | Ray Data distributed data processing and batch inference |
-| - | - | slurm | Slurm GPU cluster management and job submission |
+| `srp:raydata` | - | raydata | Ray Data distributed data processing and batch inference |
+| `srp:slurm` | - | slurm | Slurm GPU cluster management and job submission |
 
 **Usage examples:**
 ```bash
@@ -131,6 +131,8 @@ srp:cloudflare-workers
 srp:cloudflare-pages
 srp:cloudflare-r2
 srp:cloudflare-kv
+srp:raydata
+srp:slurm
 
 # Short aliases
 srp:gh
@@ -297,7 +299,7 @@ Bind KV to my Worker
 
 **Activate the skill:**
 ```bash
-/raydata
+srp:raydata  # or /raydata
 ```
 
 **Example prompts:**
@@ -335,7 +337,7 @@ Set up Airflow schedule for daily data processing
 
 **Activate the skill:**
 ```bash
-/slurm
+srp:slurm  # or /slurm
 ```
 
 **Example prompts:**
@@ -558,6 +560,12 @@ Claude will:
 
 ## Version History
 
+### v1.1.1 (2026-01-20)
+- Added command shortcuts for Ray Data and Slurm skills
+  - `srp:raydata` - Quick access to Ray Data processing
+  - `srp:slurm` - Quick access to Slurm cluster management
+- Updated keywords with ray-data, slurm, hpc, ml-infrastructure
+
 ### v1.1.0 (2026-01-20)
 - **Added Ray Data Processing skill** - Large-scale distributed data processing and batch inference
   - Local development on A10 machines
@@ -598,6 +606,6 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 ---
 
 **Plugin Name:** srp-developer
-**Version:** 1.1.0
+**Version:** 1.1.1
 **Author:** SRP Team (infra@srp.one)
 **Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review

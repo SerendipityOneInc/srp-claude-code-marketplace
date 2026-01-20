@@ -52,7 +52,7 @@ Add this marketplace to Claude Code:
 
 **Skills:** `/github-integration`, `/gcp-developer`, `/cloudflare-workers`, `/cloudflare-pages`, `/cloudflare-r2`, `/cloudflare-kv`, `/raydata`, `/slurm`
 
-**Commands:** `srp:github`, `srp:gcp`, `srp:gh`, `srp:bq`, `srp:workers`, `srp:pages`, `srp:r2`, `srp:kv`
+**Commands:** `srp:github`, `srp:gcp`, `srp:gh`, `srp:bq`, `srp:workers`, `srp:pages`, `srp:r2`, `srp:kv`, `srp:raydata`, `srp:slurm`
 
 **Key Features:**
 - GitHub: Code review, PR management, issue tracking

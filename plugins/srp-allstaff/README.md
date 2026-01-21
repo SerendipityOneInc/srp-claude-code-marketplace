@@ -661,6 +661,9 @@ Planned features for future versions:
 
 ## Version History
 
+### v1.0.3 (2026-01-21)
+- Added srp:mac-setup command shortcut
+
 ### v1.0.2 (2026-01-21)
 - Added mac-setup skill for Mac development environment setup and verification
 - Smart detection of installed software and configurations
@@ -688,6 +691,6 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 ---
 
 **Plugin Name:** srp-allstaff
-**Version:** 1.0.2
+**Version:** 1.0.3
 **Author:** SRP Team (infra@srp.one)
 **Tags:** lark, feishu, documents, messaging, allstaff, automation, rube, gmail, slack, calendar, productivity

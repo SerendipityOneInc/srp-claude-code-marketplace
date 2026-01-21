@@ -211,12 +211,14 @@ The plugin provides the following commands with the `srp:` namespace:
 |---------|-------|-------|-------------|
 | `srp:lark-docs` | `srp:docs` | lark-docs | Access Lark documents and wiki |
 | `srp:lark-messages` | `srp:msg` | lark-messages | Access Lark messages and groups |
+| `srp:mac-setup` | - | mac-setup | Mac development environment setup and verification |
 
 **Usage examples:**
 ```bash
 # Full command names
 srp:lark-docs
 srp:lark-messages
+srp:mac-setup
 
 # Short aliases
 srp:docs
@@ -225,6 +227,7 @@ srp:msg
 # Original skill names (also work)
 /lark-docs
 /lark-messages
+/mac-setup
 ```
 
 ### Skill 1: Lark Docs Access
@@ -272,6 +275,35 @@ Send message to "Engineering Team": "Meeting rescheduled to tomorrow"
 - 💬 Read message history
 - ✉️ Send messages
 - 🔍 Search messages by time
+
+### Skill 3: Mac Setup
+
+**Activate the skill:**
+```bash
+srp:mac-setup  # or /mac-setup
+```
+
+**Example prompts:**
+
+```
+帮我配置 Mac 开发环境
+Setup my Mac for SRP development
+检查我的 Mac 开发环境
+```
+
+**Workflow:**
+1. 🔍 **前置检查** - 检查 Homebrew 和 gcloud 认证状态
+2. 📊 **智能检测** - 扫描所有可安装组件的状态
+3. ☑️ **用户选择** - 展示缺失组件，让用户选择要安装的内容
+4. ⚙️ **执行安装** - 按依赖顺序安装和配置
+5. ✅ **验证检查** - 验证安装配置是否正确
+
+**Supported components:**
+- **基础工具**: Claude Code, Warp Terminal, Git/GitHub CLI/Git LFS
+- **开发环境**: Python 3.13, Anaconda, Cursor IDE, Orbstack
+- **云平台 CLI**: Google Cloud SDK, Azure CLI, Oracle CLI, DigitalOcean CLI
+- **DevOps 工具**: Terraform, telnet, iftop, node, maven, ansible 等
+- **配置项**: pip 镜像配置, GKE 集群配置, Telepresence VPN
 
 ### Hooks: Feishu Notifications
 
@@ -616,6 +648,7 @@ Planned features for future versions:
 - Skills:
   - `plugins/srp-allstaff/skills/lark-docs/SKILL.md`
   - `plugins/srp-allstaff/skills/lark-messages/SKILL.md`
+  - `plugins/srp-allstaff/skills/mac-setup/SKILL.md`
 - Lark Open Platform: https://open.feishu.cn/document
 - Rube Documentation: https://rube.app/
 - Rube MCP Market: https://mcpmarket.com/server/rube
@@ -627,6 +660,13 @@ Planned features for future versions:
 - Claude Code docs: https://code.claude.com/docs
 
 ## Version History
+
+### v1.0.2 (2026-01-21)
+- Added mac-setup skill for Mac development environment setup and verification
+- Smart detection of installed software and configurations
+- Interactive component selection
+- Post-installation verification checks
+- Includes Cursor IDE extensions list
 
 ### v1.0.1 (2026-01-19)
 - Added Rube MCP for office automation (Gmail, Slack, Calendar, Drive, GitHub, Linear, PagerDuty, etc.)
@@ -648,6 +688,6 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 ---
 
 **Plugin Name:** srp-allstaff
-**Version:** 1.0.1
+**Version:** 1.0.2
 **Author:** SRP Team (infra@srp.one)
 **Tags:** lark, feishu, documents, messaging, allstaff, automation, rube, gmail, slack, calendar, productivity

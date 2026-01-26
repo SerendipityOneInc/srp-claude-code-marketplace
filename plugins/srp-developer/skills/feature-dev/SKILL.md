@@ -5,11 +5,26 @@ description: End-to-end feature development workflow from requirement to staging
 
 # Feature Development Workflow
 
-You MUST follow these steps IN ORDER. Do NOT skip steps. Do NOT write code before Step 3.
+## CRITICAL WARNING
+
+**THIS WORKFLOW IS MANDATORY. VIOLATION IS NOT ACCEPTABLE.**
+
+If you skip any step or write code before Step 3 is complete, you have FAILED. Follow the steps EXACTLY as defined below.
+
+---
+
+If user has not provided a feature request yet, ask: "Please describe the feature you want to develop." Then WAIT.
+
+After user provides feature request, execute steps in EXACT order: Step 1 → Step 2 → Step 3 → Step 4 → Step 5 → Step 6 → Step 7 → Step 8.
+
+**FORBIDDEN before Step 3 is complete:**
+- Do NOT write or modify any code
+- Do NOT use Edit or Write tools
+- Do NOT plan implementation details
 
 ## Step 1: Analyze Requirement
 
-Summarize user's requirement. Ask clarifying questions if needed.
+Only summarize user's requirement in plain text. Ask clarifying questions if needed. Do NOT explore codebase.
 
 ## Step 2: Create GitHub Issue
 

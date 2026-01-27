@@ -70,9 +70,46 @@ git push origin <branch-name>
 
 ## Step 7: Deploy Staging (Gin/FastAPI only)
 
-Check if project uses Gin or FastAPI. If yes, merge to staging branch or create beta tag.
+Check if project uses Gin or FastAPI. If not a Gin/FastAPI service, skip to Step 8.
 
-If not a Gin/FastAPI service, skip to Step 8.
+### 7.1 Check for staging branch
+
+```bash
+git fetch origin
+git branch -r | grep -q "origin/staging"
+```
+
+### 7.2a If staging branch exists: Merge to staging
+
+```bash
+git checkout staging
+git pull origin staging
+git merge <branch-name> --no-edit
+git push origin staging
+git checkout <branch-name>
+```
+
+Tell user: "Changes merged to staging branch. Staging deployment will be triggered automatically."
+
+### 7.2b If NO staging branch: Create beta tag
+
+Get the latest tag and increment version:
+
+```bash
+# Get latest version tag (e.g., v1.2.3 or v1.2.3-beta.1)
+git tag -l "v*" --sort=-v:refname | head -1
+```
+
+Create new beta tag with incremented version:
+- If latest is `vX.Y.Z`, create `vX.Y.Z-beta.1`
+- If latest is `vX.Y.Z-beta.N`, create `vX.Y.Z-beta.(N+1)`
+
+```bash
+git tag <new-beta-tag>
+git push origin <new-beta-tag>
+```
+
+Tell user: "Created and pushed tag `<new-beta-tag>`. Staging deployment will be triggered automatically."
 
 ## Step 8: Create Pull Request
 

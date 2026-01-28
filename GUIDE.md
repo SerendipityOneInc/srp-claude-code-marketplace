@@ -453,6 +453,63 @@ sapptainer -c 20 -m 200G -g 1 -p h100 -i /data0/apptainer/pytorch_24.01-py3.sif
 - SRP Wiki: https://starquest.feishu.cn/wiki/TZASwm86nivXLTkMV6kcoJF4n2I
 - ssubmit 示例: https://github.com/SerendipityOneInc/llm-jobs/tree/main/slurm/ssubmit-examples
 
+#### Feature Development Workflow
+
+End-to-end feature development automation: from requirement analysis to GitHub Issue creation, code development, unit testing, staging deployment, and PR creation.
+
+**Commands:**
+```bash
+srp:dev            # Feature development workflow skill
+/srp-dev       # Or use original skill name
+```
+
+**Workflow:**
+
+```
+Requirement --> Issue --> Branch --> Develop --> Test --> Push --> Staging --> PR
+```
+
+**Example Prompts:**
+
+```
+# Feature development
+"Develop a feature: Record user login time to database"
+"Add a new feature: Implement user avatar upload endpoint"
+"Create feature: Add rate limiting to API endpoints"
+
+# Automation
+"Convert this requirement to a GitHub Issue and create a feature branch"
+"Deploy to staging after development is complete"
+```
+
+**Core Workflow:**
+
+1. **Requirement Analysis**: Understand user needs, ask clarifying questions if needed
+2. **Issue Creation**: Create structured GitHub Issue
+3. **Branch Creation**: Create feature branch from main, auto-linked to Issue
+4. **Development**: Analyze codebase, implement feature, write unit tests
+5. **Run Tests**: Execute tests, fix failures until all pass
+6. **Push Code**: Commit and push to remote branch
+7. **Deployment Decision**:
+   - **Non-service projects**: Create PR, workflow ends
+   - **Gin/FastAPI services**: Continue to staging deployment
+8. **Staging Deployment**:
+   - Has staging branch: Merge to staging and push
+   - No staging branch: Create beta tag and push
+9. **Monitor Actions**: Monitor GitHub Actions, fix and retry if failed
+10. **Create PR**: After staging success, create PR for code review
+
+**Service Type Detection:**
+- **Gin service**: Check if `go.mod` contains `github.com/gin-gonic/gin`
+- **FastAPI service**: Check if `requirements.txt` or `pyproject.toml` contains `fastapi`
+
+**Deployment Methods:**
+
+| Condition | Deployment Method |
+|-----------|-------------------|
+| Has staging branch | Merge to staging branch and push |
+| No staging branch | Create new beta tag (e.g., v0.0.1-beta.1) |
+
 ---
 
 ### 3. 🔧 **SRP DevOps**（运维插件）

@@ -62,6 +62,14 @@ The SRP Developer plugin provides essential development tools including GitHub c
 - Automatic Feishu notifications
 - Grafana monitoring dashboards
 
+#### 🚀 Feature Development Workflow
+- End-to-end feature development automation
+- GitHub Issue creation and branch linking
+- Code development and unit testing
+- Staging deployment for Gin/FastAPI services
+- GitHub Actions monitoring and retry
+- Automated PR creation for non-service projects
+
 ## Prerequisites
 
 ### 1. Set Up Environment Variables
@@ -121,6 +129,7 @@ The plugin provides the following commands with the `srp:` namespace:
 | `srp:cloudflare-kv` | `srp:kv` | cloudflare-kv | Cloudflare KV key-value storage |
 | `srp:raydata` | - | raydata | Ray Data distributed data processing and batch inference |
 | `srp:slurm` | - | slurm | Slurm GPU cluster management and job submission |
+| `srp:dev` | - | srp-dev | End-to-end feature development workflow |
 
 **Usage examples:**
 ```bash
@@ -133,6 +142,7 @@ srp:cloudflare-r2
 srp:cloudflare-kv
 srp:raydata
 srp:slurm
+srp:dev
 
 # Short aliases
 srp:gh
@@ -151,6 +161,7 @@ srp:kv
 /cloudflare-kv
 /raydata
 /slurm
+/srp-dev
 ```
 
 ### Skill 1: GitHub Integration
@@ -382,6 +393,47 @@ Cancel job with ID 12345
   - Workload: https://grafana.g2.yesy.site/d/workload/workload
   - Job Stats: https://grafana.g2.yesy.site/d/slurm/slurm
 
+### Skill 9: Feature Development Workflow
+
+**Activate the skill:**
+```bash
+srp:dev  # or /srp-dev
+```
+
+**Example prompts:**
+
+```
+开发一个功能：用户登录时记录登录时间到数据库
+Develop a feature: Add rate limiting to API endpoints
+实现新功能：添加用户头像上传接口
+```
+
+**Key operations:**
+- 📝 Create GitHub Issues with structured templates
+- 🌿 Create feature branches linked to issues
+- 💻 Analyze codebase and implement features
+- 🧪 Write and run unit tests
+- 🚀 Deploy to staging (for Gin/FastAPI services)
+- 📊 Monitor GitHub Actions and retry on failure
+- 🔄 Create PRs for non-service projects
+
+**Workflow:**
+1. **Requirement Input** → Analyze and clarify user needs
+2. **Issue Creation** → Create structured GitHub issue
+3. **Branch Creation** → Create linked feature branch from main
+4. **Development** → Implement feature and write tests
+5. **Testing** → Run and fix unit tests
+6. **Push** → Commit and push changes
+7. **Deployment** → Deploy to staging or create PR
+
+**Service Type Detection:**
+- **Gin/FastAPI**: Deploy to staging via staging branch or beta tag
+- **Other**: Create pull request and end workflow
+
+**Staging Deployment Methods:**
+- **Staging Branch**: Merge feature to staging, push triggers GitHub Action
+- **Beta Tags**: Create versioned beta tag (v0.0.1-beta.1, etc.)
+
 ## Configuration
 
 ### MCP Servers
@@ -538,6 +590,7 @@ Claude will:
   - `plugins/srp-developer/skills/cloudflare-kv/SKILL.md`
   - `plugins/srp-developer/skills/raydata/SKILL.md`
   - `plugins/srp-developer/skills/slurm/SKILL.md`
+  - `plugins/srp-developer/skills/srp-dev/SKILL.md`
 
 ### Getting Help
 - Internal support: Contact SRP Team (infra@srp.one)
@@ -559,6 +612,16 @@ Claude will:
   - SRP Wiki: https://starquest.feishu.cn/wiki/TZASwm86nivXLTkMV6kcoJF4n2I
 
 ## Version History
+
+### v1.2.0 (2026-01-26)
+- **Added Feature Development Workflow skill** - End-to-end feature development automation
+  - GitHub Issue creation with structured templates
+  - Feature branch creation linked to issues
+  - Code development and unit testing
+  - Staging deployment for Gin/FastAPI services
+  - GitHub Actions monitoring with retry logic
+  - PR creation for non-service projects
+- Added `srp:dev` command shortcut
 
 ### v1.1.1 (2026-01-20)
 - Added command shortcuts for Ray Data and Slurm skills
@@ -606,6 +669,6 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 ---
 
 **Plugin Name:** srp-developer
-**Version:** 1.1.1
+**Version:** 1.2.0
 **Author:** SRP Team (infra@srp.one)
-**Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review
+**Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review, srp-dev, automation

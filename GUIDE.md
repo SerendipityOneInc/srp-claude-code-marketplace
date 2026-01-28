@@ -460,7 +460,7 @@ End-to-end feature development automation: from requirement analysis to GitHub I
 **Commands:**
 ```bash
 srp:dev            # Feature development workflow skill
-/feature-dev       # Or use original skill name
+/srp-dev       # Or use original skill name
 ```
 
 **Workflow:**

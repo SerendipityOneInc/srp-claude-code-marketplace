@@ -129,7 +129,7 @@ The plugin provides the following commands with the `srp:` namespace:
 | `srp:cloudflare-kv` | `srp:kv` | cloudflare-kv | Cloudflare KV key-value storage |
 | `srp:raydata` | - | raydata | Ray Data distributed data processing and batch inference |
 | `srp:slurm` | - | slurm | Slurm GPU cluster management and job submission |
-| `srp:dev` | - | feature-dev | End-to-end feature development workflow |
+| `srp:dev` | - | srp-dev | End-to-end feature development workflow |
 
 **Usage examples:**
 ```bash
@@ -161,7 +161,7 @@ srp:kv
 /cloudflare-kv
 /raydata
 /slurm
-/feature-dev
+/srp-dev
 ```
 
 ### Skill 1: GitHub Integration
@@ -397,7 +397,7 @@ Cancel job with ID 12345
 
 **Activate the skill:**
 ```bash
-srp:dev  # or /feature-dev
+srp:dev  # or /srp-dev
 ```
 
 **Example prompts:**
@@ -590,7 +590,7 @@ Claude will:
   - `plugins/srp-developer/skills/cloudflare-kv/SKILL.md`
   - `plugins/srp-developer/skills/raydata/SKILL.md`
   - `plugins/srp-developer/skills/slurm/SKILL.md`
-  - `plugins/srp-developer/skills/feature-dev/SKILL.md`
+  - `plugins/srp-developer/skills/srp-dev/SKILL.md`
 
 ### Getting Help
 - Internal support: Contact SRP Team (infra@srp.one)
@@ -671,4 +671,4 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 **Plugin Name:** srp-developer
 **Version:** 1.2.0
 **Author:** SRP Team (infra@srp.one)
-**Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review, feature-dev, automation
+**Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review, srp-dev, automation

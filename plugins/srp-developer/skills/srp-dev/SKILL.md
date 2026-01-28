@@ -1,5 +1,5 @@
 ---
-name: feature-dev
+name: srp-dev
 description: End-to-end feature development workflow from requirement to staging deployment and PR creation
 ---
 

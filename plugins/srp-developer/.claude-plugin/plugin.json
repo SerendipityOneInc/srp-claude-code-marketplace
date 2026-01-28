@@ -9,5 +9,5 @@
   "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-developer",
   "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
   "license": "MIT",
-  "keywords": ["github", "gcp", "bigquery", "cloudflare", "workers", "pages", "r2", "kv", "ray-data", "slurm", "hpc", "ml-infrastructure", "edge-computing", "developer", "code-review", "feature-dev", "automation", "cicd"]
+  "keywords": ["github", "gcp", "bigquery", "cloudflare", "workers", "pages", "r2", "kv", "ray-data", "slurm", "hpc", "ml-infrastructure", "edge-computing", "developer", "code-review", "srp-dev", "automation", "cicd"]
 }

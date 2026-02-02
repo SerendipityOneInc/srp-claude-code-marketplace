@@ -132,7 +132,25 @@ Collect issues the user worked on:
 
 ### 4. Report Generation (报告生成)
 
-Generate structured weekly report in markdown format.
+Generate structured weekly report and publish to Lark document.
+
+**Available MCP Tools:**
+- `mcp__plugin_srp-allstaff_lark__docx_builtin_import` - Import markdown as Lark document
+
+**Usage:**
+```json
+{
+  "useUAT": true,
+  "data": {
+    "file_name": "周报_<中文名>_YYYY-MM-DD_YYYY-MM-DD",
+    "markdown": "<markdown content>"
+  }
+}
+```
+
+**Response contains:**
+- `url` - Direct link to the created Lark document
+- `token` - Document ID for future reference
 
 ## Workflow
 
@@ -169,7 +187,12 @@ Generate structured weekly report in markdown format.
    - Separate sections for: 主讲的培训/分享, 参与的会议
    - Present to user for review
 
-5. Iterate (迭代)
+5. Publish to Lark (发布到飞书)
+   - Use `mcp__plugin_srp-allstaff_lark__docx_builtin_import` to create Lark document
+   - File name format: "周报_<中文名>_YYYY-MM-DD_YYYY-MM-DD"
+   - Return the Lark document URL to user
+
+6. Iterate (迭代)
    - Adjust based on user feedback
 ```
 
@@ -263,6 +286,8 @@ Generate structured weekly report in markdown format.
 - 确认下周发布计划
 - Action: 跟进 XX 系统上线
 
+飞书文档已创建：https://starquest.feishu.cn/docx/xxxxxx
+
 需要我调整格式或补充其他内容吗？
 ```
 
@@ -295,6 +320,8 @@ Let me collect your work data for last week (01-27 ~ 02-02).
 **01-30** Architecture Review
 - Reviewed microservices migration plan
 - Decided on event-driven approach
+
+Lark document created: https://starquest.feishu.cn/docx/xxxxxx
 
 Would you like me to adjust the format or add more details?
 ```
@@ -382,10 +409,11 @@ Would you like me to adjust the format or add more details?
 ## Tips for Effective Use (使用技巧)
 
 1. **Prepare GitHub username** - Have your GitHub username and organization ready
-2. **Provide Chinese name** - Your Chinese name is needed to search Lark meeting notes (e.g., "朱广彬")
+2. **Provide Chinese name** - Your Chinese name is needed to search Lark meeting notes and name the document (e.g., "朱广彬")
 3. **Check Lark authorization** - Ensure Lark MCP is authorized before starting
 4. **Provide feedback** - Tell the assistant to adjust format if needed
 5. **Add context** - Mention important meetings or activities not captured automatically
+6. **Auto-publish to Lark** - The report will be automatically published as a Lark document with a shareable link
 
 ## Limitations (限制)
 

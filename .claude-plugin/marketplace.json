@@ -1,6 +1,6 @@
 {
   "name": "srp-claude-code-marketplace",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Internal SRP Claude Code plugins and MCP servers - monorepo structure",
   "owner": {
     "name": "SRP Team",
@@ -11,7 +11,7 @@
       "name": "srp-allstaff",
       "source": "./plugins/srp-allstaff",
       "description": "SRP AllStaff plugin - Lark/Feishu integration and office automation with Rube (Gmail, Slack, Calendar, Drive, GitHub, Linear, etc.)",
-      "version": "1.0.6",
+      "version": "1.0.8",
       "strict": true
     },
     {

@@ -142,7 +142,7 @@ Generate structured weekly report and publish to Lark document.
 {
   "useUAT": true,
   "data": {
-    "file_name": "周报_<中文名>_YYYY-MM-DD_YYYY-MM-DD",
+    "file_name": "周报_<中文名>_MMDD-MMDD",
     "markdown": "<markdown content>"
   }
 }
@@ -189,7 +189,7 @@ Generate structured weekly report and publish to Lark document.
 
 5. Publish to Lark (发布到飞书)
    - Use `mcp__plugin_srp-allstaff_lark__docx_builtin_import` to create Lark document
-   - File name format: "周报_<中文名>_YYYY-MM-DD_YYYY-MM-DD"
+   - File name format: "周报_<中文名>_MMDD-MMDD" (飞书限制文件名最多27字符)
    - Return the Lark document URL to user
 
 6. Iterate (迭代)

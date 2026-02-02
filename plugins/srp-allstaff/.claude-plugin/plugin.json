@@ -1,7 +1,7 @@
 {
   "name": "srp-allstaff",
-  "version": "1.0.3",
-  "description": "SRP AllStaff plugin - Lark/Feishu integration, Mac setup, and office automation with Rube (Gmail, Slack, Calendar, Drive, GitHub, Linear, etc.)",
+  "version": "1.0.4",
+  "description": "SRP AllStaff plugin - Lark/Feishu integration, Mac setup, weekly report generation, and office automation with Rube (Gmail, Slack, Calendar, Drive, GitHub, Linear, etc.)",
   "author": {
     "name": "SRP Team",
     "email": "infra@srp.one"
@@ -9,5 +9,5 @@
   "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-allstaff",
   "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
   "license": "MIT",
-  "keywords": ["lark", "feishu", "documents", "messaging", "allstaff", "mac-setup", "development-environment"]
+  "keywords": ["lark", "feishu", "documents", "messaging", "allstaff", "mac-setup", "development-environment", "weekly-report"]
 }

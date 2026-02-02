@@ -1,13 +1,13 @@
 ---
 name: weekly-report
-description: Generate weekly work report from GitHub and Lark data (周报生成 - 从 GitHub 和飞书数据自动生成周报)
+description: Generate weekly work report from GitHub, Linear, and Lark data (周报生成 - 从 GitHub、Linear 和飞书数据自动生成周报)
 ---
 
 # Weekly Report Generator (周报生成器)
 
-自动从 GitHub 提交记录和飞书文档生成周报。
+自动从 GitHub 提交记录、Linear 任务和飞书文档生成周报。
 
-Automatically generate weekly work reports from GitHub commits/PRs and Lark documents.
+Automatically generate weekly work reports from GitHub commits/PRs, Linear issues, and Lark documents.
 
 ## Quick Start
 
@@ -109,7 +109,28 @@ IMPORTANT: Must perform multiple searches to capture all meeting-related documen
 - Check document titles for date patterns matching the report period
 - Common formats: "YYYY年M月D日", "Jan DD, YYYY", "MM-DD"
 
-### 3. Report Generation (报告生成)
+### 3. Linear Issue Collection (Linear 任务收集)
+
+Collect issues the user worked on:
+
+**Available MCP Tools (via Rube):**
+- `LINEAR_GET_CURRENT_USER` - Get current user ID
+- `LINEAR_LIST_LINEAR_ISSUES` - List issues by assignee/status
+- `LINEAR_RUN_QUERY_OR_MUTATION` - GraphQL for complex queries
+
+**Three queries to run:**
+1. Completed issues: assignee_id="me", filter by completedAt in date range
+2. In-progress issues: assignee_id="me", status not Done
+3. Created issues: GraphQL filter by creator and createdAt
+
+**Status mapping:**
+- completed → [Done]
+- started → [In Progress]
+- unstarted → [Todo]
+- backlog → [Backlog]
+- canceled → [Canceled]
+
+### 4. Report Generation (报告生成)
 
 Generate structured weekly report in markdown format.
 
@@ -125,6 +146,13 @@ Generate structured weekly report in markdown format.
 2. Collect GitHub Data (收集 GitHub 数据)
    - Search PRs: author:<username> created:>=<start_date>
    - Extract: date, repo, PR number, title, summary
+
+2.5 Collect Linear Issues (收集 Linear 任务)
+    - Get current user ID via LINEAR_GET_CURRENT_USER
+    - Query completed issues in date range (state.type = "completed", completedAt within range)
+    - Query in-progress issues assigned to user (state.type in ["started", "unstarted"])
+    - Query issues created by user in date range (GraphQL with creator filter)
+    - Deduplicate and group by status for display
 
 3. Collect Lark Documents (收集飞书文档) - IMPORTANT: Multiple searches required!
    a. Search user-hosted meetings: "智能纪要 {用户中文名}"
@@ -156,7 +184,18 @@ Generate structured weekly report in markdown format.
 |------|------|-----|----------|
 | MM-DD | repo-name | #N | Brief description |
 
-### 二、培训/会议工作
+### 二、项目任务 (Linear)
+
+**本周完成：**
+- [Done] Issue title
+
+**进行中：**
+- [In Progress] Issue title
+
+**本周新建：**
+- [Backlog] Issue title
+
+### 三、培训/会议工作
 
 #### 主讲的培训/分享 (如有)
 
@@ -172,7 +211,7 @@ Generate structured weekly report in markdown format.
 - Key discussion point 2
 - Action items assigned to user
 
-### 三、下周计划
+### 四、下周计划
 
 (User provided or left blank)
 ```
@@ -320,6 +359,25 @@ Would you like me to adjust the format or add more details?
 // Search for tech sharing by 朱广彬
 {"search_key": "朱广彬 分享 best practice", "count": 50, "useUAT": true}
 ```
+
+### Issue 6: Linear Authorization Required (Linear 授权未配置)
+
+**Problem:** Linear tools return auth error or no data
+
+**Solution:**
+- Ensure Rube is connected with Linear integration
+- Check that LINEAR tools are available via `RUBE_SEARCH_TOOLS`
+- If not authorized, ask user to configure Linear connection in Rube
+
+### Issue 7: Empty Linear Results (Linear 结果为空)
+
+**Problem:** No Linear issues found but user has activity
+
+**Solution:**
+- Verify date range matches Linear's date format
+- Check assignee filter - use "me" or actual user ID
+- For created issues, use GraphQL query with creator filter
+- Confirm user is using the correct Linear workspace
 
 ## Tips for Effective Use (使用技巧)
 

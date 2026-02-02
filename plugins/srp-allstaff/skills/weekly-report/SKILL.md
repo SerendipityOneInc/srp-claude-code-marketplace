@@ -48,6 +48,28 @@ Collect documents the user participated in:
 - `search_key` - Keywords to search
 - `count` - Number of results (max 50)
 
+**Search Strategy (搜索策略):**
+
+IMPORTANT: Must perform multiple searches to capture all meeting-related documents:
+
+1. **User-hosted meetings/trainings (用户主讲的会议/培训):**
+   - Search: `智能纪要 {用户中文名}` (e.g., "智能纪要 朱广彬")
+   - Search: `AI notes {用户中文名}` (e.g., "AI notes 朱广彬")
+   - These capture: 培训、分享会、技术讲座等用户作为主讲人的会议
+
+2. **Regular team meetings (常规团队会议):**
+   - Search: `双周会 会议` - Biweekly meetings
+   - Search: `周会 会议纪要` - Weekly meetings
+   - Filter by date in title (e.g., "Jan 27, 2026" or "2026年1月27日")
+
+3. **Other work documents (其他工作文档):**
+   - Search: `培训 分享` - Training and sharing sessions
+   - Search user-specific keywords based on their role
+
+**Date Filtering:**
+- Check document titles for date patterns matching the report period
+- Common formats: "YYYY年M月D日", "Jan DD, YYYY", "MM-DD"
+
 ### 3. Report Generation (报告生成)
 
 Generate structured weekly report in markdown format.
@@ -59,18 +81,23 @@ Generate structured weekly report in markdown format.
    - Time range: Monday to Sunday of previous week
    - GitHub username
    - GitHub organization (if applicable)
+   - User's Chinese name (用户中文名) - for searching Lark meeting notes
 
 2. Collect GitHub Data (收集 GitHub 数据)
    - Search PRs: author:<username> created:>=<start_date>
    - Extract: date, repo, PR number, title, summary
 
-3. Collect Lark Documents (收集飞书文档)
-   - Search recent documents
-   - Filter user-participated documents (meetings, authored docs)
-   - Extract key information from content
+3. Collect Lark Documents (收集飞书文档) - IMPORTANT: Multiple searches required!
+   a. Search user-hosted meetings: "智能纪要 {用户中文名}"
+   b. Search user-hosted meetings: "AI notes {用户中文名}"
+   c. Search team meetings: "双周会 会议", "周会 会议纪要"
+   d. Filter documents by date in title matching report period
+   e. Read document content for relevant meetings
+   f. Extract key information (topics, participants, action items)
 
 4. Generate Report (生成报告)
    - Format as structured markdown
+   - Separate sections for: 主讲的培训/分享, 参与的会议
    - Present to user for review
 
 5. Iterate (迭代)
@@ -88,11 +115,21 @@ Generate structured weekly report in markdown format.
 |------|------|-----|----------|
 | MM-DD | repo-name | #N | Brief description |
 
-### 二、文档/会议工作
+### 二、培训/会议工作
 
-**MM-DD** Activity Name
-- Key point 1
-- Key point 2
+#### 主讲的培训/分享 (如有)
+
+**MM-DD** Training/Sharing Title (主讲)
+- 参会人数：N 人
+- 培训内容要点
+- 待办事项（如有）
+
+#### 参与的会议
+
+**MM-DD** Meeting Name
+- Key discussion point 1
+- Key discussion point 2
+- Action items assigned to user
 
 ### 三、下周计划
 
@@ -105,7 +142,7 @@ Generate structured weekly report in markdown format.
 
 **User:**
 ```
-帮我生成上周的周报，我的 GitHub 用户名是 zhangsan，公司是 SerendipityOneInc
+帮我生成上周的周报，我的 GitHub 用户名是 zhangsan，公司是 SerendipityOneInc，中文名是张三
 ```
 
 **Assistant Response:**
@@ -113,7 +150,10 @@ Generate structured weekly report in markdown format.
 让我收集你上周 (01-27 ~ 02-02) 的工作数据。
 
 <collects GitHub PRs>
-<collects Lark documents>
+<searches Lark: "智能纪要 张三">
+<searches Lark: "AI notes 张三">
+<searches Lark: "双周会 会议">
+<reads relevant meeting documents>
 
 ## 周报 (2026-01-27 ~ 2026-02-02)
 
@@ -127,15 +167,21 @@ Generate structured weekly report in markdown format.
 | 01-30 | project-b | #18 | 修复登录页面 bug |
 | 01-28 | project-a | #40 | 优化数据库查询性能 |
 
-### 二、文档/会议工作
+### 二、培训/会议工作
 
-**01-29** 技术分享会
-- 分享主题：微服务架构设计
+#### 主讲的培训/分享
+
+**01-29** 微服务架构设计分享 (主讲)
 - 参会人数：15 人
+- 培训内容：微服务拆分原则、服务治理、链路追踪
+- 待办：整理分享材料发给参会人员
 
-**01-27** 团队周会
+#### 参与的会议
+
+**01-27** Infra 双周会
 - 讨论 Q1 OKR 进展
 - 确认下周发布计划
+- Action: 跟进 XX 系统上线
 
 需要我调整格式或补充其他内容吗？
 ```
@@ -212,9 +258,10 @@ Would you like me to adjust the format or add more details?
 ## Tips for Effective Use (使用技巧)
 
 1. **Prepare GitHub username** - Have your GitHub username and organization ready
-2. **Check Lark authorization** - Ensure Lark MCP is authorized before starting
-3. **Provide feedback** - Tell the assistant to adjust format if needed
-4. **Add context** - Mention important meetings or activities not captured automatically
+2. **Provide Chinese name** - Your Chinese name is needed to search Lark meeting notes (e.g., "朱广彬")
+3. **Check Lark authorization** - Ensure Lark MCP is authorized before starting
+4. **Provide feedback** - Tell the assistant to adjust format if needed
+5. **Add context** - Mention important meetings or activities not captured automatically
 
 ## Limitations (限制)
 

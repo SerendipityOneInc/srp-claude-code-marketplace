@@ -1,0 +1,22 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_tiktok_fivetran_campaign_geo_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.campaign_country_report",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.advertiser",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.392440",
+  "downstream_count": 0,
+  "upstream_count": 3
+}

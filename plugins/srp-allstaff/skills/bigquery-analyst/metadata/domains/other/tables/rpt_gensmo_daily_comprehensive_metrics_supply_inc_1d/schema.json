@@ -1,0 +1,80 @@
+{
+  "table_id": "rpt_gensmo_daily_comprehensive_metrics_supply_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_daily_comprehensive_metrics_supply_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 304,
+  "num_bytes": 26632,
+  "created": "2025-08-28T06:15:43.235000+00:00",
+  "modified": "2026-01-30T03:05:50.976000+00:00",
+  "description": "Gensmo每日综合指标补充表，包含新用户行为数据和登录用户留存指标",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "REQUIRED",
+      "description": "报告日期"
+    },
+    {
+      "name": "new_user_search_uv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新用户搜索UV"
+    },
+    {
+      "name": "new_user_try_on_uv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新用户试穿UV"
+    },
+    {
+      "name": "new_user_search_pv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新用户搜索PV"
+    },
+    {
+      "name": "new_user_try_on_pv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新用户试穿PV"
+    },
+    {
+      "name": "login_new_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "登录新用户数"
+    },
+    {
+      "name": "login_d1_retention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "登录用户D1留存数（次日更新）"
+    },
+    {
+      "name": "login_d1_to_d7_retention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "登录用户1D7S留存数（第8天更新）"
+    },
+    {
+      "name": "login_w1_retention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "登录用户W1留存数（第15天更新）"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "创建时间"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "更新时间"
+    }
+  ]
+}

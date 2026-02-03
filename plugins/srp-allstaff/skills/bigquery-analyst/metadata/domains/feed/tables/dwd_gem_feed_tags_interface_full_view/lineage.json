@@ -1,0 +1,26 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_gem_feed_tags_interface_full_view",
+  "upstream": [],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_faive_feed_tags_total_operation_metric_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_favie_moodboard_tag_full_agg_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_feed_collage_full_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_favie_moodboard_tag_full_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.390273",
+  "downstream_count": 4,
+  "upstream_count": 0
+}

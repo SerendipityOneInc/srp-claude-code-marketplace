@@ -1,0 +1,110 @@
+{
+  "table_id": "dws_decofy_user_group_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_decofy_user_group_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 4270897,
+  "num_bytes": 960905189,
+  "created": "2025-10-05T11:23:57+00:00",
+  "modified": "2026-01-30T01:02:57.804000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "分组名称"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Appsflyer ID"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用时长类型"
+    },
+    {
+      "name": "user_activity_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户活跃状态: active,inactive"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "membership_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员生命周期: new,active,expiring,expired"
+    },
+    {
+      "name": "membership_pay_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否付费过费： paid,unpaid"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "routine_id": "rpt_decofy_growth_management_dashboard_v2_inc_1d_function",
+  "full_routine_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_growth_management_dashboard_v2_inc_1d_function",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "function_type": "utility",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "full_dt",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "inc_dt",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

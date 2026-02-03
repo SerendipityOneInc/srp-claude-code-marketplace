@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_daily_comprehensive_metrics_inc_1d",
+  "upstream": [],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_total_comprehensive_metrics_supply_inc_1d_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.366733",
+  "downstream_count": 1,
+  "upstream_count": 0
+}

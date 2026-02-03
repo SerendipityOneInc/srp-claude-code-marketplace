@@ -1,0 +1,212 @@
+{
+  "table_id": "dwd_gem_operation_feed_full",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_gem_operation_feed_full",
+  "table_type": "TABLE",
+  "num_rows": 18889443,
+  "num_bytes": 7905235758,
+  "created": "2025-09-29T08:33:02.923000+00:00",
+  "modified": "2025-12-11T02:15:36.516000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "collage_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "collage 唯一ID；moodboard_id/try_on_task_id"
+    },
+    {
+      "name": "created_date",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "collage创建日期"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "collage创建时间，精确到秒"
+    },
+    {
+      "name": "created_user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "collage创建用户ID"
+    },
+    {
+      "name": "collage_title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "collage标题/推理reasoning"
+    },
+    {
+      "name": "collage_description",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "collage描述"
+    },
+    {
+      "name": "category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "with_cover_feed/similar_collage/general_collage/try_on"
+    },
+    {
+      "name": "image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "封面或试穿图片URL"
+    },
+    {
+      "name": "publisher",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发布者"
+    },
+    {
+      "name": "is_feed",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否信息流内容（已筛选为 TRUE）"
+    },
+    {
+      "name": "is_onboard",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否onboard"
+    },
+    {
+      "name": "moderation_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "审核状态"
+    },
+    {
+      "name": "liked_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "lick_count"
+    },
+    {
+      "name": "saved_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "save_count"
+    },
+    {
+      "name": "shared_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "share_co unt"
+    },
+    {
+      "name": "remix",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "remix"
+    },
+    {
+      "name": "hashtags",
+      "type": "JSON",
+      "mode": "REPEATED",
+      "description": "hashtag"
+    },
+    {
+      "name": "tag_dt",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "标签表(dwd_gem_feed_tags_full_1d_view)中该ID的最近日期"
+    },
+    {
+      "name": "style_one_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "style_two_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "occasion_one_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "occasion_two_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "color_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "weather_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "temperature_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "gender_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "age_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "body_size_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "body_shape_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "height_tags",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "is_UGC",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "created_user_id 字符长度>5"
+    },
+    {
+      "name": "is_duplicate_image",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "whether image_url appears more than once"
+    },
+    {
+      "name": "production_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "生产类型"
+    }
+  ]
+}

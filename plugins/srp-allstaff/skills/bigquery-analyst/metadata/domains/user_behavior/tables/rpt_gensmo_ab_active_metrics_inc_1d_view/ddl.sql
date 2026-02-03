@@ -1,0 +1,34 @@
+CREATE VIEW `srpproduct-dc37e.favie_rpt.rpt_gensmo_ab_active_metrics_inc_1d_view`
+AS WITH ab_active_metrics AS(
+        SELECT
+            dt,
+            country_name,
+            platform,
+            app_version,
+            user_login_type,
+            user_tenure_type,
+            SPLIT(user_group, '@')[OFFSET(0)] AS ab_project_name,
+            SPLIT(user_group, '@')[OFFSET(2)] AS ab_router_id,
+            SPLIT(user_group, '@')[OFFSET(1)] AS ab_router_name,
+            active_user_d1_cnt,
+            total_duration
+        FROM
+            `srpproduct-dc37e.favie_rpt.rpt_gensmo_user_active_metrics_inc_1d`
+        WHERE
+            dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY) AND user_group LIKE 'ab%'
+    )
+    
+    SELECT
+        dt,
+        user_tenure_type,
+        user_login_type,
+        country_name,
+        platform,
+        app_version,
+        ab_project_name,
+        ab_router_id,
+        ab_router_name,
+        active_user_d1_cnt,
+        total_duration
+    FROM
+        ab_active_metrics;

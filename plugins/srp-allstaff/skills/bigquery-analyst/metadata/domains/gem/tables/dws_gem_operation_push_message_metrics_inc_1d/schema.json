@@ -1,0 +1,56 @@
+{
+  "table_id": "dws_gem_operation_push_message_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gem_operation_push_message_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 2417573,
+  "num_bytes": 214144934,
+  "created": "2025-09-17T10:58:01.930000+00:00",
+  "modified": "2025-12-09T02:01:31.526000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "统计日期（按推送完成日期）"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "push_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "推送事件名称"
+    },
+    {
+      "name": "sent_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发送次数（实际发送成功的次数）"
+    },
+    {
+      "name": "click_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击次数（实际点击次数）"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "推送平台/端"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型：新用户或老用户"
+    }
+  ]
+}

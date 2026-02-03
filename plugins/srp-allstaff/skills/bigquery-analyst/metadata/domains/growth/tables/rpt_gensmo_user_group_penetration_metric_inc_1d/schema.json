@@ -1,0 +1,92 @@
+{
+  "table_id": "rpt_gensmo_user_group_penetration_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_group_penetration_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 182964662,
+  "num_bytes": 26533899611,
+  "created": "2025-11-13T04:08:14.964000+00:00",
+  "modified": "2026-01-30T01:22:14.425000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户周期类型: New User/Old User"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否登录用户"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户30日内最常使用所在国家"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的app版本号"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "group_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户组用户数"
+    },
+    {
+      "name": "active_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "活跃用户数"
+    }
+  ]
+}

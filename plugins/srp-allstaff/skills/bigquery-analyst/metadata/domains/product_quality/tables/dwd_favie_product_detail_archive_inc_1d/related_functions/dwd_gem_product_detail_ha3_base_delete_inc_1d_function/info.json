@@ -1,0 +1,16 @@
+{
+  "routine_id": "dwd_gem_product_detail_ha3_base_delete_inc_1d_function",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dwd_gem_product_detail_ha3_base_delete_inc_1d_function",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "function_type": "utility",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

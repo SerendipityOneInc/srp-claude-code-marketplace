@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_favie_mapping_raw_brand",
+  "upstream": [],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_official_brand_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.354122",
+  "downstream_count": 1,
+  "upstream_count": 0
+}

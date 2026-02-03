@@ -1,0 +1,116 @@
+{
+  "table_id": "dws_gensmo_user_activity_profile_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_user_activity_profile_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1530587,
+  "num_bytes": 488553831,
+  "created": "2025-10-21T12:04:54.240000+00:00",
+  "modified": "2026-01-30T01:06:00.564000+00:00",
+  "description": "Gensmo用户活跃行为宽表，聚合用户当天行为类型及关键功能使用情况",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID，当前活跃设备"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Appsflyer追踪ID"
+    },
+    {
+      "name": "user_ids",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": "用户ID列表，包含当天登录的所有用户ID"
+    },
+    {
+      "name": "is_internal_user",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否内部用户"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户在职时长类型"
+    },
+    {
+      "name": "user_tenure_segment",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户在职时长细分"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型，login表示当天有登录，guest表示当天未登录"
+    },
+    {
+      "name": "user_created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "用户创建时间"
+    },
+    {
+      "name": "first_event_timestamp",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "首次访问时间"
+    },
+    {
+      "name": "last_event_timestamp",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "最近访问时间"
+    },
+    {
+      "name": "geo_address",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "地理位置信息"
+    },
+    {
+      "name": "app_info",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "应用信息"
+    },
+    {
+      "name": "user_duration",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "当天用户总停留时长，单位秒"
+    },
+    {
+      "name": "common_actions",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": "当天内的行为类型及计数"
+    },
+    {
+      "name": "key_functions",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": "当天内的key功能类型及计数"
+    }
+  ]
+}

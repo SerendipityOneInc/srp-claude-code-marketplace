@@ -1,0 +1,68 @@
+{
+  "table_id": "dws_gensmo_user_avatar_duration_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_user_avatar_duration_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 577923,
+  "num_bytes": 73659964,
+  "created": "2025-09-09T08:48:06.393000+00:00",
+  "modified": "2025-12-25T02:17:49.609000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户设备id"
+    },
+    {
+      "name": "avatar_task_interval",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户从登陆到完成avatar创建的时间间隔"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户组"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户新老类型"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    }
+  ]
+}

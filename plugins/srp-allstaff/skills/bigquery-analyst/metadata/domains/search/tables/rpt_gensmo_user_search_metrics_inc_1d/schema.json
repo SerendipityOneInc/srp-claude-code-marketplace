@@ -1,0 +1,110 @@
+{
+  "table_id": "rpt_gensmo_user_search_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_search_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1578218,
+  "num_bytes": 243557557,
+  "created": "2025-07-15T06:37:46.641000+00:00",
+  "modified": "2026-01-30T01:48:42.026000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户新老类型"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "app版本"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "search_trigger_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起collage生成的pv数"
+    },
+    {
+      "name": "search_boot_page_view_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "search_boot页曝光pv"
+    },
+    {
+      "name": "search_boot_polish_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "search_boot页polish功能点击数"
+    },
+    {
+      "name": "search_boot_focus_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "search_boot页InputBox Focus点击数"
+    },
+    {
+      "name": "search_trigger_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起collage生成的用户数"
+    },
+    {
+      "name": "search_boot_page_view_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "search_boot页曝光用户数"
+    },
+    {
+      "name": "search_boot_polish_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "search_boot页polish功能点击用户数"
+    },
+    {
+      "name": "search_boot_focus_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "search_boot页InputBox Focus点击用户数"
+    },
+    {
+      "name": "DAU",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数"
+    }
+  ]
+}

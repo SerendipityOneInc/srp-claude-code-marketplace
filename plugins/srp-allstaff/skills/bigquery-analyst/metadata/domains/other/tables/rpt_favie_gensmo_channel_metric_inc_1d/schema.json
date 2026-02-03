@@ -1,0 +1,182 @@
+{
+  "table_id": "rpt_favie_gensmo_channel_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_channel_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 38918,
+  "num_bytes": 9533701,
+  "created": "2025-07-10T02:53:06.535000+00:00",
+  "modified": "2025-07-10T03:23:36.161000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "item_task_gen_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel发起任务数"
+    },
+    {
+      "name": "item_task_complete_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel完成浏览次数"
+    },
+    {
+      "name": "item_task_complete_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel完成的Item数量"
+    },
+    {
+      "name": "item_task_list_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务列表浏览次数"
+    },
+    {
+      "name": "item_task_list_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务列表Item数量"
+    },
+    {
+      "name": "item_task_detail_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务详情浏览次数"
+    },
+    {
+      "name": "item_task_detail_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务详情Item数量"
+    },
+    {
+      "name": "item_task_save_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务收藏次数"
+    },
+    {
+      "name": "item_task_save_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务收藏Item数量"
+    },
+    {
+      "name": "item_task_unsave_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务取消收藏次数"
+    },
+    {
+      "name": "item_task_unsave_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务取消收藏Item数量"
+    },
+    {
+      "name": "item_task_like_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务点赞次数"
+    },
+    {
+      "name": "item_task_like_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务点赞Item数量"
+    },
+    {
+      "name": "item_task_cancel_like_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务取消点赞次数"
+    },
+    {
+      "name": "item_task_cancel_like_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务取消点赞Item数量"
+    },
+    {
+      "name": "item_task_share_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务分享次数"
+    },
+    {
+      "name": "item_task_share_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务分享Item数量"
+    },
+    {
+      "name": "item_task_download_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务下载次数"
+    },
+    {
+      "name": "item_task_download_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务下载Item数量"
+    },
+    {
+      "name": "item_task_external_jump_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务外跳次数"
+    },
+    {
+      "name": "item_task_external_jump_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务外跳Item数量"
+    }
+  ]
+}

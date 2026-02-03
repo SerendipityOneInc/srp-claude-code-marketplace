@@ -1,0 +1,22 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.rpt_favie_gensmo_tryon_with_avatar_metric_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_gem_user_replica_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_try_on_user_task_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_favie_gensmo_user_ids_map_inc_1d",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.353382",
+  "downstream_count": 0,
+  "upstream_count": 3
+}

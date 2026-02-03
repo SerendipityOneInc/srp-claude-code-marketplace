@@ -1,0 +1,224 @@
+{
+  "table_id": "dws_favie_decofy_user_subscription_feature_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_decofy_user_subscription_feature_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 37458,
+  "num_bytes": 5965932,
+  "created": "2025-08-12T10:51:50.205000+00:00",
+  "modified": "2025-08-12T12:09:21.601000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告平台用户ID"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "created_at",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "用户创建时间"
+    },
+    {
+      "name": "first_subscription_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "第一次订阅时间"
+    },
+    {
+      "name": "latest_subscription_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "最近一次订阅时间"
+    },
+    {
+      "name": "total_subscription_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总订阅次数"
+    },
+    {
+      "name": "first_paid_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "第一次付费时间"
+    },
+    {
+      "name": "latest_paid_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "最近一次付费时间"
+    },
+    {
+      "name": "latest_paid_amount",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近一次付费金额"
+    },
+    {
+      "name": "latest_paid_currency",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "最近一次付费货币"
+    },
+    {
+      "name": "total_paid_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总付费次数"
+    },
+    {
+      "name": "total_paid_amount",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总付费金额"
+    },
+    {
+      "name": "total_paid_currency",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "总付费货币"
+    },
+    {
+      "name": "today_is_expires",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "今天是否到期"
+    },
+    {
+      "name": "current_paid_package",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "当前付费套餐"
+    },
+    {
+      "name": "current_paid_expires_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "当前付费到期时间"
+    },
+    {
+      "name": "current_package_price",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当前套餐价格"
+    },
+    {
+      "name": "current_package_currency",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "当前套餐货币"
+    },
+    {
+      "name": "first_trial_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "第一次免费试用时间"
+    },
+    {
+      "name": "latest_trial_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "最近一次免费试用时间"
+    },
+    {
+      "name": "total_trial_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总试用次数"
+    },
+    {
+      "name": "current_trial_expires_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "当前试用到期时间"
+    },
+    {
+      "name": "first_deleted_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "第一次删除订阅时间"
+    },
+    {
+      "name": "latest_deleted_time",
+      "type": "DATETIME",
+      "mode": "NULLABLE",
+      "description": "最近一次删除订阅时间"
+    },
+    {
+      "name": "total_deleted_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总订阅删除次数"
+    },
+    {
+      "name": "subscription_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅状态：active_paid(活跃付费), active_trial(活跃试用), expired_paid(过期付费), trial_only(仅试用), no_subscription(无订阅)"
+    },
+    {
+      "name": "days_to_expire",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "距离到期天数，对活跃付费或活跃试用用户有效"
+    }
+  ]
+}

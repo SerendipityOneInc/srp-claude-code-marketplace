@@ -1,0 +1,116 @@
+{
+  "table_id": "dim_ad_all_app_creative_tiktok_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_ad_all_app_creative_tiktok_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 39,
+  "num_bytes": 13693,
+  "created": "2025-07-04T07:47:28.684000+00:00",
+  "modified": "2025-07-07T06:32:44.644000+00:00",
+  "description": "TikTok广告创意维度表，存储图片创意信息",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "REQUIRED",
+      "description": "分区日期字段"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": "数据来源，固定值为Tiktok"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称：Gensmo、Decofy或UNKNOWN"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户ID，对应advertiser_id"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户名称"
+    },
+    {
+      "name": "external_creative_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "外部创意ID，对应image_id"
+    },
+    {
+      "name": "external_creative_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "外部创意名称，对应file_name"
+    },
+    {
+      "name": "external_creative_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "外部创意URL，对应image_url"
+    },
+    {
+      "name": "creative_type",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": "创意类型，固定值为image"
+    },
+    {
+      "name": "internal_creative_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "内部创意ID"
+    },
+    {
+      "name": "format",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "文件格式"
+    },
+    {
+      "name": "height",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "高度"
+    },
+    {
+      "name": "width",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "宽度"
+    },
+    {
+      "name": "size",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "文件大小"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "更新时间"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "创建时间"
+    },
+    {
+      "name": "upload_r2_process_at",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上传到R2的处理时间"
+    }
+  ]
+}

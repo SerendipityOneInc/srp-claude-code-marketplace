@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_all_app_appsflyer_webhook_including_non_ad_inc_1d_view",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.395775",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

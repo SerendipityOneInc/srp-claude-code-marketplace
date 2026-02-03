@@ -1,0 +1,73 @@
+BEGIN
+      DELETE FROM `favie_dw.dwd_favie_gem_workflow_inc_1d`
+      WHERE dt = dt_param;
+
+      -- 插入数据
+      INSERT INTO `favie_dw.dwd_favie_gem_workflow_inc_1d` (
+        trace_id,
+        traceparent,
+        task_id,
+        raw_query,
+        query_modality,
+        rewrite_queries,
+        image_url,
+        image_description,
+        image_height,
+        image_width,
+        user_image_tag,
+        collage_title,
+        intention,
+        reasoning,
+        query_source,
+        device_id,
+        user_type,
+        is_internal_user,
+        user_login_type,
+        user_tenure_type,
+        country_name,
+        platform,
+        app_version,
+        appsflyer_id,
+        ad_source,
+        ad_campaign_id,
+        ad_group_id,
+        ad_id,
+        log_timestamp,
+        receive_timestamp,
+        dt
+      )
+      SELECT
+        trace_id,
+        traceparent,
+        task_id,
+        raw_query,
+        query_modality,
+        rewrite_queries,
+        image_url,
+        image_description,
+        image_height,
+        image_width,
+        user_image_tag,
+        collage_title,
+        intention,
+        reasoning,
+        query_source,
+        device_id,
+        user_type,
+        is_internal_user,
+        user_login_type,
+        user_tenure_type,
+        country_name,
+        platform,
+        app_version,
+        appsflyer_id,
+        ad_source,
+        ad_campaign_id,
+        ad_group_id,
+        ad_id,
+        log_timestamp,
+        receive_timestamp,
+        dt
+      FROM `favie_dw.dwd_favie_gem_workflow_inc_1d_function`(dt_param);
+
+END

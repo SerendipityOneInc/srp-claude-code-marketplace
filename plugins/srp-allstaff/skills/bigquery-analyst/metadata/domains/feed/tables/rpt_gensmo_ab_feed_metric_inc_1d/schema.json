@@ -1,0 +1,110 @@
+{
+  "table_id": "rpt_gensmo_ab_feed_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_ab_feed_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1150294,
+  "num_bytes": 166602688,
+  "created": "2025-07-04T07:03:22.835000+00:00",
+  "modified": "2026-01-30T03:03:03.710000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户新老类型"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "ab_project_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "实验名"
+    },
+    {
+      "name": "ab_router_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "分组id"
+    },
+    {
+      "name": "ab_router_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "分组名称"
+    },
+    {
+      "name": "content_consumption_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "内容消费PV数"
+    },
+    {
+      "name": "feed_stay_interval_total_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "feed_detail和home停留总时长"
+    },
+    {
+      "name": "feed_true_view_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Feed真实曝光PV数"
+    },
+    {
+      "name": "content_consumption_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "从首页进入feed详情页的用户数"
+    },
+    {
+      "name": "feed_stay_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "停留在feed_detail和home页的用户数"
+    },
+    {
+      "name": "feed_true_view_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "feed真实曝光的用户数"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    }
+  ]
+}

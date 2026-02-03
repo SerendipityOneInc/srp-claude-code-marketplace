@@ -1,0 +1,212 @@
+{
+  "table_id": "rpt_images_quality_pixel_distribution_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_images_quality_pixel_distribution_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 2211983,
+  "num_bytes": 600011317,
+  "created": "2024-12-06T05:58:32.901000+00:00",
+  "modified": "2025-12-31T01:53:34.209000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "product_f_creates_at",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "商品创建时间"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "total_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SKU总数"
+    },
+    {
+      "name": "total_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SPU总数"
+    },
+    {
+      "name": "tiny_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "tiny image的SKU数"
+    },
+    {
+      "name": "small_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "small image的SKU数"
+    },
+    {
+      "name": "medium_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "medium image的SKU数"
+    },
+    {
+      "name": "large_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "large image的SKU数"
+    },
+    {
+      "name": "size_2k_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "2k image的SKU数"
+    },
+    {
+      "name": "size_4k_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "4k image的SKU数"
+    },
+    {
+      "name": "size_8k_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "8k image的SKU数"
+    },
+    {
+      "name": "tiny_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是tiny image的SKU数"
+    },
+    {
+      "name": "small_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是small image的SKU数"
+    },
+    {
+      "name": "medium_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是medium image的SKU数"
+    },
+    {
+      "name": "large_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是large image的SKU数"
+    },
+    {
+      "name": "size_2k_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是2k image的SKU数"
+    },
+    {
+      "name": "size_4k_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是4k image的SKU数"
+    },
+    {
+      "name": "size_8k_main_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是8k image的SKU数"
+    },
+    {
+      "name": "tiny_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "tiny image的SPU数"
+    },
+    {
+      "name": "small_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "small image的SPU数"
+    },
+    {
+      "name": "medium_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "medium image的SPU数"
+    },
+    {
+      "name": "large_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "large image的SPU数"
+    },
+    {
+      "name": "size_2k_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "2k image的SPU数"
+    },
+    {
+      "name": "size_4k_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "4k image的SPU数"
+    },
+    {
+      "name": "size_8k_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "8k image的SPU数"
+    },
+    {
+      "name": "tiny_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是tiny image的SPU数"
+    },
+    {
+      "name": "small_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是small image的SPU数"
+    },
+    {
+      "name": "medium_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是medium image的SPU数"
+    },
+    {
+      "name": "large_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是large image的SPU数"
+    },
+    {
+      "name": "size_2k_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是2k image的SPU数"
+    },
+    {
+      "name": "size_4k_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是4k image的SPU数"
+    },
+    {
+      "name": "size_8k_main_image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主图是8k image的SPU数"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    }
+  ]
+}

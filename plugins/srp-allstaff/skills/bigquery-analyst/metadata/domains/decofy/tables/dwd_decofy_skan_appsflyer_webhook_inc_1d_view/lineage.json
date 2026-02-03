@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_decofy_skan_appsflyer_webhook_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.skan_appsflyer_decofy2.data",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.368653",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

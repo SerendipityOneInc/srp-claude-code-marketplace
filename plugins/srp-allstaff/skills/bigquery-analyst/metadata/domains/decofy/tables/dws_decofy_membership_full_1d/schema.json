@@ -1,0 +1,176 @@
+{
+  "table_id": "dws_decofy_membership_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_decofy_membership_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 180168,
+  "num_bytes": 73826629,
+  "created": "2025-09-11T09:34:21.866000+00:00",
+  "modified": "2026-01-30T01:03:47.999000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Appsflyer ID"
+    },
+    {
+      "name": "order_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单来源"
+    },
+    {
+      "name": "membership_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员生命周期: new,active,expiring,expired"
+    },
+    {
+      "name": "first_subscribe_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员创建时间"
+    },
+    {
+      "name": "first_subscribe_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员首次订阅产品ID"
+    },
+    {
+      "name": "first_subscribe_simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员首次订阅简化产品ID"
+    },
+    {
+      "name": "first_pay_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员首次付费时间"
+    },
+    {
+      "name": "first_pay_subscribe_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员首次付费订阅时间"
+    },
+    {
+      "name": "latest_subscribe_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅时间"
+    },
+    {
+      "name": "latest_subscribe_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅序号"
+    },
+    {
+      "name": "latest_order_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员近一次订单产品ID"
+    },
+    {
+      "name": "latest_order_simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订单简化产品ID"
+    },
+    {
+      "name": "latest_order_expires_date",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员到期时间"
+    },
+    {
+      "name": "latest_order_renewal_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员续费时间"
+    },
+    {
+      "name": "latest_order_created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅的订单创建时间"
+    },
+    {
+      "name": "latest_order_subscription_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅的订单序号"
+    },
+    {
+      "name": "latest_order_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅的订单类别"
+    },
+    {
+      "name": "latest_order_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅的订单类型"
+    },
+    {
+      "name": "latest_order_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员最近一次订阅的订单序号"
+    },
+    {
+      "name": "total_order_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员累计订单数"
+    },
+    {
+      "name": "total_paid_order_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员累计付费订单数"
+    },
+    {
+      "name": "total_paid_order_usd_amount",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员所有订单的支付金额"
+    },
+    {
+      "name": "total_subscribe_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员累计订阅次数"
+    },
+    {
+      "name": "total_subscribe_product_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会员累计订阅产品数"
+    },
+    {
+      "name": "subscribe_products",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": "会员累计订阅过的产品ID列表"
+    }
+  ]
+}

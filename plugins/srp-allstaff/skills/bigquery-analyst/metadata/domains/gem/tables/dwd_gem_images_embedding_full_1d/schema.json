@@ -1,0 +1,50 @@
+{
+  "table_id": "dwd_gem_images_embedding_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_gem_images_embedding_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 45202765,
+  "num_bytes": 103772861519,
+  "created": "2025-12-09T09:03:58.562000+00:00",
+  "modified": "2026-01-18T12:26:16.453000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "target_image_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "embedding",
+      "type": "FLOAT",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "emb_update_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "emb_update_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

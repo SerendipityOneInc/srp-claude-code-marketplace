@@ -1,0 +1,98 @@
+{
+  "table_id": "dws_gensmo_user_forward_tracking_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_user_forward_tracking_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 811094,
+  "num_bytes": 251001438,
+  "created": "2025-10-21T12:05:30.033000+00:00",
+  "modified": "2026-01-30T01:08:27.163000+00:00",
+  "description": "Gensmo新增用户行为追踪宽表，聚合用户当天、未来X天行为类型及关键功能使用情况",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID，当前活跃设备"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Appsflyer追踪ID"
+    },
+    {
+      "name": "is_internal_user",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否内部用户"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户在职时长类型"
+    },
+    {
+      "name": "user_tenure_segment",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户在职时长细分"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型，login表示当天有登录，guest表示当天未登录"
+    },
+    {
+      "name": "user_created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "创建时间"
+    },
+    {
+      "name": "tracking_period",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "追踪期，单位天"
+    },
+    {
+      "name": "user_duration",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "当天用户总停留时长，单位秒"
+    },
+    {
+      "name": "common_actions_1d",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": "当天内的行为类型及计数"
+    },
+    {
+      "name": "common_actions_xd",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": "未来X天内的行为类型及计数"
+    },
+    {
+      "name": "active_dates",
+      "type": "DATE",
+      "mode": "REPEATED",
+      "description": "用户未来观察期内的活跃日期列表"
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "table_id": "rpt_decofy_growth_management_dashboard_v3_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_growth_management_dashboard_v3_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 3148,
+  "num_bytes": 1326763,
+  "created": "2025-08-20T10:03:32.940000+00:00",
+  "modified": "2025-09-04T03:02:59.368000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区字段"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "苹果/安卓"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户ID"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户名称"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign ID"
+    },
+    {
+      "name": "campaign_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign名称"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group ID"
+    },
+    {
+      "name": "ad_group_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group名称"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告名称"
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家代码"
+    },
+    {
+      "name": "channel",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "渠道"
+    },
+    {
+      "name": "impression",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "曝光数"
+    },
+    {
+      "name": "click",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击数"
+    },
+    {
+      "name": "conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "转化数"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "成本"
+    },
+    {
+      "name": "install_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "安装数"
+    },
+    {
+      "name": "user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户数"
+    },
+    {
+      "name": "real_order_paid_amount_7d",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "7天真实订单付费金额"
+    },
+    {
+      "name": "is_paid_order_7d_1_1",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天付费订单1-1"
+    },
+    {
+      "name": "is_trial_order_7d_1_1",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天试用订单1-1"
+    },
+    {
+      "name": "is_benefit_order_7d_1_1",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天福利订单1-1"
+    },
+    {
+      "name": "is_order_weekly_9990_7d_1_1",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天周订阅9990订单1-1"
+    },
+    {
+      "name": "is_order_annual_39990_7d_1_1",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天年订阅39990订单1-1"
+    },
+    {
+      "name": "is_order_free_trial_7d_1_1",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天免费试用订单1-1"
+    },
+    {
+      "name": "is_renewal_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "续费订单1-2"
+    },
+    {
+      "name": "is_trial_to_paid_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试用转付费订单1-2"
+    },
+    {
+      "name": "is_benefit_to_paid_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "福利转付费订单1-2"
+    },
+    {
+      "name": "is_paid_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费订单1-2"
+    },
+    {
+      "name": "is_paid_order_weekly_9990_paid_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费周订阅9990订单1-2"
+    },
+    {
+      "name": "is_paid_order_annual_39990_paid_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费年订阅39990订单1-2"
+    },
+    {
+      "name": "is_paid_order_free_trial_paid_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费免费试用订单1-2"
+    },
+    {
+      "name": "is_paid_order_weekly_9990_paid_renewal_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费周订阅9990续费订单1-2"
+    },
+    {
+      "name": "is_paid_order_annual_39990_paid_trial_to_paid_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费年订阅39990试用转付费订单1-2"
+    },
+    {
+      "name": "is_paid_order_free_trial_paid_benefit_to_paid_order_1_2",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费免费试用福利转付费订单1-2"
+    },
+    {
+      "name": "is_renewal_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "续费订单1-3"
+    },
+    {
+      "name": "is_trial_to_paid_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试用转付费订单1-3"
+    },
+    {
+      "name": "is_benefit_to_paid_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "福利转付费订单1-3"
+    },
+    {
+      "name": "is_paid_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费订单1-3"
+    },
+    {
+      "name": "is_paid_order_weekly_9990_paid_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费周订阅9990订单1-3"
+    },
+    {
+      "name": "is_paid_order_annual_39990_paid_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费年订阅39990订单1-3"
+    },
+    {
+      "name": "is_paid_order_free_trial_paid_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费免费试用订单1-3"
+    },
+    {
+      "name": "is_paid_order_weekly_9990_paid_renewal_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费周订阅9990续费订单1-3"
+    },
+    {
+      "name": "is_paid_order_annual_39990_paid_trial_to_paid_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费年订阅39990试用转付费订单1-3"
+    },
+    {
+      "name": "is_paid_order_free_trial_paid_benefit_to_paid_order_1_3",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "付费免费试用福利转付费订单1-3"
+    }
+  ]
+}

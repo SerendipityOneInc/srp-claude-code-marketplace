@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_gem_onesignal_push_status_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.mongo_production.copilot_gem_onesignal_push_status",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.403898",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

@@ -1,0 +1,11 @@
+{
+  "table": "project.dataset.table_name",
+  "upstream": [
+    {
+      "table": "project.dataset.source_table",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": []
+}

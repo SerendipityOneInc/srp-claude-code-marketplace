@@ -1,0 +1,158 @@
+{
+  "table_id": "rpt_gensmo_user_avatar_cnt_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_avatar_cnt_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 3385435,
+  "num_bytes": 777524313,
+  "created": "2025-11-14T06:36:29.773000+00:00",
+  "modified": "2025-12-25T02:17:24.010000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期类型（新/老用户）"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "validated_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "上传照片但未生成avatar任务数量"
+    },
+    {
+      "name": "failed_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "avatar生成失败任务数量"
+    },
+    {
+      "name": "discarded_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "生成成功但用户未选择（refine或close）任务数量"
+    },
+    {
+      "name": "refined_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "生成成功且用户refine任务数量"
+    },
+    {
+      "name": "selected_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "生成成功且用户选取任务数量"
+    },
+    {
+      "name": "new_avatar_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新头像数量"
+    },
+    {
+      "name": "valid_avatar_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "有效头像数量"
+    },
+    {
+      "name": "invalid_avatar_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "无效头像数量"
+    },
+    {
+      "name": "validated_task_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上传照片但未生成avatar任务设备ID"
+    },
+    {
+      "name": "failed_task_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "avatar生成失败任务设备ID"
+    },
+    {
+      "name": "discarded_task_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "生成成功但用户未选择（refine或close）任务设备ID"
+    },
+    {
+      "name": "refined_task_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "生成成功且用户refine任务设备ID"
+    },
+    {
+      "name": "selected_task_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "生成成功且用户选取任务设备ID"
+    },
+    {
+      "name": "new_avatar_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "新头像设备ID"
+    },
+    {
+      "name": "valid_avatar_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "有效头像设备ID"
+    },
+    {
+      "name": "invalid_avatar_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "无效头像设备ID"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "table_id": "rpt_faive_gensmo_membership_points_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_faive_gensmo_membership_points_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 161130,
+  "num_bytes": 37237859,
+  "created": "2026-01-04T06:23:35.649000+00:00",
+  "modified": "2026-01-30T01:20:34.544000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台，如 iOS、Android、Web"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家或地区名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类，如新用户、老用户"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分群标签"
+    },
+    {
+      "name": "active_user_1d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当日活跃用户数（DAU）"
+    },
+    {
+      "name": "login_user_1d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当日登录用户数"
+    },
+    {
+      "name": "earn_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取过积分行为的用户数"
+    },
+    {
+      "name": "earn_points_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取积分次数"
+    },
+    {
+      "name": "earn_points_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取积分数量"
+    },
+    {
+      "name": "earn_points_not_checkin_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过主动完成任务获取积分行为的用户数（不含被动checkin）"
+    },
+    {
+      "name": "earn_points_not_checkin_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过主动完成任务获取积分次数（不含被动checkin）"
+    },
+    {
+      "name": "earn_points_not_checkin_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过主动完成任务获取积分数量（不含被动checkin）"
+    },
+    {
+      "name": "earn_points_transaction_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过充值获取积分行为的用户数"
+    },
+    {
+      "name": "earn_points_transaction_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过充值获取积分次数"
+    },
+    {
+      "name": "earn_points_transaction_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过充值获取积分数量"
+    },
+    {
+      "name": "consume_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗过积分行为的用户数"
+    },
+    {
+      "name": "consume_points_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗积分次数"
+    },
+    {
+      "name": "consume_points_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗积分数量"
+    },
+    {
+      "name": "net_points_change",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "净积分流=当日获取积分-当日消耗积分"
+    },
+    {
+      "name": "consume_points_ge_task_claimed_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户当日消耗积分大于等于完成daily任务可获取的积分上限（当前固定13分）的用户数"
+    },
+    {
+      "name": "consume_points_ge_checkin_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户当日消耗积分大于等于每日登录可获取积分（当前固定10分）的用户数"
+    },
+    {
+      "name": "hit_limit_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "撞线用户数"
+    },
+    {
+      "name": "points_expired",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当日到期扣除积分（=当日daily积分获取-当日消耗积分）"
+    }
+  ]
+}

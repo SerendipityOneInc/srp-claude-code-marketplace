@@ -1,0 +1,80 @@
+{
+  "table_id": "rpt_faive_gensmo_membership_consume_points_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_faive_gensmo_membership_consume_points_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 133584,
+  "num_bytes": 15667450,
+  "created": "2025-12-31T02:07:56.426000+00:00",
+  "modified": "2026-01-30T01:20:49.903000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台，如 iOS、Android、Web"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家或地区名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类，如新用户、老用户"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分群标签"
+    },
+    {
+      "name": "consume_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分消耗类型，Tryon、video等"
+    },
+    {
+      "name": "consume_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户数"
+    },
+    {
+      "name": "consume_ponits_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户消耗积分次数"
+    },
+    {
+      "name": "consume_ponits_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户消耗积分数量"
+    }
+  ]
+}

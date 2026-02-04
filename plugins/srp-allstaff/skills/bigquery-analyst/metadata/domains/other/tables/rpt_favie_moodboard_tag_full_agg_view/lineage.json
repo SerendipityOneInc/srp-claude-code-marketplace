@@ -1,0 +1,19 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_favie_moodboard_tag_full_agg_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dwd_gem_feed_tags_interface_full_view",
+      "type": "table"
+    }
+  ],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_favie_feed_operation_mertic_with_tag_info_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.360260",
+  "downstream_count": 1,
+  "upstream_count": 1
+}

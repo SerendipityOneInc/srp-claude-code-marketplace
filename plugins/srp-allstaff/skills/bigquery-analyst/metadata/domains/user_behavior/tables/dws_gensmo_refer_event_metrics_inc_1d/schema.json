@@ -1,0 +1,140 @@
+{
+  "table_id": "dws_gensmo_refer_event_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_refer_event_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 21608236,
+  "num_bytes": 3889598443,
+  "created": "2025-08-07T02:30:19.474000+00:00",
+  "modified": "2025-10-05T01:02:03.868000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否新用户"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "user_country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户国家"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "ap名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件方法"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型"
+    },
+    {
+      "name": "pre_refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上级来源"
+    },
+    {
+      "name": "pre_refer_ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上级ap名称"
+    },
+    {
+      "name": "pre_refer_event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上级事件名称"
+    },
+    {
+      "name": "pre_refer_event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上级事件方法"
+    },
+    {
+      "name": "pre_refer_event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上级事件行为类型"
+    },
+    {
+      "name": "next_refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "下级来源"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "app版本"
+    },
+    {
+      "name": "web_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "native版本"
+    },
+    {
+      "name": "event_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件版本"
+    },
+    {
+      "name": "event_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "事件数"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    }
+  ]
+}

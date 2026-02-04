@@ -1,0 +1,128 @@
+{
+  "table_id": "rpt_gem_user_dimension_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gem_user_dimension_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 35279,
+  "num_bytes": 3647965,
+  "created": "2025-04-17T03:59:25.376000+00:00",
+  "modified": "2025-04-21T04:40:24.846000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "last_platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的平台"
+    },
+    {
+      "name": "last_app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的app版本号"
+    },
+    {
+      "name": "country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户30日内最常使用所在国家"
+    },
+    {
+      "name": "last_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否登录用户"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否注册用户"
+    },
+    {
+      "name": "total_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总用户数"
+    },
+    {
+      "name": "new_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新增用户数"
+    },
+    {
+      "name": "active_user_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数"
+    },
+    {
+      "name": "active_user_d7_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "周活跃用户数"
+    },
+    {
+      "name": "active_user_d30_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "月活跃用户数"
+    },
+    {
+      "name": "retention_users",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "前一日用户留存数"
+    },
+    {
+      "name": "yesterday_new_users",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "前一日新增用户数"
+    },
+    {
+      "name": "total_duration",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "总停留时长"
+    },
+    {
+      "name": "duration_0_05_percentile",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "停留时长的百分之五分位数"
+    },
+    {
+      "name": "duration_0_25_percentile",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "停留时长的百分之二十五分位数"
+    },
+    {
+      "name": "duration_0_50_percentile",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "停留时长的百分之五十分位数"
+    },
+    {
+      "name": "duration_0_75_percentile",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "停留时长的百分之七十五分位数"
+    },
+    {
+      "name": "duration_0_95_percentile",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "停留时长的百分之九十五分位数"
+    }
+  ]
+}

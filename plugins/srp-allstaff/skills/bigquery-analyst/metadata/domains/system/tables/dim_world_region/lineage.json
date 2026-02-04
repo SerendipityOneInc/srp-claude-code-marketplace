@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_world_region",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.365583",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

@@ -1,0 +1,284 @@
+{
+  "table_id": "dws_favie_gensmo_tryon_by_event_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_tryon_by_event_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 26666822,
+  "num_bytes": 10629956399,
+  "created": "2025-08-20T06:58:47.102000+00:00",
+  "modified": "2025-10-15T02:00:24.878000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "页面名称"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交互点名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称（select_item、view_item_list 等）"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件触发方式（点击、浏览、摇一摇等）"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型（试穿、无头像试穿等）"
+    },
+    {
+      "name": "event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "refer 与 ap_name 组合的事件来源"
+    },
+    {
+      "name": "cal_pre_refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "前一跳页面"
+    },
+    {
+      "name": "cal_pre_refer_ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "前一跳交互点名称"
+    },
+    {
+      "name": "cal_pre_event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "前一跳事件来源组合"
+    },
+    {
+      "name": "home_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主页浏览次数"
+    },
+    {
+      "name": "home_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "主页事件设备ID"
+    },
+    {
+      "name": "tryon_intention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿页面浏览次数"
+    },
+    {
+      "name": "tryon_intention_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿事件设备ID"
+    },
+    {
+      "name": "tryon_select_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿选择面板浏览次数"
+    },
+    {
+      "name": "tryon_select_panel_confirm_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿选择面板确认按钮点击次数"
+    },
+    {
+      "name": "tryon_select_panel_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿选择面板事件设备ID"
+    },
+    {
+      "name": "tryon_gen_action_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起试穿操作次数"
+    },
+    {
+      "name": "tryon_gen_action_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发起试穿事件设备ID"
+    },
+    {
+      "name": "tryon_gen_action_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起试穿操作次数2.0"
+    },
+    {
+      "name": "tryon_gen_action_device_id_2_0",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发起试穿事件设备ID"
+    },
+    {
+      "name": "tryon_complete_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成次数"
+    },
+    {
+      "name": "tryon_complete_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿完成事件设备ID"
+    },
+    {
+      "name": "tryon_channel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿频道点击次数"
+    },
+    {
+      "name": "tryon_channel_click_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿频道点击事件设备ID"
+    },
+    {
+      "name": "tryon_complete_detail_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿详情浏览次数"
+    },
+    {
+      "name": "tryon_complete_detail_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿详情事件设备ID"
+    },
+    {
+      "name": "tryon_gen_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板浏览次数"
+    },
+    {
+      "name": "tryon_gen_panel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板点击次数"
+    },
+    {
+      "name": "tryon_gen_panel_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板事件设备ID"
+    },
+    {
+      "name": "tryon_change_scene_intention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景次数"
+    },
+    {
+      "name": "tryon_change_scene_intention_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景事件设备ID"
+    },
+    {
+      "name": "tryon_change_scene_gen_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景次数"
+    },
+    {
+      "name": "tryon_change_scene_gen_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景事件设备ID"
+    },
+    {
+      "name": "tryon_change_scene_browse_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景浏览次数"
+    },
+    {
+      "name": "tryon_change_scene_browse_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景事件设备ID"
+    },
+    {
+      "name": "tryon_load_fail_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿后端数据传输完成后前端渲染失败次数"
+    },
+    {
+      "name": "tryon_load_fail_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿后端数据传输渲染失败用户设备id"
+    }
+  ]
+}

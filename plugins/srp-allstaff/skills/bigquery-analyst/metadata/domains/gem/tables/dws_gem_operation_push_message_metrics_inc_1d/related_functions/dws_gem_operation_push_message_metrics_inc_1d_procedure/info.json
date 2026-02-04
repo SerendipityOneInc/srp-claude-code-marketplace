@@ -1,0 +1,17 @@
+{
+  "routine_id": "dws_gem_operation_push_message_metrics_inc_1d_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dws_gem_operation_push_message_metrics_inc_1d_procedure",
+  "routine_type": "PROCEDURE",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null,
+  "linked_by": "name_matching",
+  "linked_at": "2026-01-30T14:24:22.116421"
+}

@@ -1,0 +1,16 @@
+{
+  "routine_id": "dim_favie_decofy_user_account_changelog_1d_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dim_favie_decofy_user_account_changelog_1d_procedure",
+  "routine_type": "PROCEDURE",
+  "function_type": "aggregation",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

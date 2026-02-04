@@ -1,0 +1,89 @@
+CREATE VIEW `srpproduct-dc37e.favie_dw.dwd_gem_total_appsflyer_webhook_only_install_inc_1d_view`
+AS SELECT  dt
+	   ,'Gensmo' as app_name
+	   ,case when lower(media_source) like '%facebook%' or lower(media_source)  like '%360security_int%'  or lower(media_source)  like '%meta%'  then 'Meta Ads'
+	        when lower(media_source) like '%google%' then 'Google Ads'
+			when lower(media_source) like '%tiktok%' then 'Tiktok Ads'
+			when lower(media_source) like '%apple%' then 'Apple Search Ads' else case when media_source is null or media_source='default' then 'organic' else media_source end end  as source
+	   ,channel
+	   ,upper(platform)  as platform 
+       ,event_name
+       ,case when media_source is null or media_source='default' then 'organic' else media_source end as media_source
+       ,campaign_name
+       ,campaign_id
+       ,ad_group_name
+       ,ad_group_id
+       ,ad_id
+       ,ad_name
+       ,country_code
+       ,appsflyer_id
+	   ,user_id
+	   ,event_time
+
+FROM
+(
+	
+	SELECT  date(event_time)    AS dt
+	       ,event_name
+	       ,media_source
+	       ,af_c_id             AS campaign_id
+	       ,campaign            AS campaign_name
+	       ,af_adset_id         AS ad_group_id
+	       ,af_adset            AS ad_group_name
+	       ,af_ad_id as ad_id
+	       ,af_ad               AS ad_name
+	       ,country_code
+	       ,appsflyer_id
+	       ,platform            AS platform
+	       ,channel
+		   ,JSON_EXTRACT_SCALAR(event_value, '$.uid') AS user_id
+		   ,event_time
+	FROM `favie_dw.dwd_gem_appsflyer_webhook_inc_1d_view`
+	where event_name = 'install' 
+
+
+	UNION ALL
+
+
+	SELECT  date(dt)                             AS dt
+	       ,event_name
+	       ,media_source
+	       ,campaign_name
+	       ,campaign_id
+	       ,ad_group_name
+	       ,ad_group_id
+	       ,ad_id
+	       ,ad_name
+	       ,country_code
+	       ,appsflyer_id
+	       ,platform
+	       ,channel
+		   ,user_id
+		   ,event_time
+	FROM
+	(
+		
+		SELECT  dt
+		       ,event_name
+		       ,media_source
+		       ,coalesce(ad_network_campaign_id,'SKAN')   AS campaign_name
+		       ,coalesce(ad_network_campaign_name,'SKAN') AS campaign_id
+		       ,coalesce(ad_network_adset_id,'SKAN')      AS ad_group_name
+		       ,coalesce(ad_network_adset_name,'SKAN')    AS ad_group_id
+		       ,'SKAN'                                    AS ad_name
+		       ,'SKAN'                                    AS ad_id
+		       ,'US'                                      AS country_code
+		       ,'IOS'                                     AS platform
+		       ,'SKAN'                                    AS channel
+		       ,af_attribution_flag
+			   ,concat('fake_appsflyer_id_',GENERATE_UUID()) AS appsflyer_id
+			   ,concat('fake_user_id',GENERATE_UUID()) as user_id
+			   ,cast(dt as string) as event_time
+		FROM `favie_dw.dwd_gem_skan_appsflyer_webhook_inc_1d_view`
+		where coalesce(af_attribution_flag,false)  !=true and event_name='install'
+		
+	)
+
+
+
+);

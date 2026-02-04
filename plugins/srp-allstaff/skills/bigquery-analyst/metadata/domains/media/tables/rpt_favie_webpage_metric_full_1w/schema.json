@@ -1,0 +1,44 @@
+{
+  "table_id": "rpt_favie_webpage_metric_full_1w",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_webpage_metric_full_1w",
+  "table_type": "TABLE",
+  "num_rows": 1763309,
+  "num_bytes": 88712934,
+  "created": "2025-12-17T05:36:10.849000+00:00",
+  "modified": "2026-01-26T01:47:24.435000+00:00",
+  "description": "网页指标全量周表",
+  "fields": [
+    {
+      "name": "domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_webpage_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "weekly_new_webpage_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "weekly_update_webpage_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

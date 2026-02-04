@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_agent_task_debug_info_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.mongo_production.copilot_agent_task_debug_info",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.359857",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

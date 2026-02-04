@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_favie_gensmo_feed_item_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_try_on_task_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_moodboard_view",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.388583",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

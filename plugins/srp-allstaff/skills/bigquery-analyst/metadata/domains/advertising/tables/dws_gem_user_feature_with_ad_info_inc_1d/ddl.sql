@@ -1,0 +1,48 @@
+CREATE TABLE `srpproduct-dc37e.favie_dw.dws_gem_user_feature_with_ad_info_inc_1d`
+(
+  dt DATE OPTIONS(description="数据日期"),
+  device_id STRING OPTIONS(description="设备ID，当前活跃设备"),
+  first_device_id STRING OPTIONS(description="首次登录设备ID"),
+  user_event_appsflyer_id STRING OPTIONS(description="用户事件Appsflyer追踪ID"),
+  is_internal_user BOOL OPTIONS(description="是否内部用户"),
+  user_type STRING OPTIONS(description="用户类型，如register、unregister、deregister"),
+  user_tenure_type STRING OPTIONS(description="用户生命周期类型，如new、old"),
+  created_at TIMESTAMP OPTIONS(description="用户创建时间"),
+  last_access_at DATE OPTIONS(description="用户上一次访问日期，用于分析用户活跃度和回归行为"),
+  last_day_feature_geo_continent_name STRING OPTIONS(description="大洲名称"),
+  last_day_feature_geo_sub_continent_name STRING OPTIONS(description="次大洲名称"),
+  last_day_feature_geo_country_name STRING OPTIONS(description="国家名称"),
+  last_day_feature_geo_region_name STRING OPTIONS(description="地区名称"),
+  last_day_feature_geo_metro_name STRING OPTIONS(description="都市区名称"),
+  last_day_feature_geo_city_name STRING OPTIONS(description="城市名称"),
+  last_day_feature_access_at TIMESTAMP OPTIONS(description="最近访问时间"),
+  last_day_feature_login_type STRING OPTIONS(description="最近登录类型"),
+  last_day_feature_duration FLOAT64 OPTIONS(description="最近活跃时长（秒）"),
+  last_day_feature_platform STRING OPTIONS(description="最近访问平台类型"),
+  last_day_feature_app_version STRING OPTIONS(description="最近访问应用版本"),
+  last_day_feature_action_types_with_count ARRAY<STRUCT<event_action_type STRING OPTIONS(description="行为类型"), event_action_type_count INT64 OPTIONS(description="行为类型计数")>> OPTIONS(description="最近一天内的行为类型及计数"),
+  last_30_days_feature_geo_continent_name STRING OPTIONS(description="大洲名称"),
+  last_30_days_feature_geo_sub_continent_name STRING OPTIONS(description="次大洲名称"),
+  last_30_days_feature_geo_country_name STRING OPTIONS(description="国家名称"),
+  last_30_days_feature_geo_region_name STRING OPTIONS(description="地区名称"),
+  last_30_days_feature_geo_metro_name STRING OPTIONS(description="都市区名称"),
+  last_30_days_feature_geo_city_name STRING OPTIONS(description="城市名称"),
+  last_30_days_feature_action_types_with_count ARRAY<STRUCT<event_action_type STRING OPTIONS(description="行为类型"), event_action_type_count INT64 OPTIONS(description="行为类型计数")>> OPTIONS(description="最近30天内的行为类型及计数"),
+  af_event_time STRING OPTIONS(description="AppsFlyer事件时间"),
+  af_platform STRING OPTIONS(description="AppsFlyer平台"),
+  af_event_name STRING OPTIONS(description="AppsFlyer事件名称"),
+  app_name STRING OPTIONS(description="应用名称"),
+  source STRING OPTIONS(description="广告来源"),
+  channel STRING OPTIONS(description="渠道"),
+  campaign_name STRING OPTIONS(description="广告系列名称"),
+  campaign_id STRING OPTIONS(description="广告系列ID"),
+  ad_group_name STRING OPTIONS(description="广告组名称"),
+  ad_group_id STRING OPTIONS(description="广告组ID"),
+  ad_id STRING OPTIONS(description="广告ID"),
+  ad_name STRING OPTIONS(description="广告名称"),
+  af_event_seq INT64 OPTIONS(description="AppsFlyer事件序列号")
+)
+PARTITION BY dt
+OPTIONS(
+  description="Gensmo用户特征与广告信息关联宽表，包含用户行为特征和广告归因信息"
+);

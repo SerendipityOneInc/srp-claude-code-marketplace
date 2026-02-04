@@ -1,0 +1,96 @@
+WITH notification_base AS (
+		SELECT
+			dt_param as dt,
+            user_id,
+            appsflyer_id,
+            product_id,
+            simple_product_id,
+            product_period,
+            notification_type,
+            subtype,
+		FROM `srpproduct-dc37e.favie_dw.dwd_favie_decofy_subscription_notification_full_1d`
+		WHERE dt = (select max(dt) from `srpproduct-dc37e.favie_dw.dwd_favie_decofy_subscription_notification_full_1d` where dt is not null)
+            AND date(created_at) = dt_param
+            AND notification_type IN ('DID_CHANGE_RENEWAL_STATUS','REFUND')
+	),
+
+    user_group AS (
+        SELECT
+            user_id,
+            user_group,
+            country_name,
+            platform,
+            app_version,
+            ad_source,
+            ad_id,
+            ad_group_id,
+            ad_campaign_id
+        FROM `srpproduct-dc37e.favie_dw.dws_decofy_user_group_inc_1d`
+        where dt = dt_param
+    ),
+
+
+    notification_joined AS (
+        SELECT
+            t1.dt,
+            t1.user_id,
+            coalesce(t2.country_name, 'Unknown') AS country_name,
+            coalesce(t2.platform, 'Unknown') AS platform,
+            coalesce(t2.app_version, 'Unknown') AS app_version,
+            coalesce(t2.user_group, 'Unknown') AS user_group,
+
+
+            coalesce(t2.ad_source, 'Unknown') AS ad_source,
+            coalesce(t2.ad_campaign_id, 'Unknown') AS ad_campaign_id,
+            coalesce(t2.ad_group_id, 'Unknown') AS ad_group_id,
+            coalesce(t2.ad_id, 'Unknown') AS ad_id,
+
+            t1.notification_type,
+            t1.subtype,
+
+            t1.product_id,
+            t1.simple_product_id
+        FROM notification_base t1
+        LEFT JOIN user_group t2
+        ON t1.user_id = t2.user_id
+        where t2.user_id is not null
+    )
+
+	SELECT
+        dt,
+        country_name,
+        platform,
+        app_version,
+        user_group,
+
+        ad_source,
+        ad_id,
+        ad_group_id,
+        ad_campaign_id,
+
+        product_id,
+        simple_product_id,
+
+        COUNTIF(
+            subtype = 'AUTO_RENEW_DISABLED'
+            AND notification_type = 'DID_CHANGE_RENEWAL_STATUS'
+            ) AS subscribe_disable_notification_cnt,
+
+        COUNTIF(
+            notification_type = 'REFUND'
+        ) AS subscribe_refund_notification_cnt
+	FROM notification_joined
+    group by 
+        dt,
+        country_name,
+        platform,
+        app_version,
+        user_group,
+
+        ad_source,
+        ad_id,
+        ad_group_id,
+        ad_campaign_id,
+
+        product_id,
+        simple_product_id

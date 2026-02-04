@@ -1,0 +1,194 @@
+{
+  "table_id": "dws_gem_operation_feed_user_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gem_operation_feed_user_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 103079457,
+  "num_bytes": 29681031097,
+  "created": "2025-10-17T07:45:01.049000+00:00",
+  "modified": "2025-12-09T02:01:25.823000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "事件发生日期（分区字段）"
+    },
+    {
+      "name": "item_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "item类型"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源页面"
+    },
+    {
+      "name": "feed_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "feed类型"
+    },
+    {
+      "name": "production_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "feed生产类型"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "登录类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "新老用户"
+    },
+    {
+      "name": "user_media_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户渠道来源"
+    },
+    {
+      "name": "feed_view_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "浏览PV：select_item + true_view_trigger"
+    },
+    {
+      "name": "feed_click_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击PV：enter_feed_detail"
+    },
+    {
+      "name": "feed_like_click_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "喜欢点击次数"
+    },
+    {
+      "name": "feed_try_on_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "try_on点击次数"
+    },
+    {
+      "name": "feed_try_on_trigger_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "try_on_trigger点击次数"
+    },
+    {
+      "name": "feed_remix_see_it_on_me_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "remix/see it on me 点击次数"
+    },
+    {
+      "name": "feed_comment_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "评论点击次数"
+    },
+    {
+      "name": "feed_detail_click_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "外部 feed_detail 点击次数"
+    },
+    {
+      "name": "feed_save_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "收藏点击次数"
+    },
+    {
+      "name": "feed_product_external_jump_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品外部跳转点击次数"
+    },
+    {
+      "name": "feed_product_click_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品详情点击次数"
+    },
+    {
+      "name": "feed_share_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "分享点击次数"
+    },
+    {
+      "name": "feed_screen_shot_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "截图次数"
+    },
+    {
+      "name": "feed_hashtag_click_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "话题点击次数"
+    },
+    {
+      "name": "feed_editor_pick_view_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "编辑精选曝光次数"
+    },
+    {
+      "name": "feed_editor_pick_click_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "编辑精选点击次数"
+    },
+    {
+      "name": "follow_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "关注博主次数"
+    }
+  ]
+}

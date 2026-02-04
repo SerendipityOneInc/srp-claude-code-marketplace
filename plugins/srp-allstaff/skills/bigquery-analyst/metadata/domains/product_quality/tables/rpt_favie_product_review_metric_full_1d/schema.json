@@ -1,0 +1,62 @@
+{
+  "table_id": "rpt_favie_product_review_metric_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_review_metric_full_1d",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2024-11-20T03:07:12.780000+00:00",
+  "modified": "2024-12-25T08:42:45.619000+00:00",
+  "description": "所属业务库: 商品详情库  \n所属数仓层级: RPT层(分析层)\n分区字段: dt（字段格式 yyyy-MM-dd）\n主题域:数据质量\n更新策略: 每日更新\n模型主键: site,shop_site\n负责人:\n- 庞宝辉\n- 付继文\n- 马汝钊  \n生命周期（分区TTL）:永久\n用途: >\n  此表是针对于每日评论全量快照表,以站点维度进行对数据质量分析",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "total_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "总评论数"
+    },
+    {
+      "name": "daily_new_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "每日新增评论数"
+    },
+    {
+      "name": "daily_update_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "每日更新评论数"
+    },
+    {
+      "name": "daily_spider_update_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "每日爬虫更新评论数"
+    },
+    {
+      "name": "total_spu_num_with_review",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "带有评论的spu数"
+    },
+    {
+      "name": "spu_num_with_review_count_ge_10",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "带有大于等于10条评论的spu数"
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "日期"
+    }
+  ]
+}

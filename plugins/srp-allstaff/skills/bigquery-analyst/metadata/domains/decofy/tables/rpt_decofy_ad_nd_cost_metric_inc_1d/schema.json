@@ -1,0 +1,56 @@
+{
+  "table_id": "rpt_decofy_ad_nd_cost_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_ad_nd_cost_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 3557,
+  "num_bytes": 319088,
+  "created": "2025-09-25T03:41:27.890000+00:00",
+  "modified": "2026-01-30T02:06:54.463000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "n_day",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "N天"
+    },
+    {
+      "name": "ad_cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "广告成本"
+    }
+  ]
+}

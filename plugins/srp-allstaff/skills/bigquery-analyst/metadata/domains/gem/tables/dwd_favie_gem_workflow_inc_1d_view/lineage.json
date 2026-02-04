@@ -1,0 +1,23 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_favie_gem_workflow_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.logging_gem_workflow.stderr_",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.logging_gem_workflow.export_errors_",
+      "type": "table"
+    }
+  ],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_analysis_search_country_1d_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.403487",
+  "downstream_count": 1,
+  "upstream_count": 2
+}

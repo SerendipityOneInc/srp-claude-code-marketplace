@@ -1,0 +1,86 @@
+{
+  "table_id": "rpt_normalize_field_enum_distribution_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_normalize_field_enum_distribution_1d",
+  "table_type": "TABLE",
+  "num_rows": 29817317,
+  "num_bytes": 3100241463,
+  "created": "2026-01-28T12:25:25.869000+00:00",
+  "modified": "2026-01-30T03:37:15.213000+00:00",
+  "description": "归一化后字段枚举值分布统计表，按日期分区。v2版本新增 mention_ratio 支持数组字段正确的累计覆盖率计算",
+  "fields": [
+    {
+      "name": "field_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "字段名称"
+    },
+    {
+      "name": "enum_value",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "归一化后的枚举值"
+    },
+    {
+      "name": "is_array_field",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否为数组字段（逗号分隔多值）"
+    },
+    {
+      "name": "product_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品数量（包含该枚举值的商品数）"
+    },
+    {
+      "name": "product_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "商品占比 (0-1)，分母为总商品数"
+    },
+    {
+      "name": "mention_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "提及次数（数组字段拆分后的行数）"
+    },
+    {
+      "name": "mention_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "提及占比 (0-1)，分母为该字段总提及次数"
+    },
+    {
+      "name": "value_rank",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "排名（按商品数从大到小）"
+    },
+    {
+      "name": "cumulative_product_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "商品累计占比"
+    },
+    {
+      "name": "cumulative_mention_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "提及累计占比"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "记录创建时间"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "统计日期"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "table_id": "rpt_gensmo_user_active_metrics_inc_1w",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_active_metrics_inc_1w",
+  "table_type": "TABLE",
+  "num_rows": 818302,
+  "num_bytes": 97960242,
+  "created": "2025-06-27T06:24:51.352000+00:00",
+  "modified": "2025-10-21T01:04:43.382000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "week_end_dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，周结束日期"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户30日内最常使用所在国家"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当周使用最多的平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当周使用最多的app版本号"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否登录用户"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否新用户"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "active_user_w1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "周活跃用户数"
+    },
+    {
+      "name": "total_duration",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "总停留时长"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    }
+  ]
+}

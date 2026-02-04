@@ -1,0 +1,19 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_gem_account_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.mongo_production.gem",
+      "type": "table"
+    }
+  ],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_gensmo_user_account_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.404683",
+  "downstream_count": 1,
+  "upstream_count": 1
+}

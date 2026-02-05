@@ -32,63 +32,132 @@ WHERE dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)  -- 必须有！
 
 ---
 
-### 规则2: user_group 过滤 - 理解人群维度的特殊性
+### 规则2: user_group 维度去重 - 防止用户重复计算（必须遵守！）
 
-**为什么**:
-- user_group维度中，**用户可以属于多个人群**（非互斥）
-- 例如：同一用户既在'all'人群，又在'ios'人群，还可能在'vip'人群
-- 其他维度（如platform）通常是互斥的（用户只能属于一个平台）
+**🚨 核心问题**: 一个用户可以同时属于多个 user_group 人群包，如果不筛选会导致严重的重复计算！
 
-**核心原则**:
-1. **指定人群时**: 直接过滤该人群 `user_group = 'vip'`
-2. **不指定人群时**: 过滤 `user_group = 'all'` 避免重复计数
-3. **按人群分组时**: 明确排除或包含'all'，避免混淆
+**为什么会重复**:
+- 同一个用户会在多个 user_group 中重复出现
+- 例如：user_123 同时存在于 `user_group='all'`、`user_group='ios'`、`user_group='vip'` 等多行记录中
+- 如果不筛选 user_group，该用户会被重复统计多次
 
-**场景1: 不指定人群 - 必须过滤'all'** ✅
+**真实案例**:
 ```sql
--- 查询全站DAU（不指定人群）
-SELECT SUM(active_user_1d_cnt) as total_dau
-FROM rpt_points_metric
-WHERE dt = CURRENT_DATE() - 1
-  AND user_group = 'all'  -- 必须！否则会重复计数
+-- ❌ 错误查询（未筛选user_group）
+SELECT SUM(active_user_1d_cnt) as dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt = '2026-02-04'
+-- 结果: 17,418 (重复计算了约8-9倍！)
+
+-- ✅ 正确查询（筛选user_group='all'）
+SELECT SUM(active_user_1d_cnt) as dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt = '2026-02-04'
+  AND user_group = 'all'
+-- 结果: 2,055 (真实的DAU)
 ```
 
-**场景2: 指定具体人群** ✅
+**🎯 强制规则**:
+
+**任何包含 user_group 字段的表，在统计用户数或用户相关指标时：**
+
+1. **不指定人群时**: **必须**筛选 `user_group = 'all'`
+2. **指定特定人群时**: 直接筛选该人群 `user_group = 'vip'`
+3. **按人群对比时**: 明确排除 'all' → `user_group != 'all'`
+
+**适用场景示例**:
+
+**场景1: 统计全站指标（不指定人群）** ✅
 ```sql
--- 查询VIP用户的DAU
-SELECT SUM(active_user_1d_cnt) as vip_dau
-FROM rpt_points_metric
-WHERE dt = CURRENT_DATE() - 1
-  AND user_group = 'vip'  -- 指定人群，不用'all'
+-- 查询全站DAU
+SELECT
+  dt,
+  SUM(active_user_1d_cnt) as total_dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+  AND user_group = 'all'  -- 🚨 必须加！防止重复计算
+GROUP BY dt
+ORDER BY dt DESC
 ```
 
-**场景3: 按人群分组对比** ✅
+**场景2: 统计特定人群** ✅
 ```sql
--- 对比各人群的DAU（排除'all'避免混淆）
+-- 只看VIP用户的DAU
+SELECT
+  dt,
+  SUM(active_user_1d_cnt) as vip_dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+  AND user_group = 'vip'  -- 指定具体人群
+GROUP BY dt
+ORDER BY dt DESC
+```
+
+**场景3: 按人群维度对比** ✅
+```sql
+-- 对比各人群的DAU占比
 SELECT
   user_group,
   SUM(active_user_1d_cnt) as dau
-FROM rpt_points_metric
+FROM rpt_gensmo_user_active_metrics_inc_1d
 WHERE dt = CURRENT_DATE() - 1
-  AND user_group != 'all'  -- 排除all，只看各人群
+  AND user_group != 'all'  -- 排除all，只看各细分人群
 GROUP BY user_group
+ORDER BY dau DESC
 ```
 
-**错误示例** ❌:
+**场景4: 按其他维度拆分时也要加** ✅
 ```sql
--- 错误：不过滤user_group，导致重复计数
-SELECT SUM(active_user_1d_cnt) as total_dau
-FROM rpt_points_metric
-WHERE dt = CURRENT_DATE() - 1
--- 结果会把all + ios + android + vip + ... 全部加在一起！
+-- 按平台拆分DAU（也要筛选user_group！）
+SELECT
+  dt,
+  platform,
+  SUM(active_user_1d_cnt) as dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
+  AND user_group = 'all'  -- 🚨 即使按platform分组，也必须筛选user_group
+GROUP BY dt, platform
+ORDER BY dt DESC, platform
 ```
 
-**适用范围**: 所有包含user_group维度的DWS/RPT层表
+**❌ 常见错误**:
+```sql
+-- 错误1: 完全不筛选user_group
+SELECT SUM(active_user_1d_cnt) as dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt = CURRENT_DATE() - 1
+-- 会把 all + ios + android + vip + ... 所有人群的数据加在一起！
+
+-- 错误2: 只按其他维度分组，忘记筛选user_group
+SELECT
+  platform,
+  SUM(active_user_1d_cnt) as dau
+FROM rpt_gensmo_user_active_metrics_inc_1d
+WHERE dt = CURRENT_DATE() - 1
+GROUP BY platform
+-- 每个platform下的数据也会重复计算（因为有多个user_group）
+```
+
+**📋 如何判断表是否有 user_group 字段？**
+
+1. 查看表的 schema/字段列表
+2. 或先执行测试查询：
+```sql
+SELECT DISTINCT user_group
+FROM `table_name`
+WHERE dt = CURRENT_DATE() - 1
+LIMIT 10
+```
+3. 如果返回多个值（all, ios, android, vip等），说明有 user_group 维度
+
+**适用范围**:
+- 所有包含 `user_group` 字段的 DWS/RPT 层表
+- 常见表：rpt_*_metric、dws_*_metric、rpt_*_active_metrics 等
 
 **关键理解**:
-- user_group是**非互斥维度**（用户属于多个人群）
-- platform、region等是**互斥维度**（用户只属于一个）
-- 处理非互斥维度时必须明确过滤策略
+- user_group 是**非互斥维度**（一个用户同时属于多个人群）
+- platform、country_name 等是**互斥维度**（一个用户某时刻只属于一个值）
+- **任何非互斥维度都需要明确过滤策略，防止重复计算**
 
 ---
 

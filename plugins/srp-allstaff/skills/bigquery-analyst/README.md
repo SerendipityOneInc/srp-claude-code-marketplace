@@ -18,22 +18,7 @@ BigQuery Analyst 是一个专业的数据分析技能，帮助团队成员安全
 
 ## 🚀 快速开始
 
-### 1. 安装 PreHook
-
-PreHook 是成本检查和安全防护的核心组件，必须先安装：
-
-```bash
-# 在技能目录运行安装脚本
-bash setup.sh
-```
-
-安装后，每次执行 BigQuery 查询前都会自动进行：
-- 🛡️ 破坏性操作检查（DROP/DELETE/UPDATE）
-- 💰 成本预估（Slot Time 超过 20 小时拒绝执行）
-- 🚨 中文别名检测（自动拦截）
-- ✅ 核心规则检查（dt 分区、user_group 过滤等）
-
-### 2. 开始使用
+### 使用方式
 
 直接向 Claude 提问：
 
@@ -56,40 +41,34 @@ AI 会：
 bigquery-analyst/
 ├── SKILL.md                    # 主技能文档（AI 指令）
 ├── README.md                   # 本文件（使用说明）
-├── setup.sh                    # PreHook 安装脚本
-├── install_prehook.sh          # PreHook 安装器
-├── bigquery_prehook.sh         # PreHook 主脚本
 │
 ├── core/                       # 核心规则（运行时必需）
 │   ├── CRITICAL_RULES.md       # 10 条核心查询规则
 │   └── LAYER_SELECTION.md      # 数据层选择指南
 │
-├── metadata/                   # 元数据知识库（运行时必需）
-│   ├── domains/                # 17 个业务域（611 张表）
-│   │   ├── advertising/        # 广告投放域
-│   │   ├── chat/               # 聊天对话域
-│   │   ├── data_enrichment/    # 数据增强域
-│   │   ├── feed/               # 内容推荐域
-│   │   ├── gem/                # GEM 生成域
-│   │   ├── growth/             # 增长归因域
-│   │   ├── media/              # 媒体资源域
-│   │   ├── points_membership/  # 积分会员域
-│   │   ├── product_quality/    # 产品质量域
-│   │   ├── search/             # 搜索域
-│   │   ├── tryon/              # 试穿生成域
-│   │   ├── user_behavior/      # 用户行为域
-│   │   ├── user_profile/       # 用户画像域
-│   │   └── ...
-│   │
-│   └── index/                  # 全局索引
-│       ├── ALL_TABLES.txt      # 所有表清单
-│       ├── ALL_FUNCTIONS.txt   # 所有函数清单
-│       ├── DOMAIN_INDEX.md     # 业务域索引
-│       ├── LINEAGE_MAP.json    # 血缘关系图
-│       └── LINEAGE_SUMMARY.md  # 血缘关系总结
-│
-└── scripts/                    # 维护工具（用户不需要）
-    └── update_metadata.sh      # 元数据更新脚本
+└── metadata/                   # 元数据知识库（运行时必需）
+    ├── domains/                # 17 个业务域（611 张表）
+    │   ├── advertising/        # 广告投放域
+    │   ├── chat/               # 聊天对话域
+    │   ├── data_enrichment/    # 数据增强域
+    │   ├── feed/               # 内容推荐域
+    │   ├── gem/                # GEM 生成域
+    │   ├── growth/             # 增长归因域
+    │   ├── media/              # 媒体资源域
+    │   ├── points_membership/  # 积分会员域
+    │   ├── product_quality/    # 产品质量域
+    │   ├── search/             # 搜索域
+    │   ├── tryon/              # 试穿生成域
+    │   ├── user_behavior/      # 用户行为域
+    │   ├── user_profile/       # 用户画像域
+    │   └── ...
+    │
+    └── index/                  # 全局索引
+        ├── ALL_TABLES.txt      # 所有表清单
+        ├── ALL_FUNCTIONS.txt   # 所有函数清单
+        ├── DOMAIN_INDEX.md     # 业务域索引
+        ├── LINEAGE_MAP.json    # 血缘关系图
+        └── LINEAGE_SUMMARY.md  # 血缘关系总结
 ```
 
 ---
@@ -136,9 +115,15 @@ AI 会：
 
 ## ⚙️ 配置说明
 
-### PreHook 配置
+### PreHook 自动防护
 
-PreHook 安装后位于 `~/.claude/hooks/bigquery_prehook.sh`
+技能依赖 PreHook 进行成本检查和安全防护，Hook 文件位于 `~/.claude/hooks/bigquery_prehook.sh`
+
+每次执行 BigQuery 查询前都会自动进行：
+- 🛡️ 破坏性操作检查（DROP/DELETE/UPDATE）
+- 💰 成本预估（Slot Time 超过 20 小时拒绝执行）
+- 🚨 中文别名检测（自动拦截）
+- ✅ 核心规则检查（dt 分区、user_group 过滤等）
 
 **成本阈值**（可修改）：
 ```bash
@@ -146,18 +131,12 @@ PreHook 安装后位于 `~/.claude/hooks/bigquery_prehook.sh`
 COST_THRESHOLD_HOURS=20  # 默认 20 小时
 ```
 
-**支持的检查**：
-- ✅ 破坏性操作检测
-- ✅ 成本预估（dry-run）
-- ✅ 中文别名检测
-- ✅ dt 分区过滤检查
-- ✅ user_group 检查（仅 DWS/RPT 层）
-- ✅ 数据层级建议
-
 ### 数据环境
 
 - **项目**: `srpproduct-dc37e`
-- **数据集**: `favie_rpt`, `favie_dws`, `favie_dw`, `favie_dwd`
+- **数据集**:
+  - `favie_rpt` - RPT 层报表和函数
+  - `favie_dw` - 其他数据层（DWS/DWD/DIM/ODS）
 - **表数量**: 611 张生产表
 - **函数数量**: 519 个
 - **业务域**: 17 个
@@ -211,11 +190,11 @@ COST_THRESHOLD_HOURS=20  # 默认 20 小时
 
 **解决**：
 ```bash
-# 检查 PreHook 是否安装
+# 检查 PreHook 文件是否存在
 ls -la ~/.claude/hooks/bigquery_prehook.sh
 
-# 重新安装
-bash setup.sh
+# 确认 Hook 文件有执行权限
+chmod +x ~/.claude/hooks/bigquery_prehook.sh
 ```
 
 ### 认证失败
@@ -279,7 +258,6 @@ claude plugin list | grep srp-allstaff
 claude plugin marketplace update srp-claude-code-marketplace
 ```
 
-**版本发布通知**：关注 Slack #data-platform 频道
 
 ---
 
@@ -293,18 +271,9 @@ claude plugin marketplace update srp-claude-code-marketplace
 
 # 2. 更新插件（应用到本地）
 claude plugin update srp-allstaff@srp-claude-code-marketplace
-
-# 3. 重新运行安装脚本（自动检测并更新需要的部分）
-cd ~/.claude/skills/bigquery-analyst
-bash setup.sh
 ```
 
-**setup.sh 会自动**：
-- ✅ 检测 PreHook 是否有变化，有则更新
-- ✅ 检测元数据是否最新，自动使用新版本
-- ✅ 跳过已配置的认证
-
-**无需判断更新了什么，统一运行即可。**
+更新后，技能会自动使用最新的元数据和规则。
 
 ---
 

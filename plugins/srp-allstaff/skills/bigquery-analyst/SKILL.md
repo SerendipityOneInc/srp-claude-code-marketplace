@@ -1,6 +1,6 @@
 ---
 name: bigquery-analyst
-description: 安全、高效的 BigQuery 数据分析助手 - 指南引导 + 主动探查
+description: 安全、高效的 BigQuery 数据分析助手 - 基于完整元数据知识库
 ---
 
 # BigQuery Analyst Skill
@@ -30,177 +30,145 @@ description: 安全、高效的 BigQuery 数据分析助手 - 指南引导 + 主
 
 💡 **如何触发**: 当用户问题包含 "decofy" 关键词时，才加载该域的数据
 
-## ⚠️ 启动安全检查（必须执行）
+## ⚠️ 启动连接验证（必须执行）
 
-**在处理任何查询请求前，必须先执行以下检查**:
+**在处理任何查询请求前，必须先验证 BigQuery CLI 连接**:
 
 ```instructions
-CRITICAL: 检查 PreHook 是否已安装
+CRITICAL: 验证 BigQuery CLI 连接状态
 
-1. 使用 Bash 工具检查文件是否存在:
-   ls ~/.claude/hooks/bigquery_prehook.sh
+1. 执行连接测试查询:
+   bq query --use_legacy_sql=false --format=json "SELECT 1 as test"
 
-2. 如果文件不存在或不可执行:
-   ❌ 立即停止，拒绝继续
-   ❌ 输出错误信息（见下方模板）
+2. 如果命令失败或返回认证错误:
+   ❌ 立即停止，不要继续
+   ❌ 使用 AskUserQuestion 工具弹出确认窗口
    ❌ 不要生成任何 SQL 查询
 
-3. 如果文件存在且可执行:
+3. 如果连接成功:
    ✅ 继续正常流程
 ```
 
-**错误信息模板（PreHook 未安装时）**:
+**连接失败时的处理**:
 
-```markdown
-❌ 无法执行查询：PreHook 未安装
+使用 AskUserQuestion 工具向用户确认:
 
-## 为什么需要 PreHook？
-
-PreHook 提供关键的安全防护：
-- ✅ 拦截破坏性操作（DROP/DELETE/UPDATE/INSERT）
-- ✅ 预估查询成本，超过阈值拒绝执行
-- ✅ 验证核心规则（dt 过滤、user_group 过滤）
-
-**没有 PreHook，可能导致**：
-- ❌ 误删生产数据
-- ❌ 产生高额费用（单次查询可能超过 $100）
-- ❌ 违反数据安全规范
-
-## 如何安装 PreHook？
-
-请运行以下命令（仅需一次）：
-
-\`\`\`bash
-cd .claude/skills/bigquery-analyst
-./install_prehook.sh
-\`\`\`
-
-安装完成后，请重新运行查询请求。
-
-**安装文档**: 查看 `PREHOOK_LOCATION.md` 或 `QUICK_START.md`
+```json
+{
+  "questions": [{
+    "question": "BigQuery CLI 连接失败。我们需要依赖 bq CLI 进行查询，您需要先完成认证登录。是否现在进行登录验证？",
+    "header": "BQ认证",
+    "options": [
+      {
+        "label": "立即登录验证",
+        "description": "运行 gcloud auth application-default login 完成认证"
+      },
+      {
+        "label": "稍后处理",
+        "description": "暂时跳过，稍后再进行认证"
+      }
+    ],
+    "multiSelect": false
+  }]
+}
 ```
 
-**注意**: 此检查**不可跳过**，这是强制性的安全要求。
+**如果用户选择"立即登录验证"**:
+
+```instructions
+1. 提示用户在终端运行:
+   gcloud auth application-default login
+   gcloud auth login
+   gcloud config set project srpproduct-dc37e
+
+2. 等待用户完成认证
+
+3. 重新执行连接测试查询验证是否成功
+
+4. 如果仍然失败，提示用户检查:
+   - GCP 项目 ID 是否正确
+   - 是否有 BigQuery 访问权限
+   - 网络连接是否正常
+```
+
+**注意**: 此验证**不可跳过**，没有 BigQuery CLI 连接无法执行任何查询。
 
 ---
 
-## 📚 知识库策略 (指南引导 + 主动探查)
+## 📚 知识库加载策略 (三层渐进式)
 
-### 核心思路
-
-**不再依赖完整元数据知识库**，而是使用**轻量级指南 + BigQuery 实时查询**的模式：
-
-1. ✅ **优先查阅指南** - 快速定位业务域和表命名规范
-2. ✅ **主动探查数据集** - 使用 BigQuery `INFORMATION_SCHEMA` 查询最新表结构
-3. ✅ **查看函数定义** - 从函数 SQL 定义中获取血缘关系
-4. ✅ **灵活决策** - 能用指南解决就不查询，需要时果断探查
-
----
-
-### Layer 1: 核心规则与指南 (必须加载 ~20KB)
+### Layer 1: 核心规则 (必须加载 ~10KB)
 
 **在处理任何查询前,必须先读取**:
 
 ```instructions
-1. READ core/CRITICAL_RULES.md - 10条必遵守的查询规则
-2. READ core/LAYER_SELECTION.md - 快速决策用哪个数据层
-3. READ BIGQUERY_GUIDE.md - 数据集位置、表命名规范、业务域索引
-4. READ TABLES_COMPLETE.md - 所有 611 张表的完整列表（按业务域分类）
+1. READ core/DATA_INFRASTRUCTURE.md - 数据集位置、表与函数关系、命名规范
+2. READ core/CRITICAL_RULES.md - 10条必遵守的查询规则
+3. READ core/LAYER_SELECTION.md - 快速决策用哪个数据层
+4. SCAN metadata/index/DOMAIN_INDEX.md - 了解有哪些业务域
 ```
 
 **为什么必须**:
-- 避免 90% 的常见错误（缺少 dt 过滤、user_group 重复计数等）
-- 了解表命名规范，能够快速猜测可能的表名
-- **查看完整表清单，优先使用文档中列出的 611 张表**
-- 掌握如何主动查询 BigQuery 获取最新信息（仅当表不在文档中时）
+- 了解数据存储位置和命名规范,避免引用错误的数据集
+- 避免90%的常见错误(缺少dt过滤、user_group重复计数等)
 
 ---
 
-### Layer 2: 主动探查 (按需查询 BigQuery)
+### Layer 2: 业务域加载 (按需加载 ~50KB/域)
 
-**新工作模式**: 不依赖预扫描的元数据文档，而是**主动查询 BigQuery 数据集**
+**触发规则**: 识别用户问题涉及的业务域
 
-#### 何时使用指南？
+```instructions
+用户提问 → 关键词匹配 → 加载对应域
 
-**✅ 指南可以解决的场景**：
-1. 快速定位业务域（如：试穿 → tryon 域）
-2. **查看完整表清单 (TABLES_COMPLETE.md)** - 包含所有 611 张表
-3. 了解数据层的区别（DIM/DWD/DWS/RPT）
-4. 猜测可能的表名（根据命名规范）
+关键词映射:
+- "产品"/"SKU"/"质量"/"品牌" → metadata/domains/product_quality/README.md
+- "广告"/"投放"/"ROI"/"成本" → metadata/domains/advertising/README.md
+- "gem"/"头像"/"avatar" → metadata/domains/gem/README.md
+- "活跃"/"留存"/"DAU"/"MAU" → metadata/domains/user_behavior/README.md
+- "feed"/"内容"/"推荐" → metadata/domains/feed/README.md
+- "搜索"/"search" → metadata/domains/search/README.md
+- "媒体"/"图片"/"视频"/"image" → metadata/domains/media/README.md
+- "试穿"/"tryon"/"生成" → metadata/domains/tryon/README.md
+- "积分"/"会员"/"points" → metadata/domains/points_membership/README.md
+- "增长"/"归因"/"AppsFlyer" → metadata/domains/growth/README.md
+- "系统"/"配置"/"映射" → metadata/domains/system/README.md
+- "用户画像"/"账号"/"profile" → metadata/domains/user_profile/README.md
+- "聊天"/"chat"/"对话" → metadata/domains/chat/README.md
+- "爬虫"/"crawl"/"抓取" → metadata/domains/crawl/README.md
+- "标签"/"分类规则"/"数据质量"/"数据增强" → metadata/domains/data_enrichment/README.md
 
-**示例**: 用户问"查询试穿功能的成功率"
-- ✅ 从 BIGQUERY_GUIDE.md 看到 tryon 域
-- ✅ 查看 TABLES_COMPLETE.md 中 tryon 域的所有 24 张表
-- ✅ 选择合适的表：`rpt_favie_gensmo_tryon_metric_inc_1d`
-- ✅ **无需查询 BigQuery**，直接使用
-
-#### 何时主动探查 BigQuery？
-
-**✅ 需要查询 BigQuery 的场景**（仅当以下情况发生时）：
-1. **TABLES_COMPLETE.md 中没有列出的表**（新创建的表）
-2. 需要确认字段名称和类型
-3. 需要查看函数定义和血缘关系
-4. 需要验证表是否存在
-
-**重要**: 由于 TABLES_COMPLETE.md 已包含所有 611 张表，绝大部分查询都能直接找到表，**无需查询 BigQuery**
-
-**示例查询**：
-
-```sql
--- 1. 搜索表（根据命名规范猜测）
-SELECT table_name
-FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.TABLES`
-WHERE table_name LIKE '%tryon%metric%'
-  AND table_type = 'TABLE';
-
--- 2. 查看表结构
-SELECT column_name, data_type, is_nullable, description
-FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.COLUMNS`
-WHERE table_name = 'dws_favie_gensmo_tryon_metric_inc_1d'
-ORDER BY ordinal_position;
-
--- 3. 查找对应的函数
-SELECT routine_name, routine_type, routine_definition
-FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.ROUTINES`
-WHERE routine_type = 'TABLE_VALUED_FUNCTION'
-  AND routine_name LIKE '%tryon_metric%';
-
--- 4. 查看函数定义（包含上游表引用 = 血缘关系）
-SELECT routine_definition
-FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.ROUTINES`
-WHERE routine_name = 'dws_favie_gensmo_tryon_metric_inc_1d_function';
+⚠️ 排除规则:
+- "decofy" → 仅当用户明确提及"decofy"时才加载 metadata/domains/decofy/ (已归档应用)
 ```
+
+**域README包含**:
+- ✅ 业务概览和核心流程
+- ✅ 关键指标定义
+- ✅ 常见查询场景 (5-10个示例)
+- ✅ 注意事项和已知问题
 
 ---
 
-### 决策流程图
+### Layer 3: 表文档加载 (精确加载 ~5KB/表)
 
-```
-用户提问
-    ↓
-查阅 BIGQUERY_GUIDE.md
-    ↓
-能否从指南直接定位表？
-    ↓ 是
-直接使用 → 查询 BigQuery 获取字段结构 → 生成 SQL
-    ↓ 否
-主动探查 BigQuery
-    ↓
-搜索可能的表名（根据命名规范）
-    ↓
-查看表结构和函数定义
-    ↓
-生成 SQL
+**触发时机**: 确定具体要查询的表后
+
+```instructions
+Step 1: 读取 metadata/domains/{domain}/TABLES.md
+        → 使用决策树选择正确的表
+        → 例: 需要明细数据 → DWD层, 需要聚合指标 → RPT层
+
+Step 2: 读取 metadata/domains/{domain}/tables/{table_name}.md
+        → 获取完整字段定义
+        → 了解数据范围和更新频率
+        → 查看查询示例
+
+Step 3: (可选) 读取 metadata/domains/{domain}/functions/{function_name}.md
+        → 仅当需要理解指标计算逻辑时才加载
 ```
 
----
-
-### 重要提醒
-
-⚠️ **metadata/ 目录下的详细表文档已过时，不推荐使用**
-- 这些文档在 2026-01-30 扫描生成，可能已经过时
-- 优先使用 `BIGQUERY_GUIDE.md` 和 BigQuery `INFORMATION_SCHEMA` 查询
-- 仅当无法通过查询获取信息时，才考虑查看 metadata/ 下的文档作为参考
+**绝不做**: 一次性加载所有表文档 (会消耗几十万tokens)
 
 ---
 
@@ -223,12 +191,28 @@ WHERE routine_name = 'dws_favie_gensmo_tryon_metric_inc_1d_function';
    - "功能" = consume_type字段
    - "最近7天" = dt >= DATE_SUB(CURRENT_DATE(), INTERVAL 7 DAY)
 
-4. 生成确认清单:
+4. 生成确认清单并等待用户回复
+```
+
+**⚠️ 关键要求：必须等待用户确认**
+
+```instructions
+CRITICAL: 指标口径确认是强制步骤
+
+1. 输出确认清单后，**必须停止执行**
+2. **等待用户明确回复**，不要自行假设或继续
+3. **只有在收到用户确认后**，才能进入 Step 2
+4. 如果用户没有明确回复，**不要生成任何 SQL**
+
+这是为了确保：
+- 指标理解对齐，避免查询错误数据
+- 用户清楚知道将要查询什么
+- 结果符合用户真实需求
 ```
 
 **输出给用户**:
 ```markdown
-📊 **指标口径确认**:
+📊 **指标口径确认** (请回复后我再继续):
 
 1. **"消耗量"** 的定义:
    - A) 消耗积分总数 (consume_points_points_amt)
@@ -248,58 +232,38 @@ WHERE routine_name = 'dws_favie_gensmo_tryon_metric_inc_1d_function';
 
    您的选择: _____
 
-请确认后我生成SQL。
+⚠️ **请您回复确认后，我再为您生成 SQL 查询。**
 ```
+
+**注意**：在用户回复确认前，不要执行任何后续步骤。
 
 ---
 
 ### Step 2: 表选择与字段确认
 
-**用户确认**: "A, 全部用户"
+**前置条件**: 已收到用户的口径确认
+
+**用户确认示例**: "A, 全部用户"
 
 **AI 执行**:
 
 ```instructions
-1. 查阅 BIGQUERY_GUIDE.md
-   → 业务域: points_membership
-   → 根据命名规范猜测可能的表:
-     - dwd_favie_gensmo_membership_consume_point_inc_1d (明细层)
-     - rpt_*_membership_*_metric_inc_1d (报表层)
-   → 决策: 需要 consume_type 维度 → 选择明细层表
+1. READ metadata/domains/points_membership/TABLES.md
+   → 决策: 需要明细数据(DWD) 还是 聚合指标(RPT)?
+   → 用户要分析"各功能消耗量" → 需要consume_type维度
+   → 选择: dwd_consume_point (明细表)
 
-2. 查询 BigQuery 确认表结构
-   ```sql
-   -- 确认表是否存在
-   SELECT table_name
-   FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.TABLES`
-   WHERE table_name LIKE '%membership%consume%';
-
-   -- 获取字段定义
-   SELECT column_name, data_type, is_nullable
-   FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.COLUMNS`
-   WHERE table_name = 'dwd_favie_gensmo_membership_consume_point_inc_1d'
-   ORDER BY ordinal_position;
-   ```
-
+2. READ metadata/domains/points_membership/tables/dwd_consume_point.md
    → 确认字段:
      - dt: DATE类型,分区字段 ✅
      - consume_type: STRING, 消耗类型 ✅
      - consume_points: INTEGER, 消耗积分数 ✅
      - consume_status: STRING, 状态过滤 ✅
-
-3. 查看对应的函数（可选）
-   ```sql
-   -- 查找函数
-   SELECT routine_name, routine_definition
-   FROM `srpproduct-dc37e.favie_dw.INFORMATION_SCHEMA.ROUTINES`
-   WHERE routine_name LIKE '%membership_consume%function%';
-   ```
-
-   → 从函数定义中了解:
+   → 确认规则:
      - 必须过滤 consume_status='consumed'
-     - 可能的上游表（血缘关系）
+     - dt用DATE函数,不能用字符串
 
-4. 复习 core/CRITICAL_RULES.md
+3. READ core/CRITICAL_RULES.md (复习规则)
    → 规则1: 必须dt过滤 ✅
    → 规则3: dt是DATE类型 ✅
    → 规则6: 除法用NULLIF ✅
@@ -425,50 +389,43 @@ bq query --dry_run --use_legacy_sql=false "..."
 
 ---
 
-## ⚠️ 安全防护 (PreHook)
+## 📂 知识库文件索引
 
-**PreHook自动拦截**:
-```bash
-# 1. 破坏性操作
-❌ DROP/DELETE/TRUNCATE/UPDATE/INSERT → 拒绝执行
+### 必读文件 (启动加载)
+- `core/DATA_INFRASTRUCTURE.md` - 数据基础设施说明 (数据集位置、表与函数关系、命名规范)
+- `core/CRITICAL_RULES.md` - 10条核心规则
+- `core/LAYER_SELECTION.md` - 层级选择指南
+- `metadata/index/DOMAIN_INDEX.md` - 业务域索引
 
-# 2. 成本检查
-❌ Slot Time > 20 hours → 拒绝执行
+### 业务域文件 (按需加载)
+- `metadata/domains/product_quality/` - 产品质量域 (124表)
+- `metadata/domains/advertising/` - 广告投放域 (76表)
+- `metadata/domains/gem/` - Gem应用域 (66表)
+- `metadata/domains/decofy/` - Decofy应用域 (66表) ⚠️ 已归档，仅在明确提及时加载
+- `metadata/domains/user_behavior/` - 用户行为域 (56表)
+- `metadata/domains/feed/` - 内容流域 (52表)
+- `metadata/domains/data_enrichment/` - 数据增强域 (3表) ✨ 新增
+- `metadata/domains/search/` - 搜索推荐域 (39表)
+- `metadata/domains/other/` - 其他域 (28表)
+- `metadata/domains/media/` - 媒体资源域 (24表)
+- `metadata/domains/tryon/` - 试穿生成域 (23表)
+- `metadata/domains/points_membership/` - 积分会员域 (10表)
+- `metadata/domains/growth/` - 增长归因域 (10表)
+- `metadata/domains/system/` - 系统配置域 (10表)
+- `metadata/domains/crawl/` - 爬虫任务域 (8表)
+- `metadata/domains/user_profile/` - 用户画像域 (8表)
+- `metadata/domains/chat/` - 聊天对话域 (6表)
+- `metadata/domains/content/` - 内容域 (2表)
 
-# 3. 层级建议
-⚠️ 访问ODS/DWD层 → 警告(允许但建议用RPT)
-```
+### 工作流文件 (参考)
+- `workflows/requirement_clarification.md` - 需求澄清模板
+- `workflows/sql_generation.md` - SQL生成规范
+- `workflows/result_validation.md` - 结果校验清单
 
-配置文件: `../../hooks/bigquery_prehook.sh`
-
----
-
-## 📂 核心文件索引
-
-### 必读文件 (启动时加载)
-
-**核心指南** (总计 ~20KB):
-- `core/CRITICAL_RULES.md` - 10条核心查询规则
-- `core/LAYER_SELECTION.md` - 数据层级选择指南
-- `BIGQUERY_GUIDE.md` - **数据集位置、表命名规范、业务域索引** ⭐ 新增
-
-### 探查工具 (运行时使用)
-
-**BigQuery INFORMATION_SCHEMA** (实时查询):
-- 表搜索: `INFORMATION_SCHEMA.TABLES`
-- 字段查询: `INFORMATION_SCHEMA.COLUMNS`
-- 函数查询: `INFORMATION_SCHEMA.ROUTINES`
-
-### 历史文档 (仅供参考)
-
-**⚠️ 以下文档已过时，不推荐使用，优先查询 BigQuery**:
-- `metadata/index/` - 2026-01-30 扫描的全局索引（可能已过时）
-- `metadata/domains/*/` - 各业务域的详细表文档（可能已过时）
-
-**何时参考历史文档**:
-- 仅当无法通过 BigQuery 查询获取信息时
-- 作为业务逻辑的补充说明
-- 查看示例 SQL 作为参考
+### 示例文件 (学习)
+- `examples/simple_aggregation.md` - 简单聚合示例
+- `examples/multi_table_join.md` - 多表关联示例
+- `examples/trend_analysis.md` - 趋势分析示例
 
 ---
 
@@ -514,11 +471,11 @@ bq query --dry_run --use_legacy_sql=false "..."
 3. 参考 `examples/` 目录的相似示例
 
 **反馈渠道**:
-- 数据团队: data-team@company.com
+- 数据团队: 
 - Issue系统: [内部GitLab]
 
 ---
 
-**最后更新**: 2026-02-04
-**维护者**: Data Platform Team
-**工作模式**: 轻量级指南 + BigQuery 实时探查
+**最后更新**: 2026-02-05
+**维护者**: Data Team gutingyi
+**基于**: 602张表 + 517个函数的完整元数据扫描

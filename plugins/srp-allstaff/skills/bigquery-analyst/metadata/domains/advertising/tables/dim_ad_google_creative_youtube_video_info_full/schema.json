@@ -1,0 +1,50 @@
+{
+  "table_id": "dim_ad_google_creative_youtube_video_info_full",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_ad_google_creative_youtube_video_info_full",
+  "table_type": "TABLE",
+  "num_rows": 449,
+  "num_bytes": 60693,
+  "created": "2025-11-27T06:37:29.200000+00:00",
+  "modified": "2026-01-30T03:09:41.808000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "video_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "原始视频URL"
+    },
+    {
+      "name": "video_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "解析出的视频ID"
+    },
+    {
+      "name": "video_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频标题"
+    },
+    {
+      "name": "author_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "YouTube频道名称"
+    },
+    {
+      "name": "video_created_at",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频上传日期"
+    },
+    {
+      "name": "processed_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "数据更新时间"
+    }
+  ]
+}

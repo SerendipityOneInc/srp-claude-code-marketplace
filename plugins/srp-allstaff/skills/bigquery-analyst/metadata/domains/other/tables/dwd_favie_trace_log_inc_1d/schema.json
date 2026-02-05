@@ -1,0 +1,92 @@
+{
+  "table_id": "dwd_favie_trace_log_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_trace_log_inc_1d",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2026-01-23T02:21:13.289000+00:00",
+  "modified": "2026-01-23T02:21:13.289000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "event_uuid",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "ip",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "timestamp",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "vibe_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "event",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "sign",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "headers",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "impid",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "exp_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "table_id": "dim_site_mut_google_sheet",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_site_mut_google_sheet",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-10-30T02:18:36.141000+00:00",
+  "modified": "2025-10-30T02:18:36.141000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site_domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_tier",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "rank",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "estimated_sku_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "categories",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "parser_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "country_region",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "launch_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "%m/%d/%E4Y"
+    },
+    {
+      "name": "update_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "%m/%d/%E4Y"
+    },
+    {
+      "name": "label",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "data_quality_config_json",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "refresh_interval",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "archive_interval",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "index_config",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

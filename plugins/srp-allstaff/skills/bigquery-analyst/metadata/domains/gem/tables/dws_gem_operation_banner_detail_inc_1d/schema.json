@@ -1,0 +1,92 @@
+{
+  "table_id": "dws_gem_operation_banner_detail_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gem_operation_banner_detail_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 63042,
+  "num_bytes": 6729240,
+  "created": "2025-09-10T10:21:59.522000+00:00",
+  "modified": "2025-12-09T02:00:50.934000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "事件发生日期"
+    },
+    {
+      "name": "item_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "banner 关联的内容名称"
+    },
+    {
+      "name": "user_media_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户媒体来源（根据优先级规则映射得到）"
+    },
+    {
+      "name": "is_internal_user",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否内部用户"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型（如新用户/老用户等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户生命周期类型（如新客/留存/流失等）"
+    },
+    {
+      "name": "login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录方式（last_day_feature.login_type）"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台（last_day_feature.platform）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用的 app 版本（last_day_feature.app_version）"
+    },
+    {
+      "name": "banner_view_pv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "曝光次数（true_view_trigger 且 item_type=hashtag 的事件数）"
+    },
+    {
+      "name": "banner_view_uv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "曝光用户数（去重 device_id）"
+    },
+    {
+      "name": "banner_click_pv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击次数（点击 hashtag banner 进入详情页的事件数）"
+    },
+    {
+      "name": "banner_click_uv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击用户数（去重 device_id）"
+    }
+  ]
+}

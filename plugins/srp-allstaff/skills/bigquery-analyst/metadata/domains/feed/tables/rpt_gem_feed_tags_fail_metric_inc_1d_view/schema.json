@@ -1,0 +1,86 @@
+{
+  "table_id": "rpt_gem_feed_tags_fail_metric_inc_1d_view",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gem_feed_tags_fail_metric_inc_1d_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-06-12T13:49:19.284000+00:00",
+  "modified": "2025-06-12T13:49:19.284000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "style_1_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "style_2_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "occasion_1_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "occasion_2_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "color_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "temperature_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "weather_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gender_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "age_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "body_size_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "body_shape_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "height_fail",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

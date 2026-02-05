@@ -1,0 +1,230 @@
+{
+  "table_id": "dws_favie_gem_sku_search_cube_inc_1d_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gem_sku_search_cube_inc_1d_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-02-27T11:27:32.482000+00:00",
+  "modified": "2025-02-27T11:27:32.482000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "product_site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_top_domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_tier",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_categories",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_parser_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_country_region",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_language",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_device_os",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_register_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_sku_raw_query_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_sku_raw_query_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_sku_ha3_query_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_sku_ha3_query_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_ha3_recall_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_ha3_recall_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_gem_ha3_recall_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_gem_ha3_recall_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_search_retrieval_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_search_retrieval_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "first_gem_moodboard_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "first_gem_moodboard_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_1d_update_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_7d_update_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_28d_update_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_p5_sku_seconds_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_p25_sku_seconds_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_p50_sku_seconds_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_p75_sku_seconds_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_p95_sku_seconds_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_decofy_user_vote_metric_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.mongo_production.decofy_user_votes",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.368483",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

@@ -1,0 +1,56 @@
+{
+  "table_id": "ads_favie_webpage_sample_daily",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.ads_favie_webpage_sample_daily",
+  "table_type": "TABLE",
+  "num_rows": 906,
+  "num_bytes": 10009835,
+  "created": "2024-10-18T01:32:18.176000+00:00",
+  "modified": "2024-12-04T01:12:45.663000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "域名"
+    },
+    {
+      "name": "url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "网页链接"
+    },
+    {
+      "name": "title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "网页标题"
+    },
+    {
+      "name": "keywords",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "网页关键字"
+    },
+    {
+      "name": "description",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "网页描述"
+    },
+    {
+      "name": "content",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "网页正文"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    }
+  ]
+}

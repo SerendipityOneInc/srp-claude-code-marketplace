@@ -1,0 +1,272 @@
+{
+  "table_id": "rpt_favie_gensmo_search_by_event_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_search_by_event_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-09-09T06:27:24.388000+00:00",
+  "modified": "2025-09-09T06:27:24.389000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台，如 iOS、Android、Web"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家或地区名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（登陆、未登陆）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类，如新用户、老用户"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分群标签"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件来源"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件方法"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件动作类型"
+    },
+    {
+      "name": "event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件来源"
+    },
+    {
+      "name": "model_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否为Pro用户标识"
+    },
+    {
+      "name": "cal_pre_refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "计算前事件来源"
+    },
+    {
+      "name": "cal_pre_refer_ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "计算前事件应用名称"
+    },
+    {
+      "name": "cal_pre_event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "计算前事件来源"
+    },
+    {
+      "name": "home_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首页页面浏览次数"
+    },
+    {
+      "name": "home_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "首页设备ID"
+    },
+    {
+      "name": "collage_intention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索意图次数"
+    },
+    {
+      "name": "collage_intention_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索意图设备ID"
+    },
+    {
+      "name": "search_boot_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索启动面板浏览次数"
+    },
+    {
+      "name": "search_boot_panel_generate_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索启动面板生成点击次数"
+    },
+    {
+      "name": "search_boot_panel_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索启动面板设备ID"
+    },
+    {
+      "name": "collage_gen_action_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成动作次数"
+    },
+    {
+      "name": "collage_gen_action_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索生成动作设备ID"
+    },
+    {
+      "name": "collage_gen_action_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成动作2.0版本次数"
+    },
+    {
+      "name": "collage_gen_action_device_id_2_0",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索生成动作2.0版本设备ID"
+    },
+    {
+      "name": "collage_complete_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成次数"
+    },
+    {
+      "name": "collage_complete_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索完成设备ID"
+    },
+    {
+      "name": "collage_channel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索频道点击次数"
+    },
+    {
+      "name": "collage_channel_click_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索频道点击设备ID"
+    },
+    {
+      "name": "collage_complete_detail_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成详细任务次数"
+    },
+    {
+      "name": "collage_complete_detail_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索完成详细任务设备ID"
+    },
+    {
+      "name": "collage_gen_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成面板页面浏览次数"
+    },
+    {
+      "name": "collage_gen_panel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成面板点击次数"
+    },
+    {
+      "name": "collage_gen_panel_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索生成面板设备ID"
+    },
+    {
+      "name": "search_result_product_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索结果商品点击次数"
+    },
+    {
+      "name": "search_result_positive_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索结果正反馈次数"
+    },
+    {
+      "name": "channel_collage_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "频道拼贴点击次数"
+    },
+    {
+      "name": "channel_screen_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "频道页面浏览次数"
+    },
+    {
+      "name": "channel_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "频道设备ID"
+    }
+  ]
+}

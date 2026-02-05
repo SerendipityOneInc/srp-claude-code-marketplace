@@ -1,0 +1,38 @@
+{
+  "table_id": "dim_starquest_internal_user_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_starquest_internal_user_view",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-08-15T07:49:48.251000+00:00",
+  "modified": "2025-08-15T07:49:48.251000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "user_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_id",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_email",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

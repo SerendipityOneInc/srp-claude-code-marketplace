@@ -1,0 +1,68 @@
+{
+  "table_id": "rpt_gensmo_refer_dimension_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_refer_dimension_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 724,
+  "num_bytes": 42775,
+  "created": "2025-04-12T11:04:27.377000+00:00",
+  "modified": "2025-04-12T11:07:47.687000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    },
+    {
+      "name": "pre_refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "上级来源"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "app版本"
+    },
+    {
+      "name": "native_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "native版本"
+    },
+    {
+      "name": "pv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "页面浏览数"
+    },
+    {
+      "name": "uv",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "页面访客数"
+    },
+    {
+      "name": "duration",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "页面停留时长"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    }
+  ]
+}

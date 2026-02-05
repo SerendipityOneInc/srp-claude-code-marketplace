@@ -1,0 +1,56 @@
+{
+  "table_id": "dws_favie_gem_search_query_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gem_search_query_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 790525,
+  "num_bytes": 107195083,
+  "created": "2025-10-21T02:48:01.479000+00:00",
+  "modified": "2025-10-27T02:01:08.618000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "raw_query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "qp_query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query_modality",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "raw_query_word_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "qp_query_word_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

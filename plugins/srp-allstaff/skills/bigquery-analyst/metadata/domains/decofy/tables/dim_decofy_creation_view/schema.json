@@ -1,0 +1,194 @@
+{
+  "table_id": "dim_decofy_creation_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_decofy_creation_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-12-10T05:39:20.776000+00:00",
+  "modified": "2025-12-10T05:39:20.776000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "color_palette",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "creation_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "creation_plan",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "creation_products",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "creation_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "deleted_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "design_style",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "feed_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "feed_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "generation_time_taken",
+      "type": "NUMERIC",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "plan_time_taken",
+      "type": "NUMERIC",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "primary_entry_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "product_images",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "project_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "prompt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "quality",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query_image_sizes",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query_images",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "remix_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "room_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "search_country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "search_time_taken",
+      "type": "NUMERIC",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "searched_products",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "style_images",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

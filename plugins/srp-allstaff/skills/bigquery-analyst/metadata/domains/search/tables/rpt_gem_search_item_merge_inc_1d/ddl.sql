@@ -1,0 +1,33 @@
+CREATE TABLE `srpproduct-dc37e.favie_rpt.rpt_gem_search_item_merge_inc_1d`
+(
+  dt DATE OPTIONS(description="统计日期（按事件发生日期）"),
+  trace_id STRING OPTIONS(description="搜索 trace_id"),
+  search_image STRING OPTIONS(description="用户上传或搜索的图片 URL"),
+  collage_number INT64 OPTIONS(description="拼贴编号（collage_number）"),
+  created_time TIMESTAMP OPTIONS(description="事件发生时间"),
+  product_main_image_url STRING OPTIONS(description="匹配的商品主图 URL"),
+  created_date DATE OPTIONS(description="事件发生日期，取自 created_time"),
+  product_image_info STRING OPTIONS(description="商品图片的详细信息 JSON"),
+  best_view INT64 OPTIONS(description="商品图片是否最佳视角（0/1）"),
+  has_person INT64 OPTIONS(description="商品图片是否有人物（0/1）"),
+  is_bad INT64 OPTIONS(description="商品图片是否为低质（0/1）"),
+  is_clear_background INT64 OPTIONS(description="商品图片背景是否清晰（0/1）"),
+  is_relevant INT64 OPTIONS(description="商品图片是否相关（0/1）"),
+  is_nice_collage BOOL OPTIONS(description="是否为优质拼贴"),
+  brand STRING OPTIONS(description="商品品牌"),
+  platform STRING OPTIONS(description="商品平台"),
+  link_host STRING OPTIONS(description="商品链接域名"),
+  intention STRING OPTIONS(description="用户搜索意图"),
+  user_id STRING OPTIONS(description="用户 ID"),
+  region STRING OPTIONS(description="用户地区"),
+  product_search_engine STRING OPTIONS(description="使用的商品搜索引擎"),
+  route STRING OPTIONS(description="QR debug route"),
+  gender STRING OPTIONS(description="用户性别"),
+  device_id STRING OPTIONS(description="设备 ID"),
+  f_version STRING OPTIONS(description="客户端版本"),
+  cf_ipcountry STRING OPTIONS(description="客户端 IP 国家"),
+  query STRING OPTIONS(description="用户搜索 query"),
+  f_source STRING OPTIONS(description="搜索来源"),
+  search_latency FLOAT64 OPTIONS(description="搜索延迟")
+)
+PARTITION BY dt;

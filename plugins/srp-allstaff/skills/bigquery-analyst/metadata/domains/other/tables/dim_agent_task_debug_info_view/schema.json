@@ -1,0 +1,80 @@
+{
+  "table_id": "dim_agent_task_debug_info_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_agent_task_debug_info_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-12-11T06:28:30.338000+00:00",
+  "modified": "2025-12-11T06:28:30.338000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "created_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "intention",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "session_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "task_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "moodboards",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    }
+  ]
+}

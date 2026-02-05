@@ -1,0 +1,154 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_google_fivetran_by_ad_id_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.google_yla_03.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_yla_03.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_yla_03.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_yla_03.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_yla_03.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_yla_03.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.campaign_history",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.391978",
+  "downstream_count": 0,
+  "upstream_count": 36
+}

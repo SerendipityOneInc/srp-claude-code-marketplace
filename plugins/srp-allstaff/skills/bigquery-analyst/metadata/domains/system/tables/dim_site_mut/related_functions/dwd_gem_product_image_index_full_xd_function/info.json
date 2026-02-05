@@ -1,0 +1,21 @@
+{
+  "routine_id": "dwd_gem_product_image_index_full_xd_function",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dwd_gem_product_image_index_full_xd_function",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "function_type": "utility",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "emb_model_version",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

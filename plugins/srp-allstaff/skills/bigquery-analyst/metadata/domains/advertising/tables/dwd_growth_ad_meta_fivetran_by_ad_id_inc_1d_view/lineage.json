@@ -1,0 +1,34 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_meta_fivetran_by_ad_id_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.basic_ad_actions",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.ad_set_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.basic_ad",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.394866",
+  "downstream_count": 0,
+  "upstream_count": 6
+}

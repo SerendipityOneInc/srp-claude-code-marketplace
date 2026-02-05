@@ -1,0 +1,218 @@
+{
+  "table_id": "rpt_product_dw_search_metric_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.rpt_product_dw_search_metric_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-02-27T06:36:42.906000+00:00",
+  "modified": "2025-02-27T06:36:42.906000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site_domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_top_domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_tier",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_categories",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_parser_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_country_region",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_spu_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d7_inc_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d7_inc_spu_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d7_update_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d7_update_spu_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d28_inc_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d28_inc_spu_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d28_update_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d28_update_spu_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_ha3_recall_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_ha3_recall_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_gem_ha3_recall_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_gem_ha3_recall_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_search_retrieval_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_search_retrieval_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_moodboard_sku_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gem_ha3_recall_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "valid_gem_ha3_recall_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d7_valid_gem_ha3_recall_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d28_valid_gem_ha3_recall_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_sku_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_sku_retrieval_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d7_sku_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "d28_sku_utilization_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "table_id": "rpt_gensmo_refer_pv_user_penetration_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_refer_pv_user_penetration_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 132353086,
+  "num_bytes": 22588967365,
+  "created": "2025-12-17T06:58:25.637000+00:00",
+  "modified": "2026-01-30T01:23:18.402000+00:00",
+  "description": "Gensmo refer PV用户渗透率报表",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户生命周期类型"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "引荐来源/来源页面"
+    },
+    {
+      "name": "refer_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源用户数"
+    },
+    {
+      "name": "active_user_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数"
+    }
+  ]
+}

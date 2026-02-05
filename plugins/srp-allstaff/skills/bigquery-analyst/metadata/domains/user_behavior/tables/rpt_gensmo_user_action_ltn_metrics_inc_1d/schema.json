@@ -1,0 +1,116 @@
+{
+  "table_id": "rpt_gensmo_user_action_ltn_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_action_ltn_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 26971044,
+  "num_bytes": 5597105427,
+  "created": "2025-11-07T07:06:41.557000+00:00",
+  "modified": "2026-01-30T01:18:17.446000+00:00",
+  "description": "Gensmo用户生命周期（lifetime）相关指标宽表，统计不同生命周期、分组下的活跃天数、活跃用户数等核心指标",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "功能类型: e.g., try_on_trigger,try_on_complete etc."
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型，如iOS、Android等"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型：login,guest"
+    },
+    {
+      "name": "user_tenure_segment",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户周期细分类型: New User(1 Day)/New User(2-7 Days)/New User(8-30 Days)/Old User"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户周期类型: New User/Old User"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "lifetime_days",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户生命周期天数"
+    },
+    {
+      "name": "active_days_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户活跃天数"
+    },
+    {
+      "name": "active_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "活跃用户数"
+    },
+    {
+      "name": "group_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "数据分组类型"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "table_id": "dws_favie_gensmo_user_feature_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_user_feature_inc_1d",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-10-21T12:48:58.988000+00:00",
+  "modified": "2025-10-21T12:48:58.988000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "first_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "is_internal_user",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "last_day_feature",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "last_30_days_feature",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "last_access_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

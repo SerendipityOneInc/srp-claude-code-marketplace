@@ -1,0 +1,86 @@
+{
+  "table_id": "dws_gem_operation_pre_search_message_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gem_operation_pre_search_message_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-09-29T08:33:04.780000+00:00",
+  "modified": "2025-09-29T08:33:04.780000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "统计日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "event_item_item_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件项类型（event_item.item_type）"
+    },
+    {
+      "name": "event_item_item_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件项名称（event_item.item_name）"
+    },
+    {
+      "name": "count_pre_search",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "每个device_id下每个item_type+item_name的搜索次数"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台/端"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "APP版本"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户新老类型"
+    }
+  ]
+}

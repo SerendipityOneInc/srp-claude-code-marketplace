@@ -1,0 +1,122 @@
+{
+  "table_id": "rpt_favie_product_detail_metric_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_detail_metric_full_1d",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-03-05T06:55:41.942000+00:00",
+  "modified": "2025-03-05T06:55:41.942000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "shop_site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_product_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "total_product_category_success_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "total_product_image_success_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "total_product_review_success_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "daily_new_product_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "daily_new_product_category_success_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "daily_new_product_image_success_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "daily_new_product_review_success_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "daily_update_product_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "daily_spider_update_product_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "latest_7days_update_product_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "latest_30days_update_product_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "invalid_price_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "unexpected_price_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "out_of_stock_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

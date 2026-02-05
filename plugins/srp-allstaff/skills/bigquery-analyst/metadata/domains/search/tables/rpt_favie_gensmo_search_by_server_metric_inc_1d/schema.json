@@ -1,0 +1,68 @@
+{
+  "table_id": "rpt_favie_gensmo_search_by_server_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_search_by_server_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 278059,
+  "num_bytes": 27597056,
+  "created": "2025-08-06T04:04:10.212000+00:00",
+  "modified": "2026-01-30T01:48:05.745000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台，如 iOS、Android、Web"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家或地区名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（登陆，未登陆）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类，如新用户、老用户"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分群标签"
+    },
+    {
+      "name": "collage_server_complete_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索服务端完成Item数"
+    },
+    {
+      "name": "collage_server_complete_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索服务端完成访问用户数"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "table_id": "faive_feed_tags_operation_metric_view",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.faive_feed_tags_operation_metric_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-07-09T06:42:13.851000+00:00",
+  "modified": "2025-07-09T06:42:13.851000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_created",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_tagged_today",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "not_tagged_today",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "incomplete_today",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

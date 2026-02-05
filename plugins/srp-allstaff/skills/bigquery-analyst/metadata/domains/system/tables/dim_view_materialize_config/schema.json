@@ -1,0 +1,26 @@
+{
+  "table_id": "dim_view_materialize_config",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_view_materialize_config",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-11-19T09:31:33.910000+00:00",
+  "modified": "2025-11-19T09:31:33.910000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dw_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "view_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

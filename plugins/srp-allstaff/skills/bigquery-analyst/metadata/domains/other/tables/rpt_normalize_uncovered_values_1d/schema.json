@@ -1,0 +1,80 @@
+{
+  "table_id": "rpt_normalize_uncovered_values_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_normalize_uncovered_values_1d",
+  "table_type": "TABLE",
+  "num_rows": 26110526,
+  "num_bytes": 2485113210,
+  "created": "2026-01-27T08:02:03.724000+00:00",
+  "modified": "2026-01-30T03:32:16.452000+00:00",
+  "description": "Uncovered values tracking for normalized fields",
+  "fields": [
+    {
+      "name": "field_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Field name: product_item, pattern, color, shape, material, style"
+    },
+    {
+      "name": "original_value",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Original value not found in mapping table"
+    },
+    {
+      "name": "product_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of products with this value"
+    },
+    {
+      "name": "cumulative_product_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Cumulative product count ordered by product_count DESC"
+    },
+    {
+      "name": "value_rank",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Rank by product_count DESC"
+    },
+    {
+      "name": "first_seen_dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "First date this uncovered value was seen"
+    },
+    {
+      "name": "last_seen_dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "Most recent date this uncovered value was seen"
+    },
+    {
+      "name": "days_uncovered",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of days value has been uncovered: DATE_DIFF(last_seen_dt, first_seen_dt, DAY) + 1"
+    },
+    {
+      "name": "model_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Model version"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "Record creation timestamp"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "Partition date"
+    }
+  ]
+}

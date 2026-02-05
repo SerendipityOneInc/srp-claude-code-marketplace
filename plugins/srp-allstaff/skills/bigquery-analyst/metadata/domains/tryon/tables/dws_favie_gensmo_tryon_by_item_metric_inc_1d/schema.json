@@ -1,0 +1,290 @@
+{
+  "table_id": "dws_favie_gensmo_tryon_by_item_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_tryon_by_item_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 8923747,
+  "num_bytes": 3479119704,
+  "created": "2025-08-20T07:10:51.855000+00:00",
+  "modified": "2025-10-15T02:00:36.784000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "task_model",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "任务模型类型，来源于 dim_try_on_task_view.gen_type"
+    },
+    {
+      "name": "task_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "任务类型，来源于 dim_try_on_task_view.type"
+    },
+    {
+      "name": "tryon_server_complete_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿服务端完成Item数"
+    },
+    {
+      "name": "tryon_server_complete_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿服务端完成访问用户数"
+    },
+    {
+      "name": "tryon_complete_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成Item数"
+    },
+    {
+      "name": "tryon_complete_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成用户数"
+    },
+    {
+      "name": "tryon_complete_list_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成列表浏览Item数"
+    },
+    {
+      "name": "tryon_complete_list_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成列表访问用户数"
+    },
+    {
+      "name": "tryon_complete_list_item_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成列表浏览Item数2.0"
+    },
+    {
+      "name": "tryon_complete_list_user_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成列表访问用户数2.0"
+    },
+    {
+      "name": "tryon_complete_detail_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成页面详情浏览Item数"
+    },
+    {
+      "name": "tryon_complete_detail_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成页面详情浏览用户数"
+    },
+    {
+      "name": "tryon_change_scene_intention_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景Item数"
+    },
+    {
+      "name": "tryon_change_scene_intention_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景访问用户数"
+    },
+    {
+      "name": "tryon_change_scene_gen_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景Item数"
+    },
+    {
+      "name": "tryon_change_scene_gen_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景访问用户数"
+    },
+    {
+      "name": "tryon_change_scene_browse_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景Item浏览数"
+    },
+    {
+      "name": "tryon_change_scene_browse_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成换场景浏览用户数"
+    },
+    {
+      "name": "tryon_retry_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿重试Item数"
+    },
+    {
+      "name": "tryon_retry_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿重试访问用户数"
+    },
+    {
+      "name": "tryon_save_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿保存Item数"
+    },
+    {
+      "name": "tryon_save_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿保存访问用户数"
+    },
+    {
+      "name": "tryon_unsave_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿取消保存Item数"
+    },
+    {
+      "name": "tryon_unsave_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿取消保存访问用户数"
+    },
+    {
+      "name": "tryon_download_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿下载Item数"
+    },
+    {
+      "name": "tryon_download_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿下载访问用户数"
+    },
+    {
+      "name": "tryon_like_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿点赞Item数"
+    },
+    {
+      "name": "tryon_like_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿点赞访问用户数"
+    },
+    {
+      "name": "tryon_cancel_like_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿取消点赞Item数"
+    },
+    {
+      "name": "tryon_cancel_like_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿取消点赞访问用户数"
+    },
+    {
+      "name": "tryon_share_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿分享Item数"
+    },
+    {
+      "name": "tryon_share_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿分享访问用户数"
+    },
+    {
+      "name": "tryon_post_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿发布Item数"
+    },
+    {
+      "name": "tryon_post_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿发布访问用户数"
+    },
+    {
+      "name": "tryon_dislike_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿点踩Item数"
+    },
+    {
+      "name": "tryon_dislike_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿点踩访问用户数"
+    },
+    {
+      "name": "tryon_cancel_dislike_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿取消点踩Item数"
+    },
+    {
+      "name": "tryon_cancel_dislike_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿取消点踩访问用户数"
+    }
+  ]
+}

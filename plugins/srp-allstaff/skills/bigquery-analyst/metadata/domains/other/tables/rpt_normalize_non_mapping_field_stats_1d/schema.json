@@ -1,0 +1,98 @@
+{
+  "table_id": "rpt_normalize_non_mapping_field_stats_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_normalize_non_mapping_field_stats_1d",
+  "table_type": "TABLE",
+  "num_rows": 196,
+  "num_bytes": 145612,
+  "created": "2026-01-27T08:02:20.529000+00:00",
+  "modified": "2026-01-30T03:36:30.456000+00:00",
+  "description": "Distribution statistics for fields without mapping tables",
+  "fields": [
+    {
+      "name": "field_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Field name without mapping table"
+    },
+    {
+      "name": "data_scope",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Data scope: inc=incremental, full=full data"
+    },
+    {
+      "name": "total_products",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Total products with non-empty field value"
+    },
+    {
+      "name": "total_distinct_values",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Total distinct values"
+    },
+    {
+      "name": "values_for_50pct_coverage",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of top values needed to cover 50% of products"
+    },
+    {
+      "name": "values_for_60pct_coverage",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of top values needed to cover 60% of products"
+    },
+    {
+      "name": "values_for_70pct_coverage",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of top values needed to cover 70% of products"
+    },
+    {
+      "name": "values_for_80pct_coverage",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of top values needed to cover 80% of products"
+    },
+    {
+      "name": "values_for_90pct_coverage",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of top values needed to cover 90% of products"
+    },
+    {
+      "name": "values_for_95pct_coverage",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "Number of top values needed to cover 95% of products"
+    },
+    {
+      "name": "top_values_json",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "JSON array of top 20 values with counts"
+    },
+    {
+      "name": "model_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Model version"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "Record creation timestamp"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "Partition date"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "table_id": "partition_record_table",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.partition_record_table",
+  "table_type": "TABLE",
+  "num_rows": 4319,
+  "num_bytes": 359738,
+  "created": "2025-12-08T10:57:11.179000+00:00",
+  "modified": "2026-01-30T05:11:48.094000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期，表示事件发生的日期"
+    },
+    {
+      "name": "table_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "表名称，标识具体的数据表"
+    },
+    {
+      "name": "biz_condition",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "业务条件，描述数据所属的业务场景或条件"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "表创建时间，表示表的创建时间"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "表更新时间，表示表的最后更新时间"
+    }
+  ]
+}

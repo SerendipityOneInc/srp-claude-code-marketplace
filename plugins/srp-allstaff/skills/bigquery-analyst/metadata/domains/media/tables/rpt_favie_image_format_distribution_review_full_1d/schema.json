@@ -1,0 +1,44 @@
+{
+  "table_id": "rpt_favie_image_format_distribution_review_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_image_format_distribution_review_full_1d",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2024-12-13T08:16:53.826000+00:00",
+  "modified": "2024-12-13T08:16:53.826000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "image_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "format",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "table_id": "dwd_favie_product_review_combined_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_product_review_combined_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 25339063,
+  "num_bytes": 125450532280,
+  "created": "2026-01-07T06:20:22.314000+00:00",
+  "modified": "2026-01-26T04:24:02.465000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "f_spu_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品SPU"
+    },
+    {
+      "name": "combined_title_body",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品标题和评论内容拼接"
+    }
+  ]
+}

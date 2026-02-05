@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_ab_user_dx_retention_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_x_retention_metrics_inc_1d",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.400449",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

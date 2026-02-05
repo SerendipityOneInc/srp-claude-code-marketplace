@@ -1,0 +1,164 @@
+{
+  "table_id": "dws_faive_gensmo_membership_points_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_faive_gensmo_membership_points_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1305943,
+  "num_bytes": 335119293,
+  "created": "2026-01-04T06:20:46.394000+00:00",
+  "modified": "2026-01-30T01:20:09.716000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "earn_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取过积分行为的用户标识"
+    },
+    {
+      "name": "earn_points_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取积分次数"
+    },
+    {
+      "name": "earn_points_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取积分数量"
+    },
+    {
+      "name": "earn_points_not_checkin_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过主动完成任务获取积分行为的用户标识（不含被动checkin）"
+    },
+    {
+      "name": "earn_points_not_checkin_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过主动完成任务获取积分次数（不含被动checkin）"
+    },
+    {
+      "name": "earn_points_not_checkin_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过主动完成任务获取积分数量（不含被动checkin）"
+    },
+    {
+      "name": "earn_points_transaction_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过充值获取积分行为的用户标识"
+    },
+    {
+      "name": "earn_points_transaction_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过充值获取积分次数"
+    },
+    {
+      "name": "earn_points_transaction_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过充值获取积分数量"
+    },
+    {
+      "name": "consume_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗过积分行为的用户标识"
+    },
+    {
+      "name": "consume_points_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗积分次数"
+    },
+    {
+      "name": "consume_points_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗积分数量"
+    },
+    {
+      "name": "net_points_change",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "净积分流=当日获取积分-当日消耗积分"
+    },
+    {
+      "name": "consume_points_ge_task_claimed_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户当日消耗积分大于等于完成daily任务可获取的积分上限（目前登录10分+3次分享3分共13分）的用户标识"
+    },
+    {
+      "name": "consume_points_ge_checkin_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户当日消耗积分大于等于每日登录可获取的积分（目前登录为10分）的用户标识"
+    },
+    {
+      "name": "hit_limit_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "撞线用户标识"
+    },
+    {
+      "name": "points_expired",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当日到期扣除积分"
+    }
+  ]
+}

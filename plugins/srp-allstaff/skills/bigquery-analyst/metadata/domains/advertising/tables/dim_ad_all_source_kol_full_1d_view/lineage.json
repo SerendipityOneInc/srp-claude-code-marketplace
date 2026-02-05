@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_ad_all_source_kol_full_1d_view",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.394695",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

@@ -1,0 +1,38 @@
+{
+  "table_id": "dwd_favie_gensmo_user_ids_map_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_gensmo_user_ids_map_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1401786,
+  "num_bytes": 130670969,
+  "created": "2025-08-16T10:40:44.707000+00:00",
+  "modified": "2025-12-09T01:01:31.013000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

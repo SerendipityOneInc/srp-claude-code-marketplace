@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_decofy_subscription_renewal_conversion_rate_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_decofy_subscription_membership_metrics_inc_1d",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.372762",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

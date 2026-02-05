@@ -1,0 +1,22 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_ad_tiktok_creative_full_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.video_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.image_history",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.398935",
+  "downstream_count": 0,
+  "upstream_count": 3
+}

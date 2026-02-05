@@ -1,0 +1,92 @@
+{
+  "table_id": "dwd_favie_decofy_subscription_process_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_decofy_subscription_process_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 27842,
+  "num_bytes": 2838638,
+  "created": "2025-09-08T05:21:02.141000+00:00",
+  "modified": "2026-01-30T01:03:02.053000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "process_node",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "节点类型"
+    },
+    {
+      "name": "trigger_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "触发来源"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "产品ID"
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "简化产品ID"
+    },
+    {
+      "name": "order_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单ID"
+    },
+    {
+      "name": "order_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单类目"
+    },
+    {
+      "name": "order_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单类型"
+    },
+    {
+      "name": "order_subscription_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "订单订阅序号"
+    },
+    {
+      "name": "process_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "节点时间"
+    },
+    {
+      "name": "trigger_pay_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "trigger_pay序号"
+    },
+    {
+      "name": "subscription_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅ID"
+    }
+  ]
+}

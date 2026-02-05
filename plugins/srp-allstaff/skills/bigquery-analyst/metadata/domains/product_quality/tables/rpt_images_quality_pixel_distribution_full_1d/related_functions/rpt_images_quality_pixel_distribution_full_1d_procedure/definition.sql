@@ -1,0 +1,78 @@
+BEGIN
+  -- 删除指定日期的数据
+  DELETE FROM `favie_rpt.rpt_images_quality_pixel_distribution_full_1d`
+  WHERE dt = dt_param;
+
+  -- 插入数据
+  INSERT INTO `favie_rpt.rpt_images_quality_pixel_distribution_full_1d` (
+    product_f_creates_at,
+    site,
+    total_sku_cnt,
+    total_spu_cnt,
+    tiny_image_sku_cnt,
+    small_image_sku_cnt,
+    medium_image_sku_cnt,
+    large_image_sku_cnt,
+    size_2k_image_sku_cnt,
+    size_4k_image_sku_cnt,
+    size_8k_image_sku_cnt,
+    tiny_main_image_sku_cnt,
+    small_main_image_sku_cnt,
+    medium_main_image_sku_cnt,
+    large_main_image_sku_cnt,
+    size_2k_main_image_sku_cnt,
+    size_4k_main_image_sku_cnt,
+    size_8k_main_image_sku_cnt,
+    tiny_image_spu_cnt,
+    small_image_spu_cnt,
+    medium_image_spu_cnt,
+    large_image_spu_cnt,
+    size_2k_image_spu_cnt,
+    size_4k_image_spu_cnt,
+    size_8k_image_spu_cnt,
+    tiny_main_image_spu_cnt,
+    small_main_image_spu_cnt,
+    medium_main_image_spu_cnt,
+    large_main_image_spu_cnt,
+    size_2k_main_image_spu_cnt,
+    size_4k_main_image_spu_cnt,
+    size_8k_main_image_spu_cnt,
+    dt
+  )
+  SELECT
+    product_f_creates_at,
+    site,
+    total_sku_cnt,
+    total_spu_cnt,
+    tiny_image_sku_cnt,
+    small_image_sku_cnt,
+    medium_image_sku_cnt,
+    large_image_sku_cnt,
+    size_2k_image_sku_cnt,
+    size_4k_image_sku_cnt,
+    size_8k_image_sku_cnt,
+    tiny_main_image_sku_cnt,
+    small_main_image_sku_cnt,
+    medium_main_image_sku_cnt,
+    large_main_image_sku_cnt,
+    size_2k_main_image_sku_cnt,
+    size_4k_main_image_sku_cnt,
+    size_8k_main_image_sku_cnt,
+    tiny_image_spu_cnt,
+    small_image_spu_cnt,
+    medium_image_spu_cnt,
+    large_image_spu_cnt,
+    size_2k_image_spu_cnt,
+    size_4k_image_spu_cnt,
+    size_8k_image_spu_cnt,
+    tiny_main_image_spu_cnt,
+    small_main_image_spu_cnt,
+    medium_main_image_spu_cnt,
+    large_main_image_spu_cnt,
+    size_2k_main_image_spu_cnt,
+    size_4k_main_image_spu_cnt,
+    size_8k_main_image_spu_cnt,
+    dt_param AS dt
+  FROM `favie_rpt.rpt_images_quality_pixel_distribution_full_1d_function`(dt_param);
+  call favie_dw.record_partition('favie_rpt.rpt_images_quality_pixel_distribution_full_1d', dt_param,"");
+END

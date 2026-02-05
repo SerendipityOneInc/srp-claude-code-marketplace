@@ -1,0 +1,74 @@
+{
+  "table_id": "rpt_gensmo_management_dashboard_uv_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_management_dashboard_uv_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-06-05T09:33:33.495000+00:00",
+  "modified": "2025-10-22T02:00:18.064000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "全量时间分区,分区字段"
+    },
+    {
+      "name": "event_dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "事件日期"
+    },
+    {
+      "name": "ad_media_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告媒体来源"
+    },
+    {
+      "name": "user_country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所在国家"
+    },
+    {
+      "name": "last_platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的平台"
+    },
+    {
+      "name": "last_app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的app版本号"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型 (unregister/register/deregister)"
+    },
+    {
+      "name": "mau",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "月活跃用户数 (MAU)"
+    },
+    {
+      "name": "dau",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数 (DAU)"
+    },
+    {
+      "name": "wau",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "周活跃用户数 (WAU)"
+    }
+  ]
+}

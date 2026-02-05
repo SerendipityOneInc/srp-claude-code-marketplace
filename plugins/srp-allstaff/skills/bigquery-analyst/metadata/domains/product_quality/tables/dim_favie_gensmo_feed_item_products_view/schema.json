@@ -1,0 +1,116 @@
+{
+  "table_id": "dim_favie_gensmo_feed_item_products_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_favie_gensmo_feed_item_products_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-05-19T03:13:52.561000+00:00",
+  "modified": "2025-05-19T03:13:52.561000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "feed_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "task_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "moodboard_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "moodboard_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "reasoning",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "description",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "gender",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "tags",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "score",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "is_feed",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "search_engine",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "product",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "created_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "update_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

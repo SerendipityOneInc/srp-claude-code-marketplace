@@ -1,0 +1,58 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_gem_growth_ad_google_fivetran_by_ad_id_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.campaign_criterion_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.account_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.geo_target",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.ad_history",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.394239",
+  "downstream_count": 0,
+  "upstream_count": 12
+}

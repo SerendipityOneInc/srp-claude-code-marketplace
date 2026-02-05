@@ -1,0 +1,38 @@
+{
+  "table_id": "dim_country_region_google_sheet",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_country_region_google_sheet",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-03-27T07:45:22.060000+00:00",
+  "modified": "2025-03-27T07:45:22.060000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "string_field_0",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "string_field_1",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "string_field_2",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "string_field_3",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

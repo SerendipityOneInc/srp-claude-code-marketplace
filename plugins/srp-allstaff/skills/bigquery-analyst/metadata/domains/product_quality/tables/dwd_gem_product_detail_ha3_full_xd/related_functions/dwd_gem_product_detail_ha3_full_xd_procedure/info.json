@@ -1,0 +1,47 @@
+{
+  "routine_id": "dwd_gem_product_detail_ha3_full_xd_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dwd_gem_product_detail_ha3_full_xd_procedure",
+  "routine_type": "PROCEDURE",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "index_env_type",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "collage_category_model_version",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "product_enhanced_category_model_version",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "product_enhanced_title_model_version",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "product_image_score_model_version",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "product_item_profile_model_version",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null,
+  "linked_by": "name_matching",
+  "linked_at": "2026-01-30T14:24:22.051622"
+}

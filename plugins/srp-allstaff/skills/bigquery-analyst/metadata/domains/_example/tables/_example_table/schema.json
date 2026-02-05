@@ -1,0 +1,13 @@
+{
+  "table_id": "table_name",
+  "dataset_id": "dataset",
+  "project_id": "project",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "REQUIRED",
+      "description": "日期分区"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "description": "日期分区",
+    "mode": "REQUIRED",
+    "name": "dt",
+    "type": "DATE"
+  },
+  {
+    "description": "商品站点",
+    "name": "site",
+    "type": "STRING"
+  },
+  {
+    "description": "商品sku_id, ASIN",
+    "name": "f_sku_id",
+    "type": "STRING"
+  },
+  {
+    "description": "商品SpuID",
+    "name": "f_spu_id",
+    "type": "STRING"
+  },
+  {
+    "description": "商品标题",
+    "name": "title",
+    "type": "STRING"
+  },
+  {
+    "description": "商品链接",
+    "name": "link",
+    "type": "STRING"
+  },
+  {
+    "description": "商品主图链接",
+    "name": "main_image_link",
+    "type": "STRING"
+  },
+  {
+    "description": "主图视频：是否含主图视频。用于查找产品主图中是否包含视频介绍",
+    "name": "main_image_has_video",
+    "type": "BOOLEAN"
+  },
+  {
+    "description": "品牌名称",
+    "name": "brand_name",
+    "type": "STRING"
+  },
+  {
+    "description": "价格",
+    "name": "price",
+    "type": "INTEGER"
+  },
+  {
+    "description": "上架时间 ",
+    "name": "launch_date",
+    "type": "DATE"
+  },
+  {
+    "description": "商品关键词",
+    "name": "keywords",
+    "type": "STRING"
+  },
+  {
+    "description": "所有sellers - name/id/address",
+    "name": "sellers",
+    "type": "STRING"
+  },
+  {
+    "description": "变体数 - 变体指的是同一款产品的不同型号，比如不同颜色、不同尺寸等",
+    "name": "variant_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "卖家数 - 产品Listing的BuyBox下所有跟卖数量",
+    "name": "seller_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "商品标识：best seller/Amazon's Choice/New Release/A+",
+    "name": "product_badges",
+    "type": "STRING"
+  },
+  {
+    "description": "包装重量:g",
+    "name": "package_weight",
+    "type": "STRING"
+  },
+  {
+    "description": "包装尺寸:1-小号标准，2-中号标准，3-大号标准，4-超大号标准",
+    "name": "package_dimensions",
+    "type": "STRING"
+  },
+  {
+    "description": "包装类型",
+    "name": "package_type",
+    "type": "INTEGER"
+  },
+  {
+    "description": "FBA物流费用 ",
+    "name": "package_fba_fee",
+    "type": "FLOAT"
+  },
+  {
+    "description": "配送方式：AMZ(亚马逊自营)、FBA(亚马逊物流服务)和FBM(卖家自配送)三种方式",
+    "name": "fulfillment_type",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-一级类目",
+    "name": "category_level_1",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-二级类目",
+    "name": "category_level_2",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-三级类目",
+    "name": "category_level_3",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-四级类目",
+    "name": "category_level_4",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-五级类目",
+    "name": "category_level_5",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-六级类目",
+    "name": "category_level_6",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-七级类目",
+    "name": "category_level_7",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-八级类目",
+    "name": "category_level_8",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-九级类目",
+    "name": "category_level_9",
+    "type": "STRING"
+  },
+  {
+    "description": "解析商品类目路径-十级类目",
+    "name": "category_level_10",
+    "type": "STRING"
+  },
+  {
+    "description": "子体最近30天销量 - 该子体ASIN近一个月的销量，数据来源于亚马逊搜索页",
+    "name": "monthly_sale_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "子体最近30天销售额",
+    "name": "monthly_sale_amt",
+    "type": "FLOAT"
+  },
+  {
+    "description": "父体最近30天销量",
+    "name": "monthly_parent_sale_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "父体最近30天销售额",
+    "name": "monthly_parent_sale_amt",
+    "type": "FLOAT"
+  },
+  {
+    "description": "子体月销量增长率 - 默认为子体近30天销量增长率，可以用来寻找潜力爆款",
+    "name": "monthly_sales_growth_rate",
+    "type": "FLOAT"
+  },
+  {
+    "description": "父体月销量增长率 - 默认为父体近30天销量增长率，可以用来寻找潜力爆款",
+    "name": "monthly_parent_sales_growth_rate",
+    "type": "FLOAT"
+  },
+  {
+    "description": "大类热销排名 - 大类BSR在500-5000是中小卖家一个比较理想的参考值(潜力爆款)",
+    "name": "big_category_bsr",
+    "type": "INTEGER"
+  },
+  {
+    "description": "小类热销排名 - 小类BSR，指该子ASIN的Listing页面Best Sellers Rank部分的小类最新排名",
+    "name": "small_category_bsr",
+    "type": "INTEGER"
+  },
+  {
+    "description": "BSR增长数 - BSR增长数 = 7天前的BSR-当天BSR",
+    "name": "weekly_big_bsr_growth",
+    "type": "INTEGER"
+  },
+  {
+    "description": "BSR增长率 - BSR增长率 = (7天前的BSR-当天BSR)/7天前的BSR *100%",
+    "name": "weekly_big_bsr_growth_rate",
+    "type": "FLOAT"
+  },
+  {
+    "description": "小类BSR增长数 - BSR增长数 = 7天前的BSR-当天BSR",
+    "name": "weekly_small_bsr_growth",
+    "type": "INTEGER"
+  },
+  {
+    "description": "小类BSR增长率 - BSR增长率 = (7天前的BSR-当天BSR)/7天前的BSR *100%",
+    "name": "weekly_small_bsr_growth_rate",
+    "type": "FLOAT"
+  },
+  {
+    "description": "毛利率 - 产品毛利率指的是从商品售价中扣除佣金和FBA费用后，剩余金额占商品售价的比例",
+    "name": "gross_margin_rate",
+    "type": "FLOAT"
+  },
+  {
+    "description": "LQS ",
+    "name": "listing_quality_score",
+    "type": "FLOAT"
+  },
+  {
+    "description": "评分值 - 产品Listing的最新评分值（评分星级）",
+    "name": "rating_amt",
+    "type": "FLOAT"
+  },
+  {
+    "description": "评分数 - 产品Listing的最新评分数（ratings数量）",
+    "name": "rating_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "评论数",
+    "name": "review_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "月评新增 - 产品近30天或一个自然月内的新增评分数",
+    "name": "monthly_new_rating_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "留评率 - 留评率 = 近30天评分数增长值/近30天销量",
+    "name": "monthly_rating_rate",
+    "type": "FLOAT"
+  },
+  {
+    "description": "Q&A数量 - 产品Listing的最新Q&A数量",
+    "name": "qa_cnt",
+    "type": "INTEGER"
+  }
+]

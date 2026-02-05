@@ -1,0 +1,38 @@
+{
+  "table_id": "dim_country_region",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_country_region",
+  "table_type": "TABLE",
+  "num_rows": 50,
+  "num_bytes": 1672,
+  "created": "2025-03-27T07:45:24.382000+00:00",
+  "modified": "2025-03-27T07:45:24.382000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "region_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "region_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_ab_user_duration_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_user_feature_inc_1d",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dws_gensmo_user_group_inc_1d_function_read",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.366979",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

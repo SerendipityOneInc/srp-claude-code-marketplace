@@ -1,0 +1,176 @@
+{
+  "table_id": "dws_savyo_growth_ad_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_savyo_growth_ad_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 56,
+  "num_bytes": 17276,
+  "created": "2025-12-10T07:28:23.587000+00:00",
+  "modified": "2025-12-10T07:31:21.334000+00:00",
+  "description": "Savyo广告指标增量表，包含广告花费、转化、用户行为等指标",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "REQUIRED",
+      "description": "数据日期"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源：Meta Ads、Google Ads、TikTok Ads等"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台：IOS、ANDROID"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称：Savyo"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告账户ID"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告账户名称"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "campaign_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动名称"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_group_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组名称"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告名称"
+    },
+    {
+      "name": "ad_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告类别"
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家代码"
+    },
+    {
+      "name": "channel",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "渠道：ON_LINE"
+    },
+    {
+      "name": "attribution_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "归因方法：BOTH"
+    },
+    {
+      "name": "account_put_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户投放类型"
+    },
+    {
+      "name": "account_open_agency",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户开户代理"
+    },
+    {
+      "name": "impression",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "曝光数"
+    },
+    {
+      "name": "click",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "点击数"
+    },
+    {
+      "name": "conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "转化数"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "花费"
+    },
+    {
+      "name": "install_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "安装数"
+    },
+    {
+      "name": "new_user_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "新用户数"
+    },
+    {
+      "name": "d0_active_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "D0活跃用户数"
+    },
+    {
+      "name": "d1_retention_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "D1留存用户数"
+    },
+    {
+      "name": "lt7_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "LT7（7天生命周期价值）用户数"
+    }
+  ]
+}

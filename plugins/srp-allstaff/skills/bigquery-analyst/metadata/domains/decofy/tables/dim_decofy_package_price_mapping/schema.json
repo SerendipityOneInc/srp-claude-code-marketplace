@@ -1,0 +1,68 @@
+{
+  "table_id": "dim_decofy_package_price_mapping",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_decofy_package_price_mapping",
+  "table_type": "TABLE",
+  "num_rows": 6,
+  "num_bytes": 737,
+  "created": "2025-09-23T09:27:36.609000+00:00",
+  "modified": "2025-09-23T09:27:36.610000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "period",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "price_usd",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "is_include_trial",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "first_order_price_usd",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "default_first_order_renewal_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "default_second_order_renewal_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "default_third_more_order_renewal_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

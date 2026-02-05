@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_favie_gem_search_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.logging_gem_search_product_list.export_errors_",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.logging_gem_search_product_list.stderr_",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.375136",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

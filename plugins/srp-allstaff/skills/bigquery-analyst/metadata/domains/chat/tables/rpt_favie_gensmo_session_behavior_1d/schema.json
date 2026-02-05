@@ -1,0 +1,134 @@
+{
+  "table_id": "rpt_favie_gensmo_session_behavior_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_session_behavior_1d",
+  "table_type": "TABLE",
+  "num_rows": 96764527,
+  "num_bytes": 22442627287,
+  "created": "2025-07-22T11:46:09.830000+00:00",
+  "modified": "2026-01-30T02:00:40.942000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "session_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会话 ID"
+    },
+    {
+      "name": "user_uid",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户 UID"
+    },
+    {
+      "name": "last_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "最后一次使用的设备 ID"
+    },
+    {
+      "name": "message_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会话消息类型（例如 search、tryon 等）"
+    },
+    {
+      "name": "total_message_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会话内消息总数"
+    },
+    {
+      "name": "search_query_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索请求消息数"
+    },
+    {
+      "name": "search_res_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索结果返回消息数"
+    },
+    {
+      "name": "tryon_query_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿请求消息数"
+    },
+    {
+      "name": "tryon_res_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿结果返回消息数"
+    },
+    {
+      "name": "tryon_changebg_query_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "换背景请求消息数"
+    },
+    {
+      "name": "tryon_changebg_res_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "换背景结果返回消息数"
+    },
+    {
+      "name": "session_start_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "会话启动消息数"
+    },
+    {
+      "name": "unexpect_error_count",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "意外错误消息数"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台（如 app/web）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "App 版本号"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所在国家"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（游客/注册用户）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户新老类型（新客/老客）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组标记（如实验组/对照组）"
+    }
+  ]
+}

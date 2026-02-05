@@ -1,0 +1,74 @@
+{
+  "table_id": "product_detail_price_analysis_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.product_detail_price_analysis_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-02-06T08:39:23.552000+00:00",
+  "modified": "2025-02-06T08:39:23.552000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "link",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "rrp",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "price",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "avg_price",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_historical_prices",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "change_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "updates_at",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

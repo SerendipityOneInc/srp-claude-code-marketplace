@@ -1,0 +1,38 @@
+{
+  "table_id": "favie_product_detail_clean_brand_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.favie_product_detail_clean_brand_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-07-23T05:13:36.496000+00:00",
+  "modified": "2025-07-23T05:13:36.496000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "brand_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_brand",
+      "type": "JSON",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "table_id": "rpt_webpage_quality_source_update_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_webpage_quality_source_update_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 6172,
+  "num_bytes": 507374,
+  "created": "2024-12-13T06:36:38.289000+00:00",
+  "modified": "2025-12-17T01:02:49.647000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "parser_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "爬虫名称"
+    },
+    {
+      "name": "source_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "数据源类型"
+    },
+    {
+      "name": "domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "total_update_times",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总更新次数"
+    },
+    {
+      "name": "effective_update_times",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "有效更新次数"
+    },
+    {
+      "name": "ineffective_update_times",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "无效更新次数"
+    },
+    {
+      "name": "update_url_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "更新URL数"
+    },
+    {
+      "name": "new_added_url_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新增URL数"
+    }
+  ]
+}

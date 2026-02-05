@@ -1,0 +1,47 @@
+CREATE VIEW `srpproduct-dc37e.favie_dw.dwd_decofy_skan_appsflyer_webhook_inc_1d_view`
+AS select
+skad_version
+,skad_ad_network_id
+,fidelity_type
+,did_win
+,timestamp
+,skad_campaign_id
+,event_type
+,_sdc_table_version
+,skad_transaction_id
+,_sdc_received_at
+,_sdc_sequence
+,skad_attribution_signature
+,__sdc_primary_key
+,skad_redownload
+,app_id
+,_sdc_batched_at
+,skad_app_id
+,ad_network_adset_id
+,ad_network_campaign_id
+,ad_network_adset_name
+,ip
+,ad_network_campaign_name
+,ad_network_timestamp
+,skad_conversion_value
+,skad_source_app_id
+,event_uuid
+,install_type
+,install_date
+,skad_fidelity_type
+,skad_mode
+,skad_postback_sequence_index
+,media_source
+,measurement_window
+,af_attribution_flag
+,skad_ambiguous_event
+,event_name
+,skad_revenue
+,max_revenue
+,min_time_post_install
+,max_time_post_install
+,min_revenue
+,max_event_counter
+,min_event_counter
+,source_app_id
+from `srpproduct-dc37e.skan_appsflyer_decofy2.data`;

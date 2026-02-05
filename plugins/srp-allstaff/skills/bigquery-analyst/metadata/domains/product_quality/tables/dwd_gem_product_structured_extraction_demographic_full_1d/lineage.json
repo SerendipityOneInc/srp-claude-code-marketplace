@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_gem_product_structured_extraction_demographic_full_1d",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.379422",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

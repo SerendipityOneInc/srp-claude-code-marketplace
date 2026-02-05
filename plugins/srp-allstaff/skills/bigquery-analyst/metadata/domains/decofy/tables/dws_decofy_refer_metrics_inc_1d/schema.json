@@ -1,0 +1,170 @@
+{
+  "table_id": "dws_decofy_refer_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_decofy_refer_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1989491,
+  "num_bytes": 651867195,
+  "created": "2025-08-19T12:02:04.933000+00:00",
+  "modified": "2026-01-30T01:03:32.370000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Appsflyer ID"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交互点名称"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "跳转至当前页面的来源页面或入口"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件触发方式（点击、浏览等）"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型"
+    },
+    {
+      "name": "refer_ap_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面交互点击次数"
+    },
+    {
+      "name": "refer_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面浏览次数"
+    },
+    {
+      "name": "refer_view_item_list_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面查看Item列表次数"
+    },
+    {
+      "name": "refer_true_view_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品详情页查看次数"
+    },
+    {
+      "name": "refer_leave_directly_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面直接离开次数"
+    },
+    {
+      "name": "refer_duration_amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "来源页面停留时长"
+    },
+    {
+      "name": "refer_click_user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源页面点击用户ID"
+    },
+    {
+      "name": "refer_directly_leave_user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源页面直接离开用户ID"
+    }
+  ]
+}

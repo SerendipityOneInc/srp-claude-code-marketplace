@@ -1,0 +1,92 @@
+{
+  "table_id": "rpt_decofy_subscribe_notification_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_subscribe_notification_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 2916,
+  "num_bytes": 669629,
+  "created": "2025-09-05T08:11:41.083000+00:00",
+  "modified": "2026-01-30T02:01:08.316000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家或地区名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台，如 iOS、Android、Web"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分群标签"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅产品ID"
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "简化产品ID"
+    },
+    {
+      "name": "subscribe_disable_notification_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "订阅禁用通知次数"
+    },
+    {
+      "name": "subscribe_refund_notification_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "订阅退款通知次数"
+    }
+  ]
+}

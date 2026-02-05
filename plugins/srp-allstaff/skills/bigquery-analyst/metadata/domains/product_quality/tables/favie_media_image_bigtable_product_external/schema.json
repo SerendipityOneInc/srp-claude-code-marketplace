@@ -1,0 +1,26 @@
+{
+  "table_id": "favie_media_image_bigtable_product_external",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.favie_media_image_bigtable_product_external",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-01-23T05:35:45.552000+00:00",
+  "modified": "2025-01-23T05:35:45.552000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "rowkey",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "main_cf",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

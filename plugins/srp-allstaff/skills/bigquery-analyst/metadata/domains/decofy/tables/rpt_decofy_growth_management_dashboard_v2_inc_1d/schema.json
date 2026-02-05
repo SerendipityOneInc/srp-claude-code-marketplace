@@ -1,0 +1,248 @@
+{
+  "table_id": "rpt_decofy_growth_management_dashboard_v2_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_growth_management_dashboard_v2_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 15094,
+  "num_bytes": 8269588,
+  "created": "2025-08-14T12:08:02.616000+00:00",
+  "modified": "2025-08-21T03:01:35.702000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区字段"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "苹果/安卓"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户ID"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户名称"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign ID"
+    },
+    {
+      "name": "campaign_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign名称"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group ID"
+    },
+    {
+      "name": "ad_group_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group名称"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告名称"
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家代码"
+    },
+    {
+      "name": "channel",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "渠道"
+    },
+    {
+      "name": "impression",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "曝光数"
+    },
+    {
+      "name": "click",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击数"
+    },
+    {
+      "name": "conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "转化数"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "成本"
+    },
+    {
+      "name": "install_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "安装数"
+    },
+    {
+      "name": "user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户数"
+    },
+    {
+      "name": "subscription_7d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天订阅转化数"
+    },
+    {
+      "name": "subscription_3d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "3天订阅转化数"
+    },
+    {
+      "name": "subscription_1d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "1天订阅转化数"
+    },
+    {
+      "name": "subscription_0d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天订阅转化数"
+    },
+    {
+      "name": "paid_7d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天付费转化数"
+    },
+    {
+      "name": "paid_3d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "3天付费转化数"
+    },
+    {
+      "name": "paid_1d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "1天付费转化数"
+    },
+    {
+      "name": "paid_0d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天付费转化数"
+    },
+    {
+      "name": "trial_7d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天试用转化数"
+    },
+    {
+      "name": "trial_3d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "3天试用转化数"
+    },
+    {
+      "name": "trial_1d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "1天试用转化数"
+    },
+    {
+      "name": "trial_0d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天试用转化数"
+    },
+    {
+      "name": "total_order_paid_amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "总订单付费金额"
+    },
+    {
+      "name": "first_paid_weekly_9990_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首次付费周订阅9.99数量"
+    },
+    {
+      "name": "first_paid_annual_39990_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首次付费年订阅39.99数量"
+    },
+    {
+      "name": "first_paid_free_trial_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首次付费免费试用数量"
+    },
+    {
+      "name": "second_paid_weekly_9990_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "二次付费周订阅9.99数量"
+    },
+    {
+      "name": "second_paid_annual_39990_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "二次付费年订阅39.99数量"
+    },
+    {
+      "name": "second_paid_free_trial_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "二次付费免费试用数量"
+    }
+  ]
+}

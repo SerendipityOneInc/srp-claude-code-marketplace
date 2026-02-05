@@ -1,0 +1,68 @@
+{
+  "table_id": "dws_gensmo_refer_general_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_refer_general_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 30227674,
+  "num_bytes": 4006249917,
+  "created": "2025-06-04T10:11:22.040000+00:00",
+  "modified": "2026-01-30T01:22:55.477000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "页面名称"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "AP名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件方法"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "动作类型"
+    },
+    {
+      "name": "data_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "数据名称"
+    },
+    {
+      "name": "data_value",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "数据值"
+    }
+  ]
+}

@@ -1,0 +1,537 @@
+srpproduct-dc37e 项目 - 全函数清单
+扫描日期: 2026-01-29
+================================================================================
+
+favie_rpt 数据集: 182 个函数/存储过程
+  - FUNCTION: 0 个
+  - TABLE FUNCTION: 91 个
+  - PROCEDURE: 91 个
+--------------------------------------------------------------------------------
+  1. [TABLE FUNCTION ] gem_operation_refer_duration_inc_1d_function
+  2. [TABLE FUNCTION ] rpt_decofy_ad_nd_cost_metric_inc_1d_function
+  3. [PROCEDURE      ] rpt_decofy_ad_nd_cost_metric_inc_1d_procedure
+  4. [TABLE FUNCTION ] rpt_decofy_growth_management_dashboard_v2_inc_1d_function
+  5. [PROCEDURE      ] rpt_decofy_growth_management_dashboard_v2_inc_1d_procedure
+  6. [TABLE FUNCTION ] rpt_decofy_growth_management_dashboard_v3_inc_1d_function
+  7. [PROCEDURE      ] rpt_decofy_growth_management_dashboard_v3_inc_1d_procedure
+  8. [TABLE FUNCTION ] rpt_decofy_growth_management_dashboard_v4_inc_1d_function
+  9. [PROCEDURE      ] rpt_decofy_growth_management_dashboard_v4_inc_1d_procedure
+ 10. [TABLE FUNCTION ] rpt_decofy_renewal_in_1d_function
+ 11. [TABLE FUNCTION ] rpt_decofy_renewal_inc_1d_function
+ 12. [TABLE FUNCTION ] rpt_decofy_subscribe_notification_metric_inc_1d_function
+ 13. [PROCEDURE      ] rpt_decofy_subscribe_notification_metric_inc_1d_procedure
+ 14. [TABLE FUNCTION ] rpt_decofy_subscribe_process_user_metric_inc_1d_function
+ 15. [PROCEDURE      ] rpt_decofy_subscribe_process_user_metric_inc_1d_procedure
+ 16. [TABLE FUNCTION ] rpt_decofy_subscribe_renewal_30d_metric_inc_1d_function
+ 17. [PROCEDURE      ] rpt_decofy_subscribe_renewal_30d_metric_inc_1d_procedure
+ 18. [TABLE FUNCTION ] rpt_decofy_subscribe_renewal_ltv_metric_inc_1d_function
+ 19. [PROCEDURE      ] rpt_decofy_subscribe_renewal_ltv_metric_inc_1d_procedure
+ 20. [TABLE FUNCTION ] rpt_decofy_subscribe_renewal_metric_inc_1d_function
+ 21. [PROCEDURE      ] rpt_decofy_subscribe_renewal_metric_inc_1d_procedure
+ 22. [TABLE FUNCTION ] rpt_decofy_subscription_membership_metrics_inc_1d_function
+ 23. [PROCEDURE      ] rpt_decofy_subscription_membership_metrics_inc_1d_procedure
+ 24. [TABLE FUNCTION ] rpt_decofy_subscription_order_metrics_inc_1d_function
+ 25. [PROCEDURE      ] rpt_decofy_subscription_order_metrics_inc_1d_procedure
+ 26. [TABLE FUNCTION ] rpt_decofy_user_active_metrics_inc_1d_function
+ 27. [PROCEDURE      ] rpt_decofy_user_active_metrics_inc_1d_procedure
+ 28. [TABLE FUNCTION ] rpt_decofy_user_active_metrics_inc_1w_function
+ 29. [PROCEDURE      ] rpt_decofy_user_active_metrics_inc_1w_procedure
+ 30. [TABLE FUNCTION ] rpt_decofy_user_ltn_metrics_inc_1d_function
+ 31. [PROCEDURE      ] rpt_decofy_user_ltn_metrics_inc_1d_procedure
+ 32. [TABLE FUNCTION ] rpt_decofy_user_retention_metrics_inc_1d_function
+ 33. [PROCEDURE      ] rpt_decofy_user_retention_metrics_inc_1d_procedure
+ 34. [TABLE FUNCTION ] rpt_decofy_user_retention_metrics_inc_1w_function
+ 35. [PROCEDURE      ] rpt_decofy_user_retention_metrics_inc_1w_procedure
+ 36. [TABLE FUNCTION ] rpt_faive_gensmo_membership_consume_points_metric_inc_1d_function
+ 37. [PROCEDURE      ] rpt_faive_gensmo_membership_consume_points_metric_inc_1d_procedure
+ 38. [TABLE FUNCTION ] rpt_faive_gensmo_membership_earn_points_metric_inc_1d_function
+ 39. [PROCEDURE      ] rpt_faive_gensmo_membership_earn_points_metric_inc_1d_procedure
+ 40. [TABLE FUNCTION ] rpt_faive_gensmo_membership_points_metric_inc_1d_function
+ 41. [PROCEDURE      ] rpt_faive_gensmo_membership_points_metric_inc_1d_procedure
+ 42. [TABLE FUNCTION ] rpt_favie_gensmo_channel_metric_inc_1d_function
+ 43. [PROCEDURE      ] rpt_favie_gensmo_channel_metric_inc_1d_procedure
+ 44. [PROCEDURE      ] rpt_favie_gensmo_channel_metric_with_dau_inc_1d_procedure
+ 45. [TABLE FUNCTION ] rpt_favie_gensmo_channel_with_dau_metric_inc_1d_function
+ 46. [TABLE FUNCTION ] rpt_favie_gensmo_feed_with_dau_metric_inc_1d_function
+ 47. [PROCEDURE      ] rpt_favie_gensmo_feed_with_dau_metric_inc_1d_procedure
+ 48. [TABLE FUNCTION ] rpt_favie_gensmo_product_with_dau_metric_inc_1d_function
+ 49. [PROCEDURE      ] rpt_favie_gensmo_product_with_dau_metric_inc_1d_procedure
+ 50. [TABLE FUNCTION ] rpt_favie_gensmo_save_metric_inc_1d_function
+ 51. [PROCEDURE      ] rpt_favie_gensmo_save_metric_inc_1d_procedure
+ 52. [TABLE FUNCTION ] rpt_favie_gensmo_save_with_dau_metric_inc_1d_function
+ 53. [PROCEDURE      ] rpt_favie_gensmo_save_with_dau_metric_inc_1d_procedure
+ 54. [TABLE FUNCTION ] rpt_favie_gensmo_search_by_server_metric_inc_1d_function
+ 55. [PROCEDURE      ] rpt_favie_gensmo_search_by_server_metric_inc_1d_procedure
+ 56. [TABLE FUNCTION ] rpt_favie_gensmo_search_with_dau_metric_inc_1d_function
+ 57. [PROCEDURE      ] rpt_favie_gensmo_search_with_dau_metric_inc_1d_new_procedure
+ 58. [TABLE FUNCTION ] rpt_favie_gensmo_session_behavior_1d_function
+ 59. [PROCEDURE      ] rpt_favie_gensmo_session_behavior_1d_procedure
+ 60. [TABLE FUNCTION ] rpt_favie_gensmo_tryon_by_server_metric_inc_1d_function
+ 61. [TABLE FUNCTION ] rpt_favie_gensmo_tryon_bysource_metric_inc_1d_function
+ 62. [PROCEDURE      ] rpt_favie_gensmo_tryon_bysource_metric_inc_1d_procedure
+ 63. [TABLE FUNCTION ] rpt_favie_gensmo_tryon_metric_inc_1d_function
+ 64. [PROCEDURE      ] rpt_favie_gensmo_tryon_metric_inc_1d_procedure
+ 65. [TABLE FUNCTION ] rpt_favie_gensmo_tryon_model_metric_inc_1d_function
+ 66. [PROCEDURE      ] rpt_favie_gensmo_tryon_model_metric_inc_1d_procedure
+ 67. [TABLE FUNCTION ] rpt_favie_gensmo_tryon_with_dau_metric_inc_1d_function
+ 68. [PROCEDURE      ] rpt_favie_gensmo_tryon_with_dau_metric_inc_1d_procedure
+ 69. [TABLE FUNCTION ] rpt_favie_gensmo_video_tryon_metric_inc_1d_function
+ 70. [PROCEDURE      ] rpt_favie_gensmo_video_tryon_metric_inc_1d_procedure
+ 71. [TABLE FUNCTION ] rpt_favie_product_review_metric_full_1w_function
+ 72. [PROCEDURE      ] rpt_favie_product_review_metric_full_1w_procedure
+ 73. [TABLE FUNCTION ] rpt_favie_webpage_metric_full_1w_function
+ 74. [PROCEDURE      ] rpt_favie_webpage_metric_full_1w_procedure
+ 75. [TABLE FUNCTION ] rpt_gem_growth_management_dashboard_inc_1d_function
+ 76. [PROCEDURE      ] rpt_gem_growth_management_dashboard_inc_1d_procedure
+ 77. [PROCEDURE      ] rpt_gem_growth_management_dashboard_v2_inc_1d_procedure
+ 78. [TABLE FUNCTION ] rpt_gem_growth_management_dashboard_v4_inc_1d_function
+ 79. [PROCEDURE      ] rpt_gem_growth_management_dashboard_v4_inc_1d_procedure
+ 80. [TABLE FUNCTION ] rpt_gem_search_item_merge_inc_1d_function
+ 81. [PROCEDURE      ] rpt_gem_search_item_merge_inc_1d_procedure
+ 82. [TABLE FUNCTION ] rpt_gem_user_dimension_metrics_by_device_id_inc_1d_function
+ 83. [TABLE FUNCTION ] rpt_gem_user_dimension_metrics_inc_1d_function
+ 84. [TABLE FUNCTION ] rpt_gensmo_ab_feed_metric_byuser_inc_1d_function
+ 85. [PROCEDURE      ] rpt_gensmo_ab_feed_metric_byuser_inc_1d_procedure
+ 86. [TABLE FUNCTION ] rpt_gensmo_ab_feed_metric_inc_1d_function
+ 87. [PROCEDURE      ] rpt_gensmo_ab_feed_metric_inc_1d_procedure
+ 88. [TABLE FUNCTION ] rpt_gensmo_action_user_penetration_metric_inc_1d_function
+ 89. [PROCEDURE      ] rpt_gensmo_action_user_penetration_metric_inc_1d_procedure
+ 90. [TABLE FUNCTION ] rpt_gensmo_analysis_search_1d_function
+ 91. [PROCEDURE      ] rpt_gensmo_analysis_search_1d_procedure
+ 92. [TABLE FUNCTION ] rpt_gensmo_avatar_full_penetration_funnel_inc_1d_function
+ 93. [PROCEDURE      ] rpt_gensmo_avatar_full_penetration_funnel_inc_1d_procedure
+ 94. [TABLE FUNCTION ] rpt_gensmo_avatar_funnel_7d_avg_function
+ 95. [TABLE FUNCTION ] rpt_gensmo_avatar_funnel_7d_avg_inc_1d_function
+ 96. [PROCEDURE      ] rpt_gensmo_avatar_funnel_7d_avg_inc_1d_procedure
+ 97. [TABLE FUNCTION ] rpt_gensmo_daily_comprehensive_metrics_inc_1d_function
+ 98. [PROCEDURE      ] rpt_gensmo_daily_comprehensive_metrics_inc_1d_procedure
+ 99. [TABLE FUNCTION ] rpt_gensmo_daily_comprehensive_metrics_supply_inc_1d_function
+100. [PROCEDURE      ] rpt_gensmo_daily_comprehensive_metrics_supply_inc_1d_procedure
+101. [TABLE FUNCTION ] rpt_gensmo_invalid_user_metrics_inc_1d_function
+102. [PROCEDURE      ] rpt_gensmo_invalid_user_metrics_inc_1d_procedure
+103. [TABLE FUNCTION ] rpt_gensmo_management_dashboard_core_feature_inc_1d_function
+104. [TABLE FUNCTION ] rpt_gensmo_management_dashboard_retention_full_1d_function
+105. [TABLE FUNCTION ] rpt_gensmo_management_dashboard_uv_full_1d_function
+106. [TABLE FUNCTION ] rpt_gensmo_refer_click_user_penetration_metric_inc_1d_function
+107. [PROCEDURE      ] rpt_gensmo_refer_click_user_penetration_metric_inc_1d_procedure
+108. [TABLE FUNCTION ] rpt_gensmo_refer_dimension_metrics_inc_1d
+109. [TABLE FUNCTION ] rpt_gensmo_refer_event_metrics_inc_1d
+110. [TABLE FUNCTION ] rpt_gensmo_refer_pv_user_penetration_metric_inc_1d_function
+111. [PROCEDURE      ] rpt_gensmo_refer_pv_user_penetration_metric_inc_1d_procedure
+112. [TABLE FUNCTION ] rpt_gensmo_try_on_metrics_inc_1d_function
+113. [TABLE FUNCTION ] rpt_gensmo_user_action_ltn_metrics_inc_1d_function
+114. [TABLE FUNCTION ] rpt_gensmo_user_action_ltn_metrics_inc_1d_function_v2
+115. [PROCEDURE      ] rpt_gensmo_user_action_ltn_metrics_inc_1d_manager_procedure_prod
+116. [PROCEDURE      ] rpt_gensmo_user_action_ltn_metrics_inc_1d_manager_procedure_temp
+117. [PROCEDURE      ] rpt_gensmo_user_action_ltn_metrics_inc_1d_procedure
+118. [PROCEDURE      ] rpt_gensmo_user_action_ltn_metrics_inc_1d_procedure_v2
+119. [TABLE FUNCTION ] rpt_gensmo_user_active_metrics_inc_1d_function
+120. [TABLE FUNCTION ] rpt_gensmo_user_active_metrics_inc_1d_function_v2
+121. [TABLE FUNCTION ] rpt_gensmo_user_active_metrics_inc_1d_function_v3
+122. [TABLE FUNCTION ] rpt_gensmo_user_active_metrics_inc_1d_function_v4
+123. [PROCEDURE      ] rpt_gensmo_user_active_metrics_inc_1d_procedure
+124. [PROCEDURE      ] rpt_gensmo_user_active_metrics_inc_1d_procedure_v2
+125. [PROCEDURE      ] rpt_gensmo_user_active_metrics_inc_1d_procedure_v3
+126. [PROCEDURE      ] rpt_gensmo_user_active_metrics_inc_1d_procedure_v4
+127. [TABLE FUNCTION ] rpt_gensmo_user_active_metrics_inc_1w_function
+128. [TABLE FUNCTION ] rpt_gensmo_user_active_metrics_inc_1w_function_v2
+129. [PROCEDURE      ] rpt_gensmo_user_active_metrics_inc_1w_procedure
+130. [PROCEDURE      ] rpt_gensmo_user_active_metrics_inc_1w_procedure_v2
+131. [TABLE FUNCTION ] rpt_gensmo_user_avatar_cnt_inc_1d_function
+132. [PROCEDURE      ] rpt_gensmo_user_avatar_cnt_inc_1d_procedure
+133. [TABLE FUNCTION ] rpt_gensmo_user_group_penetration_metric_inc_1d_function
+134. [PROCEDURE      ] rpt_gensmo_user_group_penetration_metric_inc_1d_procedure
+135. [TABLE FUNCTION ] rpt_gensmo_user_ltn_metrics_inc_1d_function
+136. [TABLE FUNCTION ] rpt_gensmo_user_ltn_metrics_inc_1d_function_v2
+137. [TABLE FUNCTION ] rpt_gensmo_user_ltn_metrics_inc_1d_function_v3
+138. [TABLE FUNCTION ] rpt_gensmo_user_ltn_metrics_inc_1d_function_v4
+139. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_manager_procedure_prod
+140. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_manager_procedure_temp
+141. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_procedure
+142. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_procedure_v2
+143. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_procedure_v3
+144. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_procedure_v4
+145. [TABLE FUNCTION ] rpt_gensmo_user_retention_metrics_inc_1d_function
+146. [TABLE FUNCTION ] rpt_gensmo_user_retention_metrics_inc_1d_function_v2
+147. [PROCEDURE      ] rpt_gensmo_user_retention_metrics_inc_1d_procedure
+148. [PROCEDURE      ] rpt_gensmo_user_retention_metrics_inc_1d_procedure_v2
+149. [TABLE FUNCTION ] rpt_gensmo_user_retention_metrics_inc_1w_function
+150. [TABLE FUNCTION ] rpt_gensmo_user_retention_metrics_inc_1w_function_v2
+151. [PROCEDURE      ] rpt_gensmo_user_retention_metrics_inc_1w_procedure
+152. [PROCEDURE      ] rpt_gensmo_user_retention_metrics_inc_1w_procedure_v2
+153. [TABLE FUNCTION ] rpt_gensmo_user_search_metrics_inc_1d_function
+154. [PROCEDURE      ] rpt_gensmo_user_search_metrics_inc_1d_procedure
+155. [TABLE FUNCTION ] rpt_gensmo_user_x1_active_metrics_inc_1d_function
+156. [TABLE FUNCTION ] rpt_gensmo_user_x_action_retention_metrics_inc_1d_function
+157. [TABLE FUNCTION ] rpt_gensmo_user_x_action_retention_metrics_inc_1d_function_v2
+158. [PROCEDURE      ] rpt_gensmo_user_x_action_retention_metrics_inc_1d_procedure
+159. [PROCEDURE      ] rpt_gensmo_user_x_action_retention_metrics_inc_1d_procedure_v2
+160. [PROCEDURE      ] rpt_gensmo_user_x_action_retention_metrics_manager_procedure
+161. [PROCEDURE      ] rpt_gensmo_user_x_action_retention_metrics_manager_procedure_prod
+162. [PROCEDURE      ] rpt_gensmo_user_x_action_retention_metrics_manager_procedure_temp
+163. [TABLE FUNCTION ] rpt_gensmo_user_x_active_metrics_inc_1d_function
+164. [TABLE FUNCTION ] rpt_gensmo_user_x_active_metrics_inc_1d_function_v2
+165. [PROCEDURE      ] rpt_gensmo_user_x_active_metrics_inc_1d_procedure
+166. [PROCEDURE      ] rpt_gensmo_user_x_active_metrics_inc_1d_procedure_v2
+167. [PROCEDURE      ] rpt_gensmo_user_x_active_metrics_manager_procedure
+168. [PROCEDURE      ] rpt_gensmo_user_x_active_metrics_manager_procedure_prod
+169. [PROCEDURE      ] rpt_gensmo_user_x_active_metrics_manager_procedure_temp
+170. [TABLE FUNCTION ] rpt_gensmo_user_x_retention_metrics_inc_1d_function
+171. [TABLE FUNCTION ] rpt_gensmo_user_x_retention_metrics_inc_1d_function_v2
+172. [PROCEDURE      ] rpt_gensmo_user_x_retention_metrics_inc_1d_procedure
+173. [PROCEDURE      ] rpt_gensmo_user_x_retention_metrics_inc_1d_procedure_v2
+174. [PROCEDURE      ] rpt_gensmo_user_x_retention_metrics_manager_procedure
+175. [PROCEDURE      ] rpt_gensmo_user_x_retention_metrics_manager_procedure_prod
+176. [PROCEDURE      ] rpt_gensmo_user_x_retention_metrics_manager_procedure_temp
+177. [TABLE FUNCTION ] rpt_images_quality_pixel_distribution_full_1d_function
+178. [PROCEDURE      ] rpt_images_quality_pixel_distribution_full_1d_procedure
+179. [TABLE FUNCTION ] rpt_product_dw_search_metric_inc_1d_function
+180. [PROCEDURE      ] rpt_product_dw_search_metric_inc_1d_procedure
+181. [TABLE FUNCTION ] rpt_product_image_crawl_metrics_inc_1d_function
+182. [PROCEDURE      ] rpt_product_image_crawl_metrics_inc_1d_procedure
+
+================================================================================
+
+favie_dw 数据集: 335 个函数/存储过程
+  - FUNCTION: 29 个
+  - TABLE FUNCTION: 176 个
+  - PROCEDURE: 130 个
+--------------------------------------------------------------------------------
+  1. [FUNCTION       ] add_is_used_flag_str
+  2. [TABLE FUNCTION ] ads_growth_ad_all_app_effect_tracking_function
+  3. [FUNCTION       ] app_minor_version_udf
+  4. [FUNCTION       ] app_patch_version_udf
+  5. [FUNCTION       ] append_if_missing
+  6. [FUNCTION       ] append_missing_values
+  7. [PROCEDURE      ] calculate_fillrate_col_JSON
+  8. [PROCEDURE      ] calculate_fillrate_col_string
+  9. [FUNCTION       ] calculate_moving_average_with_denoise
+ 10. [FUNCTION       ] calculate_moving_average_without_denoise
+ 11. [PROCEDURE      ] check_partition
+ 12. [FUNCTION       ] classify_user_type
+ 13. [FUNCTION       ] convert_user_type
+ 14. [TABLE FUNCTION ] dim_ad_all_app_creative_full_1d_function
+ 15. [PROCEDURE      ] dim_ad_all_app_creative_full_1d_procedure
+ 16. [TABLE FUNCTION ] dim_ad_all_app_creative_meta_full_1d_function
+ 17. [TABLE FUNCTION ] dim_ad_all_app_creative_tiktok_inc_1d_function
+ 18. [PROCEDURE      ] dim_ad_all_app_creative_tiktok_inc_1d_procedure
+ 19. [PROCEDURE      ] dim_ad_google_creative_youtube_video_info_full_procedure
+ 20. [TABLE FUNCTION ] dim_all_app_appsflyer_ad_info_mapping_full_1d_function
+ 21. [PROCEDURE      ] dim_all_app_appsflyer_ad_info_mapping_full_1d_procedure
+ 22. [TABLE FUNCTION ] dim_all_app_appsflyer_all_reachout_info_mapping_full_1d_function
+ 23. [PROCEDURE      ] dim_all_app_appsflyer_all_reachout_info_mapping_full_1d_procedure
+ 24. [PROCEDURE      ] dim_decofy_product_config_procedure
+ 25. [TABLE FUNCTION ] dim_favie_appsflyer_user_ad_source_full_1d_function
+ 26. [PROCEDURE      ] dim_favie_appsflyer_user_ad_source_full_1d_procedure
+ 27. [TABLE FUNCTION ] dim_favie_decofy_user_account_change_function
+ 28. [PROCEDURE      ] dim_favie_decofy_user_account_changelog_1d_procedure
+ 29. [TABLE FUNCTION ] dim_favie_decofy_user_account_changelog_init_function
+ 30. [PROCEDURE      ] dim_favie_decofy_user_account_scd2_1d_procedure
+ 31. [TABLE FUNCTION ] dim_favie_decofy_user_account_snapshot_function
+ 32. [TABLE FUNCTION ] dim_favie_decofy_user_account_snapshot_with_ad_function
+ 33. [TABLE FUNCTION ] dim_favie_gem_moodboard_inc_1d_function
+ 34. [TABLE FUNCTION ] dim_favie_gensmo_feed_item_function
+ 35. [TABLE FUNCTION ] dim_favie_gensmo_feed_item_with_product_info_function
+ 36. [TABLE FUNCTION ] dim_favie_gensmo_feed_need_tag_item_inc_1d_function
+ 37. [TABLE FUNCTION ] dim_favie_gensmo_feed_need_tag_item_manual_function
+ 38. [TABLE FUNCTION ] dim_favie_gensmo_feed_need_tag_item_products_inc_1d_function
+ 39. [TABLE FUNCTION ] dim_favie_gensmo_feed_need_tag_item_products_manual_function
+ 40. [TABLE FUNCTION ] dim_favie_gensmo_uniq_user_full_function
+ 41. [PROCEDURE      ] dim_favie_gensmo_user_account_changelog_1d_procedure
+ 42. [TABLE FUNCTION ] dim_favie_gensmo_user_account_changelog_init_function
+ 43. [TABLE FUNCTION ] dim_favie_gensmo_user_account_full_1d_function
+ 44. [PROCEDURE      ] dim_favie_gensmo_user_account_full_1d_procedure
+ 45. [TABLE FUNCTION ] dim_favie_gensmo_user_change_function
+ 46. [TABLE FUNCTION ] dim_favie_gensmo_user_ids_map_inc_1d_function
+ 47. [PROCEDURE      ] dim_favie_gensmo_user_ids_map_inc_1d_procedure
+ 48. [TABLE FUNCTION ] dim_favie_gensmo_user_ids_map_snapshot_function
+ 49. [PROCEDURE      ] dim_favie_gensmo_user_scd2_1d_procedure
+ 50. [TABLE FUNCTION ] dim_favie_gensmo_user_scd2_init_function
+ 51. [PROCEDURE      ] dim_favie_gensmo_user_scd2_init_procedure
+ 52. [TABLE FUNCTION ] dim_favie_gensmo_user_snapshot_function
+ 53. [TABLE FUNCTION ] dim_favie_gensmo_user_snapshot_with_ad_function
+ 54. [TABLE FUNCTION ] dim_feed_tag_compare_function
+ 55. [TABLE FUNCTION ] dim_gem_appsflyer_ad_info_mapping_full_1d_function
+ 56. [TABLE FUNCTION ] dim_gem_creative_history_manual_function
+ 57. [TABLE FUNCTION ] dim_gensmo_user_full_1d
+ 58. [TABLE FUNCTION ] dwd_ad_all_source_post_full_1d_function
+ 59. [TABLE FUNCTION ] dwd_favie_city_weather_inc_1d_function
+ 60. [PROCEDURE      ] dwd_favie_city_weather_inc_1d_procedure
+ 61. [TABLE FUNCTION ] dwd_favie_decofy_ab_active_users_inc_1d_function
+ 62. [PROCEDURE      ] dwd_favie_decofy_ab_active_users_inc_1d_procedure
+ 63. [PROCEDURE      ] dwd_favie_decofy_events_inc_1d_procedure
+ 64. [TABLE FUNCTION ] dwd_favie_decofy_subscription_notification_full_1d_function
+ 65. [PROCEDURE      ] dwd_favie_decofy_subscription_notification_full_1d_procedure
+ 66. [TABLE FUNCTION ] dwd_favie_decofy_subscription_order_full_1d_function
+ 67. [PROCEDURE      ] dwd_favie_decofy_subscription_order_full_1d_procedure
+ 68. [TABLE FUNCTION ] dwd_favie_decofy_subscription_process_inc_1d_function
+ 69. [PROCEDURE      ] dwd_favie_decofy_subscription_process_inc_1d_procedure
+ 70. [TABLE FUNCTION ] dwd_favie_events_inc_1d_function
+ 71. [TABLE FUNCTION ] dwd_favie_events_with_duration_inc_1d_function
+ 72. [TABLE FUNCTION ] dwd_favie_gem_product_search_inc_1d_function
+ 73. [PROCEDURE      ] dwd_favie_gem_product_search_inc_1d_procedure
+ 74. [TABLE FUNCTION ] dwd_favie_gem_search_query_inc_1d_function
+ 75. [PROCEDURE      ] dwd_favie_gem_search_query_inc_1d_procedure
+ 76. [TABLE FUNCTION ] dwd_favie_gem_search_sku_inc_1d_function
+ 77. [TABLE FUNCTION ] dwd_favie_gem_user_behavior_inc_1d_function
+ 78. [TABLE FUNCTION ] dwd_favie_gem_workflow_inc_1d_function
+ 79. [PROCEDURE      ] dwd_favie_gem_workflow_inc_1d_procedure
+ 80. [TABLE FUNCTION ] dwd_favie_gensmo_chat_session_messages_inc_1d_function
+ 81. [PROCEDURE      ] dwd_favie_gensmo_chat_session_messages_inc_1d_procedure
+ 82. [TABLE FUNCTION ] dwd_favie_gensmo_events_ab_infos_inc_1d_function
+ 83. [PROCEDURE      ] dwd_favie_gensmo_events_ab_infos_inc_1d_procedure
+ 84. [TABLE FUNCTION ] dwd_favie_gensmo_events_inc_1d_function
+ 85. [TABLE FUNCTION ] dwd_favie_gensmo_events_inc_1d_function_staging
+ 86. [PROCEDURE      ] dwd_favie_gensmo_events_inc_1d_procedure
+ 87. [TABLE FUNCTION ] dwd_favie_gensmo_events_items_inc_1d_function
+ 88. [PROCEDURE      ] dwd_favie_gensmo_events_items_inc_1d_procedure
+ 89. [TABLE FUNCTION ] dwd_favie_gensmo_events_with_duration_inc_1d_function
+ 90. [TABLE FUNCTION ] dwd_favie_gensmo_membership_consume_point_full_1d_function
+ 91. [PROCEDURE      ] dwd_favie_gensmo_membership_consume_point_inc_1d_procedure
+ 92. [TABLE FUNCTION ] dwd_favie_gensmo_membership_earn_point_full_1d_function
+ 93. [PROCEDURE      ] dwd_favie_gensmo_membership_earn_point_inc_1d_procedure
+ 94. [TABLE FUNCTION ] dwd_favie_gensmo_membership_process_node_inc_1d_function
+ 95. [PROCEDURE      ] dwd_favie_gensmo_membership_process_node_inc_1d_procedure
+ 96. [TABLE FUNCTION ] dwd_favie_gensmo_moodboard_product_inc_1d_function
+ 97. [PROCEDURE      ] dwd_favie_gensmo_moodboard_product_inc_1d_procedure
+ 98. [TABLE FUNCTION ] dwd_favie_gensmo_user_ids_map_inc_1d_function
+ 99. [PROCEDURE      ] dwd_favie_gensmo_user_ids_map_inc_1d_procedure
+100. [PROCEDURE      ] dwd_favie_gensmo_user_recap_inc_1d_procedure
+101. [TABLE FUNCTION ] dwd_favie_gensmo_user_recap_refer_detail_v2_inc_1d_function
+102. [TABLE FUNCTION ] dwd_favie_gensmo_user_recap_refer_list_v2_inc_1d_function
+103. [TABLE FUNCTION ] dwd_favie_product_review_combined_full_1d_function
+104. [PROCEDURE      ] dwd_favie_product_review_combined_full_1d_procedure
+105. [TABLE FUNCTION ] dwd_gem_operation_feed_full_function
+106. [PROCEDURE      ] dwd_gem_operation_feed_full_procedure
+107. [PROCEDURE      ] dwd_gem_product_detail_ha3_algo_inc_1d_procedure
+108. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_algo_inc_function
+109. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_base_delete_inc_1d_function
+110. [PROCEDURE      ] dwd_gem_product_detail_ha3_base_delete_inc_1d_procedure
+111. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_base_update_inc_1d_function
+112. [PROCEDURE      ] dwd_gem_product_detail_ha3_base_update_inc_1d_procedure
+113. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_config_inc_1d_function
+114. [PROCEDURE      ] dwd_gem_product_detail_ha3_config_inc_1d_procedure
+115. [PROCEDURE      ] dwd_gem_product_detail_ha3_flag_inc_1d_procedure
+116. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_full_xd_function
+117. [PROCEDURE      ] dwd_gem_product_detail_ha3_full_xd_procedure
+118. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_full_xw_function
+119. [TABLE FUNCTION ] dwd_gem_product_detail_ha3_inc_1h_function
+120. [PROCEDURE      ] dwd_gem_product_detail_ha3_inc_1h_procedure
+121. [PROCEDURE      ] dwd_gem_product_detail_ha3_merge_1d_procedure
+122. [TABLE FUNCTION ] dwd_gem_product_enhanced_category_full_1d_function
+123. [TABLE FUNCTION ] dwd_gem_product_enhanced_category_inc_1d_function
+124. [TABLE FUNCTION ] dwd_gem_product_ha3_index_config_function
+125. [TABLE FUNCTION ] dwd_gem_product_ha3_merge_config_inc_1d_function
+126. [PROCEDURE      ] dwd_gem_product_ha3_merge_config_inc_1d_procedure
+127. [TABLE FUNCTION ] dwd_gem_product_image_index_add_op_inc_1d_function
+128. [TABLE FUNCTION ] dwd_gem_product_image_index_add_op_inc_1h_function
+129. [PROCEDURE      ] dwd_gem_product_image_index_config_inc_1d_procedure
+130. [TABLE FUNCTION ] dwd_gem_product_image_index_delete_inc_1d_function
+131. [PROCEDURE      ] dwd_gem_product_image_index_delete_inc_1d_procedure
+132. [TABLE FUNCTION ] dwd_gem_product_image_index_delete_op_inc_1d_function
+133. [TABLE FUNCTION ] dwd_gem_product_image_index_delete_op_inc_1h_function
+134. [TABLE FUNCTION ] dwd_gem_product_image_index_full_xd_function
+135. [PROCEDURE      ] dwd_gem_product_image_index_full_xd_procedure
+136. [TABLE FUNCTION ] dwd_gem_product_image_index_inc_1h_function
+137. [PROCEDURE      ] dwd_gem_product_image_index_inc_1h_procedure
+138. [PROCEDURE      ] dwd_gem_product_image_index_merge_1d_procedure
+139. [TABLE FUNCTION ] dwd_gem_product_image_index_update_inc_1d_function
+140. [PROCEDURE      ] dwd_gem_product_image_index_update_inc_1d_procedure
+141. [TABLE FUNCTION ] dwd_gem_product_image_index_update_op_inc_1h_function
+142. [TABLE FUNCTION ] dwd_gem_product_index_config_inc_1d_function
+143. [PROCEDURE      ] dwd_gem_product_index_config_inc_1d_procedure
+144. [TABLE FUNCTION ] dwd_gem_user_behavior_wide_inc_1d_function
+145. [PROCEDURE      ] dwd_gensmo_channel_action_info_inc_1d_procedure
+146. [TABLE FUNCTION ] dwd_gensmo_user_recap_inc_1d_function
+147. [TABLE FUNCTION ] dwd_growth_ad_brand_wall_product_full_1d_function
+148. [PROCEDURE      ] dwd_partition_clear_procedure
+149. [TABLE FUNCTION ] dwd_product_image_crawl_error_sample_inc_1d_function
+150. [PROCEDURE      ] dwd_product_image_crawl_error_sample_inc_1d_procedure
+151. [TABLE FUNCTION ] dwd_product_image_crawl_inc_1d_function
+152. [PROCEDURE      ] dwd_product_image_crawl_inc_1d_procedure
+153. [TABLE FUNCTION ] dws_decofy_membership_full_1d_function
+154. [PROCEDURE      ] dws_decofy_membership_full_1d_procedure
+155. [TABLE FUNCTION ] dws_decofy_refer_general_metrics_inc_1d_function
+156. [PROCEDURE      ] dws_decofy_refer_general_metrics_inc_1d_procedure
+157. [TABLE FUNCTION ] dws_decofy_refer_metrics_inc_1d_function
+158. [PROCEDURE      ] dws_decofy_refer_metrics_inc_1d_procedure
+159. [TABLE FUNCTION ] dws_decofy_subscribe_pay_metric_inc_1d_function
+160. [PROCEDURE      ] dws_decofy_subscribe_pay_metric_inc_1d_procedure
+161. [TABLE FUNCTION ] dws_decofy_subscribe_process_metric_inc_1d_function
+162. [PROCEDURE      ] dws_decofy_subscribe_process_metric_inc_1d_procedure
+163. [TABLE FUNCTION ] dws_decofy_subscribe_renewal_ltv_metric_inc_1d_function
+164. [TABLE FUNCTION ] dws_decofy_subscribe_renewal_metric_inc_1d_function
+165. [TABLE FUNCTION ] dws_decofy_subscribe_renewal_nd_metric_inc_1d_function
+166. [PROCEDURE      ] dws_decofy_subscribe_renewal_nd_metric_inc_1d_procedure
+167. [TABLE FUNCTION ] dws_decofy_user_group_inc_1d_function
+168. [PROCEDURE      ] dws_decofy_user_group_inc_1d_procedure
+169. [TABLE FUNCTION ] dws_faive_gensmo_membership_consume_points_metric_inc_1d_function
+170. [PROCEDURE      ] dws_faive_gensmo_membership_consume_points_metric_inc_1d_procedure
+171. [TABLE FUNCTION ] dws_faive_gensmo_membership_earn_points_metric_inc_1d_function
+172. [PROCEDURE      ] dws_faive_gensmo_membership_earn_points_metric_inc_1d_procedure
+173. [TABLE FUNCTION ] dws_faive_gensmo_membership_points_metric_inc_1d_function
+174. [PROCEDURE      ] dws_faive_gensmo_membership_points_metric_inc_1d_procedure
+175. [TABLE FUNCTION ] dws_favie_decofy_subscription_order_with_ad_info_full_1d_function
+176. [TABLE FUNCTION ] dws_favie_decofy_user_feature_inc_1d_function
+177. [TABLE FUNCTION ] dws_favie_decofy_user_feature_inc_1d_function_v2
+178. [PROCEDURE      ] dws_favie_decofy_user_feature_inc_1d_procedure
+179. [PROCEDURE      ] dws_favie_decofy_user_feature_inc_1d_procedure_v2
+180. [TABLE FUNCTION ] dws_favie_decofy_user_feature_latest_n_days_function
+181. [TABLE FUNCTION ] dws_favie_decofy_user_subscription_feature_full_1d_function
+182. [PROCEDURE      ] dws_favie_decofy_user_subscription_feature_full_1d_procedure
+183. [TABLE FUNCTION ] dws_favie_gem_product_traffic_function
+184. [TABLE FUNCTION ] dws_favie_gem_search_query_cube_inc_1d_function
+185. [PROCEDURE      ] dws_favie_gem_search_query_cube_inc_1d_procedure
+186. [TABLE FUNCTION ] dws_favie_gem_search_query_metric_inc_1d_function
+187. [PROCEDURE      ] dws_favie_gem_search_query_metric_inc_1d_procedure
+188. [TABLE FUNCTION ] dws_favie_gem_search_skus_inc_1d_function
+189. [PROCEDURE      ] dws_favie_gem_search_skus_inc_1d_procedure
+190. [TABLE FUNCTION ] dws_favie_gem_sku_search_cube_inc_1d_function
+191. [PROCEDURE      ] dws_favie_gem_sku_search_cube_inc_1d_procedure
+192. [PROCEDURE      ] dws_favie_gem_sku_top_search_cube_inc_1d_procedure
+193. [TABLE FUNCTION ] dws_favie_gem_user_search_cube_inc_1d_function
+194. [PROCEDURE      ] dws_favie_gem_user_search_cube_inc_1d_procedure
+195. [TABLE FUNCTION ] dws_favie_gensmo_chat_session_messages_metric_inc_1d_function
+196. [PROCEDURE      ] dws_favie_gensmo_chat_session_messages_metric_inc_1d_procedure
+197. [TABLE FUNCTION ] dws_favie_gensmo_feed_bysource_metric_inc_1d_function
+198. [PROCEDURE      ] dws_favie_gensmo_feed_bysource_metric_inc_1d_procedure
+199. [TABLE FUNCTION ] dws_favie_gensmo_product_bysource_metric_inc_1d_function
+200. [PROCEDURE      ] dws_favie_gensmo_product_bysource_metric_inc_1d_procedure
+201. [TABLE FUNCTION ] dws_favie_gensmo_refer_event_metric_inc_1d_function
+202. [PROCEDURE      ] dws_favie_gensmo_refer_event_metric_inc_1d_procedure
+203. [TABLE FUNCTION ] dws_favie_gensmo_search_by_event_metric_inc_1d_function
+204. [PROCEDURE      ] dws_favie_gensmo_search_by_event_metric_inc_1d_procedure
+205. [TABLE FUNCTION ] dws_favie_gensmo_search_query_metric_inc_1d_function
+206. [PROCEDURE      ] dws_favie_gensmo_search_query_metric_inc_1d_procedure
+207. [TABLE FUNCTION ] dws_favie_gensmo_tryon_by_event_metric_inc_1d_function
+208. [PROCEDURE      ] dws_favie_gensmo_tryon_by_event_metric_inc_1d_procedure
+209. [TABLE FUNCTION ] dws_favie_gensmo_tryon_by_item_metric_inc_1d_function
+210. [PROCEDURE      ] dws_favie_gensmo_tryon_by_item_metric_inc_1d_procedure
+211. [TABLE FUNCTION ] dws_favie_gensmo_tryon_metric_inc_1d_function
+212. [PROCEDURE      ] dws_favie_gensmo_tryon_metric_inc_1d_procedure
+213. [TABLE FUNCTION ] dws_favie_gensmo_user_1d7s_inc_1d_function
+214. [PROCEDURE      ] dws_favie_gensmo_user_1d7s_inc_1d_procedure
+215. [TABLE FUNCTION ] dws_favie_gensmo_user_feature_inc_1d_function
+216. [TABLE FUNCTION ] dws_favie_gensmo_user_feature_inc_1d_function_v2
+217. [PROCEDURE      ] dws_favie_gensmo_user_feature_inc_1d_procedure
+218. [PROCEDURE      ] dws_favie_gensmo_user_feature_inc_1d_procedure_v2
+219. [TABLE FUNCTION ] dws_favie_gensmo_user_inc_1d_function
+220. [TABLE FUNCTION ] dws_favie_gensmo_video_tryon_metric_inc_1d_function
+221. [PROCEDURE      ] dws_favie_gensmo_video_tryon_metric_inc_1d_procedure
+222. [TABLE FUNCTION ] dws_favie_product_data_cube_inc_1d_function
+223. [PROCEDURE      ] dws_favie_product_data_cube_inc_1d_procedure
+224. [TABLE FUNCTION ] dws_gem_full_appsflyer_event_inc_1d_function
+225. [TABLE FUNCTION ] dws_gem_growth_ad_skan_and_classic_metrics_inc_1d_function
+226. [PROCEDURE      ] dws_gem_growth_ad_skan_and_classic_metrics_inc_1d_procedure
+227. [TABLE FUNCTION ] dws_gem_growth_creative_ad_skan_classic_inc_1d_function
+228. [PROCEDURE      ] dws_gem_growth_creative_ad_skan_classic_inc_1d_procedure
+229. [TABLE FUNCTION ] dws_gem_growth_creative_ad_skan_inc_1d_function
+230. [TABLE FUNCTION ] dws_gem_operation_banner_detail_inc_1d_function
+231. [PROCEDURE      ] dws_gem_operation_banner_detail_inc_1d_procedure
+232. [TABLE FUNCTION ] dws_gem_operation_feed_metrics_inc_1d_function
+233. [PROCEDURE      ] dws_gem_operation_feed_metrics_inc_1d_procedure
+234. [TABLE FUNCTION ] dws_gem_operation_feed_user_metrics_inc_1d_function
+235. [PROCEDURE      ] dws_gem_operation_feed_user_metrics_inc_1d_procedure
+236. [TABLE FUNCTION ] dws_gem_operation_hashtag_message_metrics_inc_1d_function
+237. [PROCEDURE      ] dws_gem_operation_hashtag_message_metrics_inc_1d_procedure
+238. [TABLE FUNCTION ] dws_gem_operation_poster_retention_inc_1d_function
+239. [PROCEDURE      ] dws_gem_operation_poster_retention_inc_1d_procedure
+240. [TABLE FUNCTION ] dws_gem_operation_pre_search_message_metrics_inc_1d_function
+241. [PROCEDURE      ] dws_gem_operation_pre_search_message_metrics_inc_1d_procedure
+242. [TABLE FUNCTION ] dws_gem_operation_push_message_metrics_inc_1d_function
+243. [PROCEDURE      ] dws_gem_operation_push_message_metrics_inc_1d_procedure
+244. [TABLE FUNCTION ] dws_gem_product_category_rule_health_inc_1d_function
+245. [TABLE FUNCTION ] dws_gem_product_demographic_dist_inc_1d_function
+246. [TABLE FUNCTION ] dws_gem_product_multitag_scale_inc_1d_function
+247. [TABLE FUNCTION ] dws_gem_product_tag_coverage_inc_1d_function
+248. [TABLE FUNCTION ] dws_gem_product_tag_value_dist_inc_1d_function
+249. [PROCEDURE      ] dws_gem_product_tag_value_dist_inc_1d_procedure
+250. [TABLE FUNCTION ] dws_gem_user_feature_with_ad_info_inc_1d_function
+251. [PROCEDURE      ] dws_gem_user_feature_with_ad_info_inc_1d_procedure
+252. [TABLE FUNCTION ] dws_gem_user_feature_with_total_info_inc_1d_function
+253. [TABLE FUNCTION ] dws_gem_user_last_access_full_1d_function
+254. [PROCEDURE      ] dws_gem_user_last_access_full_1d_procedure
+255. [TABLE FUNCTION ] dws_gensmo_base_user_group_inc_1d_function_prod
+256. [TABLE FUNCTION ] dws_gensmo_base_user_group_inc_1d_function_temp
+257. [TABLE FUNCTION ] dws_gensmo_common_user_group_inc_1d_function
+258. [TABLE FUNCTION ] dws_gensmo_content_metrics_inc_1d_function
+259. [TABLE FUNCTION ] dws_gensmo_prod_base_user_group_inc_1d_function
+260. [TABLE FUNCTION ] dws_gensmo_prod_user_group_inc_1d_function
+261. [TABLE FUNCTION ] dws_gensmo_refer_event_metrics_inc_1d_function
+262. [PROCEDURE      ] dws_gensmo_refer_event_metrics_inc_1d_procedure
+263. [TABLE FUNCTION ] dws_gensmo_refer_general_metrics_inc_1d_function
+264. [PROCEDURE      ] dws_gensmo_refer_general_metrics_inc_1d_procedure
+265. [TABLE FUNCTION ] dws_gensmo_refer_metrics_inc_1d_function
+266. [TABLE FUNCTION ] dws_gensmo_refer_metrics_inc_1d_function_v2
+267. [PROCEDURE      ] dws_gensmo_refer_metrics_inc_1d_procedure
+268. [PROCEDURE      ] dws_gensmo_refer_metrics_inc_1d_procedure_v2
+269. [TABLE FUNCTION ] dws_gensmo_tob_content_trace_metric_inc_1d_function
+270. [PROCEDURE      ] dws_gensmo_tob_content_trace_metric_inc_1d_procedure
+271. [TABLE FUNCTION ] dws_gensmo_tob_group_trace_metric_inc_1d_function
+272. [PROCEDURE      ] dws_gensmo_tob_group_trace_metric_inc_1d_procedure
+273. [TABLE FUNCTION ] dws_gensmo_user_activity_profile_inc_1d_function
+274. [PROCEDURE      ] dws_gensmo_user_activity_profile_inc_1d_procedure
+275. [TABLE FUNCTION ] dws_gensmo_user_avatar_duration_inc_1d_function
+276. [PROCEDURE      ] dws_gensmo_user_avatar_duration_inc_1d_procedure
+277. [PROCEDURE      ] dws_gensmo_user_forward_tracking_backfill_procedure
+278. [TABLE FUNCTION ] dws_gensmo_user_forward_tracking_inc_1d_function
+279. [PROCEDURE      ] dws_gensmo_user_forward_tracking_inc_1d_procedure
+280. [TABLE FUNCTION ] dws_gensmo_user_group_full_1d_function
+281. [PROCEDURE      ] dws_gensmo_user_group_full_1d_procedure
+282. [TABLE FUNCTION ] dws_gensmo_user_group_inc_1d_function
+283. [TABLE FUNCTION ] dws_gensmo_user_group_inc_1d_function_read
+284. [TABLE FUNCTION ] dws_gensmo_user_group_inc_1d_function_read_by_type
+285. [TABLE FUNCTION ] dws_gensmo_user_group_inc_1d_function_v2
+286. [TABLE FUNCTION ] dws_gensmo_user_group_inc_1d_function_v3
+287. [TABLE FUNCTION ] dws_gensmo_user_group_inc_1d_function_write
+288. [PROCEDURE      ] dws_gensmo_user_group_inc_1d_procedure
+289. [PROCEDURE      ] dws_gensmo_user_group_inc_1d_procedure_prod
+290. [PROCEDURE      ] dws_gensmo_user_group_inc_1d_procedure_temp
+291. [PROCEDURE      ] dws_gensmo_user_group_inc_1d_procedure_v2
+292. [PROCEDURE      ] dws_gensmo_user_group_inc_1d_procedure_v3
+293. [TABLE FUNCTION ] dws_gensmo_user_tryon_duration_inc_1d_function
+294. [PROCEDURE      ] dws_gensmo_user_tryon_duration_inc_1d_procedure
+295. [TABLE FUNCTION ] dws_product_image_metric_full_1d_function
+296. [PROCEDURE      ] dws_product_image_metric_full_1d_procedure
+297. [TABLE FUNCTION ] dws_product_image_metric_inc_1d_function
+298. [PROCEDURE      ] dws_product_image_metric_inc_1d_procedure
+299. [TABLE FUNCTION ] dws_savyo_growth_ad_metrics_inc_1d_function
+300. [PROCEDURE      ] dws_savyo_growth_ad_metrics_inc_1d_procedure
+301. [FUNCTION       ] emb_images_merge_udf
+302. [FUNCTION       ] emb_images_stateful_merge_udf
+303. [PROCEDURE      ] favie_product_detail_bigtable_external_procedure
+304. [FUNCTION       ] generate_seo_title
+305. [TABLE FUNCTION ] gensmo_events_inc_1d_function
+306. [FUNCTION       ] gensmo_name_udf
+307. [FUNCTION       ] gensmo_user_tenure_segment_udf
+308. [FUNCTION       ] gensmo_user_tenure_type_udf
+309. [FUNCTION       ] get_app_name
+310. [FUNCTION       ] get_currency_symbol
+311. [FUNCTION       ] get_image_size_type
+312. [FUNCTION       ] get_leaf_category
+313. [FUNCTION       ] get_product_traffic_scenario
+314. [FUNCTION       ] get_product_traffic_type
+315. [FUNCTION       ] get_root_category
+316. [FUNCTION       ] get_spider_update_time
+317. [FUNCTION       ] is_cron_date_match
+318. [FUNCTION       ] normalize_color_value
+319. [FUNCTION       ] normalize_tag_array
+320. [FUNCTION       ] normalize_tag_value
+321. [FUNCTION       ] parse_feed_tag
+322. [PROCEDURE      ] record_partition
+323. [FUNCTION       ] remove_www_prefix
+324. [TABLE FUNCTION ] rpt_favie_crawl_daily_host_metrics_inc_1d_function
+325. [PROCEDURE      ] rpt_favie_crawl_daily_host_metrics_inc_1d_procedure
+326. [TABLE FUNCTION ] rpt_favie_gem_search_sku_metric_inc_1d_function
+327. [PROCEDURE      ] rpt_favie_gem_search_sku_metric_inc_1d_procedure
+328. [TABLE FUNCTION ] rpt_favie_gensmo_search_sku_metric_inc_1d_function
+329. [PROCEDURE      ] rpt_favie_gensmo_search_sku_metric_inc_1d_procedure
+330. [TABLE FUNCTION ] rpt_gem_growth_management_dashboard_v2_inc_1d_function
+331. [TABLE FUNCTION ] rpt_gem_product_tag_value_topn_inc_1d_function
+332. [PROCEDURE      ] rpt_gensmo_user_ltn_metrics_inc_1d_procedure
+333. [TABLE FUNCTION ] tmp_dws_gem_growth_ad_skan_and_classic_metrics_inc_1d_function
+334. [TABLE FUNCTION ] tvf_dwd_favie_valid_product_detail_flat_inc_1h
+335. [PROCEDURE      ] view_materialize_procedure
+
+================================================================================
+总计: 517 个函数/存储过程

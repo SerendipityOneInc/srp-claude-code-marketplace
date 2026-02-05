@@ -1,0 +1,44 @@
+{
+  "table_id": "rpt_favie_gensmo_tryon_model_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_tryon_model_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 28,
+  "num_bytes": 1064,
+  "created": "2025-07-09T11:11:00.220000+00:00",
+  "modified": "2025-07-10T04:14:53.771000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "item_task_model",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "任务模型类型"
+    },
+    {
+      "name": "item_task_list_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务列表Item数量"
+    },
+    {
+      "name": "item_task_save_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务收藏Item数量"
+    },
+    {
+      "name": "item_task_download_item_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "channel任务下载Item数量"
+    }
+  ]
+}

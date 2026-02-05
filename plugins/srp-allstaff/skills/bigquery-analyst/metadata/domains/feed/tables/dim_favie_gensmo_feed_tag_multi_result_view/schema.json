@@ -1,0 +1,98 @@
+{
+  "table_id": "dim_favie_gensmo_feed_tag_multi_result_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_favie_gensmo_feed_tag_multi_result_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-05-21T12:09:30.990000+00:00",
+  "modified": "2025-05-21T12:09:30.990000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "moodboard_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "moodboard_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "style_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "occasion_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "color_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "weather_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "temperature_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "gender_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "age_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "body_shape_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "body_size_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "height_candidates",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "products",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "rn",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

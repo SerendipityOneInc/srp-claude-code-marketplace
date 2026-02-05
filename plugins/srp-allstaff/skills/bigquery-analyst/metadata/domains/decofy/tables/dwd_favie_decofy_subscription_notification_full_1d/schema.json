@@ -1,0 +1,122 @@
+{
+  "table_id": "dwd_favie_decofy_subscription_notification_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_decofy_subscription_notification_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 38392,
+  "num_bytes": 11647865,
+  "created": "2025-09-05T06:25:35.314000+00:00",
+  "modified": "2026-01-30T01:02:37.066000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "appsflyer ID"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "产品ID"
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "简化产品ID"
+    },
+    {
+      "name": "product_price",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "产品价格（USD）"
+    },
+    {
+      "name": "product_first_order_price",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "产品首单价格（USD）"
+    },
+    {
+      "name": "product_currency",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "产品货币"
+    },
+    {
+      "name": "product_with_trial",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "是否包含试用期：1(包含), 0(不包含)"
+    },
+    {
+      "name": "product_period",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "产品周期（天）"
+    },
+    {
+      "name": "notification_uuid",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅消息UUID"
+    },
+    {
+      "name": "notification_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅消息类型"
+    },
+    {
+      "name": "transaction_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交易ID"
+    },
+    {
+      "name": "original_transaction_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "原始交易ID"
+    },
+    {
+      "name": "subscription_status",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "订阅状态"
+    },
+    {
+      "name": "subtype",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅消息子类型"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "创建时间"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "更新时间"
+    }
+  ]
+}

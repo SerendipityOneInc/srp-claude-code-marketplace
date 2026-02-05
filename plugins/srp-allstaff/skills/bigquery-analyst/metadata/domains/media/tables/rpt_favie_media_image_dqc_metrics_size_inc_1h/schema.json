@@ -1,0 +1,50 @@
+{
+  "table_id": "rpt_favie_media_image_dqc_metrics_size_inc_1h",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_media_image_dqc_metrics_size_inc_1h",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-02-22T14:27:46.220000+00:00",
+  "modified": "2025-02-22T14:27:46.220000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "size_type",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "f_url_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "total_f_url_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "hour",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

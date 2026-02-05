@@ -1,0 +1,296 @@
+{
+  "table_id": "dws_gem_growth_creative_ad_skan_classic_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gem_growth_creative_ad_skan_classic_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 73992,
+  "num_bytes": 52139682,
+  "created": "2025-12-01T12:14:33.438000+00:00",
+  "modified": "2026-01-30T03:06:42.406000+00:00",
+  "description": "Gensmo广告创意维度的SKAN和Classic归因指标增量表，包含创意级别的广告花费、转化、用户行为等指标",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "REQUIRED",
+      "description": "数据日期"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源：Meta Ads、Google Ads、TikTok Ads等"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台：IOS、ANDROID"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称：Gensmo"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告账户ID"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告账户名称"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "campaign_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动名称"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_group_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组名称"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告名称"
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家代码"
+    },
+    {
+      "name": "ad_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告类别"
+    },
+    {
+      "name": "account_put_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户投放类型"
+    },
+    {
+      "name": "account_open_agency",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户开户代理"
+    },
+    {
+      "name": "attribution_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "归因方式：SKAN、CLASSIC、BOTH"
+    },
+    {
+      "name": "creative_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意ID"
+    },
+    {
+      "name": "creative_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意名称"
+    },
+    {
+      "name": "creative_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意类型：视频、图片等"
+    },
+    {
+      "name": "f_creative_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "统一创意ID"
+    },
+    {
+      "name": "f_creative_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "统一创意名称"
+    },
+    {
+      "name": "f_creative_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "统一创意素材URL"
+    },
+    {
+      "name": "f_creative_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "统一创意素材类型"
+    },
+    {
+      "name": "tag_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "标签来源"
+    },
+    {
+      "name": "creative_language_tag",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意语言标签"
+    },
+    {
+      "name": "creative_func_tag",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意功能标签"
+    },
+    {
+      "name": "creative_source_tag",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意来源标签"
+    },
+    {
+      "name": "creative_race_tag",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意种族标签"
+    },
+    {
+      "name": "creative_gender_tag",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创意性别标签"
+    },
+    {
+      "name": "creative_created_at",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "创意创建时间"
+    },
+    {
+      "name": "google_youtube_video_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Google YouTube视频ID"
+    },
+    {
+      "name": "google_youtube_video_title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Google YouTube视频标题"
+    },
+    {
+      "name": "channel",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "渠道：ON_LINE、SKAN"
+    },
+    {
+      "name": "creative_impression",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "创意维度的曝光数"
+    },
+    {
+      "name": "creative_click",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "创意维度的点击数"
+    },
+    {
+      "name": "creative_conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "创意维度的转化数"
+    },
+    {
+      "name": "creative_cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "创意维度的花费"
+    },
+    {
+      "name": "impression",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的曝光数"
+    },
+    {
+      "name": "click",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的点击数"
+    },
+    {
+      "name": "conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的转化数"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的花费"
+    },
+    {
+      "name": "creative_install_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的安装数"
+    },
+    {
+      "name": "creative_new_user_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的新用户数"
+    },
+    {
+      "name": "creative_d0_active_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的D0活跃用户数"
+    },
+    {
+      "name": "creative_d1_retention_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的D1留存用户数"
+    },
+    {
+      "name": "creative_lt7_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "按权重分配后的LT7用户数"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "table_id": "rpt_gensmo_avatar_full_penetration_funnel_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_avatar_full_penetration_funnel_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 4590431,
+  "num_bytes": 366500278,
+  "created": "2025-11-14T06:36:30.186000+00:00",
+  "modified": "2025-12-25T02:17:43.164000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户国家"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用时长"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录方式"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "create_replica_intention_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "创建头像意图用户数"
+    },
+    {
+      "name": "create_replica_action_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "创建头像行为用户数"
+    },
+    {
+      "name": "use_default_avatar_btn_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "使用默认头像按钮用户数"
+    },
+    {
+      "name": "set_face_btn_click_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "设置脸部按钮点击用户数"
+    },
+    {
+      "name": "set_body_btn_click_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "设置身体按钮点击用户数"
+    },
+    {
+      "name": "set_model_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "设置模型用户数"
+    },
+    {
+      "name": "default_upload_by_camera_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相机上传默认头像用户数"
+    },
+    {
+      "name": "default_upload_by_album_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相册上传默认头像用户数"
+    },
+    {
+      "name": "confirm_default_avatar_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "确认默认头像用户数"
+    },
+    {
+      "name": "upload_selfie_btn_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "上传自拍按钮用户数"
+    },
+    {
+      "name": "selfie_upload_by_album_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相册上传自拍用户数"
+    },
+    {
+      "name": "selfie_upload_by_camera_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相机上传自拍用户数"
+    },
+    {
+      "name": "avatar_selfie_check_pass_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像自拍检查通过用户数"
+    },
+    {
+      "name": "avatar_selfie_check_fail_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像自拍检查失败用户数"
+    },
+    {
+      "name": "avatar_generate_btn_click_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成按钮点击用户数"
+    },
+    {
+      "name": "avatar_gen_click_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成点击用户数"
+    },
+    {
+      "name": "create_replica_intention_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "创建头像意图PV数"
+    },
+    {
+      "name": "create_replica_action_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "创建头像行为PV数"
+    },
+    {
+      "name": "use_default_avatar_btn_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "使用默认头像按钮点击数"
+    },
+    {
+      "name": "set_face_btn_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "设置脸部按钮点击数"
+    },
+    {
+      "name": "set_body_btn_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "设置身体按钮点击数"
+    },
+    {
+      "name": "set_model_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "设置模型按钮点击数"
+    },
+    {
+      "name": "default_upload_by_camera_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相机上传默认头像数"
+    },
+    {
+      "name": "default_upload_by_album_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相册上传默认头像数"
+    },
+    {
+      "name": "confirm_default_avatar_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "确认默认头像点击数"
+    },
+    {
+      "name": "upload_selfie_btn_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "上传自拍按钮点击数"
+    },
+    {
+      "name": "selfie_upload_by_album_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相册上传自拍点击数"
+    },
+    {
+      "name": "selfie_upload_by_camera_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "通过相机上传自拍点击数"
+    },
+    {
+      "name": "avatar_selfie_check_pass_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像自拍检查通过点击数"
+    },
+    {
+      "name": "avatar_selfie_check_fail_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像自拍检查失败点击数"
+    },
+    {
+      "name": "avatar_generate_btn_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成按钮点击数"
+    },
+    {
+      "name": "avatar_gen_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成点击数"
+    },
+    {
+      "name": "DAU",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数"
+    },
+    {
+      "name": "bd_avatar_validated_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "上传照片但未创建 avatar 用户数"
+    },
+    {
+      "name": "bd_avatar_failed_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成失败用户数"
+    },
+    {
+      "name": "bd_avatar_discarded_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成成功但未采用用户数"
+    },
+    {
+      "name": "bd_avatar_refined_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成成功且用户refine用户数"
+    },
+    {
+      "name": "bd_avatar_selected_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成成功且采用用户数"
+    },
+    {
+      "name": "bd_avatar_validated_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "上传照片但未创建 avatar 次数"
+    },
+    {
+      "name": "bd_avatar_failed_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成失败次数"
+    },
+    {
+      "name": "bd_avatar_discarded_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成成功但未采用次数"
+    },
+    {
+      "name": "bd_avatar_refined_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成成功且用户refine次数"
+    },
+    {
+      "name": "bd_avatar_selected_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "头像生成成功且采用次数"
+    }
+  ]
+}

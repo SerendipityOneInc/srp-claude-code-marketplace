@@ -1,0 +1,80 @@
+{
+  "table_id": "dws_gem_user_last_access_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gem_user_last_access_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 458071,
+  "num_bytes": 272490560,
+  "created": "2025-09-23T07:01:49.023000+00:00",
+  "modified": "2025-09-26T01:04:33.101000+00:00",
+  "description": "Gensmo用户最后访问信息表，记录每个用户最后一次访问的日期及当时的完整用户特征，用于用户活跃度分析、流失用户识别和用户画像分析",
+  "fields": [
+    {
+      "name": "last_access_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "用户最后访问日期"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID，当前活跃设备"
+    },
+    {
+      "name": "first_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "首次登录设备ID"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Appsflyer追踪ID"
+    },
+    {
+      "name": "is_internal_user",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否内部用户"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型，如register、unregister、deregister"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户生命周期类型，如new、old"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "用户创建时间"
+    },
+    {
+      "name": "last_day_feature",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "最后一次访问当天的用户特征"
+    },
+    {
+      "name": "last_30_days_feature",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "最后一次访问时的30天用户特征"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "记录更新时间"
+    }
+  ]
+}

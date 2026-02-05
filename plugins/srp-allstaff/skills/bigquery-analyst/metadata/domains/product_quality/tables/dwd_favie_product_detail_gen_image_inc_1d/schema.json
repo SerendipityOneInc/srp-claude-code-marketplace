@@ -1,0 +1,38 @@
+{
+  "table_id": "dwd_favie_product_detail_gen_image_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_product_detail_gen_image_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 66683,
+  "num_bytes": 31326875,
+  "created": "2025-09-26T08:26:00.497000+00:00",
+  "modified": "2025-09-26T08:32:05.860000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品SKU ID"
+    },
+    {
+      "name": "f_image_list",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品图片列表，JSON字符串"
+    },
+    {
+      "name": "f_meta",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品元信息，JSON字符串"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期，格式yyyy-MM-dd"
+    }
+  ]
+}

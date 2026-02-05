@@ -1,0 +1,31 @@
+CREATE TABLE `srpproduct-dc37e.favie_dw.dws_decofy_membership_full_1d`
+(
+  dt DATE OPTIONS(description="数据日期"),
+  user_id STRING OPTIONS(description="用户ID"),
+  appsflyer_id STRING OPTIONS(description="Appsflyer ID"),
+  order_source STRING OPTIONS(description="订单来源"),
+  membership_tenure_type STRING OPTIONS(description="会员生命周期: new,active,expiring,expired"),
+  first_subscribe_at TIMESTAMP OPTIONS(description="会员创建时间"),
+  first_subscribe_product_id STRING OPTIONS(description="会员首次订阅产品ID"),
+  first_subscribe_simple_product_id STRING OPTIONS(description="会员首次订阅简化产品ID"),
+  first_pay_at TIMESTAMP OPTIONS(description="会员首次付费时间"),
+  first_pay_subscribe_at TIMESTAMP OPTIONS(description="会员首次付费订阅时间"),
+  latest_subscribe_at TIMESTAMP OPTIONS(description="会员最近一次订阅时间"),
+  latest_subscribe_seq INT64 OPTIONS(description="会员最近一次订阅序号"),
+  latest_order_product_id STRING OPTIONS(description="会员近一次订单产品ID"),
+  latest_order_simple_product_id STRING OPTIONS(description="会员最近一次订单简化产品ID"),
+  latest_order_expires_date TIMESTAMP OPTIONS(description="会员到期时间"),
+  latest_order_renewal_at TIMESTAMP OPTIONS(description="会员续费时间"),
+  latest_order_created_at TIMESTAMP OPTIONS(description="会员最近一次订阅的订单创建时间"),
+  latest_order_subscription_seq INT64 OPTIONS(description="会员最近一次订阅的订单序号"),
+  latest_order_category STRING OPTIONS(description="会员最近一次订阅的订单类别"),
+  latest_order_type STRING OPTIONS(description="会员最近一次订阅的订单类型"),
+  latest_order_seq INT64 OPTIONS(description="会员最近一次订阅的订单序号"),
+  total_order_cnt INT64 OPTIONS(description="会员累计订单数"),
+  total_paid_order_cnt INT64 OPTIONS(description="会员累计付费订单数"),
+  total_paid_order_usd_amount INT64 OPTIONS(description="会员所有订单的支付金额"),
+  total_subscribe_cnt INT64 OPTIONS(description="会员累计订阅次数"),
+  total_subscribe_product_cnt INT64 OPTIONS(description="会员累计订阅产品数"),
+  subscribe_products ARRAY<STRING> OPTIONS(description="会员累计订阅过的产品ID列表")
+)
+PARTITION BY dt;

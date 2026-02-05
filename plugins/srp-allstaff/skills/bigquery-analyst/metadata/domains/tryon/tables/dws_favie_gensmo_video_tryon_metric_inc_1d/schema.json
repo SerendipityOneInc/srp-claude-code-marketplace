@@ -1,0 +1,224 @@
+{
+  "table_id": "dws_favie_gensmo_video_tryon_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_video_tryon_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 872222,
+  "num_bytes": 306603789,
+  "created": "2025-12-11T08:35:53.579000+00:00",
+  "modified": "2026-01-30T02:00:36.842000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "页面名称"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交互点名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称（select_item、view_item_list 等）"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件触发方式（点击、浏览、摇一摇等）"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型（视频试穿、无头像视频试穿等）"
+    },
+    {
+      "name": "event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "refer 与 ap_name 组合的事件来源"
+    },
+    {
+      "name": "video_tryon_mode_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿模板类型（视频视频试穿等）"
+    },
+    {
+      "name": "video_tryon_trigger_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "触发视频试穿次数"
+    },
+    {
+      "name": "video_tryon_trigger_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "触发视频试穿事件设备ID"
+    },
+    {
+      "name": "video_tryon_complete_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿成功任务数"
+    },
+    {
+      "name": "video_tryon_complete_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿成功用户设备ID"
+    },
+    {
+      "name": "video_tryon_play_complete_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿播放完成任务数"
+    },
+    {
+      "name": "video_tryon_play_complete_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿播放完成用户设备ID"
+    },
+    {
+      "name": "video_tryon_retry_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿重试次数"
+    },
+    {
+      "name": "video_tryon_retry_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿重试用户设备ID"
+    },
+    {
+      "name": "video_tryon_switch_mode_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿切换模式任务数"
+    },
+    {
+      "name": "video_tryon_switch_mode_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿切换模式用户设备ID"
+    },
+    {
+      "name": "video_tryon_save_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿保存任务数"
+    },
+    {
+      "name": "video_tryon_save_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿保存用户设备ID"
+    },
+    {
+      "name": "video_tryon_unsave_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿取消保存任务数"
+    },
+    {
+      "name": "video_tryon_unsave_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿取消保存用户设备ID"
+    },
+    {
+      "name": "video_tryon_like_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿点赞任务数"
+    },
+    {
+      "name": "video_tryon_like_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿点赞用户设备ID"
+    },
+    {
+      "name": "video_tryon_dislike_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿点踩任务数"
+    },
+    {
+      "name": "video_tryon_dislike_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿点踩用户设备ID"
+    },
+    {
+      "name": "video_tryon_download_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "视频试穿下载任务数"
+    },
+    {
+      "name": "video_tryon_download_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频试穿下载用户设备ID"
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "table_id": "rpt_decofy_growth_management_dashboard_v4_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_growth_management_dashboard_v4_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 5752,
+  "num_bytes": 2685114,
+  "created": "2025-09-04T10:02:39.012000+00:00",
+  "modified": "2026-01-30T03:10:00.356000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区字段"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "苹果/安卓"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户ID"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户名称"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign ID"
+    },
+    {
+      "name": "campaign_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign名称"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group ID"
+    },
+    {
+      "name": "ad_group_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group名称"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告名称"
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家代码"
+    },
+    {
+      "name": "channel",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "渠道"
+    },
+    {
+      "name": "impression",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "曝光数"
+    },
+    {
+      "name": "click",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击数"
+    },
+    {
+      "name": "conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "转化数"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "成本"
+    },
+    {
+      "name": "install_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "安装数"
+    },
+    {
+      "name": "user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户数"
+    },
+    {
+      "name": "real_order_paid_amount_7d",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "7天内真实订单付费金额"
+    },
+    {
+      "name": "subscription_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天开通的订阅数"
+    },
+    {
+      "name": "order_cnt_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天内开通的订单数"
+    },
+    {
+      "name": "paid_order_cnt_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天内开通的付费订单数"
+    },
+    {
+      "name": "subscribed_user_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天内订阅用户数"
+    },
+    {
+      "name": "paid_user_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天内付费用户数"
+    },
+    {
+      "name": "weekly_benefit_order_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天归因周期内周费benefit订单数"
+    },
+    {
+      "name": "weekly_trail_order_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天归因周期内周费trial订单数"
+    },
+    {
+      "name": "weekly_normal_order_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天归因周期内周费normal订单数"
+    },
+    {
+      "name": "annual_benefit_order_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天归因周期内年费benefit订单数"
+    },
+    {
+      "name": "annual_trail_order_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天归因周期内年费trial订单数"
+    },
+    {
+      "name": "annual_normal_order_7d",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "7天归因周期内年费normal订单数"
+    }
+  ]
+}

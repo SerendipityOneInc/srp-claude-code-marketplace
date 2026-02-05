@@ -1,0 +1,32 @@
+{
+  "table_id": "tmp_dwd_gem_product_base_keys_inc_1h",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.tmp_dwd_gem_product_base_keys_inc_1h",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-12-12T13:17:21.439000+00:00",
+  "modified": "2025-12-12T13:17:21.440000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "biz_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "product_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

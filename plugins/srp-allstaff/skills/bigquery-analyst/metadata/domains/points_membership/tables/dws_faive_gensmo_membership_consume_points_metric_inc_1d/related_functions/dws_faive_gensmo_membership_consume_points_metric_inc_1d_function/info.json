@@ -1,0 +1,17 @@
+{
+  "routine_id": "dws_faive_gensmo_membership_consume_points_metric_inc_1d_function",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dws_faive_gensmo_membership_consume_points_metric_inc_1d_function",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null,
+  "linked_by": "name_matching",
+  "linked_at": "2026-01-30T14:24:22.096873"
+}

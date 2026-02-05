@@ -1,0 +1,236 @@
+{
+  "table_id": "dwd_favie_product_review_flat_inc_1h",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_product_review_flat_inc_1h",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2024-12-10T08:32:15.597000+00:00",
+  "modified": "2024-12-26T11:19:02.074000+00:00",
+  "description": "所属业务库: 评价库  \n所属数仓层级: DWD层\n分区字段: dt,hour（dt字段格式:yyyy-MM-dd,hour 字段格式:HH）\n更新策略: 每小时增量更新\n模型主键:f_review_id\n负责人:\n- 庞宝辉\n- 付继文\n- 马汝钊  \n生命周期（分区TTL）: 7天\n用途: >\n  此表是评价库的每小时增量明细更新数据\n\n保持字段含义一致的表集合:\n - favie_dw.dwd_favie_product_review_flat_inc_1h \n - favie_dw.dwd_favie_product_review_full_1d\n\n 以上表的字段含义、字段名称、字段数量保持一致,在查询字段含义时,如果所目标表没有的字段说明,可以查询表集合的字段含义",
+  "fields": [
+    {
+      "name": "f_review_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "评论id"
+    },
+    {
+      "name": "f_spu_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "spu_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "review_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "评论id"
+    },
+    {
+      "name": "title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "标题"
+    },
+    {
+      "name": "body",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "评论体"
+    },
+    {
+      "name": "body_html",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "评论体的html内容"
+    },
+    {
+      "name": "link",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "链接"
+    },
+    {
+      "name": "images",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片信息"
+    },
+    {
+      "name": "f_images",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片信息"
+    },
+    {
+      "name": "videos",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频信息"
+    },
+    {
+      "name": "f_videos",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "视频信息"
+    },
+    {
+      "name": "rating",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "评价数量"
+    },
+    {
+      "name": "date_raw",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "raw数据"
+    },
+    {
+      "name": "date_utc",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "author_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "作者名称"
+    },
+    {
+      "name": "author_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "作者id"
+    },
+    {
+      "name": "author_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "作者url"
+    },
+    {
+      "name": "vine_program",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "verified_purchase",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "review_country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "is_global_review",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "position",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "helpful_votes",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "unhelpful_votes",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "stark_tag",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "stark_tags",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_meta",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_updates_at",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "更新时间"
+    },
+    {
+      "name": "f_creates_at",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创建时间"
+    },
+    {
+      "name": "f_system_tags",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_image_list",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "hour",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "小时"
+    }
+  ]
+}

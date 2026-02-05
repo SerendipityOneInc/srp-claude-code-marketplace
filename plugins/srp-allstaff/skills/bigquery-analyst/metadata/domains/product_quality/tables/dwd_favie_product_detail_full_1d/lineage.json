@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_favie_product_detail_full_1d",
+  "upstream": [],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.product_detail_price_analysis_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.favie_product_detail_clean_brand_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.379867",
+  "downstream_count": 2,
+  "upstream_count": 0
+}

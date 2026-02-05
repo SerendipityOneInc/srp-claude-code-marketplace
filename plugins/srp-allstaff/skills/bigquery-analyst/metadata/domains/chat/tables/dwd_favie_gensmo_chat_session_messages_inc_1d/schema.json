@@ -1,0 +1,80 @@
+{
+  "table_id": "dwd_favie_gensmo_chat_session_messages_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_gensmo_chat_session_messages_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 2778283,
+  "num_bytes": 201645368310,
+  "created": "2025-10-31T02:55:53.944000+00:00",
+  "modified": "2026-01-30T02:14:13.147000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "被创建的日期"
+    },
+    {
+      "name": "chat_session_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会话id"
+    },
+    {
+      "name": "message_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "id"
+    },
+    {
+      "name": "message_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "信息类型"
+    },
+    {
+      "name": "message_visibility",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否是用户可见的"
+    },
+    {
+      "name": "message_value",
+      "type": "JSON",
+      "mode": "NULLABLE",
+      "description": "信息的具体内容"
+    },
+    {
+      "name": "message_sent_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "信息发出的时间"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发起会话的用户id"
+    },
+    {
+      "name": "user_role",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发送信息的角色"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "被创建的时间"
+    },
+    {
+      "name": "updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "最后一次被更新的时间"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "table_id": "dim_favie_gensmo_user_scd2_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_favie_gensmo_user_scd2_1d",
+  "table_type": "TABLE",
+  "num_rows": 2548532,
+  "num_bytes": 777833536,
+  "created": "2025-10-23T06:42:23.344000+00:00",
+  "modified": "2026-01-30T01:05:30.527000+00:00",
+  "description": "Gensmo用户变更日志明细表，记录用户的账号信息，地理位置信息，访问信息等的变化，is_current=True 表示当前有效记录。",
+  "fields": [
+    {
+      "name": "scd2_sk",
+      "type": "STRING",
+      "mode": "REQUIRED",
+      "description": "系统主键，唯一标识一条记录"
+    },
+    {
+      "name": "start_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "SCD2：本条记录生效的起始日期"
+    },
+    {
+      "name": "end_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "SCD2：本条记录失效的截止日期，若为9999-12-31表示当前有效"
+    },
+    {
+      "name": "is_current",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "SCD2：是否为当前最新记录，true为最新，false为历史"
+    },
+    {
+      "name": "created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "创建时间，记录本条变更的创建时间"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "is_internal_user",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否内部用户"
+    },
+    {
+      "name": "user_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户类型: 未注册-unregistered,注册-registered,注销-deregistered"
+    },
+    {
+      "name": "user_accounts",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": "关联的账号列表"
+    },
+    {
+      "name": "first_access_info",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "last_access_info",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "最近访问和登录信息"
+    },
+    {
+      "name": "first_geo_address",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "首次地理位置信息"
+    },
+    {
+      "name": "permanent_geo_address",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": "常驻地理位置信息"
+    },
+    {
+      "name": "scd2_created_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "SCD2：记录本条变更的创建时间"
+    },
+    {
+      "name": "scd2_updated_at",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "记录本条变更的处理时间"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "routine_id": "dws_gem_product_category_rule_health_inc_1d_function",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dws_gem_product_category_rule_health_inc_1d_function",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "language": "SQL",
+  "created": "2026-01-25T09:36:36.190000+00:00",
+  "modified": "2026-01-25T09:36:36.190000+00:00",
+  "description": "",
+  "definition": "WITH category_base AS (\n    SELECT\n      PARSE_DATE('%Y-%m-%d', dt) AS dt,\n      f_sku_id,\n      collage_category\n    FROM `srpproduct-dc37e.favie_algo.dwd_gem_product_collage_category_full_1d`\n    WHERE dt = CAST(dt_param AS STRING)\n  ),\n\n  -- ② 结构化标签表\n  structured_tags AS (\n    SELECT\n      dt,\n      f_sku_id,\n      neckline,\n      sleeve_length,\n      sleeve_style,\n      length,\n      fit_type,\n      shape,\n      closure\n    FROM `srpproduct-dc37e.favie_algo.dwd_gem_product_structured_normalized_full_1d`\n    WHERE dt = dt_param\n  ),\n\n  -- ③ 商品库表（获取site）\n  product_detail AS (\n    SELECT\n      f_sku_id,\n      site\n    FROM `favie_dw.dwd_favie_product_detail_full_1d`\n    WHERE dt = CAST(dt_param AS STRING)\n  ),\n\n  -- ④ JOIN 三张表\n  joined AS (\n    SELECT\n      c.dt,\n      p.site,\n      c.collage_category,\n      c.f_sku_id,\n      s.neckline,\n      s.sleeve_length,\n      s.sleeve_style,\n      s.length,\n      s.fit_type,\n      s.shape,\n      s.closure\n    FROM category_base c\n    LEFT JOIN structured_tags s\n      ON c.dt = s.dt AND c.f_sku_id = s.f_sku_id\n    LEFT JOIN product_detail p\n      ON c.f_sku_id = p.f_sku_id\n  )\n\n  -- ⑤ 最终聚合\n  SELECT\n    dt,\n    site,\n    collage_category,\n\n    -- 基础规模\n    COUNT(DISTINCT f_sku_id) AS total_sku_cnt,\n\n    -- 上衣属性健康度\n    COUNT(DISTINCT IF(\n      neckline IS NOT NULL OR sleeve_length IS NOT NULL OR sleeve_style IS NOT NULL,\n      f_sku_id, NULL\n    )) AS topwear_attr_present_sku_cnt,\n\n    COUNT(DISTINCT IF(\n      (neckline IS NOT NULL OR sleeve_length IS NOT NULL OR sleeve_style IS NOT NULL)\n      AND collage_category NOT IN ('Top', 'One-Piece', 'Outerwear'),\n      f_sku_id, NULL\n    )) AS topwear_attr_invalid_sku_cnt,\n\n    -- 服装结构属性健康度\n    COUNT(DISTINCT IF(\n      length IS NOT NULL OR fit_type IS NOT NULL OR shape IS NOT NULL OR closure IS NOT NULL,\n      f_sku_id, NULL\n    )) AS apparel_structure_present_sku_cnt,\n\n    COUNT(DISTINCT IF(\n      (length IS NOT NULL OR fit_type IS NOT NULL OR shape IS NOT NULL OR closure IS NOT NULL)\n      AND collage_category NOT IN ('Top', 'Bottom', 'One-Piece', 'Outerwear'),\n      f_sku_id, NULL\n    )) AS apparel_structure_invalid_sku_cnt\n\n  FROM joined\n  GROUP BY dt, site, collage_category",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

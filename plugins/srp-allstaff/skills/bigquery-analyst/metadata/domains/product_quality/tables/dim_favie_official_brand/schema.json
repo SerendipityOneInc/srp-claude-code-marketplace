@@ -1,0 +1,62 @@
+{
+  "table_id": "dim_favie_official_brand",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_favie_official_brand",
+  "table_type": "TABLE",
+  "num_rows": 153437,
+  "num_bytes": 32926991,
+  "created": "2025-07-21T02:30:16.564000+00:00",
+  "modified": "2025-12-09T07:15:52.239000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "官方品牌维表的唯一标识符，初始是按estimated_sku_num从大到小排序后的自动编号"
+    },
+    {
+      "name": "official_brand",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "标准化后的官方品牌名称，用于统一管理多个raw_brand"
+    },
+    {
+      "name": "category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "品牌所属的行业类目，用于区分不同类行业下的同名品牌"
+    },
+    {
+      "name": "website",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "品牌的官方网站URL"
+    },
+    {
+      "name": "description",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "品牌的详细描述信息"
+    },
+    {
+      "name": "estimated_sku_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "初始的该品牌下预估的SKU数量"
+    },
+    {
+      "name": "parent_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "父级品牌的ID"
+    },
+    {
+      "name": "parent_official_brand",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "父级品牌的official_brand名称，与parent_id配合使用，提供更直观的层级关系表示"
+    }
+  ]
+}

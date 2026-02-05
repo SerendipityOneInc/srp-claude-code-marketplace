@@ -1,0 +1,46 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_asa_fivetran_by_ad_id_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.apple_search_ads_decofy.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads.campaign_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads_decofy.ad_level_report",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads_decofy.country_or_region_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads.ad_level_report",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads.country_or_region_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads.ad_group_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads.ad_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.apple_search_ads_decofy.campaign_history",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.393346",
+  "downstream_count": 0,
+  "upstream_count": 9
+}

@@ -1,0 +1,149 @@
+WITH mongo_decofy_user_account_full AS (
+        SELECT  
+            uid AS user_id,
+            username AS user_name,
+            email AS user_email,
+            1 AS user_type,
+            CASE 
+                WHEN device_ids IS NOT NULL AND ARRAY_LENGTH(device_ids) > 0 
+                THEN device_ids[SAFE_OFFSET(ARRAY_LENGTH(device_ids) - 1)]
+                ELSE NULL 
+            END as last_device_id,
+            device_ids, 
+            CASE 
+                WHEN device_ids IS NOT NULL AND ARRAY_LENGTH(device_ids) > 0 
+                THEN device_ids[SAFE_OFFSET(0)]
+                ELSE NULL 
+            END AS first_device_id,
+            updated_at,       
+            created_at
+        FROM `favie_dw.dim_decofy_users_view`   
+        WHERE uid IS NOT NULL 
+        AND Date(created_at) <= dt_param
+    ),
+
+    event_user_info_by_user_id_base as (
+        select 
+            user_id,
+            device_id,
+            event_timestamp,
+            if(coalesce(geo_continent_name,geo_sub_continent_name,geo_country_name,geo_region_name,geo_metro_name,geo_city_name) is null, null,struct(
+                geo_continent_name,
+                geo_sub_continent_name,
+                geo_country_name,
+                geo_region_name,
+                geo_metro_name,
+                geo_city_name
+            )) as geo_address,
+            if(coalesce(platform,app_version) is null ,null,struct(
+                platform,
+                app_version
+            )) as app_info
+        FROM srpproduct-dc37e.favie_dw.dwd_favie_decofy_events_inc_1d
+        WHERE  dt <= dt_param
+            and user_id is not null
+            and device_id is not null  
+            and event_timestamp is not null
+            and refer_group = 'valid'
+    ),
+
+    event_user_info_by_user_id as (
+        SELECT 
+            user_id,
+            first_value(app_info) over (partition by user_id order by if(app_info is not null,0,1), event_timestamp) as app_info,
+            first_value(geo_address) over (partition by user_id order by if(geo_address is not null,0,1), event_timestamp) as geo_address,
+            first_value(device_id) over (partition by user_id order by if(device_id is not null,0,1), event_timestamp) as first_device_id,
+            first_value(device_id) over (partition by user_id order by if(device_id is not null,0,1), event_timestamp desc) as last_device_id,
+            row_number() over (partition by user_id order by event_timestamp) as rn
+        FROM event_user_info_by_user_id_base       
+    ),
+
+    event_user_info_by_device_id_base as (
+        select 
+            device_id,
+            event_timestamp,
+            if(coalesce(geo_continent_name,geo_sub_continent_name,geo_country_name,geo_region_name,geo_metro_name,geo_city_name) is null, null,struct(
+                geo_continent_name,
+                geo_sub_continent_name,
+                geo_country_name,
+                geo_region_name,
+                geo_metro_name,
+                geo_city_name
+            )) as geo_address,
+            if(coalesce(platform,app_version) is null ,null,struct(
+                platform,
+                app_version
+            )) as app_info
+        FROM srpproduct-dc37e.favie_dw.dwd_favie_decofy_events_inc_1d
+        WHERE dt <= dt_param
+            and device_id is not null 
+            and event_timestamp is not null
+            and refer_group = 'valid'
+    ),
+
+    event_user_info_by_device_id as (
+        SELECT 
+            device_id,
+            first_value(app_info) over (partition by device_id order by if(app_info is not null,0,1), event_timestamp) as app_info,
+            first_value(geo_address) over (partition by device_id order by if(geo_address is not null,0,1), event_timestamp) as geo_address,
+            row_number() over (partition by device_id order by event_timestamp) as rn
+        FROM event_user_info_by_device_id_base          
+    ),
+
+    -- AppsFlyer ID 映射，从 decofy 事件表
+    device_id_appsflyer_id_map as (
+        SELECT 
+            device_id,
+            appsflyer_id,
+            ROW_NUMBER() OVER (PARTITION BY device_id ORDER BY event_timestamp) AS rn
+        FROM srpproduct-dc37e.favie_dw.dwd_favie_decofy_events_inc_1d
+        WHERE dt >= DATE_SUB(dt_param, INTERVAL 60 DAY)
+            and dt <= dt_param
+            and device_id IS NOT NULL
+            and appsflyer_id IS NOT NULL
+            and event_timestamp is not null
+            and refer_group = 'valid'
+    ),
+    
+    mongo_decofy_user_account_full_with_event_info AS (
+        SELECT 
+            dt_param AS dt,
+            t1.updated_at,
+            t1.created_at,
+
+            t1.user_id,
+            coalesce(t1.first_device_id,t2.first_device_id) AS first_device_id,
+            coalesce(t2.last_device_id,t1.last_device_id) as last_device_id,
+            t4.appsflyer_id,
+            t1.device_ids,
+            t1.user_name,
+            t1.user_email,
+            t1.user_type,
+            false as is_internal_user,
+
+            coalesce(t2.geo_address, t3.geo_address) as geo_address,
+            coalesce(t2.app_info, t3.app_info) as app_info
+        FROM mongo_decofy_user_account_full t1
+        LEFT OUTER JOIN (select * from event_user_info_by_user_id where rn = 1) t2 ON t1.user_id = t2.user_id
+        LEFT OUTER JOIN (select * from event_user_info_by_device_id where rn = 1) t3 ON t1.last_device_id = t3.device_id
+        LEFT OUTER JOIN (select * from device_id_appsflyer_id_map where rn =1) t4 ON t1.last_device_id = t4.device_id
+    )
+
+    SELECT 
+        dt as process_date,
+        updated_at,
+        created_at,
+
+        user_id,
+        first_device_id,
+        last_device_id,
+        appsflyer_id,
+        device_ids,
+        user_email,
+        user_name,
+        user_type,
+        is_internal_user,
+
+        geo_address,
+        app_info      
+    FROM mongo_decofy_user_account_full_with_event_info

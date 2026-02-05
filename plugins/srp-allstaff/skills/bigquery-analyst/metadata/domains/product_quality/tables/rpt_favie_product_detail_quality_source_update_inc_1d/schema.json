@@ -1,0 +1,74 @@
+{
+  "table_id": "rpt_favie_product_detail_quality_source_update_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_detail_quality_source_update_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 2166983,
+  "num_bytes": 220862151,
+  "created": "2024-12-13T06:37:16.500000+00:00",
+  "modified": "2025-12-16T01:00:20.982000+00:00",
+  "description": "所属业务库: 商品详情库  \n所属数仓层级: RPT层(分析层)\n分区字段: dt（字段格式 yyyy-MM-dd）\n主题域:数据质量\n更新策略: 每日更新\n模型主键: parser_name,source_type,site,shop_site\n负责人:\n- 庞宝辉\n- 付继文\n- 马汝钊  \n生命周期（分区TTL）: 永久\n用途: >\n  此表是针对于每日商品成功变更增量表和每日商品增量失败变更增量表分析每一个爬虫产生数据的质量以及对全量商品详情库的数据质量的影响",
+  "fields": [
+    {
+      "name": "parser_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "爬虫名称"
+    },
+    {
+      "name": "source_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "数据源类型"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "shop_site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "店铺站点"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "total_update_times",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总更新次数"
+    },
+    {
+      "name": "effective_update_times",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "有效更新次数"
+    },
+    {
+      "name": "ineffective_update_times",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "无效更新次数"
+    },
+    {
+      "name": "update_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "更新SKU数"
+    },
+    {
+      "name": "new_added_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "新增SKU数"
+    }
+  ]
+}

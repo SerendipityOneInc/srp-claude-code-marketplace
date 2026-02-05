@@ -1,0 +1,86 @@
+{
+  "table_id": "dwd_favie_gensmo_membership_process_node_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_gensmo_membership_process_node_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 211675,
+  "num_bytes": 35734072,
+  "created": "2026-01-04T05:31:47.825000+00:00",
+  "modified": "2026-01-30T01:05:31.262000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期，事件发生的日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID，已登录用户的唯一标识"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID，设备的唯一标识符"
+    },
+    {
+      "name": "process_node_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员流程节点ID，唯一标识每个流程节点"
+    },
+    {
+      "name": "process_node_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会员流程节点，如注册、赚取积分、消耗积分等"
+    },
+    {
+      "name": "process_node_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "节点类型，赚取积分类型，消耗积分类型等"
+    },
+    {
+      "name": "process_node_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "节点状态，如成功、失败等"
+    },
+    {
+      "name": "process_node_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "节点发生时间"
+    },
+    {
+      "name": "process_node_points",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "节点涉及的积分数值"
+    },
+    {
+      "name": "process_node_point_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分类型，如Daily积分、永久积分"
+    },
+    {
+      "name": "earn_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "赚取积分节点序列号/顺序"
+    },
+    {
+      "name": "earn_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "赚取积分分组标识"
+    }
+  ]
+}

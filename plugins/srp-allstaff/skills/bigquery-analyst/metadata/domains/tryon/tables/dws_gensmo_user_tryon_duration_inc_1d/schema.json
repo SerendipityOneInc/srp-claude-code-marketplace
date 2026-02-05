@@ -1,0 +1,68 @@
+{
+  "table_id": "dws_gensmo_user_tryon_duration_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_user_tryon_duration_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 476600,
+  "num_bytes": 62160460,
+  "created": "2025-09-09T09:00:56.368000+00:00",
+  "modified": "2025-10-15T02:00:52.044000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期；分区"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID"
+    },
+    {
+      "name": "tryon_complete_interval",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成时间间隔"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户组"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户任期类型"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    }
+  ]
+}

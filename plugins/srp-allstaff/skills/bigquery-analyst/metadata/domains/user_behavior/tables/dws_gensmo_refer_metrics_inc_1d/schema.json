@@ -1,0 +1,164 @@
+{
+  "table_id": "dws_gensmo_refer_metrics_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_refer_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 388589443,
+  "num_bytes": 110814192228,
+  "created": "2025-08-19T12:04:06.552000+00:00",
+  "modified": "2026-01-30T01:23:05.833000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交互点名称"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "跳转至当前页面的来源页面或入口"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件触发方式（点击、浏览等）"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型"
+    },
+    {
+      "name": "refer_ap_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面交互点击次数,这里的点击是宽泛的概念，包含event_method in ('click','shake','swipe','screenshot')四种事件"
+    },
+    {
+      "name": "refer_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面浏览次数"
+    },
+    {
+      "name": "refer_leave_directly_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面直接离开次数,页面展示后没有任何交互事件（'click','shake','swipe','screenshot'）就离开的次数"
+    },
+    {
+      "name": "refer_duration_amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "来源页面停留时长，单位：毫秒，报表请转化为秒进行展示"
+    },
+    {
+      "name": "refer_click_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源页面点击设备ID，如果refer_ap_click_cnt>0则是device_id,否则为null"
+    },
+    {
+      "name": "refer_directly_leave_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源页面直接离开设备ID，如果refer_directly_leave_device_id>0则是device_id,否则为null"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "refer_backend_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "来源页面非交互点击次数,这里的非交互点击是指event_method not in ('click','shake','swipe','screenshot')的其他事件"
+    },
+    {
+      "name": "refer_backend_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源页面非交互点击设备ID，如果refer_backend_cnt>0则是device_id,否则为null"
+    }
+  ]
+}

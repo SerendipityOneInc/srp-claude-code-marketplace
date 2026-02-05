@@ -1,0 +1,47 @@
+[
+  {
+    "description": "事件发生日期",
+    "name": "dt",
+    "type": "DATE"
+  },
+  {
+    "description": "商品来源网站（如 us.princesspolly.com）",
+    "name": "site",
+    "type": "STRING"
+  },
+  {
+    "description": "商品类别（Top/Bottom/One-Piece等13类+null）",
+    "name": "collage_category",
+    "type": "STRING"
+  },
+  {
+    "description": "人群标签（枚举：'Men', 'Women', 'Boys', 'Girls', 'Baby Boys', 'Baby Girls', 'Unisex', 'Unknown'）",
+    "name": "demographic",
+    "type": "STRING"
+  },
+  {
+    "description": "属于当前人群标签的 SKU 去重数量",
+    "name": "sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "当前人群中，至少填写了领口、袖长或袖型任意一个上衣属性的 SKU 去重数量（不判断该品类是否适用）",
+    "name": "topwear_attr_present_sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "当前人群中，填写了上衣属性（领口/袖长/袖型），但所属品类不属于上衣相关品类的 SKU 去重数量（异常数据）",
+    "name": "topwear_attr_invalid_sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "当前人群中，至少填写了长度、版型、廓形或闭合方式任意一个服装结构属性的 SKU 去重数量（不判断该品类是否适用）",
+    "name": "apparel_structure_present_sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "当前人群中，填写了服装结构属性（长度/版型/廓形/闭合方式），但所属品类不属于服装结构适用品类的 SKU 去重数量（异常数据）",
+    "name": "apparel_structure_invalid_sku_cnt",
+    "type": "INTEGER"
+  }
+]

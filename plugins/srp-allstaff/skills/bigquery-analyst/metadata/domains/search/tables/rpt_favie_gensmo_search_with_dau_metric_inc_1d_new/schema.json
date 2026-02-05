@@ -1,0 +1,224 @@
+{
+  "table_id": "rpt_favie_gensmo_search_with_dau_metric_inc_1d_new",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_search_with_dau_metric_inc_1d_new",
+  "table_type": "TABLE",
+  "num_rows": 33256361,
+  "num_bytes": 4577033320,
+  "created": "2025-08-06T03:52:37.507000+00:00",
+  "modified": "2026-01-30T01:48:28.060000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户平台，如 iOS、Android、Web"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本号"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家或地区名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（login、guest等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类，如新用户、老用户"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分群标签"
+    },
+    {
+      "name": "active_user_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数"
+    },
+    {
+      "name": "home_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主页页面浏览量"
+    },
+    {
+      "name": "home_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主页访问用户数"
+    },
+    {
+      "name": "collage_intention_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索页面浏览量"
+    },
+    {
+      "name": "collage_intention_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索页面访问用户数"
+    },
+    {
+      "name": "search_boot_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索选择面板页面浏览量"
+    },
+    {
+      "name": "search_boot_panel_generate_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索选择面板确认按钮点击次数"
+    },
+    {
+      "name": "search_boot_panel_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索选择面板访问用户数"
+    },
+    {
+      "name": "collage_gen_action_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起搜索操作次数"
+    },
+    {
+      "name": "collage_gen_action_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起搜索操作用户数"
+    },
+    {
+      "name": "collage_gen_action_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起搜索操作次数2.0"
+    },
+    {
+      "name": "collage_gen_action_user_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "发起搜索操作用户数2.0"
+    },
+    {
+      "name": "collage_server_complete_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索服务端完成Item数"
+    },
+    {
+      "name": "collage_server_complete_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索服务端完成访问用户数"
+    },
+    {
+      "name": "collage_complete_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成次数"
+    },
+    {
+      "name": "collage_complete_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成用户数"
+    },
+    {
+      "name": "collage_channel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成渠道页点击次数"
+    },
+    {
+      "name": "collage_channel_click_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成渠道页点击用户数"
+    },
+    {
+      "name": "collage_complete_detail_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成详情任务次数"
+    },
+    {
+      "name": "collage_complete_detail_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索完成详情用户数"
+    },
+    {
+      "name": "collage_gen_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成面板浏览量"
+    },
+    {
+      "name": "collage_gen_panel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成面板点击次数"
+    },
+    {
+      "name": "collage_gen_panel_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索生成面板用户数"
+    },
+    {
+      "name": "search_result_product_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索结果商品点击次数"
+    },
+    {
+      "name": "search_result_positive_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "搜索结果正反馈次数"
+    },
+    {
+      "name": "channel_collage_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "频道拼贴点击次数"
+    },
+    {
+      "name": "channel_screen_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "频道页面浏览次数"
+    },
+    {
+      "name": "channel_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "频道设备用户数"
+    }
+  ]
+}

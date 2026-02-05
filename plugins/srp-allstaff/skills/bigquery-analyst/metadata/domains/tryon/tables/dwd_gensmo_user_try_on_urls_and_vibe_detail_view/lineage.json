@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_gensmo_user_try_on_urls_and_vibe_detail_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_mongodb_integration_airbyte.try_on_change_background_task",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_mongodb_integration_airbyte.try_on_task",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.367064",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

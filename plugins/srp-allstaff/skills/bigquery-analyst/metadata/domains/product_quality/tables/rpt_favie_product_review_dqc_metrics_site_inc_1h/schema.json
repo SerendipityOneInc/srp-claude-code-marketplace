@@ -1,0 +1,86 @@
+{
+  "table_id": "rpt_favie_product_review_dqc_metrics_site_inc_1h",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_review_dqc_metrics_site_inc_1h",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-02-22T14:29:44.032000+00:00",
+  "modified": "2025-02-22T14:29:44.032000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_review_id_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "f_review_id_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "f_review_id_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_spu_id_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "site_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "link_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "title_body_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "title_length_p50",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "body_length_p50",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "hour",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

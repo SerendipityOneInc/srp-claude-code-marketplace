@@ -1,0 +1,16 @@
+{
+  "routine_id": "dim_ad_all_app_creative_full_1d_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dim_ad_all_app_creative_full_1d_procedure",
+  "routine_type": "PROCEDURE",
+  "function_type": "dimension",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "base_date",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

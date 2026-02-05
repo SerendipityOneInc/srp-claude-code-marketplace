@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_faive_feed_tags_operation_metric_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dwd_gem_feed_moodboard_tag_inc_1hour_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_feed_collage_full_view",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.389508",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

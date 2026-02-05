@@ -1,0 +1,62 @@
+{
+  "table_id": "dim_bigquery_job_info_full_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_bigquery_job_info_full_view",
+  "table_type": "VIEW",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-10-15T09:42:07.290000+00:00",
+  "modified": "2025-10-15T09:42:07.290000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "user_email",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "job_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_slot_ms",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "total_bytes_processed",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "destination_table",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "referenced_tables",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    }
+  ]
+}

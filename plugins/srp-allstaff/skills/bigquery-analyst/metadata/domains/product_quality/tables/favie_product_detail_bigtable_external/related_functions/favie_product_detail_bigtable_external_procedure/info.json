@@ -1,0 +1,27 @@
+{
+  "routine_id": "favie_product_detail_bigtable_external_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.favie_product_detail_bigtable_external_procedure",
+  "routine_type": "PROCEDURE",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "selected_columns",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.ARRAY: 'ARRAY'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "where_condition",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "limit_count",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.INT64: 'INT64'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null,
+  "linked_by": "name_matching",
+  "linked_at": "2026-01-30T14:24:22.111333"
+}

@@ -1,0 +1,128 @@
+{
+  "table_id": "rpt_favie_media_image_dqc_metrics_site_inc_1h",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_media_image_dqc_metrics_site_inc_1h",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-02-22T14:27:05.238000+00:00",
+  "modified": "2025-02-22T14:27:05.238000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "f_url_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "f_url_uniq_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "f_url_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "site_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "format_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "width_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "width_not_gt_0_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "height_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "height_not_gt_0_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "error_code_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "error_code_not_200_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "size_type_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "source_type_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "source_type_invalid_enum_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "source_id_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "category_null_cnt",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "hour",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

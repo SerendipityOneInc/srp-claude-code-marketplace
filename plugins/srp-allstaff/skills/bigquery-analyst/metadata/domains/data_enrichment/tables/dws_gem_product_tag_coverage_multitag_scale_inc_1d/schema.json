@@ -1,0 +1,47 @@
+[
+  {
+    "description": "事件发生日期",
+    "name": "dt",
+    "type": "DATE"
+  },
+  {
+    "description": "商品来源网站（如 us.princesspolly.com）",
+    "name": "site",
+    "type": "STRING"
+  },
+  {
+    "description": "商品类别（Top/Bottom/One-Piece等13类+null）",
+    "name": "collage_category",
+    "type": "STRING"
+  },
+  {
+    "description": "人群标签（枚举：'Men', 'Women', 'Boys', 'Girls', 'Baby Boys', 'Baby Girls', 'Unisex', 'Unknown'）",
+    "name": "demographic",
+    "type": "STRING"
+  },
+  {
+    "description": "标签名称（枚举：enhanced_title, demographic, season, length, closure, fit_type, function, neckline, sleeve_length, sleeve_style, features, occasion, color, color_family, color_tone, color_saturation, shape, pattern, material, style, collage_category）",
+    "name": "tag",
+    "type": "STRING"
+  },
+  {
+    "description": "在当前维度（包括人群）下，理论上'适用该标签'的 SKU 去重数量（覆盖率分母）",
+    "name": "applicable_sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "在当前维度（包括人群）下，实际获得该标签有效取值的 SKU 去重数量（覆盖率分子）",
+    "name": "has_value_sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "在当前粒度下，所有'有值 SKU'的该多值标签取值总数。计算公式：SUM(IF(ARRAY_LENGTH(field_array) > 0, ARRAY_LENGTH(field_array), 0))",
+    "name": "total_value_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "把多值字段 UNNEST 展开后得到的总行数，用于观察 explode 后的数据规模。计算公式：COUNT(*) FROM UNNEST(field_array)",
+    "name": "explode_row_cnt",
+    "type": "INTEGER"
+  }
+]

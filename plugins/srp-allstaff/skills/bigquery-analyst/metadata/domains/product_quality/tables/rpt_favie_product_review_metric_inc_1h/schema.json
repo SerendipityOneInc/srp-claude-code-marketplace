@@ -1,0 +1,50 @@
+{
+  "table_id": "rpt_favie_product_review_metric_inc_1h",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_review_metric_inc_1h",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2024-11-19T05:40:07.664000+00:00",
+  "modified": "2024-12-25T08:45:15.076000+00:00",
+  "description": "所属业务库: 商品详情库  \n所属数仓层级: RPT层(分析层)\n分区字段: dt,hour（字段格式 yyyy-MM-dd）\n更新策略: 每日更新\n模型主键: site\n负责人:\n- 庞宝辉\n- 付继文\n- 马汝钊  \n生命周期（分区TTL）: 永久\n用途: >\n  此表是对于每小时评论表的以站点维度进行分析的小时分析表",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "total_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "总评论数"
+    },
+    {
+      "name": "update_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "更新的评论数"
+    },
+    {
+      "name": "spider_update_review_num",
+      "type": "INTEGER",
+      "mode": "REQUIRED",
+      "description": "爬虫更新的评论数"
+    },
+    {
+      "name": "dt",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "hour",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "小时"
+    }
+  ]
+}

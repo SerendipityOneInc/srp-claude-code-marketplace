@@ -1,0 +1,56 @@
+{
+  "table_id": "rpt_favie_product_review_metric_full_1w",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_review_metric_full_1w",
+  "table_type": "TABLE",
+  "num_rows": 528,
+  "num_bytes": 32992,
+  "created": "2025-12-17T02:33:37.969000+00:00",
+  "modified": "2026-01-26T05:36:37.150000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "total_review_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总评论数"
+    },
+    {
+      "name": "weekly_new_review_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "每周新增评论数"
+    },
+    {
+      "name": "weekly_update_review_num",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "每周更新评论数"
+    },
+    {
+      "name": "total_spu_num_with_review",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "有评论的SPU总数"
+    },
+    {
+      "name": "spu_num_with_review_count_ge_10",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "评论数>=10的SPU数"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    }
+  ]
+}

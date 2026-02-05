@@ -1,0 +1,38 @@
+{
+  "table_id": "dim_favie_mapping_raw_brand",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_favie_mapping_raw_brand",
+  "table_type": "TABLE",
+  "num_rows": 175175,
+  "num_bytes": 5751518,
+  "created": "2025-07-21T02:47:20.419000+00:00",
+  "modified": "2025-11-08T03:25:43.362000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "raw_brand",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "爬虫数据中的原始品牌"
+    },
+    {
+      "name": "category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "官网品牌所属的类目"
+    },
+    {
+      "name": "official_brand",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "官方品牌"
+    },
+    {
+      "name": "status",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "该映射关系的状态，1是生效；-1是失效"
+    }
+  ]
+}

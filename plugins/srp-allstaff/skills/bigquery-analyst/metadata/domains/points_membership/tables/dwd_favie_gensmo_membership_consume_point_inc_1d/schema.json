@@ -1,0 +1,62 @@
+{
+  "table_id": "dwd_favie_gensmo_membership_consume_point_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_gensmo_membership_consume_point_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 114274,
+  "num_bytes": 16569375,
+  "created": "2025-12-28T03:07:38.628000+00:00",
+  "modified": "2026-01-30T01:05:12.765000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期，表示事件发生的日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID，已登录用户的唯一标识符"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID，设备的唯一标识符"
+    },
+    {
+      "name": "consume_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分消耗记录ID"
+    },
+    {
+      "name": "consume_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分消耗类型，Tryon、video等"
+    },
+    {
+      "name": "consume_points",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "消耗的积分总数"
+    },
+    {
+      "name": "consume_status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分消耗状态，如成功、失败等"
+    },
+    {
+      "name": "consume_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "积分消耗时间戳"
+    }
+  ]
+}

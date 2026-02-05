@@ -1,0 +1,80 @@
+{
+  "table_id": "dwd_favie_gensmo_user_recap_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_gensmo_user_recap_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 15142786,
+  "num_bytes": 7636565569,
+  "created": "2025-05-15T07:38:04.229000+00:00",
+  "modified": "2026-01-30T02:04:50.307000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "event_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "event_timestamp",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "session_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "item_name",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "item_id",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "item_type",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "item_index",
+      "type": "INTEGER",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "image_url",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "moodboard_content",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": ""
+    }
+  ]
+}

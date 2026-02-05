@@ -1,0 +1,17 @@
+{
+  "routine_id": "rpt_gem_growth_management_dashboard_v2_inc_1d_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_rpt.rpt_gem_growth_management_dashboard_v2_inc_1d_procedure",
+  "routine_type": "PROCEDURE",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "base_date",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null,
+  "linked_by": "name_matching",
+  "linked_at": "2026-01-30T14:24:22.080309"
+}

@@ -1,0 +1,134 @@
+{
+  "table_id": "rpt_decofy_subscribe_renewal_ltv_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_subscribe_renewal_ltv_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 952,
+  "num_bytes": 198056,
+  "created": "2025-09-25T04:05:48.170000+00:00",
+  "modified": "2026-01-30T02:01:07.605000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅产品ID"
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "简化产品ID"
+    },
+    {
+      "name": "product_with_trial",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首单是否使用免费试用，1表示使用，0表示未使用"
+    },
+    {
+      "name": "order_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单来源"
+    },
+    {
+      "name": "first_order_due_30d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近30天首单到期订单数"
+    },
+    {
+      "name": "first_order_renewal_30d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近30天首单续订订单数"
+    },
+    {
+      "name": "first_order_due_60d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近60天首单到期订单数"
+    },
+    {
+      "name": "first_order_renewal_60d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近60天首单续订订单数"
+    },
+    {
+      "name": "default_first_order_renewal_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "兜底首单续订率"
+    },
+    {
+      "name": "second_order_due_30d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近30天二单到期订单数"
+    },
+    {
+      "name": "second_order_renewal_30d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近30天二单续订订单数"
+    },
+    {
+      "name": "second_order_due_60d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近60天二单到期订单数"
+    },
+    {
+      "name": "second_order_renewal_60d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近60天二单续订订单数"
+    },
+    {
+      "name": "default_second_order_renewal_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "兜底二单续订率"
+    },
+    {
+      "name": "third_more_order_due_30d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近30天三单到期订单数"
+    },
+    {
+      "name": "third_more_order_renewal_30d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近30天三单续订订单数"
+    },
+    {
+      "name": "third_more_order_due_60d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近60天三单到期订单数"
+    },
+    {
+      "name": "third_more_order_renewal_60d_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "最近60天三单续订订单数"
+    },
+    {
+      "name": "default_third_more_order_renewal_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "兜底三单续订率"
+    }
+  ]
+}

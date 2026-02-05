@@ -1,0 +1,38 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dws_gem_growth_ads_insights_region_full_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmo_appgensmo_yla_dt_05.ads_insights_region",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmo_appgensmo_yla_dt_06.ads_insights_region",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmo_appgensmo_yla_dt_04.ads_insights_region",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmow2agensmo_yla_dt_01.ads_insights_region",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmo_appgensmo_yla_dt_02.ads_insights_region",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmow2agensmo_yla_dt_03.ads_insights_region",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.facebook_ads_gensmo_appgensmo_yla_dt_07.ads_insights_region",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.394347",
+  "downstream_count": 0,
+  "upstream_count": 7
+}

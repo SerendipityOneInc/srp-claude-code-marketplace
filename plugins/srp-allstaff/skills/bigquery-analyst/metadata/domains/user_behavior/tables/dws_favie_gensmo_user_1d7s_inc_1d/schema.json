@@ -1,0 +1,56 @@
+{
+  "table_id": "dws_favie_gensmo_user_1d7s_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_user_1d7s_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 7176,
+  "num_bytes": 371764,
+  "created": "2025-09-16T07:04:07.215000+00:00",
+  "modified": "2025-09-16T07:07:34.547000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "base_dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（登陆、未登陆）"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "function_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户回访深度行为类型"
+    },
+    {
+      "name": "active_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "基准日活跃数"
+    },
+    {
+      "name": "revisit_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "至少 1 次回访数"
+    }
+  ]
+}

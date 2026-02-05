@@ -1,0 +1,3 @@
+CREATE VIEW `srpproduct-dc37e.favie_rpt.rpt_favie_webpage_failure_base_metrics_inc_1h_view`
+AS SELECT domain,last_parser_name,case when error_type='1' then 'QCA_FAILED' when error_type='2' then 'INTERCEPTED' when error_type='3' then 'INTERNAL_ERROR' when error_type='99' then 'IGNORE' else 'UNKNOWN' end as error_type ,failure_cnt,cast (dt as Date ) as dt ,hour
+FROM `favie_rpt`.`rpt_favie_webpage_failure_base_metrics_inc_1h`;

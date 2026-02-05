@@ -1,0 +1,51 @@
+CREATE TABLE `srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_search_by_event_metric_inc_1d`
+(
+  dt DATE OPTIONS(description="日期，分区字段，格式YYYY-MM-DD"),
+  platform STRING OPTIONS(description="用户平台，如 iOS、Android、Web"),
+  app_version STRING OPTIONS(description="应用版本号"),
+  country_name STRING OPTIONS(description="国家或地区名称"),
+  user_login_type STRING OPTIONS(description="用户登录类型（登陆、未登陆）"),
+  user_tenure_type STRING OPTIONS(description="用户使用周期分类，如新用户、老用户"),
+  user_group STRING OPTIONS(description="用户分群标签"),
+  device_id STRING OPTIONS(description="设备ID"),
+  refer STRING OPTIONS(description="事件来源"),
+  ap_name STRING OPTIONS(description="应用名称"),
+  event_name STRING OPTIONS(description="事件名称"),
+  event_method STRING OPTIONS(description="事件方法"),
+  event_action_type STRING OPTIONS(description="事件动作类型"),
+  event_source STRING OPTIONS(description="事件来源"),
+  model_type STRING OPTIONS(description="是否为Pro用户标识"),
+  cal_pre_refer STRING OPTIONS(description="计算前事件来源"),
+  cal_pre_refer_ap_name STRING OPTIONS(description="计算前事件应用名称"),
+  cal_pre_event_source STRING OPTIONS(description="计算前事件来源"),
+  home_pv_cnt INT64 OPTIONS(description="首页页面浏览次数"),
+  home_device_id STRING OPTIONS(description="首页设备ID"),
+  collage_intention_cnt INT64 OPTIONS(description="搜索意图次数"),
+  collage_intention_device_id STRING OPTIONS(description="搜索意图设备ID"),
+  search_boot_panel_pv_cnt INT64 OPTIONS(description="搜索启动面板浏览次数"),
+  search_boot_panel_generate_click_cnt INT64 OPTIONS(description="搜索启动面板生成点击次数"),
+  search_boot_panel_device_id STRING OPTIONS(description="搜索启动面板设备ID"),
+  collage_gen_action_cnt INT64 OPTIONS(description="搜索生成动作次数"),
+  collage_gen_action_device_id STRING OPTIONS(description="搜索生成动作设备ID"),
+  collage_gen_action_cnt_2_0 INT64 OPTIONS(description="搜索生成动作2.0版本次数"),
+  collage_gen_action_device_id_2_0 STRING OPTIONS(description="搜索生成动作2.0版本设备ID"),
+  collage_complete_cnt INT64 OPTIONS(description="搜索完成次数"),
+  collage_complete_device_id STRING OPTIONS(description="搜索完成设备ID"),
+  collage_channel_click_cnt INT64 OPTIONS(description="搜索频道点击次数"),
+  collage_channel_click_device_id STRING OPTIONS(description="搜索频道点击设备ID"),
+  collage_complete_detail_task_cnt INT64 OPTIONS(description="搜索完成详细任务次数"),
+  collage_complete_detail_device_id STRING OPTIONS(description="搜索完成详细任务设备ID"),
+  collage_gen_panel_pv_cnt INT64 OPTIONS(description="搜索生成面板页面浏览次数"),
+  collage_gen_panel_click_cnt INT64 OPTIONS(description="搜索生成面板点击次数"),
+  collage_gen_panel_device_id STRING OPTIONS(description="搜索生成面板设备ID"),
+  search_result_product_click_cnt INT64 OPTIONS(description="搜索结果商品点击次数"),
+  search_result_positive_cnt INT64 OPTIONS(description="搜索结果正反馈次数"),
+  channel_collage_click_cnt INT64 OPTIONS(description="频道拼贴点击次数"),
+  channel_screen_cnt INT64 OPTIONS(description="频道页面浏览次数"),
+  channel_device_id STRING OPTIONS(description="频道设备ID")
+)
+PARTITION BY dt
+CLUSTER BY user_group
+OPTIONS(
+  require_partition_filter=true
+);

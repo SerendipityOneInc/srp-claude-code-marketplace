@@ -1,0 +1,278 @@
+{
+  "table_id": "rpt_favie_product_detail_quality_metrics_change_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_detail_quality_metrics_change_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 5528909,
+  "num_bytes": 2015615906,
+  "created": "2024-12-25T07:34:37.678000+00:00",
+  "modified": "2026-01-30T01:57:31.922000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "shop_site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "店铺站点"
+    },
+    {
+      "name": "total_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "总商品数"
+    },
+    {
+      "name": "title_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "标题变化商品数"
+    },
+    {
+      "name": "title_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "标题非空商品数"
+    },
+    {
+      "name": "title_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "标题填充率"
+    },
+    {
+      "name": "title_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "标题变化率"
+    },
+    {
+      "name": "link_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "链接变化商品数"
+    },
+    {
+      "name": "link_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "链接非空商品数"
+    },
+    {
+      "name": "link_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "链接填充率"
+    },
+    {
+      "name": "link_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "链接变化率"
+    },
+    {
+      "name": "description_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "描述变化商品数"
+    },
+    {
+      "name": "description_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "描述非空商品数"
+    },
+    {
+      "name": "description_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "描述填充率"
+    },
+    {
+      "name": "description_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "描述变化率"
+    },
+    {
+      "name": "keywords_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "关键词变化商品数"
+    },
+    {
+      "name": "keywords_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "关键词非空商品数"
+    },
+    {
+      "name": "keywords_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "关键词填充率"
+    },
+    {
+      "name": "keywords_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "关键词变化率"
+    },
+    {
+      "name": "spu_id_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SPU ID变化商品数"
+    },
+    {
+      "name": "spu_id_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SPU ID非空商品数"
+    },
+    {
+      "name": "spu_id_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "SPU ID填充率"
+    },
+    {
+      "name": "spu_id_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "SPU ID变化率"
+    },
+    {
+      "name": "images_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "图片变化商品数"
+    },
+    {
+      "name": "images_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "图片非空商品数"
+    },
+    {
+      "name": "images_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "图片填充率"
+    },
+    {
+      "name": "images_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "图片变化率"
+    },
+    {
+      "name": "attributes_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "属性变化商品数"
+    },
+    {
+      "name": "attributes_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "属性非空商品数"
+    },
+    {
+      "name": "attributes_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "属性填充率"
+    },
+    {
+      "name": "attributes_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "属性变化率"
+    },
+    {
+      "name": "categories_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "类目变化商品数"
+    },
+    {
+      "name": "categories_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "类目非空商品数"
+    },
+    {
+      "name": "categories_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "类目填充率"
+    },
+    {
+      "name": "categories_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "类目变化率"
+    },
+    {
+      "name": "specifications_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "规格变化商品数"
+    },
+    {
+      "name": "specifications_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "规格非空商品数"
+    },
+    {
+      "name": "specifications_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "规格填充率"
+    },
+    {
+      "name": "specifications_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "规格变化率"
+    },
+    {
+      "name": "feature_bullets_change_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "特性点变化商品数"
+    },
+    {
+      "name": "feature_bullets_not_null_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "特性点非空商品数"
+    },
+    {
+      "name": "feature_bullets_fill_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "特性点填充率"
+    },
+    {
+      "name": "feature_bullets_change_ratio",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "特性点变化率"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    }
+  ]
+}

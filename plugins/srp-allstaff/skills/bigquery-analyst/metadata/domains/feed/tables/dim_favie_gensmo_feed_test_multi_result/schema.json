@@ -1,0 +1,38 @@
+{
+  "table_id": "dim_favie_gensmo_feed_test_multi_result",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_favie_gensmo_feed_test_multi_result",
+  "table_type": "TABLE",
+  "num_rows": 90,
+  "num_bytes": 241956,
+  "created": "2025-05-22T02:11:51.883000+00:00",
+  "modified": "2025-05-22T02:11:51.883000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "moodboard_tags",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "products",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": ""
+    },
+    {
+      "name": "moodboard_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "moodboard_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "table_id": "rpt_gem_growth_management_dashboard_v4_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gem_growth_management_dashboard_v4_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 110242,
+  "num_bytes": 46933368,
+  "created": "2025-08-28T06:56:16.829000+00:00",
+  "modified": "2025-12-09T03:02:51.387000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区字段"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "苹果/安卓"
+    },
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户ID"
+    },
+    {
+      "name": "account_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账户名称"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign ID"
+    },
+    {
+      "name": "campaign_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign名称"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group ID"
+    },
+    {
+      "name": "ad_group_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Ad Group名称"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告名称"
+    },
+    {
+      "name": "ad_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告类别"
+    },
+    {
+      "name": "country_code",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家代码"
+    },
+    {
+      "name": "channel",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "渠道"
+    },
+    {
+      "name": "attribution_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "归因方式"
+    },
+    {
+      "name": "impression",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "曝光数"
+    },
+    {
+      "name": "click",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击数"
+    },
+    {
+      "name": "conversion",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "转化数"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "成本"
+    },
+    {
+      "name": "install_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "安装数"
+    },
+    {
+      "name": "new_user_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "新用户数"
+    },
+    {
+      "name": "d0_active_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "D0活跃数"
+    },
+    {
+      "name": "d1_retention_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "D1留存数"
+    },
+    {
+      "name": "lt7_cnt",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "近7天活跃天数"
+    }
+  ]
+}

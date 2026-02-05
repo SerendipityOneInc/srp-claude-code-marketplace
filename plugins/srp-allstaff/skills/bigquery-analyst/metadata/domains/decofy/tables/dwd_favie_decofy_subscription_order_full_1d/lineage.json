@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_favie_decofy_subscription_order_full_1d",
+  "upstream": [],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dwd_favie_decofy_subscription_order_inc_1d_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.371664",
+  "downstream_count": 1,
+  "upstream_count": 0
+}

@@ -1,5 +1,5 @@
 {
-  "description": "Feishu notification plugin - sends notifications when Claude needs user confirmation or completes tasks",
+  "description": "SRP AllStaff plugin hooks - Feishu notifications and BigQuery security validation",
   "hooks": {
     "Notification": [
       {
@@ -19,6 +19,17 @@
           {
             "type": "command",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/feishu-notify.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__plugin_srp-developer_bigquery__execute-query",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/bigquery-prehook.sh"
           }
         ]
       }

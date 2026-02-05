@@ -1,0 +1,50 @@
+{
+  "table_id": "rpt_favie_product_sample_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_product_sample_1d",
+  "table_type": "TABLE",
+  "num_rows": 314474,
+  "num_bytes": 1902413429,
+  "created": "2024-11-13T09:51:55.866000+00:00",
+  "modified": "2025-11-18T01:01:07.884000+00:00",
+  "description": "所属业务库: 商品详情库  \n所属数仓层级: RPT层(分析层)\n分区字段: dt（字段格式 yyyy-MM-dd）\n更新策略: 每日更新\n模型主键: domain\n负责人:\n- 庞宝辉\n- 付继文\n- 马汝钊  \n生命周期（分区TTL）: 永久\n用途: >\n  此表是针对于每日商品详情全量表的抽检,以更好更直观的观测数据的质量",
+  "fields": [
+    {
+      "name": "domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "域名"
+    },
+    {
+      "name": "product_link",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品链接"
+    },
+    {
+      "name": "product_title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品标题"
+    },
+    {
+      "name": "product_image",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品图片"
+    },
+    {
+      "name": "product_data",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品数据"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    }
+  ]
+}

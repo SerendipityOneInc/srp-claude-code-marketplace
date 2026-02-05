@@ -1,0 +1,22 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_favie_feed_user_operation_30days_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.gensmo_dw.dwd_gem_user_behavior_wide_inc_1d",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.gensmo_dim.dim_gem_user_full_1d_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dws_gensmo_refer_metrics_inc_1d",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.390195",
+  "downstream_count": 0,
+  "upstream_count": 3
+}

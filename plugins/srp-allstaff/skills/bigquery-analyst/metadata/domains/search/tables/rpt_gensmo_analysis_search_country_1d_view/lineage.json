@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_analysis_search_country_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dwd_favie_gem_workflow_inc_1d_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_gem_user_view",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.377111",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

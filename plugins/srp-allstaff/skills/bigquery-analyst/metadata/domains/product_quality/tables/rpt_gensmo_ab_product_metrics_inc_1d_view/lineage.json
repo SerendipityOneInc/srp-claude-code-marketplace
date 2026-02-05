@@ -1,0 +1,22 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_ab_product_metrics_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_product_bysource_metric_inc_1d",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_active_metrics_inc_1d",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_channel_metric_with_dau_inc_1d",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.381113",
+  "downstream_count": 0,
+  "upstream_count": 3
+}

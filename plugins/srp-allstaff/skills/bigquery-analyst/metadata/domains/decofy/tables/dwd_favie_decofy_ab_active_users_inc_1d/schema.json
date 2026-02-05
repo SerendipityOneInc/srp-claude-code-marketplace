@@ -1,0 +1,56 @@
+{
+  "table_id": "dwd_favie_decofy_ab_active_users_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_decofy_ab_active_users_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1687770,
+  "num_bytes": 200133682,
+  "created": "2025-09-06T09:01:09.513000+00:00",
+  "modified": "2026-01-30T01:02:14.437000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "ab_project",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "AB测试项目"
+    },
+    {
+      "name": "ab_router",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "AB测试路由"
+    },
+    {
+      "name": "ab_unique_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "AB测试唯一ID"
+    },
+    {
+      "name": "ab_start_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "AB测试开始时间"
+    },
+    {
+      "name": "enter_ab_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "进入AB测试时间"
+    }
+  ]
+}

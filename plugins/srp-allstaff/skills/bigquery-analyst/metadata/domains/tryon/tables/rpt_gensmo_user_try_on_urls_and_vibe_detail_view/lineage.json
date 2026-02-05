@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_gensmo_user_try_on_urls_and_vibe_detail_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_try_on_task_view",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_try_on_change_background_task_view",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.364929",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

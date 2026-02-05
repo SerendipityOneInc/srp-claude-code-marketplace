@@ -1,0 +1,134 @@
+{
+  "table_id": "dws_favie_gensmo_chat_session_messages_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_chat_session_messages_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 39522748,
+  "num_bytes": 11211917903,
+  "created": "2025-10-31T02:55:55.668000+00:00",
+  "modified": "2026-01-30T02:14:41.092000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "被创建的日期"
+    },
+    {
+      "name": "chat_session_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "会话id"
+    },
+    {
+      "name": "message_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "信息类型"
+    },
+    {
+      "name": "message_visibility",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否是用户可见的"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发起会话的用户id"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备id"
+    },
+    {
+      "name": "user_role",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发送信息的角色"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户组"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "所在国家"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户活跃类型(新/老用户)"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告id"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组id"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告计划id"
+    },
+    {
+      "name": "msg_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "信息条数"
+    },
+    {
+      "name": "search_query_intention",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索查询意图/目的"
+    },
+    {
+      "name": "search_query_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索查询类型(图文情况)"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "table_id": "dim_ad_kol_external_post_id_google_sheet_full_1d_view",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_ad_kol_external_post_id_google_sheet_full_1d_view",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-11-11T11:39:04.019000+00:00",
+  "modified": "2025-11-11T11:39:04.019000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "app_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用名称"
+    },
+    {
+      "name": "post_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "帖子ID"
+    },
+    {
+      "name": "brief_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Brief类型"
+    },
+    {
+      "name": "function_tag",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "功能标签"
+    },
+    {
+      "name": "handle",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "账号Handle"
+    },
+    {
+      "name": "campaign",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Campaign"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "tier",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "层级"
+    },
+    {
+      "name": "post_time",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "发帖时间"
+    },
+    {
+      "name": "post_link",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "帖子链接"
+    },
+    {
+      "name": "cost",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "合同成本"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "数据源"
+    }
+  ]
+}

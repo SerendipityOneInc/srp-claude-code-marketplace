@@ -1,0 +1,21 @@
+{
+  "routine_id": "tvf_dwd_favie_valid_product_detail_flat_inc_1h",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.tvf_dwd_favie_valid_product_detail_flat_inc_1h",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "function_type": "utility",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "input_dt",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "input_hour",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

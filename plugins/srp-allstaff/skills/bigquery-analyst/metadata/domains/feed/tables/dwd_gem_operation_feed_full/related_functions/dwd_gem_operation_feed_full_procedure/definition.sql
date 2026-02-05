@@ -1,0 +1,78 @@
+BEGIN
+    -- 先删除当天的数据，确保幂等性
+    DELETE FROM `favie_dw.dwd_gem_operation_feed_full`
+    WHERE DATE(created_date) = dt_param;
+
+    -- 插入最新数据
+    INSERT INTO `favie_dw.dwd_gem_operation_feed_full`
+    (
+      collage_id,
+      created_date,
+      created_at,
+      created_user_id,
+      collage_title,
+      collage_description,
+      category,
+      image_url,
+      publisher,
+      is_feed,
+      is_onboard,
+      moderation_status,
+      liked_count,
+      saved_count,
+      shared_count,
+      remix,
+      hashtags,
+      tag_dt,
+      style_one_tags,
+      style_two_tags,
+      occasion_one_tags,
+      occasion_two_tags,
+      color_tags,
+      weather_tags,
+      temperature_tags,
+      gender_tags,
+      age_tags,
+      body_size_tags,
+      body_shape_tags,
+      height_tags,
+      is_UGC,
+      is_duplicate_image,
+      production_type
+    )
+    SELECT
+      collage_id,
+      created_date,
+      created_at,
+      created_user_id,
+      collage_title,
+      collage_description,
+      category,
+      image_url,
+      publisher,
+      is_feed,
+      is_onboard,
+      moderation_status,
+      liked_count,
+      saved_count,
+      shared_count,
+      remix,
+      hashtags,
+      tag_dt,
+      style_one_tags,
+      style_two_tags,
+      occasion_one_tags,
+      occasion_two_tags,
+      color_tags,
+      weather_tags,
+      temperature_tags,
+      gender_tags,
+      age_tags,
+      body_size_tags,
+      body_shape_tags,
+      height_tags,
+      is_UGC,
+      is_duplicate_image,
+      production_type
+    FROM `favie_dw.dwd_gem_operation_feed_full_function`(dt_param);  -- 对应你的函数视图
+END

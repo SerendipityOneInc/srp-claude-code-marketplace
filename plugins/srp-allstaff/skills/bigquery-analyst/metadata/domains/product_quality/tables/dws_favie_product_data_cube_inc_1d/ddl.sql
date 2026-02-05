@@ -1,0 +1,30 @@
+CREATE TABLE `srpproduct-dc37e.favie_dw.dws_favie_product_data_cube_inc_1d`
+(
+  product_site STRING,
+  product_shop_site STRING,
+  site_domain STRING,
+  site_top_domain STRING,
+  site_tier STRING,
+  site_type STRING,
+  site_rank STRING,
+  site_categories STRING,
+  site_parser_type STRING,
+  site_country_region STRING,
+  sku_uniq_cnt INT64,
+  spu_uniq_cnt INT64,
+  inc_sku_uniq_cnt INT64,
+  inc_spu_uniq_cnt INT64,
+  update_sku_uniq_cnt INT64,
+  update_spu_uniq_cnt INT64,
+  d3_update_and_inc_sku_uniq_cnt INT64,
+  d3_update_and_inc_spu_uniq_cnt INT64,
+  d7_update_and_inc_sku_uniq_cnt INT64,
+  d7_update_and_inc_spu_uniq_cnt INT64,
+  d28_update_and_inc_sku_uniq_cnt INT64,
+  d28_update_and_inc_spu_uniq_cnt INT64,
+  invalid_price_sku_uniq_cnt INT64,
+  unexpected_price_sku_uniq_cnt INT64,
+  out_of_stock_sku_uniq_cnt INT64,
+  dt DATE
+)
+PARTITION BY dt;

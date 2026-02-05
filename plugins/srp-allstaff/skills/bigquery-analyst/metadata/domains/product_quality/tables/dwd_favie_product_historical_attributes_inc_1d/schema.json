@@ -1,0 +1,80 @@
+{
+  "table_id": "dwd_favie_product_historical_attributes_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_product_historical_attributes_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2026-01-30T03:31:31.340000+00:00",
+  "modified": "2026-01-30T03:31:31.340000+00:00",
+  "description": "产品历史属性增量表（日分区）",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区日期"
+    },
+    {
+      "name": "f_sku_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "SKU ID"
+    },
+    {
+      "name": "f_spu_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "SPU ID"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "price",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "价格，JSON结构"
+    },
+    {
+      "name": "recent_sales",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "近期销量"
+    },
+    {
+      "name": "best_seller_rank",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "畅销榜，JSON数组"
+    },
+    {
+      "name": "review_summary",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "评论摘要，JSON结构"
+    },
+    {
+      "name": "f_updated_at",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "更新时间"
+    },
+    {
+      "name": "f_created_at",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "创建时间"
+    },
+    {
+      "name": "f_meta",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "元信息，JSON结构"
+    }
+  ]
+}

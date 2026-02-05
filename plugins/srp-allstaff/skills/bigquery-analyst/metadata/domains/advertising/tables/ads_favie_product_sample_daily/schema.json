@@ -1,0 +1,50 @@
+{
+  "table_id": "ads_favie_product_sample_daily",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.ads_favie_product_sample_daily",
+  "table_type": "TABLE",
+  "num_rows": 151967,
+  "num_bytes": 508307740,
+  "created": "2024-10-18T01:11:17.632000+00:00",
+  "modified": "2024-12-04T02:05:56.891000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "domain",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "域名"
+    },
+    {
+      "name": "product_link",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品链接"
+    },
+    {
+      "name": "product_data",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品数据"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "product_title",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品标题"
+    },
+    {
+      "name": "product_image",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品图片"
+    }
+  ]
+}

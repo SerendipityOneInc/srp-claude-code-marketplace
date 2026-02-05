@@ -1,0 +1,68 @@
+{
+  "table_id": "dim_gem_appsflyer_ad_info_mapping_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_gem_appsflyer_ad_info_mapping_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-10-17T09:17:52.980000+00:00",
+  "modified": "2025-10-17T09:17:52.980000+00:00",
+  "description": "appsflyer id与广告归属信息,每天包含全量数据",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "全量日期"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "appsflyer触达的事件名称"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "appsflyer_id"
+    },
+    {
+      "name": "source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "触达来源只包括广告触达,此处枚举值为Meta Ads、Google Ads、TikTok Ads等"
+    },
+    {
+      "name": "account_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告账户ID"
+    },
+    {
+      "name": "campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "event_order_seq",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "appsflyer触达的事件顺序,按照时间正序排列"
+    }
+  ]
+}

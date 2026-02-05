@@ -1,0 +1,140 @@
+{
+  "table_id": "dws_decofy_subscribe_renewal_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_decofy_subscribe_renewal_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-09-22T12:53:34.475000+00:00",
+  "modified": "2025-09-22T12:53:34.475000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区字段，格式YYYY-MM-DD"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID"
+    },
+    {
+      "name": "appsflyer_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "appsflyer_id"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名称"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户组"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅产品ID"
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "简化产品ID"
+    },
+    {
+      "name": "is_first_order_paid",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首单是否付费，1表示付费，0表示未付费"
+    },
+    {
+      "name": "order_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单来源"
+    },
+    {
+      "name": "first_order_due_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首单到期订单数数"
+    },
+    {
+      "name": "first_order_renewal_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "首单续订订单数"
+    },
+    {
+      "name": "second_order_due_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "二单到期订单数"
+    },
+    {
+      "name": "second_order_renewal_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "二单续订订单数"
+    },
+    {
+      "name": "third_more_order_due_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "三单到期订单数"
+    },
+    {
+      "name": "third_more_order_renewal_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "三单续订订单数"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_google_all_creative_fivetran_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.google_yla_03.creative_metrics",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_yingliang.ad_group_ad_asset_view_2",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_savyo.creative_metrics",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_inhouse_ads.creative_metrics",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.appsflyer_google03.creative_metrics",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.google_ads_gensmo02ios.creative_metrics",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.395866",
+  "downstream_count": 0,
+  "upstream_count": 6
+}

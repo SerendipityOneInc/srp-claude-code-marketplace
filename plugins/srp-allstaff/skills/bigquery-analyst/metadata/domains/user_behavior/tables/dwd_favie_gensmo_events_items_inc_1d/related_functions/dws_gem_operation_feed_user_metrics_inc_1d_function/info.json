@@ -1,0 +1,16 @@
+{
+  "routine_id": "dws_gem_operation_feed_user_metrics_inc_1d_function",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dws_gem_operation_feed_user_metrics_inc_1d_function",
+  "routine_type": "TABLE_VALUED_FUNCTION",
+  "function_type": "metric",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null
+}

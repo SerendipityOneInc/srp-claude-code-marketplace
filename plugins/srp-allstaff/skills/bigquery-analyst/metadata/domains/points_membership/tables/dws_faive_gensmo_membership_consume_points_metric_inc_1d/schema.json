@@ -1,0 +1,86 @@
+{
+  "table_id": "dws_faive_gensmo_membership_consume_points_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_faive_gensmo_membership_consume_points_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 487844,
+  "num_bytes": 76903199,
+  "created": "2025-12-31T01:58:22.967000+00:00",
+  "modified": "2026-01-30T01:20:27.160000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "consume_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分消耗类型，Tryon、video等"
+    },
+    {
+      "name": "consume_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户标识，用户有上述消耗积分行为的记为1，否则为0"
+    },
+    {
+      "name": "consume_ponits_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户消耗积分次数，对符合上述维度组合的，对process_node_id计数"
+    },
+    {
+      "name": "consume_ponits_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户消耗积分数量，对符合上述维度组合的，对process_node_points求和"
+    }
+  ]
+}

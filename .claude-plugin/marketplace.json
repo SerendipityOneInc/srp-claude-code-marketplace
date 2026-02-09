@@ -1,6 +1,6 @@
 {
   "name": "srp-claude-code-marketplace",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Internal SRP Claude Code plugins and MCP servers - monorepo structure",
   "owner": {
     "name": "SRP Team",
@@ -18,7 +18,7 @@
       "name": "srp-developer",
       "source": "./plugins/srp-developer",
       "description": "SRP developer plugin - GitHub integration, GCP BigQuery access, Cloudflare Workers/Pages/R2/KV, Ray Data processing, Slurm cluster management, and development tools",
-      "version": "1.1.1",
+      "version": "1.3.0",
       "strict": true
     },
     {

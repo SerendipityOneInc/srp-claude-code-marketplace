@@ -1,0 +1,16 @@
+{
+  "description": "SRP Developer plugin hooks - BigQuery security validation",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__plugin_srp-developer_bigquery__execute-query",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/bigquery-prehook.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

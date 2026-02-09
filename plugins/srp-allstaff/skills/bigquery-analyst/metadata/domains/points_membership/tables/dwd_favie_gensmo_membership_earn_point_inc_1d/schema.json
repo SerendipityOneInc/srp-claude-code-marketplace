@@ -1,0 +1,62 @@
+{
+  "table_id": "dwd_favie_gensmo_membership_earn_point_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dwd_favie_gensmo_membership_earn_point_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 87978,
+  "num_bytes": 13074983,
+  "created": "2025-12-28T03:08:01.430000+00:00",
+  "modified": "2026-01-30T01:05:21.536000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "数据日期，表示事件发生的日期"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户ID，已登录用户的唯一标识符"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备ID，设备的唯一标识符"
+    },
+    {
+      "name": "earn_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分获取记录ID"
+    },
+    {
+      "name": "earn_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分获取方式，如签到、购买等"
+    },
+    {
+      "name": "earn_point_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分类型，如日常积分、永久积分等"
+    },
+    {
+      "name": "earn_points",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "获取的积分总数"
+    },
+    {
+      "name": "earn_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "积分获取时间戳"
+    }
+  ]
+}

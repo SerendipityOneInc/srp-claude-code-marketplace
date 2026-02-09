@@ -1,0 +1,26 @@
+{
+  "table_id": "dim_world_region",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dim_world_region",
+  "table_type": "EXTERNAL",
+  "num_rows": 0,
+  "num_bytes": 0,
+  "created": "2025-03-25T13:24:57.609000+00:00",
+  "modified": "2025-03-25T13:24:57.609000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "string_field_0",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    },
+    {
+      "name": "string_field_1",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": ""
+    }
+  ]
+}

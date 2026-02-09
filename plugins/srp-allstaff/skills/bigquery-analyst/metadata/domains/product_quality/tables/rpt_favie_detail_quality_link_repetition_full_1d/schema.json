@@ -1,0 +1,50 @@
+{
+  "table_id": "rpt_favie_detail_quality_link_repetition_full_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_detail_quality_link_repetition_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 27630241109,
+  "num_bytes": 4626019396719,
+  "created": "2024-12-26T03:37:39.689000+00:00",
+  "modified": "2026-01-30T01:44:55.926000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "link",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "链接"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "shop_site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "店铺站点"
+    },
+    {
+      "name": "repetition_f_sku_id_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "重复商品数"
+    },
+    {
+      "name": "repetition_f_sku_id_list",
+      "type": "STRING",
+      "mode": "REPEATED",
+      "description": "重复商品列表"
+    },
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    }
+  ]
+}

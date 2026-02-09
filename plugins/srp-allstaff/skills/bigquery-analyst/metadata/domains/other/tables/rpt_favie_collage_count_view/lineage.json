@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_favie_collage_count_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.dim_feed_collage_full_view",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.358589",
+  "downstream_count": 0,
+  "upstream_count": 1
+}

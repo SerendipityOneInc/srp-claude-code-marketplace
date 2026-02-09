@@ -1,0 +1,104 @@
+{
+  "table_id": "rpt_gensmo_ab_feed_metric_byuser_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_ab_feed_metric_byuser_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 9051317,
+  "num_bytes": 1524835396,
+  "created": "2025-07-04T07:02:07.694000+00:00",
+  "modified": "2026-01-30T03:01:28.797000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期，分区"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备id"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户新老类型"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家名"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "app版本"
+    },
+    {
+      "name": "ab_project_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "ab实验名称"
+    },
+    {
+      "name": "ab_router_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "ab分组id"
+    },
+    {
+      "name": "ab_router_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "ab分组名称"
+    },
+    {
+      "name": "user_feed_stay_interval",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "用户feed_detail和home页停留总时长"
+    },
+    {
+      "name": "user_feed_true_view",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户feed_detail的真实曝光数"
+    },
+    {
+      "name": "user_content_consumption",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "用户内容消费数"
+    },
+    {
+      "name": "user_ctr",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "用户点击率"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "来源"
+    }
+  ]
+}

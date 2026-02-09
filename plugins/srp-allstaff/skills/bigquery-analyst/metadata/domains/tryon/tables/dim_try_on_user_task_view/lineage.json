@@ -1,0 +1,14 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_try_on_user_task_view",
+  "upstream": [],
+  "downstream": [
+    {
+      "table": "srpproduct-dc37e.favie_dw.rpt_favie_gensmo_tryon_with_avatar_metric_view",
+      "type": "table"
+    }
+  ],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.357627",
+  "downstream_count": 1,
+  "upstream_count": 0
+}

@@ -1,0 +1,62 @@
+{
+  "table_id": "rpt_product_image_crawl_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_product_image_crawl_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 97910,
+  "num_bytes": 7661747,
+  "created": "2025-10-11T03:17:42.868000+00:00",
+  "modified": "2026-01-30T01:07:09.221000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品站点名称"
+    },
+    {
+      "name": "shop_site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品店铺站点名称"
+    },
+    {
+      "name": "uploader_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片上传方式"
+    },
+    {
+      "name": "status",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片状态"
+    },
+    {
+      "name": "image_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片分类"
+    },
+    {
+      "name": "download_image_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "图片数"
+    },
+    {
+      "name": "download_image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SKU数"
+    }
+  ]
+}

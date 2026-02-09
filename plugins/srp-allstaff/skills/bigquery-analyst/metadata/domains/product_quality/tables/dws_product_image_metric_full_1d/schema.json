@@ -1,0 +1,98 @@
+{
+  "table_id": "dws_product_image_metric_full_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_product_image_metric_full_1d",
+  "table_type": "TABLE",
+  "num_rows": 228734,
+  "num_bytes": 29296094,
+  "created": "2026-01-04T02:23:36.601000+00:00",
+  "modified": "2026-01-30T01:58:41.854000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "site_tier",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点等级"
+    },
+    {
+      "name": "site_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点类型"
+    },
+    {
+      "name": "site_rank",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点排名"
+    },
+    {
+      "name": "site_categories",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点类别"
+    },
+    {
+      "name": "site_parser_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点解析类型"
+    },
+    {
+      "name": "site_country_region",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点国家或地区"
+    },
+    {
+      "name": "image_size_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片尺寸类别"
+    },
+    {
+      "name": "image_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "图片类别"
+    },
+    {
+      "name": "total_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SKU总数"
+    },
+    {
+      "name": "total_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "SPU总数"
+    },
+    {
+      "name": "image_sku_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "image的SKU数"
+    },
+    {
+      "name": "image_spu_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "image的SPU数"
+    }
+  ]
+}

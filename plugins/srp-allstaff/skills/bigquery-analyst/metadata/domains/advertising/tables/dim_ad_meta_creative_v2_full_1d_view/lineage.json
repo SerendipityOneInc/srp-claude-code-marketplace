@@ -1,0 +1,26 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_ad_meta_creative_v2_full_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.ad_image_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.creative_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.ad_video_history",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_facebook_ads_full.ad_history",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.395502",
+  "downstream_count": 0,
+  "upstream_count": 4
+}

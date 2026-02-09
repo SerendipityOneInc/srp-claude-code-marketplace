@@ -1,0 +1,74 @@
+{
+  "table_id": "dws_favie_gensmo_refer_event_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_favie_gensmo_refer_event_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 11896,
+  "num_bytes": 1203482,
+  "created": "2025-11-07T03:11:11.215000+00:00",
+  "modified": "2025-11-07T03:14:18.355000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "日期"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "页面名"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交互点名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件方法"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型"
+    },
+    {
+      "name": "item_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "item类型"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台"
+    },
+    {
+      "name": "event_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "事件发生次数"
+    }
+  ]
+}

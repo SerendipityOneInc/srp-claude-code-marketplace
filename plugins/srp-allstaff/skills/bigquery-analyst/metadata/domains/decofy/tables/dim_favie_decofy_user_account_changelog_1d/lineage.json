@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dim_favie_decofy_user_account_changelog_1d",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.369297",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

@@ -1,0 +1,80 @@
+{
+  "table_id": "dws_gensmo_tob_content_trace_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_tob_content_trace_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 19984,
+  "num_bytes": 3535624,
+  "created": "2025-12-23T06:07:39.295000+00:00",
+  "modified": "2026-01-24T01:06:00.417000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家"
+    },
+    {
+      "name": "vibe_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Vibe ID"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品ID"
+    },
+    {
+      "name": "vibe_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "Vibe图片链接"
+    },
+    {
+      "name": "try_on_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿图片链接"
+    },
+    {
+      "name": "product_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品链接"
+    },
+    {
+      "name": "product_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品图片链接"
+    },
+    {
+      "name": "show_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "展示次数"
+    },
+    {
+      "name": "click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击次数"
+    }
+  ]
+}

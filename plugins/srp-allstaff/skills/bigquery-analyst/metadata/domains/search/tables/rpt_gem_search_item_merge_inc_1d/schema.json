@@ -1,0 +1,188 @@
+{
+  "table_id": "rpt_gem_search_item_merge_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gem_search_item_merge_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 7519167,
+  "num_bytes": 4556157266,
+  "created": "2025-08-27T08:47:10.478000+00:00",
+  "modified": "2025-08-27T09:06:20.968000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "统计日期（按事件发生日期）"
+    },
+    {
+      "name": "trace_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索 trace_id"
+    },
+    {
+      "name": "search_image",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户上传或搜索的图片 URL"
+    },
+    {
+      "name": "collage_number",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "拼贴编号（collage_number）"
+    },
+    {
+      "name": "created_time",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE",
+      "description": "事件发生时间"
+    },
+    {
+      "name": "product_main_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "匹配的商品主图 URL"
+    },
+    {
+      "name": "created_date",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "事件发生日期，取自 created_time"
+    },
+    {
+      "name": "product_image_info",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品图片的详细信息 JSON"
+    },
+    {
+      "name": "best_view",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品图片是否最佳视角（0/1）"
+    },
+    {
+      "name": "has_person",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品图片是否有人物（0/1）"
+    },
+    {
+      "name": "is_bad",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品图片是否为低质（0/1）"
+    },
+    {
+      "name": "is_clear_background",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品图片背景是否清晰（0/1）"
+    },
+    {
+      "name": "is_relevant",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "商品图片是否相关（0/1）"
+    },
+    {
+      "name": "is_nice_collage",
+      "type": "BOOLEAN",
+      "mode": "NULLABLE",
+      "description": "是否为优质拼贴"
+    },
+    {
+      "name": "brand",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品品牌"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品平台"
+    },
+    {
+      "name": "link_host",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品链接域名"
+    },
+    {
+      "name": "intention",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户搜索意图"
+    },
+    {
+      "name": "user_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户 ID"
+    },
+    {
+      "name": "region",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户地区"
+    },
+    {
+      "name": "product_search_engine",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "使用的商品搜索引擎"
+    },
+    {
+      "name": "route",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "QR debug route"
+    },
+    {
+      "name": "gender",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户性别"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备 ID"
+    },
+    {
+      "name": "f_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "客户端版本"
+    },
+    {
+      "name": "cf_ipcountry",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "客户端 IP 国家"
+    },
+    {
+      "name": "query",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户搜索 query"
+    },
+    {
+      "name": "f_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "搜索来源"
+    },
+    {
+      "name": "search_latency",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "搜索延迟"
+    }
+  ]
+}

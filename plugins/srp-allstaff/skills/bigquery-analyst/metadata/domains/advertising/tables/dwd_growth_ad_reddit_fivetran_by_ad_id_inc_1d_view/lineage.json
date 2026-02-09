@@ -1,0 +1,30 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_reddit_fivetran_by_ad_id_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.reddit_ads.ad_group",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.reddit_ads.ad",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.reddit_ads.business_account",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.reddit_ads.campaign",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.reddit_ads.ad_report",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.392265",
+  "downstream_count": 0,
+  "upstream_count": 5
+}

@@ -1,0 +1,224 @@
+{
+  "table_id": "rpt_favie_gensmo_tryon_bysource_metric_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_tryon_bysource_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 39657488,
+  "num_bytes": 15270618388,
+  "created": "2025-07-02T11:26:06.098000+00:00",
+  "modified": "2025-07-15T03:50:39.753000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "跳转至当前页面的来源页面或入口"
+    },
+    {
+      "name": "ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "交互点名称"
+    },
+    {
+      "name": "event_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件名称（select_item、view_item_list 等）"
+    },
+    {
+      "name": "event_method",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件触发方式（点击、浏览、摇一摇等）"
+    },
+    {
+      "name": "event_action_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "事件行为类型（试穿、无头像试穿等）"
+    },
+    {
+      "name": "event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "refer 与 ap_name 组合的事件来源"
+    },
+    {
+      "name": "cal_pre_refer",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "前一跳来源"
+    },
+    {
+      "name": "cal_pre_refer_ap_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "前一跳应用页面名称"
+    },
+    {
+      "name": "cal_pre_event_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "前一跳事件来源组合"
+    },
+    {
+      "name": "task_model",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "任务模型类型，来源于 dim_try_on_task_view.gen_type"
+    },
+    {
+      "name": "task_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "任务类型，来源于 dim_try_on_task_view.type"
+    },
+    {
+      "name": "home_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "主页浏览次数"
+    },
+    {
+      "name": "home_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "主页事件设备ID"
+    },
+    {
+      "name": "tryon_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿页面浏览次数"
+    },
+    {
+      "name": "tryon_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿事件设备ID"
+    },
+    {
+      "name": "tryon_select_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿选择面板浏览次数"
+    },
+    {
+      "name": "tryon_select_panel_confirm_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿选择面板确认按钮点击次数"
+    },
+    {
+      "name": "tryon_select_panel_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿选择面板事件设备ID"
+    },
+    {
+      "name": "tryon_gen_panel_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板浏览次数"
+    },
+    {
+      "name": "tryon_gen_panel_pv_cnt_2_0",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板浏览次数2.0"
+    },
+    {
+      "name": "tryon_gen_action_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成操作次数"
+    },
+    {
+      "name": "tryon_gen_panel_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板点击次数"
+    },
+    {
+      "name": "tryon_gen_panel_click_action_through_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板点击到操作转化率"
+    },
+    {
+      "name": "tryon_gen_panel_click_pv_through_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE",
+      "description": "试穿生成面板点击占浏览量比例"
+    },
+    {
+      "name": "tryon_gen_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿生成事件设备ID"
+    },
+    {
+      "name": "tryon_complete_pv_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "试穿完成页面浏览次数"
+    },
+    {
+      "name": "tryon_complete_device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "试穿完成事件设备ID"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "description": "事件发生日期",
+    "name": "dt",
+    "type": "DATE"
+  },
+  {
+    "description": "商品来源网站（如 us.princesspolly.com）",
+    "name": "site",
+    "type": "STRING"
+  },
+  {
+    "description": "商品类别（Top/Bottom/One-Piece等13类+null）",
+    "name": "collage_category",
+    "type": "STRING"
+  },
+  {
+    "description": "人群标签（枚举：'Men', 'Women', 'Boys', 'Girls', 'Baby Boys', 'Baby Girls', 'Unisex', 'Unknown'）",
+    "name": "demographic",
+    "type": "STRING"
+  },
+  {
+    "description": "标签类型（枚举：occasion, material）",
+    "name": "tag",
+    "type": "STRING"
+  },
+  {
+    "description": "标签的具体取值（如 'Casual', 'Cotton' 等，未聚合的原始值）",
+    "name": "tag_value",
+    "type": "STRING"
+  },
+  {
+    "description": "在当前维度（包括人群）下，具有相应标签值的 SKU 去重数量",
+    "name": "sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "在同一 dt×site×collage_category×tag 内，按 sku_cnt 从高到低的排名（ROW_NUMBER）",
+    "name": "sku_tag_value_rank",
+    "type": "INTEGER"
+  },
+  {
+    "description": "当前 dt×site×collage_category×tag 下适用的 SKU 总数（分母）。occasion: collage_category NOT IN ('Non-Outfit', NULL); material: 全量 SKU",
+    "name": "applicable_sku_cnt",
+    "type": "INTEGER"
+  },
+  {
+    "description": "当天该 dt×site×collage_category×tag 下，出现过的不同取值数量（值域规模）",
+    "name": "distinct_value_cnt",
+    "type": "INTEGER"
+  }
+]

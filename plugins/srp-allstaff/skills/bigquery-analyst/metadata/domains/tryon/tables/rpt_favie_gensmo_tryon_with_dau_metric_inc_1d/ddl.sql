@@ -1,0 +1,45 @@
+CREATE TABLE `srpproduct-dc37e.favie_rpt.rpt_favie_gensmo_tryon_with_dau_metric_inc_1d`
+(
+  dt DATE OPTIONS(description="日期，分区字段，格式YYYY-MM-DD"),
+  platform STRING OPTIONS(description="用户平台，如 iOS、Android、Web"),
+  app_version STRING OPTIONS(description="应用版本号"),
+  country_name STRING OPTIONS(description="国家或地区名称"),
+  user_login_type STRING OPTIONS(description="用户登录类型，如手机号、微信授权等"),
+  user_tenure_type STRING OPTIONS(description="用户使用周期分类，如新用户、老用户"),
+  user_group STRING OPTIONS(description="用户分群标签"),
+  active_user_d1_cnt INT64 OPTIONS(description="日活跃用户数"),
+  home_pv_cnt INT64 OPTIONS(description="主页页面浏览量"),
+  home_user_cnt INT64 OPTIONS(description="主页访问用户数"),
+  tryon_intention_cnt INT64 OPTIONS(description="试穿页面浏览量"),
+  tryon_intention_user_cnt INT64 OPTIONS(description="试穿页面访问用户数"),
+  tryon_select_panel_pv_cnt INT64 OPTIONS(description="试穿选择面板页面浏览量"),
+  tryon_select_panel_confirm_click_cnt INT64 OPTIONS(description="试穿选择面板确认按钮点击次数"),
+  tryon_select_panel_user_cnt INT64 OPTIONS(description="试穿选择面板访问用户数"),
+  tryon_gen_action_cnt INT64 OPTIONS(description="发起试穿操作次数"),
+  tryon_gen_action_user_cnt INT64 OPTIONS(description="发起试穿操作用户数"),
+  tryon_gen_action_cnt_2_0 INT64 OPTIONS(description="发起试穿操作次数2.0"),
+  tryon_gen_action_user_cnt_2_0 INT64 OPTIONS(description="发起试穿操作用户数2.0"),
+  tryon_server_complete_task_cnt INT64 OPTIONS(description="试穿服务端完成Item数"),
+  tryon_server_complete_user_cnt INT64 OPTIONS(description="试穿服务端完成访问用户数"),
+  tryon_complete_cnt INT64 OPTIONS(description="试穿完成次数"),
+  tryon_complete_user_cnt INT64 OPTIONS(description="试穿完成用户数"),
+  tryon_channel_click_cnt INT64 OPTIONS(description="试穿完成渠道页点击次数"),
+  tryon_channel_click_user_cnt INT64 OPTIONS(description="试穿完成渠道页点击用户数"),
+  tryon_complete_detail_task_cnt INT64 OPTIONS(description="试穿完成详情任务次数"),
+  tryon_complete_detail_user_cnt INT64 OPTIONS(description="试穿完成详情用户数"),
+  tryon_gen_panel_pv_cnt INT64 OPTIONS(description="试穿生成面板浏览量"),
+  tryon_gen_panel_click_cnt INT64 OPTIONS(description="试穿生成面板点击次数"),
+  tryon_gen_panel_user_cnt INT64 OPTIONS(description="试穿生成面板用户数"),
+  tryon_change_scene_intention_cnt INT64 OPTIONS(description="试穿生成换场景次数"),
+  tryon_change_scene_intention_user_cnt INT64 OPTIONS(description="试穿生成换场景访问用户数"),
+  tryon_change_scene_gen_cnt INT64 OPTIONS(description="试穿生成换场景次数"),
+  tryon_change_scene_gen_user_cnt INT64 OPTIONS(description="试穿生成换场景访问用户数"),
+  tryon_change_scene_browse_cnt INT64 OPTIONS(description="试穿生成换场景浏览次数"),
+  tryon_change_scene_browse_user_cnt INT64 OPTIONS(description="试穿生成换场景浏览用户数"),
+  tryon_load_fail_cnt INT64 OPTIONS(description="试穿后端数据传输完成后前端渲染失败次数"),
+  tryon_load_fail_user_cnt INT64 OPTIONS(description="试穿后端数据传输渲染失败用户数")
+)
+PARTITION BY dt
+OPTIONS(
+  require_partition_filter=true
+);

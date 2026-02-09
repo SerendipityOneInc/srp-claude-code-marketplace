@@ -1,0 +1,74 @@
+{
+  "table_id": "rpt_gensmo_try_on_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_gensmo_try_on_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 24990,
+  "num_bytes": 1670693,
+  "created": "2025-04-27T04:22:16.672000+00:00",
+  "modified": "2025-06-17T02:00:19.933000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否新用户"
+    },
+    {
+      "name": "user_country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户30日内最常使用所在国家"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的app版本号"
+    },
+    {
+      "name": "try_on_complete_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日完成TryOn次数"
+    },
+    {
+      "name": "try_on_complete_user_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日完成TryOn用户数"
+    },
+    {
+      "name": "try_on_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日发起TryOn次数"
+    },
+    {
+      "name": "try_on_user_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日发起TryOn用户数"
+    },
+    {
+      "name": "active_user_d1_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "日活跃用户数"
+    }
+  ]
+}

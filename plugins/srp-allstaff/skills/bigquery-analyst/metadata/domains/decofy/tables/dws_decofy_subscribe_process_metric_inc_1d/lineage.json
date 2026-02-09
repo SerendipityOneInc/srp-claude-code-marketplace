@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dws_decofy_subscribe_process_metric_inc_1d",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.371589",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

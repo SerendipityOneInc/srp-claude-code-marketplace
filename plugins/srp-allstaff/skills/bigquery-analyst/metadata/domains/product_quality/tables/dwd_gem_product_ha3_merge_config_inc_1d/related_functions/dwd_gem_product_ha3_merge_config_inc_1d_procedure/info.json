@@ -1,0 +1,27 @@
+{
+  "routine_id": "dwd_gem_product_ha3_merge_config_inc_1d_procedure",
+  "full_routine_id": "srpproduct-dc37e.favie_dw.dwd_gem_product_ha3_merge_config_inc_1d_procedure",
+  "routine_type": "PROCEDURE",
+  "language": "SQL",
+  "description": "",
+  "arguments": [
+    {
+      "name": "dt_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "biz_param",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    },
+    {
+      "name": "product_index_config_json",
+      "data_type": "StandardSqlDataType(type_kind=<StandardSqlTypeNames.STRING: 'STRING'>, ...)",
+      "mode": null
+    }
+  ],
+  "return_type": null,
+  "linked_by": "name_matching",
+  "linked_at": "2026-01-30T14:24:22.108013"
+}

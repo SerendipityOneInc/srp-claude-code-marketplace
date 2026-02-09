@@ -1,0 +1,9 @@
+{
+  "table": "srpproduct-dc37e.favie_rpt.rpt_product_dw_search_metric_inc_1d",
+  "upstream": [],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.375566",
+  "downstream_count": 0,
+  "upstream_count": 0
+}

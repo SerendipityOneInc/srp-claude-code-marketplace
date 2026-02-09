@@ -1,0 +1,98 @@
+{
+  "table_id": "dws_faive_gensmo_membership_earn_points_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_faive_gensmo_membership_earn_points_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 1378810,
+  "num_bytes": 260697826,
+  "created": "2025-12-31T01:58:42.862000+00:00",
+  "modified": "2026-01-30T01:20:17.710000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "指标数据日期"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "平台类型（iOS、Android 等）"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "应用版本"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户所属国家名称"
+    },
+    {
+      "name": "user_login_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户登录类型（匿名、注册等）"
+    },
+    {
+      "name": "user_tenure_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户使用周期分类（新用户、老用户）"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组分类"
+    },
+    {
+      "name": "device_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "设备唯一标识"
+    },
+    {
+      "name": "earn_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分获取方式，如签到、购买等（process_node_type）"
+    },
+    {
+      "name": "earn_point_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "积分类型，如日常积分、永久积分等（含 checkin 为 daily_points，其余为 permanent_points）"
+    },
+    {
+      "name": "hit_limit_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "是否撞线获取积分（hit_limit / not_hit_limit）"
+    },
+    {
+      "name": "earn_points_user_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户标识，用户有上述获取积分行为的记为1，否则为0"
+    },
+    {
+      "name": "earn_ponits_task_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户获取积分次数，对符合上述维度组合的，对process_node_id计数"
+    },
+    {
+      "name": "earn_ponits_points_amt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "对应积分类型用户获取积分数量，对符合上述维度组合的，对process_node_points求和"
+    }
+  ]
+}

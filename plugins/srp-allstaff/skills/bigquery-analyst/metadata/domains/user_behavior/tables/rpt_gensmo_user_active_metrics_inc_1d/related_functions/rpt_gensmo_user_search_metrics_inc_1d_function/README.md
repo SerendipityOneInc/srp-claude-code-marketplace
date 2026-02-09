@@ -1,0 +1,179 @@
+# rpt_gensmo_user_search_metrics_inc_1d_function
+
+**函数全名**: `srpproduct-dc37e.favie_rpt.rpt_gensmo_user_search_metrics_inc_1d_function`
+**类型**: TABLE_VALUED_FUNCTION
+**函数分类**: metric
+**语言**: SQL
+**创建时间**: 2025-10-09
+**最后更新**: 2025-10-09
+
+---
+
+## 📝 函数说明
+
+暂无描述
+
+---
+
+## 📋 参数定义
+
+| 参数名 | 类型 | 模式 |
+|--------|------|------|
+| dt_param | StandardSqlDataType(type_kind=<StandardSqlTypeNames.DATE: 'DATE'>, ...) | None |
+
+**返回类型**: 无
+
+---
+
+## 🔗 使用的表
+
+- `srpproduct-dc37e.favie_rpt.rpt_gensmo_user_active_metrics_inc_1d` (rpt_gensmo_user_active_metrics_inc_1d)
+- `srpproduct-dc37e.favie_dw.dws_gensmo_refer_metrics_inc_1d` (dws_gensmo_refer_metrics_inc_1d)
+
+---
+
+## 💻 函数定义
+
+```sql
+WITH user_refer_events_info AS (
+        SELECT
+            dt,
+            
+            user_tenure_type,
+            user_login_type,
+            country_name,
+            platform,
+            app_version,
+            
+            user_group,
+
+            device_id,
+            ap_name,
+            refer,
+            event_name,
+            event_method,
+            event_action_type,
+
+            refer_ap_click_cnt,
+            refer_pv_cnt,
+            refer_leave_directly_cnt,
+            refer_duration_amount,
+            refer_click_device_id,
+            refer_directly_leave_device_id
+        FROM
+            `srpproduct-dc37e.favie_dw.dws_gensmo_refer_metrics_inc_1d`
+        WHERE
+            dt = dt_param
+            AND device_id IS NOT NULL
+            AND refer IS NOT NULL
+    ),
+
+    user_search_events AS (
+        SELECT
+            dt,
+            
+            user_tenure_type,
+            user_login_type,
+            country_name,
+            platform,
+            app_version,
+            user_group,
+
+            SUM(CASE WHEN event_action_type = 'collage_gen' THEN refer_ap_click_cnt ELSE 0 END) AS search_trigger_pv_cnt,
+            COUNT(DISTINCT CASE WHEN event_action_type = 'collage_gen' THEN refer_click_device_id END) AS search_trigger_user_cnt,
+
+            SUM(CASE WHEN refer = 'search_boot' AND event_name = 'select_item' AND event_method = 'page_view' THEN refer_pv_cnt ELSE 0 END) AS search_boot_page_view_pv_cnt,
+            COUNT(DISTINCT CASE WHEN refer = 'search_boot' AND event_name = 'select_item' AND event_method = 'page_view' THEN device_id END) AS search_boot_page_view_user_cnt,
+
+            SUM(CASE WHEN refer = 'search_boot' AND event_name = 'select_item' AND event_method = 'click' AND ap_name = 'ap_polish_btn' THEN refer_ap_click_cnt ELSE 0 END) AS search_boot_polish_pv_cnt,
+            COUNT(DISTINCT CASE WHEN refer = 'search_boot' AND event_name = 'select_item' AND event_method = 'click' AND ap_name = 'ap_polish_btn' THEN refer_click_device_id END) AS search_boot_polish_user_cnt,
+            
+            SUM(CASE WHEN refer = 'search_boot' AND event_name = 'select_item' AND event_method = 'click' AND ap_name = 'ap_input_field' THEN refer_ap_click_cnt ELSE 0 END) AS search_boot_focus_pv_cnt,
+            COUNT(DISTINCT CASE WHEN refer = 'search_boot' AND event_name = 'select_item' AND event_method = 'click' AND ap_name = 'ap_input_field' THEN refer_click_device_id END) AS search_boot_focus_user_cnt
+        FROM
+            user_refer_events_info
+        GROUP BY
+            dt,
+            user_tenure_type,
+            user_login_type,
+            country_name,
+            platform,
+            app_version,
+            user_group
+    ),
+
+    events_with_dau AS (
+        SELECT
+            a.dt,
+            a.user_tenure_type,
+            a.user_login_type,
+            a.country_name,
+            a.platform,
+            a.app_version,
+            a.user_group,
+            a.search_trigger_pv_cnt,
+            a.search_boot_page_view_pv_cnt,
+            a.search_boot_polish_pv_cnt,
+            a.search_boot_focus_pv_cnt,
+            a.search_trigger_user_cnt,
+            a.search_boot_page_view_user_cnt,
+            a.search_boot_polish_user_cnt,
+            a.search_boot_focus_user_cnt,
+            b.active_user_d1_cnt AS DAU
+        FROM
+            user_search_events a
+        LEFT JOIN (
+            SELECT
+                dt,
+                country_name,
+                platform,
+                app_version,
+                user_group,
+                user_login_type,
+                user_tenure_type,
+                SUM(active_user_d1_cnt) AS active_user_d1_cnt
+            FROM `srpproduct-dc37e.favie_rpt.rpt_gensmo_user_active_metrics_inc_1d`
+            GROUP BY 
+                dt,
+                country_name,
+                platform,
+                app_version,
+                user_group,
+                user_login_type,
+                user_tenure_type
+        ) b
+        ON
+            a.dt = b.dt
+            AND a.user_tenure_type = b.user_tenure_type
+            AND a.user_login_type = b.user_login_type
+            AND a.country_name = b.country_name
+            AND a.platform = b.platform
+            AND a.app_version = b.app_version
+            AND a.user_group = b.user_group
+    )
+
+    SELECT
+        dt,
+        user_tenure_type,
+        user_login_type,
+        country_name,
+        platform,
+        app_version,
+        user_group,
+        search_trigger_pv_cnt,
+        search_boot_page_view_pv_cnt,
+        search_boot_polish_pv_cnt,
+        search_boot_focus_pv_cnt,
+        search_trigger_user_cnt,
+        search_boot_page_view_user_cnt,
+        search_boot_polish_user_cnt,
+        search_boot_focus_user_cnt,
+        DAU
+    FROM
+        events_with_dau
+```
+
+---
+
+**文档生成**: 2026-01-30 13:39:57
+**扫描工具**: scan_functions.py

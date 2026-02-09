@@ -1,0 +1,92 @@
+{
+  "table_id": "dws_gensmo_tob_group_trace_metric_inc_1d",
+  "dataset_id": "favie_dw",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_dw.dws_gensmo_tob_group_trace_metric_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 9612,
+  "num_bytes": 2713526,
+  "created": "2026-01-23T03:48:04.620000+00:00",
+  "modified": "2026-01-30T01:10:30.727000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "site",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "站点"
+    },
+    {
+      "name": "country",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "国家"
+    },
+    {
+      "name": "impid",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "曝光ID"
+    },
+    {
+      "name": "exp_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "实验ID"
+    },
+    {
+      "name": "vibe_list",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "description": "Vibe ID"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品ID"
+    },
+    {
+      "name": "product_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品链接"
+    },
+    {
+      "name": "product_image_url",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "商品图片链接"
+    },
+    {
+      "name": "show_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "展示次数"
+    },
+    {
+      "name": "click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "点击次数"
+    },
+    {
+      "name": "unique_click_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "去重点击次数"
+    },
+    {
+      "name": "unique_click_product_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "去重点击商品次数"
+    }
+  ]
+}

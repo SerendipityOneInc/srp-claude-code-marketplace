@@ -1,0 +1,18 @@
+{
+  "table": "srpproduct-dc37e.favie_dw.dwd_growth_ad_tiktok_all_creative_fivetran_inc_1d_view",
+  "upstream": [
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.image_asset_metrics",
+      "type": "table"
+    },
+    {
+      "table": "srpproduct-dc37e.fivetran_tiktok_ads.creative_metrics",
+      "type": "table"
+    }
+  ],
+  "downstream": [],
+  "functions_used": [],
+  "lineage_updated": "2026-01-30T13:38:37.396576",
+  "downstream_count": 0,
+  "upstream_count": 2
+}

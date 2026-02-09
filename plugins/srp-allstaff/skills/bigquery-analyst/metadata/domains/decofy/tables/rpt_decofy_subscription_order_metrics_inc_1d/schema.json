@@ -1,0 +1,140 @@
+{
+  "table_id": "rpt_decofy_subscription_order_metrics_inc_1d",
+  "dataset_id": "favie_rpt",
+  "project_id": "srpproduct-dc37e",
+  "full_table_id": "srpproduct-dc37e.favie_rpt.rpt_decofy_subscription_order_metrics_inc_1d",
+  "table_type": "TABLE",
+  "num_rows": 7923,
+  "num_bytes": 2414503,
+  "created": "2025-09-10T11:36:16.258000+00:00",
+  "modified": "2026-01-30T01:04:34.898000+00:00",
+  "description": "",
+  "fields": [
+    {
+      "name": "dt",
+      "type": "DATE",
+      "mode": "NULLABLE",
+      "description": "分区，日期"
+    },
+    {
+      "name": "country_name",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户30日内最常使用所在国家"
+    },
+    {
+      "name": "platform",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的平台"
+    },
+    {
+      "name": "app_version",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户当日使用最多的app版本号"
+    },
+    {
+      "name": "user_group",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "用户分组"
+    },
+    {
+      "name": "ad_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告来源"
+    },
+    {
+      "name": "ad_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告ID"
+    },
+    {
+      "name": "ad_group_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告组ID"
+    },
+    {
+      "name": "ad_campaign_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "广告活动ID"
+    },
+    {
+      "name": "order_source",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单来源"
+    },
+    {
+      "name": "product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "产品ID"
+    },
+    {
+      "name": "simple_product_id",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "产品简化ID"
+    },
+    {
+      "name": "subscription_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订阅类型：first_subscription, resubscription"
+    },
+    {
+      "name": "order_category",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单一级分类：pay_order, trial_order, benefit_order, unknown_order"
+    },
+    {
+      "name": "order_type",
+      "type": "STRING",
+      "mode": "NULLABLE",
+      "description": "订单二级分类：trial, trial_to_paid, benefit, benefit_to_paid, paid, renewal, unknown"
+    },
+    {
+      "name": "created_order_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天创建订单数"
+    },
+    {
+      "name": "created_order_amount",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天创建订单收入"
+    },
+    {
+      "name": "due_order_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天到期订单数"
+    },
+    {
+      "name": "due_order_amount",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天到期订单收入"
+    },
+    {
+      "name": "renewed_order_cnt",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天续订订单数"
+    },
+    {
+      "name": "renewed_order_amount",
+      "type": "INTEGER",
+      "mode": "NULLABLE",
+      "description": "当天续订订单收入"
+    }
+  ]
+}

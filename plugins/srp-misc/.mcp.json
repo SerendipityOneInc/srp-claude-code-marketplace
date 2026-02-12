@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "12306-mcp": {
+      "command": "npx",
+      "args": ["-y", "12306-mcp"],
+      "env": {}
+    },
+    "variflight": {
+      "command": "npx",
+      "args": ["-y", "@variflight-ai/variflight-mcp"],
+      "env": {
+        "X_VARIFLIGHT_KEY": "${X_VARIFLIGHT_KEY}"
+      }
+    },
+    "airbnb": {
+      "command": "npx",
+      "args": ["-y", "@openbnb/mcp-server-airbnb", "--ignore-robots-txt"],
+      "env": {}
+    },
+    "rednote": {
+      "command": "npx",
+      "args": ["rednote-mcp", "--stdio"],
+      "env": {}
+    }
+  }
+}

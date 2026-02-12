@@ -17,6 +17,10 @@
         "${GCP_LOCATION}"
       ],
       "env": {}
+    },
+    "cloudflare-pages": {
+      "type": "sse",
+      "url": "https://page.yesy.site/sse"
     }
   }
 }

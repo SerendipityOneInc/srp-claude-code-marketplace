@@ -1,0 +1,13 @@
+{
+  "name": "srp-misc",
+  "version": "1.0.0",
+  "description": "SRP Misc plugin - 12306 train tickets, Variflight flight info, Airbnb listings, and Rednote (Xiaohongshu)",
+  "author": {
+    "name": "SRP Team",
+    "email": "infra@srp.one"
+  },
+  "homepage": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace/tree/main/plugins/srp-misc",
+  "repository": "https://github.com/SerendipityOneInc/srp-claude-code-marketplace",
+  "license": "MIT",
+  "keywords": ["12306", "train", "variflight", "flight", "airbnb", "rednote", "xiaohongshu", "travel", "misc"]
+}

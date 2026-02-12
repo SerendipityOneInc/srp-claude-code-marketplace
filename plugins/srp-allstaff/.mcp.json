@@ -10,10 +10,9 @@
         "${LARK_APP_ID}",
         "-s",
         "${LARK_APP_SECRET}",
-        "-u",
-        "${LARK_USER_ACCESS_TOKEN}",
+        "--oauth",
         "--token-mode",
-        "user_access_token"
+        "auto"
       ],
       "env": {}
     },

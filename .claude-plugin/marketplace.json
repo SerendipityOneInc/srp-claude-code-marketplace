@@ -11,7 +11,7 @@
       "name": "srp-allstaff",
       "source": "./plugins/srp-allstaff",
       "description": "SRP AllStaff plugin - Lark/Feishu integration and office automation with Rube (Gmail, Slack, Calendar, Drive, GitHub, Linear, etc.)",
-      "version": "1.0.9",
+      "version": "1.1.0",
       "strict": true
     },
     {

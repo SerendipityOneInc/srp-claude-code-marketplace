@@ -46,6 +46,18 @@ The SRP Developer plugin provides essential development tools including GitHub c
 - Global replication
 - Workers KV API
 
+#### 📦 Cloudflare Assets (R2 Storage)
+- Upload, list, and delete files on R2 storage
+- Smart routing: small files via MCP, large files (>512KB) via REST API
+- Auto-categorization by file type and date
+- Public CDN URLs for uploaded assets
+
+#### 📄 Publish HTML Page
+- Asset-first workflow for HTML page publishing
+- Binary assets uploaded to R2, HTML references URLs
+- Integration with image generation skills
+- Lightweight pages via Cloudflare Pages KV
+
 #### 🚀 Ray Data Processing
 - Large-scale distributed data processing
 - GPU/CPU coordinated batch inference
@@ -130,6 +142,9 @@ The plugin provides the following commands with the `srp:` namespace:
 | `srp:raydata` | - | raydata | Ray Data distributed data processing and batch inference |
 | `srp:slurm` | - | slurm | Slurm GPU cluster management and job submission |
 | `srp:dev` | - | srp-dev | End-to-end feature development workflow |
+| - | - | cloudflare-assets | Cloudflare Assets - R2 file upload/list/delete with smart routing |
+| - | - | publish-html-page | Publish HTML pages with asset-first workflow |
+| - | - | bigquery-analyst | BigQuery data analysis assistant |
 
 **Usage examples:**
 ```bash
@@ -159,6 +174,9 @@ srp:kv
 /cloudflare-pages
 /cloudflare-r2
 /cloudflare-kv
+/cloudflare-assets
+/publish-html-page
+/bigquery-analyst
 /raydata
 /slurm
 /srp-dev
@@ -306,7 +324,65 @@ Bind KV to my Worker
 - 🔧 Workers KV API
 - 💾 Edge caching
 
-### Skill 7: Ray Data Processing
+### Skill 7: Cloudflare Assets (R2 Storage)
+
+**Activate the skill:**
+```bash
+/cloudflare-assets
+```
+
+**Auto-detected** when user mentions uploading files, images, videos to R2 or Cloudflare.
+
+**Example prompts:**
+
+```
+Upload ~/Downloads/photo.jpg to R2
+List all my images in storage
+Delete that video I uploaded earlier
+Upload this PDF to Cloudflare assets
+```
+
+**Key operations:**
+- 📤 Upload files with smart routing (< 512KB → MCP, >= 512KB → REST API)
+- 📋 List files with type/year/month filters
+- 🗑️ Delete files by key
+- 📊 Check file info and recommended upload method
+
+**Script:** `scripts/cf-assets.sh` provides CLI access:
+```bash
+cf-assets.sh upload /path/to/file.png
+cf-assets.sh list --type images --year 2026
+cf-assets.sh delete images/2026/02/abc12345.png
+cf-assets.sh info /path/to/file.png
+```
+
+### Skill 8: Publish HTML Page
+
+**Activate the skill:**
+```bash
+/publish-html-page
+```
+
+**Auto-detected** when user asks to create, publish, or deploy HTML pages.
+
+**Example prompts:**
+
+```
+Create a landing page for our new product
+Publish an HTML report with charts
+Build a simple game and deploy it
+Make a portfolio page with my photos
+```
+
+**Key operations:**
+- 🎨 Design phase with image generation skills (nano-banana, canvas-design)
+- 📤 Upload binary assets to R2 via cloudflare-assets skill
+- 🏗️ Build HTML with asset URL references (no base64 blobs)
+- 🚀 Publish lightweight HTML to Cloudflare Pages
+
+**Workflow:** Design → Analyze → Upload Assets → Build HTML → Publish
+
+### Skill 10: Ray Data Processing
 
 **Activate the skill:**
 ```bash
@@ -344,7 +420,7 @@ Set up Airflow schedule for daily data processing
 - GitHub: https://github.com/SerendipityOneInc/ray-data-etl
 - Wiki: https://starquest.feishu.cn/wiki/Kpb3w8MNZieJGkkMhbqcIkrTnTc
 
-### Skill 8: Slurm Cluster Management
+### Skill 11: Slurm Cluster Management
 
 **Activate the skill:**
 ```bash
@@ -393,7 +469,7 @@ Cancel job with ID 12345
   - Workload: https://grafana.g2.yesy.site/d/workload/workload
   - Job Stats: https://grafana.g2.yesy.site/d/slurm/slurm
 
-### Skill 9: Feature Development Workflow
+### Skill 12: Feature Development Workflow
 
 **Activate the skill:**
 ```bash
@@ -473,6 +549,14 @@ plugins/srp-developer/.mcp.json
         "--location", "${GCP_LOCATION}"
       ],
       "env": {}
+    },
+    "cloudflare-pages": {
+      "type": "http",
+      "url": "https://page.yesy.site/mcp"
+    },
+    "cloudflare-assets": {
+      "type": "http",
+      "url": "https://assets.yesy.site/mcp"
     }
   }
 }
@@ -591,6 +675,9 @@ Claude will:
   - `plugins/srp-developer/skills/raydata/SKILL.md`
   - `plugins/srp-developer/skills/slurm/SKILL.md`
   - `plugins/srp-developer/skills/srp-dev/SKILL.md`
+  - `plugins/srp-developer/skills/cloudflare-assets/SKILL.md`
+  - `plugins/srp-developer/skills/publish-html-page/SKILL.md`
+  - `plugins/srp-developer/skills/bigquery-analyst/SKILL.md`
 
 ### Getting Help
 - Internal support: Contact SRP Team (infra@srp.one)
@@ -612,6 +699,18 @@ Claude will:
   - SRP Wiki: https://starquest.feishu.cn/wiki/TZASwm86nivXLTkMV6kcoJF4n2I
 
 ## Version History
+
+### v1.6.0 (2026-02-26)
+- **Added Cloudflare Assets skill** - Upload, list, delete files on R2 storage
+  - Smart routing: < 512KB via MCP, >= 512KB via REST API script
+  - `cf-assets.sh` script for CLI access (upload/list/delete/info)
+  - Auto-categorization by file type and date
+- **Added Publish HTML Page skill** - Asset-first HTML publishing workflow
+  - Binary assets uploaded to R2 first, HTML references URLs
+  - Integration with image generation skills (nano-banana, canvas-design)
+  - Lightweight pages via Cloudflare Pages KV
+- Added `cloudflare-assets` and `cloudflare-pages` MCP servers (HTTP)
+- Updated MCP configuration: cloudflare-pages changed from SSE to HTTP
 
 ### v1.2.0 (2026-01-26)
 - **Added Feature Development Workflow skill** - End-to-end feature development automation
@@ -669,6 +768,6 @@ Internal use only by SRP (Serendipity One Inc.) employees.
 ---
 
 **Plugin Name:** srp-developer
-**Version:** 1.2.0
+**Version:** 1.6.0
 **Author:** SRP Team (infra@srp.one)
-**Tags:** github, gcp, bigquery, cloudflare, ray-data, slurm, hpc, ml-infrastructure, cicd, developer, code-review, srp-dev, automation
+**Tags:** github, gcp, bigquery, cloudflare, workers, pages, r2, kv, assets, html-publish, ray-data, slurm, hpc, ml-infrastructure, edge-computing, developer, code-review, srp-dev, automation, cicd

@@ -1,3 +1,8 @@
+---
+name: cloudflare-assets
+description: Upload, list, and delete files on Cloudflare R2 storage (assets.yesy.site). Smart routing - small files via MCP, large files (>512KB) via REST API script. Use when uploading images, videos, PDFs, or any files to R2/Cloudflare.
+---
+
 # Cloudflare Assets (R2 Storage)
 
 Manage files on Cloudflare R2 storage at `assets.yesy.site`. Supports uploading, listing, and deleting files with **automatic routing** based on file size — small files go through MCP, large files go through REST API.

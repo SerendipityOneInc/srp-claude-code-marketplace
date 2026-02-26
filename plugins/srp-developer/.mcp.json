@@ -19,8 +19,12 @@
       "env": {}
     },
     "cloudflare-pages": {
-      "type": "sse",
-      "url": "https://page.yesy.site/sse"
+      "type": "http",
+      "url": "https://page.yesy.site/mcp"
+    },
+    "cloudflare-assets": {
+      "type": "http",
+      "url": "https://assets.yesy.site/mcp"
     }
   }
 }

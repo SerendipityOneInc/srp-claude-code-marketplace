@@ -16,7 +16,7 @@ Publish HTML pages to Cloudflare Pages with an **asset-first workflow**: images 
 
 ## When NOT to Use This Skill
 
-- Uploading standalone files (images, videos, PDFs) without an HTML page — use `cloudflare-r2` or cf-assets directly
+- Uploading standalone files (images, videos, PDFs) without an HTML page — use `cloudflare-assets` skill
 - Deploying full web applications with build steps — use `cloudflare-pages` skill
 - Editing existing code projects — use standard development workflow
 
@@ -90,21 +90,34 @@ Before writing any HTML, identify all media assets the page will need:
 
 ### Step 2: Upload Assets to cf-assets
 
-For each binary asset, upload via MCP:
+Use the `cloudflare-assets` skill for smart upload routing:
+
+- **File < 512KB** → MCP tool `upload_file` (base64, fast)
+- **File >= 512KB** → Script `cf-assets.sh upload` (REST API, no base64 overhead)
+
+**Small file (< 512KB) — MCP:**
 
 ```
 Tool: mcp__plugin_srp-developer_cloudflare-assets__upload_file
 Args:
-  filename: "hero-banner.png"
+  filename: "icon.svg"
   content: "<base64-encoded content>"
-
-Returns: URL like https://assets.yesy.site/f/images/2026/02/abc12345.png
 ```
+
+**Large file (>= 512KB) — Script:**
+
+```bash
+SCRIPT=$(find ~/.claude/plugins/cache/srp-claude-code-marketplace/srp-developer -name "cf-assets.sh" -type f 2>/dev/null | head -1)
+bash "$SCRIPT" upload /path/to/hero-banner.png
+```
+
+Both return: `{"state":true,"data":{"url":"https://assets.yesy.site/f/images/2026/02/abc12345.png",...}}`
 
 **Tips:**
 - Upload all assets in parallel when possible
 - Note down each returned URL for use in HTML
 - Filenames are for type detection only — the actual key is auto-generated
+- For generated images (nano-banana, etc.), always use script — they're typically > 512KB
 
 ### Step 3: Build HTML with URLs
 
@@ -271,6 +284,10 @@ Is it binary (PNG, JPG, MP4, etc.)?
 
 ## Version History
 
+- **1.1.0** (2026-02-26): Smart upload routing
+  - Upload now uses `cloudflare-assets` skill with size-based routing
+  - Files < 512KB → MCP; files >= 512KB → REST API via script
+  - Added reference to `cf-assets.sh` script for large file uploads
 - **1.0.0** (2026-02-26): Initial skill release
   - Asset-first workflow for HTML page publishing
   - Integration with cf-assets (R2) and cf-page-publish-mcp (KV)
